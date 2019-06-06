@@ -1,0 +1,23 @@
+.bar {
+  fill:  #FFCB05  !important;
+  clip-path: url(#clip) !important; /* clip bar with rectangle */
+}
+
+.avgLine {
+  fill: none !important;
+  stroke: #00274C !important;
+  stroke-width: 2px !important;
+  clip-path: url(#clip) !important; /* clip line with rectangle */
+}
+
+.axis{
+  font-size: 14px !important;
+}
+.brush .extent {
+  stroke:#fff;
+  fill-opacity:0.125;
+  shape-rendering:crispEdges;
+}
+ /* .summary{
+  font-weight: bold;
+} */
