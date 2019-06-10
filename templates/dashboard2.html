@@ -24,22 +24,22 @@
   <script src="//d3js.org/topojson.v3.min.js"></script>
 
   <!-- general style -->
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style2.css">
 
   <!--timetable -->
-  <link rel="stylesheet" href="/static/css/timetable.css">
+  <link rel="stylesheet" href="/static/css/timetable2.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <!--mapbox -->
-  <link rel="stylesheet" href="/static/css/map.css">
+  <link rel="stylesheet" href="/static/css/map2.css">
   <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet'>
 
 
   <!-- three charts -->
-  <link rel="stylesheet" href="/static/css/tablecharts.css">
+  <link rel="stylesheet" href="/static/css/tablecharts2.css">
 
   <!-- searchpage michigan-->
   <link rel="stylesheet" href="/static/css/michigan.css">
@@ -86,7 +86,7 @@
     <div class="row content">
 
       <!-- side navigation currently have hard-coded links to location pages, but will use flask iteration to generate -->
-      <div class="col-sm-2 sidenav text-right push-1">
+      <div class="col-sm-1 sidenav text-right push-1">
         <div id="accordion" class="accordion">
           <div class="panel list-group">
           {% for each in names %}
@@ -104,7 +104,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-9 text-center"  id="content" tabindex="-1">
+      <div class="col-sm-10 text-center"  id="content" tabindex="-1">
 
         <!-- sticky information bar, with variables inserted through flask -->
         <div class="row top-buffer sticky-top border-bottom">
@@ -137,71 +137,76 @@
             </div>
         </div>
 
-        <!-- Map -->
-        <h2 class="top-buffer">Map</h2>
-        <div class="map-insert" align="center">
-          <div class="map" id="map"></div>
-          <script>
-          // Mapbox section
-          L.mapbox.accessToken = 'pk.eyJ1Ijoic3RjaG9pIiwiYSI6ImNqd2pkNWN0NzAyNnE0YW8xeTl5a3VqMXQifQ.Rq3qT82-ysDHcMsHGTBiQg';
-          const layers = {
-              'Streets': L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'),
-              'Light': L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10'),
-              'Dark': L.mapbox.styleLayer('mapbox://styles/mapbox/dark-v10')
-          };
-          let map = L.mapbox.map('map')
-              .setView([44.5, -85], 6)
-              .addLayer(layers.Light) // default layer
-              .addControl(L.mapbox.geocoderControl('mapbox.places', {autocomplete: true}))
-              .setMaxBounds([[36,-92],[52,-80]])
-              .setMinZoom(5)
 
-          map.scrollWheelZoom.disable();
+        <div class="row">
+          <div class="col-sm-6">
+            <!-- Map -->
+            <!-- <h2>Map</h2> -->
+            <div class="map-insert d-block" align="center">
+              <div class="map" id="map"></div>
+              <script>
+              // Mapbox section
+              L.mapbox.accessToken = 'pk.eyJ1Ijoic3RjaG9pIiwiYSI6ImNqd2pkNWN0NzAyNnE0YW8xeTl5a3VqMXQifQ.Rq3qT82-ysDHcMsHGTBiQg';
+              const layers = {
+                  'Streets': L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'),
+                  'Light': L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10'),
+                  'Dark': L.mapbox.styleLayer('mapbox://styles/mapbox/dark-v10')
+              };
+              let map = L.mapbox.map('map')
+                  .setView([44.5, -85], 6)
+                  .addLayer(layers.Light) // default layer
+                  .addControl(L.mapbox.geocoderControl('mapbox.places', {autocomplete: true}))
+                  .setMaxBounds([[36,-92],[52,-80]])
+                  .setMinZoom(5)
 
-          L.control.layers(layers).addTo(map); // add basemap control
-          let featureLayer = L.mapbox.featureLayer().addTo(map);
-          let boxLayer = L.mapbox.featureLayer().addTo(map);
+              map.scrollWheelZoom.disable();
 
-          var tableIcon = L.icon({
-              iconUrl: '/static/markers/ambulance_icon_blues.svg',
-              iconSize:     [25,25], // size of the icon
-              iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
-            });
+              L.control.layers(layers).addTo(map); // add basemap control
+              let featureLayer = L.mapbox.featureLayer().addTo(map);
+              let boxLayer = L.mapbox.featureLayer().addTo(map);
 
-          </script>
-        </div>
+              var tableIcon = L.icon({
+                  iconUrl: '/static/markers/ambulance_icon_blues.svg',
+                  iconSize:     [25,25], // size of the icon
+                  iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
+                });
 
-        <!-- Timeseries -->
-        <h2 class="top-buffer">Time Table</h2>
-        <div class="timetable-insert">
-          <div class="timetable bottombuffer"></div>
+              </script>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <!-- Timeseries -->
+            <!-- <h2>Time Table</h2> -->
+            <div class="timetable-insert d-block">
+              <div class="timetable bottombuffer"></div>
+            </div>
+          </div>
         </div>
 
         <!-- Demographics -->
-        <h2 class="top-buffer">Demographics</h2>
-          <div class="row demographics">
+          <div class="row demographics top-buffer">
 
             <div class="col-sm-4 mx-auto">
-              <div class="row-content text-center bottombuffer">
+              <div class="row-content">
                 <h4>Age</h4>
               </div>
-              <div class="row age-chart top-buffer center-block">
+              <div class="row age-chart bottom-buffer">
                 <svg id="age"></svg>
               </div>
             </div>
             <div class="col-sm-4  mx-auto">
-              <div class="row-content text-center bottombuffer">
+              <div class="row-content bottom-buffer">
                 <h4>Gender</h4>
               </div>
-              <div class="row gender-chart top-buffer center-block">
+              <div class="row gender-chart">
                 <svg id="gender"></svg>
               </div>
             </div>
             <div class="col-sm-4 mx-auto">
-              <div class="row-content text-center bottombuffer">
+              <div class="row-content">
                 <h4>Race</h4>
               </div>
-              <div class="row race-chart top-buffer center-block">
+              <div class="row race-chart bottom-buffer">
                 <svg id="race"></svg>
               </div>
             </div>
@@ -262,20 +267,20 @@
 
   // set the dimensions and margins of the graph
   let margin = {top: 20, right: 20, bottom: 110, left: 40},
-    width = 960 - margin.left - margin.right,
+    width = 700 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
     margin2 = {top: 400-70, right: 20, bottom: 30, left: 40},
     height2 = 400 - margin2.top - margin2.bottom;
 
   // set up dimensions of age horizontal bar graph
-  var marginAge = {top: 20, right: 130, bottom: 40, left: 50},
-    widthAge = 420 - marginAge.left - marginAge.right,
-    heightAge = 320 - marginAge.top - marginAge.bottom;
+  var marginAge = {top: 20, right: 20, bottom: 20, left: 20},
+    widthAge = 460 - marginAge.left - marginAge.right,
+    heightAge = 460 - marginAge.top - marginAge.bottom;
 
   // set up dimensions for gender donut chart
-  var marginGender = {top: 10, right: 10, bottom: 40, left: 10},
-    widthGender = 420 - marginGender.left - marginGender.right,
-    heightGender = 320 - marginGender.top - marginGender.bottom + 50,
+  var marginGender = {top: 20, right: 20, bottom: 20, left: 20},
+    widthGender = 460 - marginGender.left - marginGender.right,
+    heightGender = 460 - marginGender.top - marginGender.bottom,
     radius = Math.min(widthGender, heightGender) / 2;
 
   // sets up all arrays to be filtered
@@ -296,10 +301,10 @@
 
   // append gender graph 'svg'
   var svgGender = d3.select("#gender")
-    .attr("width", widthGender)
-    .attr("height", heightGender)
+    .attr("width", widthGender + marginGender.left + marginGender.right)
+    .attr("height", heightGender + marginGender.top + marginGender.bottom)
   .append("g")
-    .attr("transform", `translate(${widthGender/2},${heightGender/2})`);
+    .attr("transform", `translate(${(widthGender + marginGender.left + marginGender.right)/2},${(heightGender + marginGender.top + marginGender.bottom)/2})`);
 
   // parse the date / time
   const parseDate = d3.timeParse("%Y-%m-%d");
@@ -869,6 +874,9 @@
   makeBarLineChart('/static/data/map_fake.csv');
 
 
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWcrEjQkOP_N22KyU6aPQitc4O-47sWCQ&callback=initMap">
 </script>
 </body>
 </html>
