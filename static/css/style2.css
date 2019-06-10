@@ -134,7 +134,7 @@ padding: 5px;
 }
 .sidebuff{
   height: 100%;
-  background-color: #2E4B70 ;
+  background-color: #00274c;
 }
 
 h2{
@@ -156,12 +156,6 @@ font-size: 36px;
 #Pct{
 font-weight: bold;
 /* color: green; */
-}
-
-
-.rightbuff{
-  background-color:#2E4B70;
-  height: 100%;
 }
 
 .footstyle{
@@ -193,6 +187,11 @@ div.sticky-top{
   top: 50px;
   padding: 5px;
 }
+
+footer img{
+height: 50px;
+}
+
 @media screen and (min-width:600px){
 .sidenav{
   padding-top: 50px;

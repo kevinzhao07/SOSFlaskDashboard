@@ -28,11 +28,12 @@ padding: 10px;
 
 }
 .age-chart{
-
+/* padding-left: 40px; */
+/* background-color: red; */
 }
 
 .gender-chart{
-
+  /* background-color: blue; */
   padding-left: 30px;
 }
 .race-chart{
