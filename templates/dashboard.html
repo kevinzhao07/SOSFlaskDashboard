@@ -141,6 +141,36 @@
         <h2 class="top-buffer">Map</h2>
         <div class="map-insert" align="center">
           <div class="map" id="map"></div>
+          {% if data.datasource == "EMS" %}
+            <script>
+            var tableIcon = L.icon({
+
+                iconUrl: '/static/markers/ambulance_icon_blues.svg',
+                iconSize:     [25,25], // size of the icon
+                iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
+              });
+            </script>
+            {% endif %}
+          {% if data.datasource == "ED" %}
+            <script>
+            var tableIcon = L.icon({
+
+                iconUrl: '/static/markers/hospital_icon_blues.svg',
+                iconSize:     [25,25], // size of the icon
+                iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
+              });
+            </script>
+            {% endif %}
+          {% if data.datasource == "ME" %}
+            <script>
+            var tableIcon = L.icon({
+
+                iconUrl: '/static/markers/morguetable_5.svg',
+                iconSize:     [25,25], // size of the icon
+                iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
+              });
+            </script>
+          {% endif %}
           <script>
           // Mapbox section
           L.mapbox.accessToken = 'pk.eyJ1Ijoic3RjaG9pIiwiYSI6ImNqd2pkNWN0NzAyNnE0YW8xeTl5a3VqMXQifQ.Rq3qT82-ysDHcMsHGTBiQg';
@@ -161,12 +191,6 @@
           L.control.layers(layers).addTo(map); // add basemap control
           let featureLayer = L.mapbox.featureLayer().addTo(map);
           let boxLayer = L.mapbox.featureLayer().addTo(map);
-
-          var tableIcon = L.icon({
-              iconUrl: '/static/markers/ambulance_icon_blues.svg',
-              iconSize:     [25,25], // size of the icon
-              iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
-            });
 
           </script>
         </div>

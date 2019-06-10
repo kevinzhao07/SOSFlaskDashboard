@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- icon  -->
-  <link rel="icon" type="image/png" href="/static/images/icon.png">
+  <link rel="icon" type="image/png" href="/static/images/icon_t.png">
 
   <!-- BS and FA -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -138,12 +138,42 @@
         </div>
 
 
-        <div class="row">
+        <div class="row d-flex">
           <div class="col-sm-6">
             <!-- Map -->
             <!-- <h2>Map</h2> -->
             <div class="map-insert d-block" align="center">
               <div class="map" id="map"></div>
+              {% if data.datasource == "EMS" %}
+                <script>
+                var tableIcon = L.icon({
+
+                    iconUrl: '/static/markers/ambulance_icon_blues.svg',
+                    iconSize:     [25,25], // size of the icon
+                    iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
+                  });
+                </script>
+                {% endif %}
+              {% if data.datasource == "ED" %}
+                <script>
+                var tableIcon = L.icon({
+
+                    iconUrl: '/static/markers/hospital_icon_blues.svg',
+                    iconSize:     [25,25], // size of the icon
+                    iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
+                  });
+                </script>
+                {% endif %}
+              {% if data.datasource == "ME" %}
+                <script>
+                var tableIcon = L.icon({
+
+                    iconUrl: '/static/markers/morguetable_5.svg',
+                    iconSize:     [25,25], // size of the icon
+                    iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
+                  });
+                </script>
+              {% endif %}
               <script>
               // Mapbox section
               L.mapbox.accessToken = 'pk.eyJ1Ijoic3RjaG9pIiwiYSI6ImNqd2pkNWN0NzAyNnE0YW8xeTl5a3VqMXQifQ.Rq3qT82-ysDHcMsHGTBiQg';
@@ -165,11 +195,7 @@
               let featureLayer = L.mapbox.featureLayer().addTo(map);
               let boxLayer = L.mapbox.featureLayer().addTo(map);
 
-              var tableIcon = L.icon({
-                  iconUrl: '/static/markers/ambulance_icon_blues.svg',
-                  iconSize:     [25,25], // size of the icon
-                  iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
-                });
+
 
               </script>
             </div>
@@ -177,7 +203,7 @@
           <div class="col-sm-6">
             <!-- Timeseries -->
             <!-- <h2>Time Table</h2> -->
-            <div class="timetable-insert d-block">
+            <div class="timetable-insert d-block" align="center">
               <div class="timetable bottombuffer"></div>
             </div>
           </div>
@@ -234,7 +260,7 @@
         <a href="#content">Back to Top</a>
       </div>
 
-  <div class="col-sm-1 rightbuff">  </div>
+  <div class="col-sm-1 sidebuff">  </div>
   </div>
   <footer class="footer">
       <div class="footstyle container-fluid text-center">
@@ -272,10 +298,10 @@
   <script>
 
   // set the dimensions and margins of the graph
-  let margin = {top: 20, right: 20, bottom: 110, left: 40},
+  let margin = {top: 20, right: 20, bottom: 110, left: 10},
     width = 700 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
-    margin2 = {top: 400-70, right: 20, bottom: 30, left: 40},
+    margin2 = {top: 400-70, right: 20, bottom: 30, left: 10},
     height2 = 400 - margin2.top - margin2.bottom;
 
   // set up dimensions of age horizontal bar graph
