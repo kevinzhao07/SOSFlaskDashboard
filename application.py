@@ -27,7 +27,7 @@ def dashboard(placename, datasource):
         'center': center_dict[placename],
     }
 
-    return render_template("dashboard.html", data=data, names=names, cities=cities)
+    return render_template("dashboard2.html", data=data, names=names, cities=cities)
 
 #%% Run Flask app
 # python application.py
