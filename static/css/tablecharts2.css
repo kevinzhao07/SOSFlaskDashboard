@@ -3,17 +3,18 @@
     font-weight: bold;
     font-family: 'Helvetica';
     text-anchor: middle;
+    font-size: 35px !important;
 }
 
 /* text inside donut chart */
 .count {
-    font: 16px sans-serif;
+    font: 40px sans-serif !important;
     text-anchor: middle;
 }
 
 /* text for label */
 .total {
-    font-size: 3em;
+    font-size: 40px !important;
     text-anchor: middle;
     font-family: 'Helvetica';
 
@@ -34,7 +35,7 @@ padding: 10px;
 
 .gender-chart{
   /* background-color: blue; */
-  padding-left: 30px;
+  /* padding-left: 30px; */
 }
 .race-chart{
 
