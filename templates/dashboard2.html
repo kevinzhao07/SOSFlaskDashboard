@@ -204,7 +204,8 @@
             <!-- Timeseries -->
             <!-- <h2>Time Table</h2> -->
             <div class="timetable-insert d-block" align="center">
-              <div class="timetable bottombuffer"></div>
+              <div id="timetable" class="timetable bottombuffer" preserveAspectRatio="xMinYMin meet"
+    viewBox="0 0 800 440"></div>
             </div>
           </div>
         </div>
@@ -217,7 +218,8 @@
                 <h4>Age</h4>
               </div>
               <div class="row age-chart bottom-buffer">
-                <svg id="age"></svg>
+                <svg id="age" preserveAspectRatio="xMinYMin meet"
+      viewBox="0 0 900 740"></svg>
               </div>
             </div>
             <div class="col-sm-4  mx-auto">
@@ -225,7 +227,8 @@
                 <h4>Gender</h4>
               </div>
               <div class="row gender-chart">
-                <svg id="gender"></svg>
+                <svg id="gender" preserveAspectRatio="xMinYMin meet"
+      viewBox="0 0 900 740"></svg>
               </div>
             </div>
             <div class="col-sm-4 mx-auto">
@@ -233,7 +236,8 @@
                 <h4>Race</h4>
               </div>
               <div class="row race-chart bottom-buffer">
-                <svg id="race"></svg>
+                <svg id="race" preserveAspectRatio="xMinYMin meet"
+      viewBox="0 0 800 440"></svg>
               </div>
             </div>
           </div>
@@ -305,24 +309,30 @@
     height2 = 400 - margin2.top - margin2.bottom;
 
   // set up dimensions of age horizontal bar graph
-  var marginAge = {top: 20, right: 20, bottom: 20, left: 40},
-    widthAge = 460 - marginAge.left - marginAge.right,
-    heightAge = 460 - marginAge.top - marginAge.bottom;
+  var marginAge = {top: 20, right: 20, bottom: 20, left: 30},
+    widthAge = 750 - marginAge.left - marginAge.right,
+    heightAge = 750 - marginAge.top - marginAge.bottom;
 
   // set up dimensions for gender donut chart
   var marginGender = {top: 20, right: 20, bottom: 20, left: 20},
-    widthGender = 460 - marginGender.left - marginGender.right,
-    heightGender = 460 - marginGender.top - marginGender.bottom,
+    widthGender = 750 - marginGender.left - marginGender.right,
+    heightGender = 750 - marginGender.top - marginGender.bottom,
     radius = Math.min(widthGender, heightGender) / 2;
 
   // sets up all arrays to be filtered
   var ageArray = [],
     genderArray = [];
 
-  // append timetable svg
+  // append timetable svg, referenced from https://eddyerburgh.me/create-responsive-bar-chart-d3-js
   var svg = d3.select(".timetable").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+  .attr('preserveAspectRatio', 'xMinYMin meet')
+  .attr(
+      'viewBox',
+      '0 0 ' +
+        (width + margin.left + margin.right) +
+        ' ' +
+        (height + margin.top + margin.bottom)
+    )
 
   // append age graph 'svg'
   var svgAge = d3.select("#age")
@@ -573,7 +583,7 @@
       .data(dataAge)
     .enter().append("text")
       .attr("class", "chart")
-      .style("font-size","16px")
+      .style("font-size","40px")
       .attr("x", d=>xAge(d.value) - 32)
       .attr("y", d=>yAge(d.key) + yAge.bandwidth() - 12)
       .text(d=>d.value);
@@ -589,7 +599,7 @@
     // specifies size for y axis age graph
     svgAge.select(".y")
       .selectAll("text")
-      .style("font-size","16px");
+      .style("font-size","40px");
 
     // adds text for x axis age graph
     svgAge.append("g")
@@ -597,7 +607,7 @@
       .attr("transform", `translate(0,${heightAge})`)
       .call(d3.axisBottom(xAge))
     .selectAll(".tick text")
-      .style("font-size","16px")
+      .style("font-size","90px")
       .attr("y", 10);
 
     // add the focus moving avg line path
@@ -737,7 +747,7 @@
         .transition().duration(200)
         .call(d3.axisBottom(xAge))
     .selectAll(".tick text")
-    .style("font-size","16px")
+    .style("font-size","40px")
 
     barsAge.data(dataAge)
         .transition().duration(200)
@@ -838,7 +848,7 @@
   // updates HTML table
   function updateHtmlTable() {
     let rows = tbody.selectAll('tr')
-      .data(date.top(10))
+      .data((date.top(10)))
       .join('tr')
     rows.selectAll('td')
       .data((d) => d3.values(d))
