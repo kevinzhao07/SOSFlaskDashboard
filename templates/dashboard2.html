@@ -217,27 +217,24 @@
               <div class="row-content">
                 <h4>Age</h4>
               </div>
-              <div class="row age-chart bottom-buffer">
-                <svg id="age" preserveAspectRatio="xMinYMin meet"
-      viewBox="0 0 900 740"></svg>
+              <div class="row age-chart">
+                <svg id="age"></svg>
               </div>
             </div>
             <div class="col-sm-4  mx-auto">
-              <div class="row-content bottom-buffer">
+              <div class="row-content">
                 <h4>Gender</h4>
               </div>
               <div class="row gender-chart">
-                <svg id="gender" preserveAspectRatio="xMinYMin meet"
-      viewBox="0 0 900 740"></svg>
+                <svg id="gender"></svg>
               </div>
             </div>
             <div class="col-sm-4 mx-auto">
               <div class="row-content">
                 <h4>Race</h4>
               </div>
-              <div class="row race-chart bottom-buffer">
-                <svg id="race" preserveAspectRatio="xMinYMin meet"
-      viewBox="0 0 800 440"></svg>
+              <div class="row race-chart">
+                <svg id="race"></svg>
               </div>
             </div>
           </div>
@@ -309,14 +306,14 @@
     height2 = 400 - margin2.top - margin2.bottom;
 
   // set up dimensions of age horizontal bar graph
-  var marginAge = {top: 20, right: 20, bottom: 20, left: 30},
-    widthAge = 750 - marginAge.left - marginAge.right,
-    heightAge = 750 - marginAge.top - marginAge.bottom;
+  var marginAge = {top: 20, right: 20, bottom: 20, left: 40},
+    widthAge = 460 - marginAge.left - marginAge.right,
+    heightAge = 460 - marginAge.top - marginAge.bottom;
 
   // set up dimensions for gender donut chart
   var marginGender = {top: 20, right: 20, bottom: 20, left: 20},
-    widthGender = 750 - marginGender.left - marginGender.right,
-    heightGender = 750 - marginGender.top - marginGender.bottom,
+    widthGender = 460 - marginGender.left - marginGender.right,
+    heightGender = 460 - marginGender.top - marginGender.bottom,
     radius = Math.min(widthGender, heightGender) / 2;
 
   // sets up all arrays to be filtered
@@ -583,7 +580,7 @@
       .data(dataAge)
     .enter().append("text")
       .attr("class", "chart")
-      .style("font-size","40px")
+      .style("font-size","16px")
       .attr("x", d=>xAge(d.value) - 32)
       .attr("y", d=>yAge(d.key) + yAge.bandwidth() - 12)
       .text(d=>d.value);
@@ -599,7 +596,7 @@
     // specifies size for y axis age graph
     svgAge.select(".y")
       .selectAll("text")
-      .style("font-size","40px");
+      .style("font-size","16px");
 
     // adds text for x axis age graph
     svgAge.append("g")
@@ -607,7 +604,7 @@
       .attr("transform", `translate(0,${heightAge})`)
       .call(d3.axisBottom(xAge))
     .selectAll(".tick text")
-      .style("font-size","90px")
+      .style("font-size","16px")
       .attr("y", 10);
 
     // add the focus moving avg line path
@@ -747,7 +744,7 @@
         .transition().duration(200)
         .call(d3.axisBottom(xAge))
     .selectAll(".tick text")
-    .style("font-size","40px")
+    .style("font-size","16px")
 
     barsAge.data(dataAge)
         .transition().duration(200)
