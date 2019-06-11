@@ -196,6 +196,13 @@ height: 50px;
   width: 100%;
 }
 
+/*  https://stackoverflow.com/questions/29258382/bootstrap-align-divs-to-top-middle-and-bottom */
+.vbottom{
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
+}
+
 @media screen and (min-width:600px){
 .sidenav{
   padding-top: 50px;
