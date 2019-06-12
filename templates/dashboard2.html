@@ -176,25 +176,39 @@
               {% endif %}
               <script>
               // Mapbox section
+              var center = {{ data.center }}
+              var county_geojson = "{{ url_for('static',filename=data.f_geojson) }}"
+
               L.mapbox.accessToken = 'pk.eyJ1Ijoic3RjaG9pIiwiYSI6ImNqd2pkNWN0NzAyNnE0YW8xeTl5a3VqMXQifQ.Rq3qT82-ysDHcMsHGTBiQg';
               const layers = {
-                  'Streets': L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'),
+                  // 'main': L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'),
                   'Light': L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10'),
-                  'Dark': L.mapbox.styleLayer('mapbox://styles/mapbox/dark-v10')
+                  'Dark': L.mapbox.styleLayer('mapbox://styles/mapbox/dark-v10'),
+                  'Main': L.mapbox.styleLayer('mapbox://styles/stchoi/cjwky60dk0toy1cm8fnhngzrv')
               };
+
               let map = L.mapbox.map('map')
-                  .setView([44.5, -85], 6)
-                  .addLayer(layers.Light) // default layer
+                  .setView({{ data.center }}, 9)
+                  .addLayer(layers.Main) // default layer
                   .addControl(L.mapbox.geocoderControl('mapbox.places', {autocomplete: true}))
                   .setMaxBounds([[36,-92],[52,-80]])
                   .setMinZoom(5)
 
               map.scrollWheelZoom.disable();
+              function style(feature) {
+                return {
+                    fillColor: '#adcfe6',
+                    weight: 2,
+                    opacity: 1,
+                    color: '#72add4',
+                    dashArray: '3',
+                    fillOpacity: 0.35
+                };
+            }
 
               L.control.layers(layers).addTo(map); // add basemap control
-              let featureLayer = L.mapbox.featureLayer().addTo(map);
-              let boxLayer = L.mapbox.featureLayer().addTo(map);
-
+              let featureLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
+              let boxLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
 
 
               </script>
