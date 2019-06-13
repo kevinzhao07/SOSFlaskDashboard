@@ -18,6 +18,7 @@ def dashboard(placename, datasource):
     else:
         folder = 'counties'
         county_flag = 'County'
+
     data = {
         'placename': placename,
         'datasource': datasource,
@@ -28,7 +29,7 @@ def dashboard(placename, datasource):
         'zoom' : center_dict[placename].get('zoom', 10)
     }
 
-    return render_template("dashboard3.html", data=data, names=names, cities=cities)
+    return render_template("dashboard2.html", data=data, names=names, cities=cities)
 
 #%% Run Flask app
 # python application.py

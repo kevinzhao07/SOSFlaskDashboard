@@ -209,8 +209,6 @@
               L.control.layers(layers).addTo(map); // add basemap control
               let featureLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
               let boxLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
-
-
               </script>
             </div>
           </div>
@@ -426,7 +424,7 @@
   // sets color of donut chart
   const color = d3.schemePaired.slice(6);
 
-  var updateDumbDonut;
+  var updateTheDonut;
 
   // function to create bar charts
   async function makeBarLineChart(filename) {
@@ -446,7 +444,6 @@
     lng = CF.dimension(d => d.lng)
     age = CF.dimension(d => d.Age);
     gender = CF.dimension(d => d.Gender);
-
     // changes dimension into groups
     agegrp = age.group();
     dategrp = date.group();
@@ -528,7 +525,6 @@
 
           summaryStats(x.domain())
       });
-
 
     // adds donut table
     slices = svgGender.datum(dataGender).selectAll("path")
@@ -800,7 +796,7 @@
         });
     labelCount.text(d => d.data.value)
    // update(map.getBounds());
-  }
+ };
 
   // brush function
   function brushed() {
@@ -856,10 +852,14 @@
      summaryStats(dayRange);
   }
 
+
   // updates HTML table
   function updateHtmlTable() {
+
     let rows = tbody.selectAll('tr')
       .data((date.top(10)))
+      //date.top(10) is an array of 10 incidents' info
+
       .join('tr')
     rows.selectAll('td')
       .data((d) => d3.values(d))
@@ -925,7 +925,6 @@
     }
 
   makeBarLineChart('/static/data/map_fake.csv');
-
 
 </script>
 

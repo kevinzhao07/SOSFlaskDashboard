@@ -60,13 +60,13 @@ center_dict = {
     },
     'Flint': {
         'center': '{lat:43.01, lng:-83.70}',
-        'zoom': 11, #optimal: 12
+        'zoom': 12, #optimal: 12
         'minwidth': 250, #optimal: 450
         'minheight': 300 #optimal: 550
     },
     'Grand Rapids': {
         'center': '{lat:42.96, lng:-85.66}',
-        'zoom': 11, #optimal: 12
+        'zoom': 12, #optimal: 12
         'minwidth': 300, #optimal: 550
         'minheight': 300, #optimal: 600
     },
@@ -83,6 +83,7 @@ center_dict = {
     },
     'Alger': {
         'center': '{lat:46.42, lng:-86.49}',
+        'zoom': 9,
         'minwidth': 950,
         'minheight': 600
     },
@@ -117,7 +118,7 @@ center_dict = {
         'minheight': 350
     },
     'Bay': {
-        'center': '{lat:43.7b, lng:-83.93}',
+        'center': '{lat:43.7, lng:-83.93}',
         'minwidth': 350,
         'minheight': 550
     },
@@ -467,6 +468,7 @@ center_dict = {
     },
     'Schoolcraft': {
         'center': '{lat:46.13, lng:-86.24}',
+        'zoom' : 9,
         'minwidth': 550,
         'minheight': 800
     },
