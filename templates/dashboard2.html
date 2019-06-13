@@ -862,9 +862,9 @@
 
       .join('tr')
     rows.selectAll('td')
-      .data((d) => d3.values(d))
+      .data((d) => d3.values(d)) //the values in the arrays are being pulled here?
       .join('td')
-      .text((d,i) => i > 0 ? d : d)
+      .text((d,i) => i > 0 ? d : d) //what's i?
   }
 
   function type(d) {
