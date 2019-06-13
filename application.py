@@ -24,7 +24,8 @@ def dashboard(placename, datasource):
         'county_flag': county_flag,
         'titlename': src_dict[datasource],
         'f_geojson': f'geojson/{folder}/{placename}.geojson',
-        'center': center_dict[placename],
+        'center': center_dict[placename]['center'],
+        'zoom' : center_dict[placename].get('zoom', 10)
     }
 
     return render_template("dashboard3.html", data=data, names=names, cities=cities)

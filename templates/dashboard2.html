@@ -188,7 +188,7 @@
               };
 
               let map = L.mapbox.map('map')
-                  .setView({{ data.center }}, 9)
+                  .setView({{ data.center }}, {{data.zoom}})
                   .addLayer(layers.Main) // default layer
                   .addControl(L.mapbox.geocoderControl('mapbox.places', {autocomplete: true}))
                   .setMaxBounds([[36,-92],[52,-80]])
