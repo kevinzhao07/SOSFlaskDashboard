@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <!--Title uses flask to update data source-->
-{% if data.placename in cities %}
-  <title> {{ data.placename }} {{  data.datasource  }} - SIMULATED</title>
-{% else %}
-  <title> {{ data.placename }} County {{  data.datasource  }} - SIMULATED</title>
-{% endif %}
+  {% if data.placename in cities %}
+    <title> {{ data.placename }} {{  data.src  }} - SIMULATED</title>
+  {% else %}
+    <title> {{ data.placename }} County {{  data.src  }} - SIMULATED</title>
+  {% endif %}
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,26 +57,52 @@
       <a class="navbar-brand" href="#">SOS Michigan Opioid Epidemic Dashboard</a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          {% if data.datasource == 'EMS' %}
-            <a class="nav-link active" href="/{{ data.placename }}/EMS">EMS</a>
+          {% if data.src == 'EMS' %}
+            {% if data.placename in cities %}
+              <a class="nav-link active" href="?src=EMS&city={{data.placename}}">EMS</a>
+            {% else %}
+              <a class="nav-link active" href="?src=EMS&county={{data.placename}}">EMS</a>
+              {% endif %}
           {% else %}
-            <a class="nav-link" href="/{{ data.placename }}/EMS">EMS</a>
+            {% if data.placename in cities %}
+              <a class="nav-link" href="?src=EMS&city={{data.placename}}">EMS</a>
+            {% else %}
+              <a class="nav-link" href="?src=EMS&county={{data.placename}}">EMS</a>
+            {% endif %}
           {% endif %}
-          <!-- have to add "active" class to the page in focus -->
+
         </li>
         <li class="nav-item">
-          {% if data.datasource == 'ED' %}
-            <a class="nav-link active" href="/{{ data.placename }}/ED">ED</a>
+          {% if data.src == 'ED' %}
+            {% if data.placename in cities %}
+              <a class="nav-link active" href="?src=ED&city={{data.placename}}">ED</a>
+            {% else %}
+              <a class="nav-link active" href="?src=ED&county={{data.placename}}">ED</a>
+              {% endif %}
           {% else %}
-            <a class="nav-link" href="/{{ data.placename }}/ED">ED</a>
+            {% if data.placename in cities %}
+              <a class="nav-link" href="?src=ED&city={{data.placename}}">ED</a>
+            {% else %}
+              <a class="nav-link" href="?src=ED&county={{data.placename}}">ED</a>
+            {% endif %}
           {% endif %}
+
         </li>
         <li class="nav-item">
-          {% if data.datasource == 'ME' %}
-            <a class="nav-link active" href="/{{ data.placename }}/ME">ME</a>
+          {% if data.src == 'ME' %}
+            {% if data.placename in cities %}
+              <a class="nav-link active" href="?src=ME&city={{data.placename}}">ME</a>
+            {% else %}
+              <a class="nav-link active" href="?src=ME&county={{data.placename}}">ME</a>
+              {% endif %}
           {% else %}
-            <a class="nav-link" href="/{{ data.placename }}/ME">ME</a>
+            {% if data.placename in cities %}
+              <a class="nav-link" href="?src=ME&city={{data.placename}}">ME</a>
+            {% else %}
+              <a class="nav-link" href="?src=ME&county={{data.placename}}">ME</a>
+            {% endif %}
           {% endif %}
+
         </li>
       </ul>
     </div>
@@ -96,7 +122,13 @@
             <div class="collapse collapse-in" id="{{ each }}-sec">
               <ul class="list-group-item-text">
                 {% for item in names[each] %}
-                  <li><a href="/{{ item }}/{{ data.datasource }}">{{ item }}</a></li>
+                  {% if item in cities %}
+                    {% set city = item %}
+                    <li><a href="?src={{ data.src }}&city={{ item }}">{{ item }}</a></li>
+                  {% else %}
+                    {% set county = item %}
+                    <li><a href="?src={{ data.src }}&county={{ item }}">{{ item }}</a></li>
+                  {% endif %}
                 {% endfor %}
               </ul>
             </div>
@@ -104,7 +136,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-10 text-center"  id="content" tabindex="-1">
+      <div class="col-sm-11 text-center"  id="content" tabindex="-1">
 
         <!-- sticky information bar, with variables inserted through flask -->
         <div class="row top-buffer sticky-top border-bottom">
@@ -114,7 +146,7 @@
               {% else %}
                 <h2 id="countyname">{{ data.placename }} County</h2>
               {% endif %}
-              <h4 id="datasource">{{ data.datasource }} - SIMULATED</h4>
+              <h4 id="datasource">{{ data.src }} - SIMULATED</h4>
             </div>
             <div class="col-sm-4">
               <div class="row vbottom">
@@ -359,7 +391,7 @@
 
   // parse the date / time
   const parseDate = d3.timeParse("%Y-%m-%d");
-  const formatDate = d3.timeFormat("%b %d %Y");
+  const formatDate = d3.timeFormat("%b %e, %Y");
 
   // set the ranges
   let x = d3.scaleTime().range([0, width]),

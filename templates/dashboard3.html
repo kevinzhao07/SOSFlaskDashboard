@@ -3,9 +3,9 @@
 <head>
   <!--Title uses flask to update data source-->
 {% if data.placename in cities %}
-  <title> {{ data.placename }} {{  data.datasource  }} - SIMULATED</title>
+  <title> {{ data.placename }} {{  data.src  }} - SIMULATED</title>
 {% else %}
-  <title> {{ data.placename }} County {{  data.datasource  }} - SIMULATED</title>
+  <title> {{ data.placename }} County {{  data.src  }} - SIMULATED</title>
 {% endif %}
 
   <meta charset="utf-8">
@@ -57,26 +57,52 @@
       <a class="navbar-brand" href="#">SOS Michigan Opioid Epidemic Dashboard</a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          {% if data.datasource == 'EMS' %}
-            <a class="nav-link active" href="/{{ data.placename }}/EMS">EMS</a>
+          {% if data.src == 'EMS' %}
+            {% if data.placename in cities %}
+              <a class="nav-link active" href="?src=EMS&city={{data.placename}}">EMS</a>
+            {% else %}
+              <a class="nav-link active" href="?src=EMS&county={{data.placename}}">EMS</a>
+              {% endif %}
           {% else %}
-            <a class="nav-link" href="/{{ data.placename }}/EMS">EMS</a>
+            {% if data.placename in cities %}
+              <a class="nav-link" href="?src=EMS&city={{data.placename}}">EMS</a>
+            {% else %}
+              <a class="nav-link" href="?src=EMS&county={{data.placename}}">EMS</a>
+            {% endif %}
           {% endif %}
-          <!-- have to add "active" class to the page in focus -->
+
         </li>
         <li class="nav-item">
-          {% if data.datasource == 'ED' %}
-            <a class="nav-link active" href="/{{ data.placename }}/ED">ED</a>
+          {% if data.src == 'ED' %}
+            {% if data.placename in cities %}
+              <a class="nav-link active" href="?src=ED&city={{data.placename}}">ED</a>
+            {% else %}
+              <a class="nav-link active" href="?src=ED&county={{data.placename}}">ED</a>
+              {% endif %}
           {% else %}
-            <a class="nav-link" href="/{{ data.placename }}/ED">ED</a>
+            {% if data.placename in cities %}
+              <a class="nav-link" href="?src=ED&city={{data.placename}}">ED</a>
+            {% else %}
+              <a class="nav-link" href="?src=ED&county={{data.placename}}">ED</a>
+            {% endif %}
           {% endif %}
+
         </li>
         <li class="nav-item">
-          {% if data.datasource == 'ME' %}
-            <a class="nav-link active" href="/{{ data.placename }}/ME">ME</a>
+          {% if data.src == 'ME' %}
+            {% if data.placename in cities %}
+              <a class="nav-link active" href="?src=ME&city={{data.placename}}">ME</a>
+            {% else %}
+              <a class="nav-link active" href="?src=ME&county={{data.placename}}">ME</a>
+              {% endif %}
           {% else %}
-            <a class="nav-link" href="/{{ data.placename }}/ME">ME</a>
+            {% if data.placename in cities %}
+              <a class="nav-link" href="?src=ME&city={{data.placename}}">ME</a>
+            {% else %}
+              <a class="nav-link" href="?src=ME&county={{data.placename}}">ME</a>
+            {% endif %}
           {% endif %}
+
         </li>
       </ul>
     </div>
@@ -96,7 +122,13 @@
             <div class="collapse collapse-in" id="{{ each }}-sec">
               <ul class="list-group-item-text">
                 {% for item in names[each] %}
-                  <li><a href="/{{ item }}/{{ data.datasource }}">{{ item }}</a></li>
+                  {% if item in cities %}
+                    {% set city = item %}
+                    <li><a href="?src={{ data.src }}&city={{ item }}">{{ item }}</a></li>
+                  {% else %}
+                    {% set county = item %}
+                    <li><a href="?src={{ data.src }}&county={{ item }}">{{ item }}</a></li>
+                  {% endif %}
                 {% endfor %}
               </ul>
             </div>
@@ -114,7 +146,7 @@
               {% else %}
                 <h2 id="countyname">{{ data.placename }} County</h2>
               {% endif %}
-              <h4 id="datasource">{{ data.datasource }} - SIMULATED</h4>
+              <h4 id="datasource">{{ data.src }} - SIMULATED</h4>
             </div>
             <div class="col-sm-4">
               <div class="row vbottom">
@@ -143,7 +175,7 @@
             <!-- <h2>Map</h2> -->
             <div class="map-insert d-block" align="center">
               <div class="map" id="map"></div>
-              {% if data.datasource == "EMS" %}
+              {% if data.src == "EMS" %}
                 <script>
                 var tableIcon = L.icon({
 
@@ -153,7 +185,7 @@
                   });
                 </script>
                 {% endif %}
-              {% if data.datasource == "ED" %}
+              {% if data.src == "ED" %}
                 <script>
                 var tableIcon = L.icon({
 
@@ -163,7 +195,7 @@
                   });
                 </script>
                 {% endif %}
-              {% if data.datasource == "ME" %}
+              {% if data.src == "ME" %}
                 <script>
                 var tableIcon = L.icon({
 
