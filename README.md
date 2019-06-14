@@ -4,9 +4,19 @@
 
 ---
 ## How the information is structured
+
+### Content and base originate from Alex Cao's repository
+  - [Original Repo](https://github.com/caocscar/opioid-web)
+
 ### HTML pages use bootstrap CDN
+Referenced during creation of html page templates:
+  - [Bootstrap Documentation](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+  - [W3 Schools Bootstrap 4 Tutorials](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp)
+  -[Stack Overflow Threads such as this](https://stackoverflow.com/questions/29258382/bootstrap-align-divs-to-top-middle-and-bottom)
+
 ### Scripts draw information from files in data and geojson folders
-### Flask app (application.py) relies on opioid_dict.py to get information
+  - Mapbox/Leaflet-Mapbox, items in data folder (geojson, csv, topojson), and time series created by and lifted from [Alex Cao](https://github.com/caocscar)
+  - d3 coding for infographics and table created by [Kevin Zhao](https://github.com/kevinzhao07)
 
 
 ## In this repository:
