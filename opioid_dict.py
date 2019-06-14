@@ -76,6 +76,26 @@ center_dict = {
         'minwidth': 150, #optimal: 300
         'minheight': 200, #optimal: 400
     },
+    'Kalamazoo (City)':{
+        'center': '{lat:42.29, lng: -85.58}',
+        'zoom': 12,
+        'minwidth':150,
+        'minheight': 200
+    },
+    'Muskegon (City)':{
+        'center':  '{lat:43.23, lng: -86.25}',
+        'zoom': 12,
+        'minwidth':150,
+        'minheight': 200
+    },
+
+    'Saginaw (City)':{
+        'center': '{lat: 43.42, lng: -83.95}',
+        'zoom': 12,
+        'minwidth': 150,
+        'minheight': 200
+    },
+
     'Alcona': {
         'center': '{lat:44.68, lng:-83.58}',
         'minwidth': 450,
@@ -503,7 +523,7 @@ center_dict = {
         'minheight': 400
     },
 }
-cities = ['Bay City','Detroit','Flint','Grand Rapids','Pontiac', 'Saginaw', 'Kalamazoo']
+cities = ['Bay City','Detroit','Flint','Grand Rapids','Pontiac', 'Saginaw (City)', 'Kalamazoo (City)', 'Muskegon (City)']
 counties = [county for county in center_dict.keys() if county not in cities]
 
 placenames={}

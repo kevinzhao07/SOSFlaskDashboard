@@ -19,12 +19,16 @@ def navtocorrect():
     if city in cities:
         folder = 'cities'
         county_flag = ''
+        if '(City)' in city:
+            city_geojson = city[:-7]
+        else:
+            city_geojson = city    
         data = {
             'placename': city,
             'src': source,
             'county_flag': county_flag,
             'titlename': src_dict[source],
-            'f_geojson': f'geojson/{folder}/{city}.geojson',
+            'f_geojson': f'geojson/{folder}/{city_geojson}.geojson',
             'center': center_dict[city]['center'],
             'zoom' : center_dict[city].get('zoom', 10)}
 
