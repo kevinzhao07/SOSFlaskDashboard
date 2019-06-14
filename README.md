@@ -4,7 +4,7 @@
 
 ---
 ## How the information is structured
-### HTML pages use bootstrap
+### HTML pages use bootstrap CDN
 ### Scripts draw information from files in data and geojson folders
 ### Flask app (application.py) relies on opioid_dict.py to get information
 
@@ -28,25 +28,47 @@
 - /static
     - /css
         - map.css
+            - formats and styles the mapbox item for dashboard.html
         - map2.css
+            - formats and styles the mapbox item for dashboard2.html
         - map3.css
+            - formats and styles the mapbox item for dashboard3.html
         - michigan.css
+            - styles the map and tooltips in search.html
         - nondatastyle.css
+            - styles non-dashboard pages (landing.html, search.html)
         - style.css
+            - styles dashboard.html
         - style2.css
+            - styles dashboard2.html
         - style3.css
+            - styles dashboard3.html
         - tablecharts.css
+            - styles the d3 infographics (bar graphs and donut) for dashboard.html
         - tablecharts2.css
+            - styles the d3 infographics (bar graphs and donut) for dashboard2.html and dashboard3.html
         - timetable.css
+            - styles the d3 time series (2 bar graphs with moving average) for dashboard.html
         - timetable2.css
+            - styles the d3 time series (2 bar graphs with moving average) for dashboard2.html and dashboard3.html
     - /data
         - cities.csv
+            - names cities of interest and their latitude and longitudes
+            - used in search.html
         - map_fake.csv
+            - fake data of approximately 1000 coordinates, dates, demographics
+            - used in dashboard.html, dashboard2.html, and dashboard3.html
     - /geojson
         - /cities
+            - geoJSON-format information about cities of interest
+            - used by dashboard.html, dashboard2.html, dashboard3.html
         - /counties
+            - geoJSON-format information about counties
+            - used by dashboard.html, dashboard2.html, dashboard3.html
         - gz_2010_iz_050_00_5m_MI_counties.topojson
-    - /images
+            - topojson-format information
+            - used by search.html
+    - /images - includes favicon (icon_t) and placeholders
         - age.png
         - hidta.png
         - icon.png
@@ -60,7 +82,7 @@
         - washtenawcounty.png
         - wayne_table.png
         - waynecounty.png
-    - /markers
+    - /markers - svg map markers used by leaflet mapbox in dashboard.html, dashboard2.html, and dashboard3.html
         - ambulance_icon_blues.svg
         - hospital_icon_blues.svg
         - morguetable_5.svg
