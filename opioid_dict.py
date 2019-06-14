@@ -503,7 +503,7 @@ center_dict = {
         'minheight': 400
     },
 }
-cities = ['Bay City','Detroit','Flint','Grand Rapids','Pontiac']
+cities = ['Bay City','Detroit','Flint','Grand Rapids','Pontiac', 'Saginaw', 'Kalamazoo']
 counties = [county for county in center_dict.keys() if county not in cities]
 
 placenames={}
@@ -522,5 +522,3 @@ keyalphabet=sorted(placenames.keys())
 
 for letter in keyalphabet:
     names[letter]=placenames[letter]
-
-# print(names)
