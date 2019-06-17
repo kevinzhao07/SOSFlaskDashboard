@@ -10,6 +10,11 @@
   fill: #989c97 ; /* THE ROCK GRAY */
 }
 
+#ED{
+  background-color: rgba(228,225,223, 0.25)
+
+}
+
 .mapEMS, .mapED, .mapME {
   margin-bottom : 20px;
   padding: 5px;

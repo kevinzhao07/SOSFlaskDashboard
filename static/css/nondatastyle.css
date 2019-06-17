@@ -3,24 +3,35 @@
   padding-top: 90px;
 }
 .countynames{
-  padding-top: 20px !important;
-}
+  padding-top: 10px !important;
 
+}
 .eachcol{
   display: block;
 }
+p a{
+    color: #00274c;
+    font-weight: 500;
+}
+p a:hover{
+  text-decoration: underline;
+}
 
-.h3Padding{
-  padding-top: 20px;
+p a:focus{
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 @media screen and (min-width:700px){
 .row.content{
-  height:1800px;
   padding-top: 0px;
+}
+.sidebuff{
+  height: auto;
 }
 
 @media screen and (min-width:1000px){
-.row.content{
-  height:1800px;
+  .sidebuff{
+    height: auto;
+  }
 }
