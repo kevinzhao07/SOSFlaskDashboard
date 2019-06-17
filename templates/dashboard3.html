@@ -51,67 +51,63 @@
 
   <header></header>
 
-  <!-- top navigation, element names and their href links should be added through flask, but are currently hard coded -->
+  <!-- top navigation -->
   <nav class="navbar navbar-expand-sm fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="/">SOS Michigan Opioid Epidemic Dashboard</a>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          {% if data.src == 'EMS' %}
-            {% if data.placename in counties %}
-              <a class="nav-link active" href="?src=EMS&county={{data.placename}}">EMS</a>
-            {% else %}
-              <a class="nav-link active" href="?src=EMS&city={{data.placename}}">EMS</a>
-              {% endif %}
+    <a class="navbar-brand" href="/">SOS Michigan Opioid Epidemic Dashboard</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        {% if data.src == 'EMS' %}
+          {% if data.placename in cities %}
+            <a class="nav-link active" href="?src=EMS&city={{data.placename}}">EMS</a>
           {% else %}
-            {% if data.placename in counties %}
-              <a class="nav-link" href="?src=EMS&county={{data.placename}}">EMS</a>
-            {% else %}
-              <a class="nav-link" href="?src=EMS&city={{data.placename}}">EMS</a>
-            {% endif %}
+            <a class="nav-link active" href="?src=EMS&county={{data.placename}}">EMS</a>
           {% endif %}
-
-        </li>
-        <li class="nav-item">
-          {% if data.src == 'ED' %}
-            {% if data.placename in counties %}
-              <a class="nav-link active" href="?src=ED&county={{data.placename}}">ED</a>
-            {% else %}
-              <a class="nav-link active" href="?src=ED&city={{data.placename}}">ED</a>
-              {% endif %}
+        {% else %}
+          {% if data.placename in cities %}
+            <a class="nav-link" href="?src=EMS&city={{data.placename}}">EMS</a>
           {% else %}
-            {% if data.placename in counties %}
-              <a class="nav-link" href="?src=ED&county={{data.placename}}">ED</a>
-            {% else %}
-              <a class="nav-link" href="?src=ED&city={{data.placename}}">ED</a>
-            {% endif %}
-          {% endif %}
+            <a class="nav-link" href="?src=EMS&county={{data.placename}}">EMS</a>
+        {% endif %}
+      {% endif %}
 
-        </li>
-        <li class="nav-item">
-          {% if data.src == 'ME' %}
-            {% if data.placename in counties %}
-              <a class="nav-link active" href="?src=ME&county={{data.placename}}">ME</a>
-            {% else %}
-              <a class="nav-link active" href="?src=ME&city={{data.placename}}">ME</a>
-              {% endif %}
+      </li>
+      <li class="nav-item">
+        {% if data.src == 'ED' %}
+          {% if data.placename in cities %}
+            <a class="nav-link active" href="?src=ED&city={{data.placename}}">ED</a>
           {% else %}
-            {% if data.placename in counties %}
-              <a class="nav-link" href="?src=ME&county={{data.placename}}">ME</a>
-            {% else %}
-              <a class="nav-link" href="?src=ME&city={{data.placename}}">ME</a>
-            {% endif %}
+            <a class="nav-link active" href="?src=ED&county={{data.placename}}">ED</a>
           {% endif %}
-
+        {% else %}
+          {% if data.placename in cities %}
+            <a class="nav-link" href="?src=ED&city={{data.placename}}">ED</a>
+          {% else %}
+            <a class="nav-link" href="?src=ED&county={{data.placename}}">ED</a>
+        {% endif %}
+      {% endif %}
+      </li>
+      <li class="nav-item">
+        {% if data.src == 'ME' %}
+          {% if data.placename in cities %}
+            <a class="nav-link active" href="?src=ME&city={{data.placename}}">ME</a>
+          {% else %}
+            <a class="nav-link active" href="?src=ME&county={{data.placename}}">ME</a>
+          {% endif %}
+        {% else %}
+          {% if data.placename in cities %}
+            <a class="nav-link" href="?src=ME&city={{data.placename}}">ME</a>
+          {% else %}
+            <a class="nav-link" href="?src=ME&county={{data.placename}}">ME</a>
+          {% endif %}
+        {% endif %}
         </li>
       </ul>
-    </div>
   </nav>
 
   <div class="container-fluid container-top-buffer">
     <div class="row content">
 
-      <!-- side navigation currently have hard-coded links to location pages, but will use flask iteration to generate -->
+      <!-- side navigation -->
       <div class="col-sm-1 sidenav text-right push-1">
         <div id="accordion" class="accordion">
           <div class="panel list-group">
