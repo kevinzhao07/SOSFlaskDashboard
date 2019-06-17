@@ -1,15 +1,26 @@
 .row.content {
   height:auto;
-  padding-top: 40px;
+  padding-top: 90px;
+}
+.countynames{
+  padding-top: 20px !important;
+}
+
+.eachcol{
+  display: block;
+}
+
+.h3Padding{
+  padding-top: 20px;
 }
 
 @media screen and (min-width:700px){
 .row.content{
-  height:750px;
+  height:1800px;
   padding-top: 0px;
 }
 
 @media screen and (min-width:1000px){
 .row.content{
-  height:800px;
+  height:1800px;
 }

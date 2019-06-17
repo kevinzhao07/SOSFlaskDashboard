@@ -1,34 +1,52 @@
-/*Style for Custom Tooltip */
-/* div.tooltip {
-  position: absolute;
-  text-align: center;
-  min-width: 80px;
-  height: auto;
-  padding: 10px;
-  font-size: 14px;
-  font-family: arial;
-  background: rgba(0,0,0, 0.9);
-  color: #fff;
-  border-radius: 5px;
-  pointer-events: none;
-  line-height: 1;
+.EMS.county {
+  fill: #a79d96; /* ANGELL HALL ASH */
+}
+
+.ED.county {
+  fill: #9b9a6d ; /* BURTON TOWER BEIGE */
+}
+
+.ME.county {
+  fill: #989c97 ; /* THE ROCK GRAY */
+}
+
+.mapEMS, .mapED, .mapME {
+  margin-bottom : 20px;
+  padding: 5px;
+}
+
+/* commented out code was used to debug map position */
+/*
+.mapEMS{
+  background-color: blue;
+}
+
+.mapED{
+  background-color: red;
+}
+
+.mapME{
+  background-color: green;
 } */
 
-/* .tooltip p {
-  margin: 2px;
-} */
+.tooltip p {
+  margin: 2px !important;
+}
 
 path.county {
-  fill: #00274c;
-  stroke: #fff;
+  stroke: #fff !important;
 }
 
 path.county:hover, circle.city:hover {
-  fill: #ffcb05;
-  cursor: pointer;
+  fill: #ffcb05 !important;
+  cursor: pointer !important;
 }
 
 circle.city {
-  fill: #587abc;
-  stroke: white;
+  fill: #575294  !important;
+  stroke: white !important;
+}
+
+.extraMapPadding{
+  padding-bottom: 20px;
 }
