@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <!--Title uses flask to update data source-->
-  {% if data.placename in cities %}
-    <title> {{ data.placename }} {{  data.src  }} - SIMULATED</title>
+  {% if data.placename in counties %}
+    <title> {{ data.placename }}  County {{  data.src  }} - SIMULATED</title>
   {% else %}
-    <title> {{ data.placename }} County {{  data.src  }} - SIMULATED</title>
+    <title> {{ data.placename }} {{  data.src  }} - SIMULATED</title>
   {% endif %}
 
   <meta charset="utf-8">
@@ -112,7 +112,7 @@
     <div class="row content">
 
       <!-- side navigation currently have hard-coded links to location pages, but will use flask iteration to generate -->
-      <div class="col-sm-1 sidenav text-right push-1">
+      <div class="col-sm-2 sidenav text-right push-1">
         <div id="accordion" class="accordion">
           <div class="panel list-group">
           {% for each in names %}
@@ -122,12 +122,11 @@
             <div class="collapse collapse-in" id="{{ each }}-sec">
               <ul class="list-group-item-text">
                 {% for item in names[each] %}
-                  {% if item in cities %}
-                    {% set city = item %}
-                    <li><a href="?src={{ data.src }}&city={{ item }}">{{ item }}</a></li>
-                  {% else %}
+                  {% if item in counties %}
                     {% set county = item %}
                     <li><a href="?src={{ data.src }}&county={{ item }}">{{ item }}</a></li>
+                  {% else %}
+                    <li><a href="?src={{ data.src }}&city={{ item }}">{{ item }}</a></li>
                   {% endif %}
                 {% endfor %}
               </ul>
@@ -136,14 +135,14 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-11 text-center"  id="content" tabindex="-1">
+      <div class="col-sm-9 text-center"  id="content" tabindex="-1">
         <!-- sticky information bar, with variables inserted through flask -->
         <div class="row top-buffer sticky-top border-bottom">
             <div class= "col-sm-4 text-left">
-              {% if data.placename in cities %}
-                <h2 id="countyname">{{ data.placename }}</h2>
-              {% else %}
+              {% if data.placename in counties %}
                 <h2 id="countyname">{{ data.placename }} County</h2>
+              {% else %}
+                <h2 id="countyname">{{ data.placename }}</h2>
               {% endif %}
               <h4 id="datasource">{{ data.src }} - SIMULATED</h4>
             </div>
@@ -172,7 +171,7 @@
         <h2 class="top-buffer">Map</h2>
         <div class="map-insert" align="center">
           <div class="map" id="map"></div>
-          {% if data.datasource == "EMS" %}
+          {% if data.src == "EMS" %}
             <script>
             var tableIcon = L.icon({
 
@@ -181,8 +180,8 @@
                 iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
               });
             </script>
-            {% endif %}
-          {% if data.datasource == "ED" %}
+          {% endif %}
+          {% if data.src == "ED" %}
             <script>
             var tableIcon = L.icon({
 
@@ -191,8 +190,8 @@
                 iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
               });
             </script>
-            {% endif %}
-          {% if data.datasource == "ME" %}
+          {% endif %}
+          {% if data.src == "ME" %}
             <script>
             var tableIcon = L.icon({
 
@@ -202,6 +201,7 @@
               });
             </script>
           {% endif %}
+
           <script>
           // Mapbox section
           var center = {{ data.center }}

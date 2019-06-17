@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <!--Title uses flask to update data source-->
-{% if data.placename in cities %}
-  <title> {{ data.placename }} {{  data.src  }} - SIMULATED</title>
-{% else %}
+{% if data.placename in counties %}
   <title> {{ data.placename }} County {{  data.src  }} - SIMULATED</title>
+{% else %}
+  <title> {{ data.placename }} {{  data.src  }} - SIMULATED</title>
 {% endif %}
 
   <meta charset="utf-8">
@@ -58,48 +58,48 @@
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
           {% if data.src == 'EMS' %}
-            {% if data.placename in cities %}
-              <a class="nav-link active" href="?src=EMS&city={{data.placename}}">EMS</a>
-            {% else %}
+            {% if data.placename in counties %}
               <a class="nav-link active" href="?src=EMS&county={{data.placename}}">EMS</a>
+            {% else %}
+              <a class="nav-link active" href="?src=EMS&city={{data.placename}}">EMS</a>
               {% endif %}
           {% else %}
-            {% if data.placename in cities %}
-              <a class="nav-link" href="?src=EMS&city={{data.placename}}">EMS</a>
-            {% else %}
+            {% if data.placename in counties %}
               <a class="nav-link" href="?src=EMS&county={{data.placename}}">EMS</a>
+            {% else %}
+              <a class="nav-link" href="?src=EMS&city={{data.placename}}">EMS</a>
             {% endif %}
           {% endif %}
 
         </li>
         <li class="nav-item">
           {% if data.src == 'ED' %}
-            {% if data.placename in cities %}
-              <a class="nav-link active" href="?src=ED&city={{data.placename}}">ED</a>
-            {% else %}
+            {% if data.placename in counties %}
               <a class="nav-link active" href="?src=ED&county={{data.placename}}">ED</a>
+            {% else %}
+              <a class="nav-link active" href="?src=ED&city={{data.placename}}">ED</a>
               {% endif %}
           {% else %}
-            {% if data.placename in cities %}
-              <a class="nav-link" href="?src=ED&city={{data.placename}}">ED</a>
-            {% else %}
+            {% if data.placename in counties %}
               <a class="nav-link" href="?src=ED&county={{data.placename}}">ED</a>
+            {% else %}
+              <a class="nav-link" href="?src=ED&city={{data.placename}}">ED</a>
             {% endif %}
           {% endif %}
 
         </li>
         <li class="nav-item">
           {% if data.src == 'ME' %}
-            {% if data.placename in cities %}
-              <a class="nav-link active" href="?src=ME&city={{data.placename}}">ME</a>
-            {% else %}
+            {% if data.placename in counties %}
               <a class="nav-link active" href="?src=ME&county={{data.placename}}">ME</a>
+            {% else %}
+              <a class="nav-link active" href="?src=ME&city={{data.placename}}">ME</a>
               {% endif %}
           {% else %}
-            {% if data.placename in cities %}
-              <a class="nav-link" href="?src=ME&city={{data.placename}}">ME</a>
-            {% else %}
+            {% if data.placename in counties %}
               <a class="nav-link" href="?src=ME&county={{data.placename}}">ME</a>
+            {% else %}
+              <a class="nav-link" href="?src=ME&city={{data.placename}}">ME</a>
             {% endif %}
           {% endif %}
 
@@ -122,12 +122,11 @@
             <div class="collapse collapse-in" id="{{ each }}-sec">
               <ul class="list-group-item-text">
                 {% for item in names[each] %}
-                  {% if item in cities %}
-                    {% set city = item %}
-                    <li><a href="?src={{ data.src }}&city={{ item }}">{{ item }}</a></li>
-                  {% else %}
+                  {% if item in counties %}
                     {% set county = item %}
                     <li><a href="?src={{ data.src }}&county={{ item }}">{{ item }}</a></li>
+                  {% else %}
+                    <li><a href="?src={{ data.src }}&city={{ item }}">{{ item }}</a></li>
                   {% endif %}
                 {% endfor %}
               </ul>
@@ -141,10 +140,10 @@
         <!-- sticky information bar, with variables inserted through flask -->
         <div class="row top-buffer sticky-top border-bottom">
             <div class= "col-sm-4 text-left">
-              {% if data.placename in cities %}
-                <h2 id="countyname">{{ data.placename }}</h2>
-              {% else %}
+              {% if data.placename in counties %}
                 <h2 id="countyname">{{ data.placename }} County</h2>
+              {% else %}
+                <h2 id="countyname">{{ data.placename }}</h2>
               {% endif %}
               <h4 id="datasource">{{ data.src }} - SIMULATED</h4>
             </div>
