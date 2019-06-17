@@ -23,7 +23,7 @@
 }
 .sidenav{
   padding-top: 120px;
-  background-color:#00274c;
+  background-color:#00274c !important;
   height: 100%;
 }
 .footer{
@@ -131,7 +131,7 @@ padding: 5px;
 }
 .sidebuff{
   height: 100%;
-  background-color: #2E4B70 ;
+  background-color: #00274c;
 }
 
 h2{
@@ -157,7 +157,7 @@ font-weight: bold;
 
 
 .rightbuff{
-  background-color:#2E4B70;
+  background-color:#00274c;
   height: 100%;
 }
 
