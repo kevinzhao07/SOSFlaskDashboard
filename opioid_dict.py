@@ -524,7 +524,16 @@ center_dict = {
     },
 }
 cities = ['Bay City','Detroit','Flint','Grand Rapids','Pontiac', 'Saginaw (City)', 'Kalamazoo (City)', 'Muskegon (City)']
-counties = [county for county in center_dict.keys() if county not in cities]
+
+
+name_cases = [{'Saginaw' : 'Saginaw (City)'}, {'Kalamazoo' : 'Kalamazoo (City)'}, {'Muskegon' : 'Muskegon (City)'}]
+counties=[]
+
+
+for county in center_dict.keys():
+    if county not in cities:
+        counties.append(county)
+
 
 placenames={}
 names={}

@@ -22,7 +22,6 @@ Referenced during creation of html page templates:
 ## In this repository:
 - **application.py** : flask app that runs templates for opioid dashboard
 - opioid_dict.py : definitions, dictionaries, etc. that format the information necessary for flask to process data into the HTML templates
-- create_D3_files.py : creates the files necessary for D3. **not used in this project.**
 - requirements.txt : things you need to have installed to run this program
 - /templates
     - dashboard.html
