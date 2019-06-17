@@ -6,7 +6,10 @@ application.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 @application.route('/')
 def homepage():
-    return "hello"
+    data = {
+      'counties': counties,
+    }
+    return render_template("search.html", data=data)
 
 
 @application.route('/dashboard', methods=['GET'])
@@ -18,6 +21,7 @@ def navtocorrect():
 
 
     source = source.upper()
+
     if city:
         city = city.title()
         for each in name_cases:

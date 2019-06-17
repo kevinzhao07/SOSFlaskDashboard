@@ -33,7 +33,7 @@ Referenced during creation of html page templates:
     - landing.html
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - search.html
-        - low-fidelity static HTML of a possible search interface. does not contain search functions and is not currently connected to the Flask app.
+        - low-fidelity static HTML of a possible search interface. Search has been commented out and working page can be accessed at index.
 - /static
     - /css
         - map.css
