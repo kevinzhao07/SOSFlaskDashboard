@@ -32,7 +32,6 @@
   <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet'>
 
-
   <!-- three charts -->
   <link rel="stylesheet" href="/static/css/tablecharts2.css">
 
@@ -43,14 +42,31 @@
 </head>
 <body>
   <script>
+    var cities = {{ cities|safe }};
+    var counties = {{ counties|safe }};
+
+    //placeholder function def for search
   function navPlace(){
-    console.log(hey);
+    event.preventDefault();
+
+    var placeName = document.querySelector("#searchbar").value;
+    var form = document.querySelector(".formthing");
+
+    if(placeName in cities){
+      form.action = "/dashboard?src=EMS&city="+ placeName
+    }
+    else{
+      form.action = "/dashboard?src=EMS&county="+ placeName
+    };
+
+    console.log(form);
   };
 
   </script>
   <nav class="navbar navbar-expand-lg fixed-top">
     <a class="navbar-brand" href="/">SOS Michigan Opioid Epidemic Dashboard</a>
-    <form class="navbar-form navbar-right form-inline ml-auto" action="navPlace()">
+    <form class="formthing navbar-form navbar-right form-inline ml-auto" onsubmit="return navPlace()" action="">
+      <!-- autocomplete is defined in nondatastyle.css -->
       <input class="nav-item form-control autocomplete" autocomplete="off" id="searchbar" placeholder="City or County Name" aria-label="Search">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
@@ -64,12 +80,15 @@
 
         <div class="row content">
           {% for src in ['EMS','ED','ME'] %}
+          <!-- iterate through each data source,: add a heading, div ID of the source name, map, and list of counties for each -->
             <div class="col-sm-4 eachcol center-align" id="{{ src }}">
               <h3 class="col">{{ src }}</h3>
               <div class="{{ 'map'+src }} extraMapPadding"></div>
               <div class='row content'>
                 <div class='col-sm-6 text-center'>
+                  <!-- application.py defines data as a list of counties -->
                   {% for county in data.counties[:42] %}
+                  <!-- county list is split in half for better layout -->
                     <p class="countynames"><a href='/dashboard?src={{ src }}&county={{ county }}'>{{ county }}</a></p>
                   {% endfor %}
                 </div>
@@ -118,9 +137,9 @@
 
   <script>
     var eachcol = document.querySelector(".eachcol");
-
-
+    // each column for map/data source called
     let width = eachcol.clientWidth;
+    // d3 svgmap width set to div (eachcol) width
     let height = width;
 
     //Create SVG element and append map to the SVG
@@ -199,17 +218,18 @@
         return d
     };
 
+    //create maps for each source
     make_map(EMS, "EMS");
     make_map(ED, "ED");
     make_map(ME, "ME");
 
-
-
   </script>
 
 <script>
+  // inputOptions pulls the list of place names from application.py. "safe" keeps the quotes out of the string
   var inputOptions = {{ placenames|safe }}
 
+  // Lifted from W3 schools autocomplete tutorial
   function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
