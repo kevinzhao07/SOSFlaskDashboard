@@ -18,12 +18,15 @@
   padding-top: 50px;
 }
 
-.row.content {
-  height:auto;
+body{
+  height: auto;
+}
+.row.content{
+  height: auto;
 }
 .sidenav{
   padding-top: 120px;
-  background-color:#00274c !important;
+  background-color:#00274c;
   height: 100%;
 }
 .footer{
@@ -155,12 +158,6 @@ font-weight: bold;
 /* color: green; */
 }
 
-
-.rightbuff{
-  background-color:#00274c;
-  height: 100%;
-}
-
 .footstyle{
   background-color: black;
   color: white;
@@ -190,6 +187,15 @@ div.sticky-top{
   top: 50px;
   padding: 5px;
 }
+
+footer img{
+height: 50px;
+}
+
+.movingmap img{
+  width: 100%;
+}
+
 /*  https://stackoverflow.com/questions/29258382/bootstrap-align-divs-to-top-middle-and-bottom */
 .vbottom{
     position: relative;
@@ -197,31 +203,31 @@ div.sticky-top{
     transform: translateY(-100%);
 }
 
-@media screen and (min-width:700px){
-.row.content{
-  height: 2500px;
-}
+@media screen and (min-width:600px){
 .sidenav{
   padding-top: 50px;
 }
+.row.content{
+  height: 4200px;
 }
-@media screen and (min-width:1000px){
+}
+@media screen and (min-width: 1000px){
   .row.content{
-    height:2600px;
+    height:3100px;
   }
 }
 @media screen and (min-width: 1100px){
   .row.content{
-    height:2650px;
+    height:3000px;
   }
 }
 @media screen and (min-width: 1300px){
   .row.content{
-    height:3200px;
+    height: 3000px;
   }
 }
 @media screen and (min-width: 1500px){
-  .body{
-    height: 3200px;
+  .row.content{
+    height: 2900px;
   }
 }
