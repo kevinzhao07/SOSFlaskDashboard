@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- icon  -->
-  <link rel="icon" type="image/png" href="/static/images/icon.png">
+  <link rel="icon" type="image/png" href="/static/images/icon_t.png">
 
   <!-- BS and FA -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -77,16 +77,13 @@
   </nav>
 
   <div class="container-fluid container-top-buffer">
-    <!-- container-top-buffer is defined in style.css -->
     <div class="row content">
 
       <!-- side navigation -->
-      <div class="col-sm-2 sidenav text-right push-1">
+      <div class="col-sm-1 sidenav text-right push-1">
         <div id="accordion" class="accordion">
-          <!-- accordion has extra styling rules in style.css -->
           <div class="panel list-group">
           {% for each in names %}
-          <!-- add each place to the sidenav under appropriate alphabet -->
             <a href="#{{ each }}-sec" data-parent="#accordion" data-toggle="collapse" class="list-group-item-action accordion-toggle collapsed">
               {{ each }}
             </a>
@@ -106,7 +103,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-9 text-center"  id="content" tabindex="-1">
+      <div class="col-sm-10 text-center"  id="content" tabindex="-1">
+
         <!-- sticky information bar, with variables inserted through flask -->
         <div class="row top-buffer sticky-top border-bottom">
             <div class= "col-sm-4 text-left">
@@ -138,112 +136,115 @@
             </div>
         </div>
 
-        <!-- Map -->
-        <h2 class="top-buffer">Map</h2>
-        <div class="map-insert" align="center">
-          <div class="map" id="map"></div>
-          {% if data.src == "EMS" %}
-            <script>
-            var tableIcon = L.icon({
 
-                iconUrl: '/static/markers/ambulance_icon_blues.svg',
-                iconSize:     [25,25], // size of the icon
-                iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
-              });
-            </script>
-          {% endif %}
-          {% if data.src == "ED" %}
-            <script>
-            var tableIcon = L.icon({
+        <div class="row d-flex">
+          <div class="col-sm-6">
+            <!-- Map -->
+            <!-- <h2>Map</h2> -->
+            <div class="map-insert d-block" align="center">
+              <div class="map" id="map"></div>
+              {% if data.src == "EMS" %}
+                <script>
+                var tableIcon = L.icon({
 
-                iconUrl: '/static/markers/hospital_icon_blues.svg',
-                iconSize:     [25,25], // size of the icon
-                iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
-              });
-            </script>
-          {% endif %}
-          {% if data.src == "ME" %}
-            <script>
-            var tableIcon = L.icon({
+                    iconUrl: '/static/markers/ambulance_icon_blues.svg',
+                    iconSize:     [25,25], // size of the icon
+                    iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
+                  });
+                </script>
+                {% endif %}
+              {% if data.src == "ED" %}
+                <script>
+                var tableIcon = L.icon({
 
-                iconUrl: '/static/markers/morguetable_5.svg',
-                iconSize:     [25,25], // size of the icon
-                iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
-              });
-            </script>
-          {% endif %}
+                    iconUrl: '/static/markers/hospital_icon_blues.svg',
+                    iconSize:     [25,25], // size of the icon
+                    iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
+                  });
+                </script>
+                {% endif %}
+              {% if data.src == "ME" %}
+                <script>
+                var tableIcon = L.icon({
 
-          <script>
-          // Mapbox section
-          var center = {{ data.center }}
-          var county_geojson = "{{ url_for('static',filename=data.f_geojson) }}"
+                    iconUrl: '/static/markers/morguetable_5.svg',
+                    iconSize:     [25,25], // size of the icon
+                    iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
+                  });
+                </script>
+              {% endif %}
+              <script>
+              // Mapbox section
+              var center = {{ data.center }}
+              var county_geojson = "{{ url_for('static',filename=data.f_geojson) }}"
 
-          L.mapbox.accessToken = 'pk.eyJ1Ijoic3RjaG9pIiwiYSI6ImNqd2pkNWN0NzAyNnE0YW8xeTl5a3VqMXQifQ.Rq3qT82-ysDHcMsHGTBiQg';
-          const layers = {
-              // 'main': L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'),
-              'Light': L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10'),
-              'Dark': L.mapbox.styleLayer('mapbox://styles/mapbox/dark-v10'),
-              'Main': L.mapbox.styleLayer('mapbox://styles/stchoi/cjwky60dk0toy1cm8fnhngzrv')
-          };
+              L.mapbox.accessToken = 'pk.eyJ1Ijoic3RjaG9pIiwiYSI6ImNqd2pkNWN0NzAyNnE0YW8xeTl5a3VqMXQifQ.Rq3qT82-ysDHcMsHGTBiQg';
+              const layers = {
+                  // 'main': L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'),
+                  'Light': L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10'),
+                  'Dark': L.mapbox.styleLayer('mapbox://styles/mapbox/dark-v10'),
+                  'Main': L.mapbox.styleLayer('mapbox://styles/stchoi/cjwky60dk0toy1cm8fnhngzrv')
+              };
 
-          let map = L.mapbox.map('map')
-              .setView({{ data.center }}, {{data.zoom}})
-              .addLayer(layers.Main) // default layer
-              .addControl(L.mapbox.geocoderControl('mapbox.places', {autocomplete: true}))
-              .setMaxBounds([[36,-92],[52,-80]])
-              .setMinZoom(5)
+              let map = L.mapbox.map('map')
+                  .setView({{ data.center }}, {{data.zoom}})
+                  .addLayer(layers.Main) // default layer
+                  .addControl(L.mapbox.geocoderControl('mapbox.places', {autocomplete: true}))
+                  .setMaxBounds([[36,-92],[52,-80]])
+                  .setMinZoom(5)
 
-          map.scrollWheelZoom.disable();
-          function style(feature) {
-            return {
-                fillColor: '#adcfe6',
-                weight: 2,
-                opacity: 1,
-                color: '#72add4',
-                dashArray: '3',
-                fillOpacity: 0.30
-            };
-        }
+              map.scrollWheelZoom.disable();
+              function style(feature) {
+                return {
+                    fillColor: '#adcfe6',
+                    weight: 2,
+                    opacity: 1,
+                    color: '#72add4',
+                    dashArray: '3',
+                    fillOpacity: 0.30
+                };
+            }
 
-          L.control.layers(layers).addTo(map); // add basemap control
-          let featureLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
-          let boxLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
-
-
-          </script>
-        </div>
-
-        <!-- Timeseries -->
-        <h2 class="top-buffer">Time Table</h2>
-        <div class="timetable-insert">
-          <div class="timetable bottombuffer"></div>
+              L.control.layers(layers).addTo(map); // add basemap control
+              let featureLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
+              let boxLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
+              </script>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <!-- Timeseries -->
+            <!-- <h2>Time Table</h2> -->
+            <div class="timetable-insert d-block" align="center">
+              <div id="timetable" class="timetable bottombuffer" preserveAspectRatio="xMinYMin meet"
+    viewBox="0 0 800 440"></div>
+            </div>
+          </div>
         </div>
 
         <!-- Demographics -->
-        <h2 class="top-buffer">Demographics</h2>
-          <div class="row demographics">
+          <div class="row demographics top-buffer">
 
             <div class="col-sm-4 mx-auto">
-              <div class="row-content text-center bottombuffer">
+              <div class="row-content">
                 <h4>Age</h4>
               </div>
-              <div class="row age-chart top-buffer center-block">
+              <div class="row age-chart">
                 <svg id="age"></svg>
               </div>
             </div>
             <div class="col-sm-4  mx-auto">
-              <div class="row-content text-center bottombuffer">
+              <div class="row-content">
                 <h4>Gender</h4>
               </div>
-              <div class="row gender-chart top-buffer center-block">
+              <div class="row gender-chart">
                 <svg id="gender"></svg>
               </div>
             </div>
             <div class="col-sm-4 mx-auto">
-              <div class="row-content text-center bottombuffer">
+              <div class="row-content">
                 <h4>Race</h4>
               </div>
-              <div class="row race-chart top-buffer center-block">
+              <div class="row race-chart">
                 <svg id="race"></svg>
               </div>
             </div>
@@ -271,7 +272,7 @@
         <a href="#content">Back to Top</a>
       </div>
 
-  <div class="col-sm-1 rightbuff">  </div>
+  <div class="col-sm-1 sidebuff">  </div>
   </div>
   <footer class="footer">
       <div class="footstyle container-fluid text-center">
@@ -303,31 +304,37 @@
   <script>
 
   // set the dimensions and margins of the graph
-  let margin = {top: 20, right: 20, bottom: 110, left: 40},
-    width = 960 - margin.left - margin.right,
+  let margin = {top: 20, right: 20, bottom: 110, left: 10},
+    width = 700 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
-    margin2 = {top: 400-70, right: 20, bottom: 30, left: 40},
+    margin2 = {top: 400-70, right: 20, bottom: 30, left: 10},
     height2 = 400 - margin2.top - margin2.bottom;
 
   // set up dimensions of age horizontal bar graph
-  var marginAge = {top: 20, right: 130, bottom: 40, left: 50},
-    widthAge = 420 - marginAge.left - marginAge.right,
-    heightAge = 320 - marginAge.top - marginAge.bottom;
+  var marginAge = {top: 20, right: 20, bottom: 20, left: 40},
+    widthAge = 460 - marginAge.left - marginAge.right,
+    heightAge = 460 - marginAge.top - marginAge.bottom;
 
   // set up dimensions for gender donut chart
-  var marginGender = {top: 10, right: 10, bottom: 40, left: 10},
-    widthGender = 420 - marginGender.left - marginGender.right,
-    heightGender = 320 - marginGender.top - marginGender.bottom + 50,
+  var marginGender = {top: 20, right: 20, bottom: 20, left: 20},
+    widthGender = 460 - marginGender.left - marginGender.right,
+    heightGender = 460 - marginGender.top - marginGender.bottom,
     radius = Math.min(widthGender, heightGender) / 2;
 
   // sets up all arrays to be filtered
   var ageArray = [],
     genderArray = [];
 
-  // append timetable svg
+  // append timetable svg, referenced from https://eddyerburgh.me/create-responsive-bar-chart-d3-js
   var svg = d3.select(".timetable").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+  .attr('preserveAspectRatio', 'xMinYMin meet')
+  .attr(
+      'viewBox',
+      '0 0 ' +
+        (width + margin.left + margin.right) +
+        ' ' +
+        (height + margin.top + margin.bottom)
+    )
 
   // append age graph 'svg'
   var svgAge = d3.select("#age")
@@ -338,10 +345,10 @@
 
   // append gender graph 'svg'
   var svgGender = d3.select("#gender")
-    .attr("width", widthGender)
-    .attr("height", heightGender)
+    .attr("width", widthGender + marginGender.left + marginGender.right)
+    .attr("height", heightGender + marginGender.top + marginGender.bottom)
   .append("g")
-    .attr("transform", `translate(${widthGender/2},${heightGender/2})`);
+    .attr("transform", `translate(${(widthGender + marginGender.left + marginGender.right)/2},${(heightGender + marginGender.top + marginGender.bottom)/2})`);
 
   // parse the date / time
   const parseDate = d3.timeParse("%Y-%m-%d");
@@ -410,7 +417,7 @@
   // sets color of donut chart
   const color = d3.schemePaired.slice(6);
 
-  var updateDumbDonut;
+  var updateTheDonut;
 
   // function to create bar charts
   async function makeBarLineChart(filename) {
@@ -430,7 +437,6 @@
     lng = CF.dimension(d => d.lng)
     age = CF.dimension(d => d.Age);
     gender = CF.dimension(d => d.Gender);
-
     // changes dimension into groups
     agegrp = age.group();
     dategrp = date.group();
@@ -512,7 +518,6 @@
 
           summaryStats(x.domain())
       });
-
 
     // adds donut table
     slices = svgGender.datum(dataGender).selectAll("path")
@@ -784,7 +789,7 @@
         });
     labelCount.text(d => d.data.value)
    // update(map.getBounds());
-  }
+ };
 
   // brush function
   function brushed() {
@@ -840,15 +845,19 @@
      summaryStats(dayRange);
   }
 
+
   // updates HTML table
   function updateHtmlTable() {
+
     let rows = tbody.selectAll('tr')
-      .data(date.top(10))
+      .data((date.top(10)))
+      //date.top(10) is an array of 10 incidents' info
+
       .join('tr')
     rows.selectAll('td')
-      .data((d) => d3.values(d))
+      .data((d) => d3.values(d)) //the values in the arrays are being pulled here?
       .join('td')
-      .text((d,i) => i > 0 ? d : d)
+      .text((d,i) => i > 0 ? d : d) //what's i?
   }
 
   function type(d) {
@@ -910,7 +919,7 @@
 
   makeBarLineChart('/static/data/map_fake.csv');
 
-
 </script>
+
 </body>
 </html>
