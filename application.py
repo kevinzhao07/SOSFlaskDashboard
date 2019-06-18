@@ -65,7 +65,7 @@ def navtocorrect():
             'zoom' : center_dict[county].get('zoom', 10)}
 
 
-    return render_template("dashboard3.html", data=data, names=names, cities=cities, counties=counties)
+    return render_template("dashboard.html", data=data, names=names, cities=cities, counties=counties)
 
 
 
