@@ -3,17 +3,18 @@
     font-weight: bold;
     font-family: 'Helvetica';
     text-anchor: middle;
+    font-size: 20px !important;
 }
 
 /* text inside donut chart */
 .count {
-    font: 16px sans-serif;
+    font: 20px sans-serif !important;
     text-anchor: middle;
 }
 
 /* text for label */
 .total {
-    font-size: 3em;
+    font-size: 20px !important;
     text-anchor: middle;
     font-family: 'Helvetica';
 
@@ -25,5 +26,17 @@
 
 .age-chart, .race-chart, .gender-chart{
 padding: 10px;
+
+}
+.age-chart{
+/* padding-left: 40px; */
+/* background-color: red; */
+}
+
+.gender-chart{
+/* background-color: blue; */
+  /* padding-left: 30px; */
+}
+.race-chart{
 
 }
