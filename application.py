@@ -9,7 +9,13 @@ def homepage():
     data = {
       'counties': counties,
     }
-    return render_template("search.html", data=data)
+    placenames=[]
+    for each in cities:
+        placenames.append(each)
+    for each in counties:
+        placenames.append(each)
+
+    return render_template("search.html", data=data, placenames=placenames, cities=cities, counties=counties)
 
 
 @application.route('/dashboard', methods=['GET'])
@@ -59,7 +65,7 @@ def navtocorrect():
             'zoom' : center_dict[county].get('zoom', 10)}
 
 
-    return render_template("dashboard2.html", data=data, names=names, cities=cities, counties=counties)
+    return render_template("dashboard3.html", data=data, names=names, cities=cities, counties=counties)
 
 
 

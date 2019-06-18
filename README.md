@@ -91,6 +91,12 @@ Referenced during creation of html page templates:
         - washtenawcounty.png
         - wayne_table.png
         - waynecounty.png
+    - `/js`
+        - `autocomplete.js`
+            - codes the autocomplete search used in `search.html`
+        - `makeMichigan.js`
+            - creates the d3 svg maps of Michigan counties and cities
+            - used in `search.html`
     - `/markers` - svg map markers used by leaflet mapbox in `dashboard.html`, `dashboard2.html`, and `dashboard3.html`
         - ambulance_icon_blues.svg
         - hospital_icon_blues.svg
