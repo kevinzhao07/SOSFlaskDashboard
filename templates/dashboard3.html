@@ -55,53 +55,25 @@
   <nav class="navbar navbar-expand-sm fixed-top">
     <a class="navbar-brand" href="/">SOS Michigan Opioid Epidemic Dashboard</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        {% if data.src == 'EMS' %}
+      {% for eachsource in ['EMS', 'ED', 'ME'] %}
+        <li class="nav-item">
+        <!-- check the data source and apply active class. also check for city or county. -->
+        {% if data.src == eachsource %}
           {% if data.placename in cities %}
-            <a class="nav-link active" href="?src=EMS&city={{data.placename}}">EMS</a>
+            <a class="nav-link active" href="?src={{ eachsource }}&city={{data.placename}}">{{ eachsource }}</a>
           {% else %}
-            <a class="nav-link active" href="?src=EMS&county={{data.placename}}">EMS</a>
+            <a class="nav-link active" href="?src={{ eachsource }}&county={{data.placename}}">{{ eachsource }}</a>
           {% endif %}
         {% else %}
           {% if data.placename in cities %}
-            <a class="nav-link" href="?src=EMS&city={{data.placename}}">EMS</a>
+            <a class="nav-link" href="?src={{ eachsource }}&city={{data.placename}}">{{ eachsource }}</a>
           {% else %}
-            <a class="nav-link" href="?src=EMS&county={{data.placename}}">EMS</a>
-        {% endif %}
-      {% endif %}
-
-      </li>
-      <li class="nav-item">
-        {% if data.src == 'ED' %}
-          {% if data.placename in cities %}
-            <a class="nav-link active" href="?src=ED&city={{data.placename}}">ED</a>
-          {% else %}
-            <a class="nav-link active" href="?src=ED&county={{data.placename}}">ED</a>
-          {% endif %}
-        {% else %}
-          {% if data.placename in cities %}
-            <a class="nav-link" href="?src=ED&city={{data.placename}}">ED</a>
-          {% else %}
-            <a class="nav-link" href="?src=ED&county={{data.placename}}">ED</a>
-        {% endif %}
-      {% endif %}
-      </li>
-      <li class="nav-item">
-        {% if data.src == 'ME' %}
-          {% if data.placename in cities %}
-            <a class="nav-link active" href="?src=ME&city={{data.placename}}">ME</a>
-          {% else %}
-            <a class="nav-link active" href="?src=ME&county={{data.placename}}">ME</a>
-          {% endif %}
-        {% else %}
-          {% if data.placename in cities %}
-            <a class="nav-link" href="?src=ME&city={{data.placename}}">ME</a>
-          {% else %}
-            <a class="nav-link" href="?src=ME&county={{data.placename}}">ME</a>
+            <a class="nav-link" href="?src={{ eachsource }}&county={{data.placename}}">{{ eachsource }}</a>
           {% endif %}
         {% endif %}
         </li>
-      </ul>
+      {% endfor %}
+    </ul>
   </nav>
 
   <div class="container-fluid container-top-buffer">
