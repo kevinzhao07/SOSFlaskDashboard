@@ -25,7 +25,8 @@ Referenced during creation of html page templates:
 - `requirements.txt` : things you need to have installed to run this program
 - `/templates`
     - `dashboard.html`
-        - bootstrap layout template for dashboard with map positioned on top, then time series under the map, then a series of 3 infographics arranged in a row. under this is a table. the side navigation occupies 2 columns.
+        - bootstrap layout template for dashboard with map positioned next to time series, a series of 3 infographics arranged in a row below this, and then a table. the side navigation occupies 1 column.
+
     - `landing.html`
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - `search.html`
@@ -54,10 +55,10 @@ Referenced during creation of html page templates:
     - `/geojson`
         - `/cities`
             - geoJSON-format information about cities of interest
-            - used by `dashboard.html`
+            - used by `dashboard.html`, `dashboard2.html`, `dashboard3.html`
         - `/counties`
             - geoJSON-format information about counties
-            - used by `dashboard.html`
+            - used by `dashboard.html`, `dashboard2.html`, `dashboard3.html`
         - `gz_2010_iz_050_00_5m_MI_counties.topojson`
             - topojson-format information
             - used by `search.html`
