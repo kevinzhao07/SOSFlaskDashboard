@@ -55,10 +55,10 @@ Referenced during creation of html page templates:
     - `/geojson`
         - `/cities`
             - geoJSON-format information about cities of interest
-            - used by `dashboard.html`, `dashboard2.html`, `dashboard3.html`
+            - used by `dashboard.html`
         - `/counties`
             - geoJSON-format information about counties
-            - used by `dashboard.html`, `dashboard2.html`, `dashboard3.html`
+            - used by `dashboard.html`
         - `gz_2010_iz_050_00_5m_MI_counties.topojson`
             - topojson-format information
             - used by `search.html`
