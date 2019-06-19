@@ -25,7 +25,7 @@ Referenced during creation of html page templates:
 - `requirements.txt` : things you need to have installed to run this program
 - `/templates`
     - `dashboard.html`
-        - bootstrap layout template for dashboard with map positioned on top, then time series under the map, then a series of 3 infographics arranged in a row. under this is a table. the side navigation occupies 2 columns.
+        - bootstrap layout template for dashboard with map positioned next to a moving image (currently png placeholder) of map trends. Time series is positioned under the map and moving images. a row of 3 infographics is placed under this, and a table is under the infographics. the side navigation occupies 1 column.
     - `landing.html`
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - `search.html`
