@@ -1,0 +1,20 @@
+/*  print view css */
+
+/*  Referenced: https://www.sitepoint.com/css-printer-friendly-pages/ */
+/* Referenced: https://www.smashingmagazine.com/2011/11/how-to-set-up-a-print-style-sheet/ */
+
+.print-only{
+
+}
+
+@media print{
+  *{
+    /* https://www.lockedownseo.com/chrome-print-preview-differs-from-dev-tools/ */
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+
+  @page{
+    margin: 0.5cm;
+  }
+}

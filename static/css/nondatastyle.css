@@ -63,7 +63,7 @@ form .autocomplete-items {
   border-bottom: none;
   border-top: none;
   z-index: 99;
-  width: auto;
+  width: 200px;
   top: 100%;
   right: 45px;
 
@@ -82,7 +82,7 @@ form .autocomplete-items {
 }
 
 input{
-  width: auto !important;
+  width: 200px !important;
 }
 
 
@@ -94,10 +94,10 @@ input{
   height: auto;
 }
 input{
-  width: 400px !important;
+  width: 300px !important;
 }
 form .autocomplete-items {
-  width: 400px;
+  width: 300px;
 }
 
 @media screen and (min-width:1000px){
