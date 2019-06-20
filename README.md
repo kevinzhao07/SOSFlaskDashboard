@@ -33,7 +33,7 @@ Referenced during creation of html page templates:
     - `landing.html`
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - `search.html`
-        - low-fidelity static HTML of a possible search interface. Search has been commented out and working page can be accessed at index.
+        - bootstrap layout template for search page. Contains 3 interactable county/city maps for each data source as well as a list of counties for each. An autocomplete search bar exists but is not currently functional.
 - `/static`
     - `/css`
         - `map.css`
@@ -118,7 +118,7 @@ Referenced during creation of html page templates:
             - function definitions are referenced in `multipleCharts.js`
         - `timeSeries.js`
             - creates and updates the time time series
-            - function definitions are referenced in `multipleCharts.ks`
+            - function definitions are referenced in `multipleCharts.js`
     - `/markers` - svg map markers used by leaflet mapbox in `dashboard.html`, `dashboard2.html`, and `dashboard3.html`
         - ambulance_icon_blues.svg
         - hospital_icon_blues.svg
