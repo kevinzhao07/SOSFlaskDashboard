@@ -85,8 +85,9 @@ function closeAllLists(elmnt) {
   }
 };
 
-};
 
-document.addEventListener("click", function (e) {
-        closeAllLists(e.target);
+
+document.addEventListener("click", function (e) {closeAllLists(e.target);
     });
+
+};
