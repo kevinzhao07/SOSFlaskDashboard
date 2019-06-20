@@ -44,29 +44,59 @@
   <script>
     var cities = {{ cities|safe }};
     var counties = {{ counties|safe }};
-
+    var url = new URL('/dashboard');
+    var parameters = {
+      "src": "EMS"
+    };
+    // https://stackoverflow.com/questions/316781/how-to-build-query-string-with-javascript
+    function buildUrl(url, parameters){
+      var qs = "";
+      for(var key in parameters) {
+        var value = parameters[key];
+        qs += encodeURIComponent(key) + "=" + encodeURIComponent(value) + "&";
+      }
+      if (qs.length > 0){
+        qs = qs.substring(0, qs.length-1); //chop off last "&"
+        url = url + "?" + qs;
+      }
+      return url;
+    };
 
     //placeholder function def for search
   function navPlace(){
-    // event.preventDefault();
+    event.preventDefault();
+
 
     var placeName = document.querySelector("#searchbar").value;
+    var searchBar = document.querySelector("#searchbar");
     var form = document.querySelector(".formthing");
 
+    console.log(name);
+
     if(placeName in cities){
-      form.action = "../../dashboard?src=EMS&city="+ placeName
+      url.searchParams.append('src', 'EMS');
+      url.searchParams.append('city', placeName);
+
+      searchBar.setAttribute("action", url);
+
+
     }
     else{
-      form.action = "../../dashboard?src=EMS&county="+ placeName
+      url.searchParams.append('src', 'EMS');
+      url.searchParams.append('county', placeName);
+
+      searchBar.setAttribute("action", url);
+
+    };
+    console.log(searchBar);
     };
 
-    console.log(form);
-  };
+
 
   </script>
   <nav class="navbar navbar-expand-lg fixed-top">
     <a class="navbar-brand" href="/">SOS Michigan Opioid Epidemic Dashboard</a>
-    <form class="formthing navbar-form navbar-right form-inline ml-auto" onsubmit="return navPlace()" action="">
+    <form class="formthing navbar-form navbar-right form-inline ml-auto" onsubmit="return navPlace()" method="get" action="">
       <!-- autocomplete is defined in nondatastyle.css -->
       <input class="nav-item form-control autocomplete" autocomplete="off" id="searchbar" placeholder="City or County Name" aria-label="Search">
       <button type="submit"><i class="fa fa-search"></i></button>
