@@ -21,7 +21,7 @@ def homepage():
 @application.route('/dashboard', methods=['GET'])
 def navtocorrect():
     arguments=['city', 'county', 'src']
-    source = request.args.get('src')
+    source = request.args.get('src', default = "EMS", type = str)
     city = request.args.get('city')
     county = request.args.get('county')
 
@@ -65,7 +65,7 @@ def navtocorrect():
             'zoom' : center_dict[county].get('zoom', 10)}
 
 
-    return render_template("dashboard.html", data=data, names=names, cities=cities, counties=counties)
+    return render_template("dashboard2.html", data=data, names=names, cities=cities, counties=counties)
 
 
 
