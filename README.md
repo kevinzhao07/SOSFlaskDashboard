@@ -26,11 +26,10 @@ Referenced during creation of html page templates:
 - `/templates`
     - `dashboard.html`
         - bootstrap layout template for dashboard with map positioned next to time series, a series of 3 infographics arranged in a row below this, and then a table. the side navigation occupies 1 column.
-
     - `landing.html`
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - `search.html`
-        - low-fidelity static HTML of a possible search interface. Search has been commented out and working page can be accessed at index.
+        - bootstrap layout template for search page. Contains 3 interactable county/city maps for each data source as well as a list of counties for each. An autocomplete search bar exists but is not currently functional.
 - `/static`
     - `/css`
         - `map.css`
@@ -77,11 +76,33 @@ Referenced during creation of html page templates:
         - wayne_table.png
         - waynecounty.png
     - `/js`
+        - `ageChart.js`
+            - creates and updates the bar graphs for age representation
+            - function definitions are referenced in `multipleCharts.js`
         - `autocomplete.js`
             - codes the autocomplete search used in `search.html`
+        - `genderChart.js`
+            - creates and updates the gender donut
+            - function definitions are referenced in `multipleCharts.js`
+        - `htmlTable.js`
+            - creates and updates the HTML table
+            - function definitions are referenced in `multipleCharts.js`        
         - `makeMichigan.js`
             - creates the d3 svg maps of Michigan counties and cities
             - used in `search.html`
+        - `map.js`
+            - creates mapbox-leaflet map used in main view
+            - function definitions are referenced in `multipleCharts.js`
+            - Flask-created variables are present in-line in `dashboard.html`
+        - `multipleCharts.js`
+            - runs the function definitions defined in `ageChart.js`, `genderChart.js`, `htmlTable.js`, `raceChart.js`, and `timeSeries.js`
+            - function definition for creating infographics from csv defined here
+        - `raceChart.js`
+            - creates and updates the bar graphs for race representation
+            - function definitions are referenced in `multipleCharts.js`
+        - `timeSeries.js`
+            - creates and updates the time time series
+            - function definitions are referenced in `multipleCharts.js`
     - `/markers` - svg map markers used by leaflet mapbox in `dashboard.html`
         - ambulance_icon_blues.svg
         - hospital_icon_blues.svg
