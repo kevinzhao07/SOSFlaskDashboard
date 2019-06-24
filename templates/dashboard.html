@@ -104,7 +104,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-11 text-center"  id="content" tabindex="-1">
+      <div class="col-sm-10 text-center"  id="content" tabindex="-1">
 
         <!-- sticky information bar, with variables inserted through flask -->
         <div class="row top-buffer sticky-top border-bottom">
@@ -140,7 +140,6 @@
         <div class="row d-flex">
           <div class="col-sm-8">
             <!-- Map -->
-
             <div class="map-insert d-block" align="center">
               <div class="map" id="map"></div>
             </div>
@@ -161,33 +160,26 @@
           </div>
 
         <!-- Demographics -->
-          <div class="row demographics top-buffer">
-
+        <div class="row demographics">
+          {% for item in ["Age", "Gender", "Race"] %}
             <div class="col-sm-4 mx-auto">
-              <div class="row-content">
-                <h4>Age</h4>
+              <div class="row-content text-center bottombuffer">
+                <h4>{{ item }}</h4>
               </div>
-              <div class="row age-chart bottom-buffer">
-                <svg id="age"></svg>
-              </div>
-            </div>
-            <div class="col-sm-4  mx-auto">
-              <div class="row-content bottom-buffer">
-                <h4>Gender</h4>
-              </div>
-              <div class="row gender-chart">
-                <svg id="gender"></svg>
-              </div>
-            </div>
-            <div class="col-sm-4 mx-auto">
-              <div class="row-content">
-                <h4>Race</h4>
-              </div>
-              <div class="row race-chart bottom-buffer">
-                <svg id="race"></svg>
-              </div>
+              <div class="row {{item}}-chart top-buffer center-block">
+                {% if item == "Age" %}
+                  <svg id="age"></svg>
+                {% endif %}
+                {% if item == "Gender" %}
+                  <svg id="gender"></svg>
+                {% endif %}
+                {% if item == "Race" %}
+                  <svg id="race"></svg>
+                {% endif %}
             </div>
           </div>
+          {% endfor %}
+        </div>
 
         <!-- Table -->
         <h2 class="top-buffer">Table</h2>
@@ -197,46 +189,36 @@
 
         <!-- Buttons, currently disabled -->
         <div class="row top-buffer buttons d-print-none">
-          <div class="col-sm">
-            <button type="button" class="btn-lg btn-primary disabled">Save</button>
+          {% for itm in ["Save", "Email", "Print"] %}
+            <div class="col-sm">
+              {% if itm == "Print" %}
+                <button type="button" class="btn-lg btn-primary" onclick="window.print(); return false;">{{ itm }}</button>
+              {% else %}
+                <button type="button" class="btn-lg btn-primary disabled">{{ itm }}</button>
+              {% endif %}
           </div>
-          <div class="col-sm">
-            <button type="button" class="btn-lg btn-primary disabled">Email</button>
-          </div>
-          <div class="col-sm">
-            <button type="button" class="btn-lg btn-primary disabled">Print</button>
-          </div>
+          {% endfor %}
         </div>
         <!-- Back to top link -->
         <a href="#content">Back to Top</a>
       </div>
+  <div class="col-sm-1 sidebuff">  </div>
   </div>
+  <!-- footer -->
   <footer class="footer d-print-none">
-      <div class="footstyle container-fluid text-center">
-        <div class="row text-center">
-            <div class="col-sm-4 text-center">
-              <h4>Links</h4>
-              <div class="list-group">
-                <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
-                <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
-              </div>
-            </div>
-            <div class="col-sm-4 text-center">
-              <h4>Contact</h4>
-              <div class="list-group">
-                <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
-                <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
-              </div>
-            </div>
-            <div class="col-sm-4 text-center">
-              <h4>Help</h4>
-              <div class="list-group">
-                <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
-                <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
-              </div>
+    <div class="footstyle container-fluid text-center">
+      <div class="row text-center">
+        {% for thing in ["Links", "Contact","Help"] %}
+          <div class="col-sm-4 text-center">
+              <h4>{{ thing }}</h4>
+            <div class="list-group">
+              <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
+              <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
             </div>
           </div>
-        </div>
+        {% endfor %}
+      </div>
+    </div>
   </footer>
   <!-- javasript files -->
   <script src="/static/js/ageChart.js"></script>
