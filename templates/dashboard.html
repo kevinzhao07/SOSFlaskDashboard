@@ -24,8 +24,7 @@
   <script src="//d3js.org/topojson.v3.min.js"></script>
 
   <!-- general style -->
-  <link rel="stylesheet" media="screen"  href="/static/css/style.css">
-  <link media="print" href="/static/css/print.css">
+  <link rel="stylesheet" href="/static/css/style.css">
 
   <!--timetable -->
   <link rel="stylesheet" href="/static/css/timetable.css">
@@ -44,6 +43,9 @@
 
   <!-- searchpage michigan-->
   <link rel="stylesheet" href="/static/css/michigan.css">
+
+  <!-- print style -->
+  <link rel ="stylesheet" media="print" href="/static/css/print.css">
 </head>
 
 <body>
@@ -107,130 +109,110 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-9 text-center"  id="content" tabindex="-1">
-        <!-- sticky information bar, with variables inserted through flask -->
-        <div class="row top-buffer sticky-top border-bottom">
-            <div class= "col-sm-4 text-left">
-              {% if data.placename in counties %}
-                <h2 id="countyname">{{ data.placename }} County</h2>
-              {% else %}
-                <h2 id="countyname">{{ data.placename }}</h2>
-              {% endif %}
-              <h4 id="datasource">{{ data.src }} - SIMULATED</h4>
-            </div>
-            <div class="col-sm-4">
-              <div class="row vbottom">
-                <div class="col-sm-12">
-                  <h4 class="summary d-inline" id="dayRange1"> </h4><h5 class="d-inline"> to</h5>
-                  <h4 class="summary d-inline" id="dayRange2"></h4>
+      <!-- screen view  content -->
+        <div class="col-sm-9 text-center"  id="content" tabindex="-1">
+          <!-- sticky information bar, with variables inserted through flask -->
+          <div class="row top-buffer sticky-top border-bottom">
+              <div class= "col-sm-4 text-left">
+                {% if data.placename in counties %}
+                  <h2 id="countyname">{{ data.placename }} County</h2>
+                {% else %}
+                  <h2 id="countyname">{{ data.placename }}</h2>
+                {% endif %}
+                <h4 id="datasource">{{ data.src }} - SIMULATED</h4>
+              </div>
+              <div class="col-sm-4">
+                <div class="row vbottom">
+                  <div class="col-sm-12">
+                    <h4 class="summary d-inline" id="dayRange1"> </h4><h5 class="d-inline"> to</h5>
+                    <h4 class="summary d-inline" id="dayRange2"></h4>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class= "col-sm-4 text-right">
-              <div class="row">
-                <div class="col-sm-8">
-                  <h2 class="summary" id="N"></h2><p>total</p>
+              <div class= "col-sm-4 text-right">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="summary" id="N"></h2><p>total</p>
+                  </div>
+                  <div class="col-sm-4 text-left">
+                    <h3 class="summary" id="Np"></h3><p>incident(s)</p>
+                    <h3 class="summary" id="Pct"></h3>
+                  </div>
                 </div>
-                <div class="col-sm-4 text-left">
-                  <h3 class="summary" id="Np"></h3><p>incident(s)</p>
-                  <h3 class="summary" id="Pct"></h3>
+              </div>
+          </div>
+
+          <!-- Map -->
+          <div class="map-insert" align="center">
+            <div class="map" id="map"></div>
+          </div>
+
+          <!-- Timeseries -->
+          <div class="timetable-insert">
+            <div class="timetable bottombuffer"></div>
+          </div>
+
+          <!-- Demographics -->
+            <div class="row demographics">
+              {% for item in ["Age", "Gender", "Race"] %}
+                <div class="col-sm-4 mx-auto">
+                  <div class="row-content text-center bottombuffer">
+                    <h4>{{ item }}</h4>
+                  </div>
+                  <div class="row {{item}}-chart top-buffer center-block">
+                    {% if item == "Age" %}
+                      <svg id="age"></svg>
+                    {% endif %}
+                    {% if item == "Gender" %}
+                      <svg id="gender"></svg>
+                    {% endif %}
+                    {% if item == "Race" %}
+                      <svg id="race"></svg>
+                    {% endif %}
                 </div>
               </div>
+              {% endfor %}
             </div>
-        </div>
 
-        <!-- Map -->
-        <h2 class="top-buffer">Map</h2>
-        <div class="map-insert" align="center">
-          <div class="map" id="map"></div>
-        </div>
-
-        <!-- Timeseries -->
-        <h2 class="top-buffer">Time Table</h2>
-        <div class="timetable-insert">
-          <div class="timetable bottombuffer"></div>
-        </div>
-
-        <!-- Demographics -->
-        <h2 class="top-buffer">Demographics</h2>
-          <div class="row demographics">
-
-            <div class="col-sm-4 mx-auto">
-              <div class="row-content text-center bottombuffer">
-                <h4>Age</h4>
-              </div>
-              <div class="row age-chart top-buffer center-block">
-                <svg id="age"></svg>
-              </div>
-            </div>
-            <div class="col-sm-4  mx-auto">
-              <div class="row-content text-center bottombuffer">
-                <h4>Gender</h4>
-              </div>
-              <div class="row gender-chart top-buffer center-block">
-                <svg id="gender"></svg>
-              </div>
-            </div>
-            <div class="col-sm-4 mx-auto">
-              <div class="row-content text-center bottombuffer">
-                <h4>Race</h4>
-              </div>
-              <div class="row race-chart top-buffer center-block">
-                <svg id="race"></svg>
-              </div>
-            </div>
+          <!-- Table -->
+          <h2 class="top-buffer">Table</h2>
+          <div class="table-responsive bottombuffer">
+            <table id="sosTable" class="table table-bordered table-striped table-hover"></table>
           </div>
 
-        <!-- Table -->
-        <h2 class="top-buffer">Table</h2>
-        <div class="table-responsive bottombuffer">
-          <table id="sosTable" class="table table-bordered table-striped table-hover"></table>
+          <!-- Buttons, currently disabled -->
+          <div class="row top-buffer buttons d-print-none">
+            {% for itm in ["Save", "Email", "Print"] %}
+              <div class="col-sm">
+                {% if itm == "Print" %}
+                  <button type="button" class="btn-lg btn-primary" onclick="window.print(); return false;">{{ itm }}</button>
+                {% else %}
+                  <button type="button" class="btn-lg btn-primary disabled">{{ itm }}</button>
+                {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          <!-- Back to top link -->
+          <a href="#content">Back to Top</a>
         </div>
 
-        <!-- Buttons, currently disabled -->
-        <div class="row top-buffer buttons d-print-none">
-          <div class="col-sm">
-            <button type="button" class="btn-lg btn-primary disabled">Save</button>
-          </div>
-          <div class="col-sm">
-            <button type="button" class="btn-lg btn-primary disabled">Email</button>
-          </div>
-          <div class="col-sm">
-            <button type="button" class="btn-lg btn-primary disabled">Print</button>
-          </div>
-        </div>
-        <!-- Back to top link -->
-        <a href="#content">Back to Top</a>
-      </div>
 
   <div class="col-sm-1 rightbuff d-print-none">  </div>
   </div>
   <footer class="footer d-print-none">
-      <div class="footstyle container-fluid text-center">
-        <div class="row text-center">
-            <div class="col-sm-4 text-center">
-              <h4>Links</h4>
-              <div class="list-group">
-                <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
-                <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
-              </div>
-            </div>
-            <div class="col-sm-4 text-center">
-              <h4>Contact</h4>
-              <div class="list-group">
-                <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
-                <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
-              </div>
-            </div>
-            <div class="col-sm-4 text-center">
-              <h4>Help</h4>
-              <div class="list-group">
-                <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
-                <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
-              </div>
+    <div class="footstyle container-fluid text-center">
+      <div class="row text-center">
+        {% for thing in ["Links", "Contact","Help"] %}
+          <div class="col-sm-4 text-center">
+              <h4>{{ thing }}</h4>
+            <div class="list-group">
+              <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
+              <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
             </div>
           </div>
-        </div>
+        {% endfor %}
+      </div>
+    </div>
   </footer>
   <!-- javascript files -->
   <script src="/static/js/ageChart.js"></script>

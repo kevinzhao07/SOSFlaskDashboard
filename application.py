@@ -65,33 +65,7 @@ def navtocorrect():
             'zoom' : center_dict[county].get('zoom', 10)}
 
 
-    return render_template("dashboard2.html", data=data, names=names, cities=cities, counties=counties)
-
-
-
-# @application.route('/<string:placename>/<string:datasource>/', methods=['GET'])
-# def dashboard(placename, datasource):
-#     placename = placename.title()
-#     datasource = datasource.upper()
-#
-#     if placename in cities:
-#         folder = 'cities'
-#         county_flag = ''
-#     else:
-#         folder = 'counties'
-#         county_flag = 'County'
-#
-#     data = {
-#         'placename': placename,
-#         'datasource': datasource,
-#         'county_flag': county_flag,
-#         'titlename': src_dict[datasource],
-#         'f_geojson': f'geojson/{folder}/{placename}.geojson',
-#         'center': center_dict[placename]['center'],
-#         'zoom' : center_dict[placename].get('zoom', 10)
-#     }
-#
-#     return render_template("dashboard2.html", data=data, names=names, cities=cities)
+    return render_template("dashboard3.html", data=data, names=names, cities=cities, counties=counties)
 
 #%% Run Flask app
 # python application.py
