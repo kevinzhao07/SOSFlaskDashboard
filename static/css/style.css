@@ -170,6 +170,7 @@ font-weight: bold;
   background-color: transparent !important;
 }
 .footer .list-group-item{
+
   font-size: 16px;
   display: block;
   padding: 10px;
@@ -199,7 +200,7 @@ div.sticky-top{
 
 @media screen and (min-width:700px){
 .row.content{
-  height: 2500px;
+  height: 4700px;
 }
 .sidenav{
   padding-top: 50px;
@@ -207,12 +208,12 @@ div.sticky-top{
 }
 @media screen and (min-width:1000px){
   .row.content{
-    height:2600px;
+    height:4700px;
   }
 }
 @media screen and (min-width: 1100px){
   .row.content{
-    height:2650px;
+    height:4500px;
   }
 }
 @media screen and (min-width: 1300px){

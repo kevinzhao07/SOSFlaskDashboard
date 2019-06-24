@@ -18,12 +18,3 @@
     font-family: 'Helvetica';
 
 }
-.age-group {
-    font-weight: bold !important;
-}
-
-
-.age-chart, .race-chart, .gender-chart{
-padding: 10px;
-
-}

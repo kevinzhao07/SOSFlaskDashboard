@@ -3,18 +3,38 @@
 /*  Referenced: https://www.sitepoint.com/css-printer-friendly-pages/ */
 /* Referenced: https://www.smashingmagazine.com/2011/11/how-to-set-up-a-print-style-sheet/ */
 
-.print-only{
 
+@page{
+  margin: 0.25in !important;
 }
 
-@media print{
-  *{
+
+
+@media print {
+  .col-sm-2{
+    width: 0px;
+  }
+
+  #content{
+    width: 150vw !important;
+  }
+  #sosTable{
+    width: 100vw !important;
+  }
+  .col-sm-1{
+    width: 0px;
+  }
+  * {
     /* https://www.lockedownseo.com/chrome-print-preview-differs-from-dev-tools/ */
     -webkit-transition: none !important;
     transition: none !important;
   }
-
-  @page{
-    margin: 0.5cm;
+    /* .row.content{
+      width: 612px !important;
+  } */
+  h1, h2, h3, h4, h5, h6{
+    font-size: 14pt !important;
   }
+
+
 }
