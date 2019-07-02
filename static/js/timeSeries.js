@@ -1,5 +1,5 @@
 function makeTimeSeries() {
-  
+
   // set up dimensions
   date = CF.dimension(d => d.date)
   dategrp = date.group();
@@ -13,10 +13,17 @@ function makeTimeSeries() {
   margin2 = {top: 400-70, right: 20, bottom: 30, left: 40},
   height2 = 400 - margin2.top - margin2.bottom;
 
-  // append timetable svg
-  svg = d3.select(".timetable").append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
+  // append timetable svg, referenced from https://eddyerburgh.me/create-responsive-bar-chart-d3-js
+  var svg = d3.select(".timetable").append("svg")
+  .attr('preserveAspectRatio', 'xMinYMin meet')
+  .attr(
+      'viewBox',
+      '0 0 ' +
+        (width + margin.left + margin.right) +
+        ' ' +
+        (height + margin.top + margin.bottom)
+    )
+
 
   // set the ranges
   x = d3.scaleTime().range([0, width]),
@@ -156,7 +163,7 @@ function updateTimeSeries() {
   avgLine2.datum(movingAvgData)
     .transition().ease(easeFunc).duration(T)
       .attr('d', movingAvg2)
-      
+
   summaryStats(x.domain())
 }
 
@@ -220,4 +227,3 @@ function resampleDates(data) {
     return data.find(d => d.key >= day && d.key < d3.timeHour.offset(day,1)) || {'key':day, 'value':0}
   })
 }
-
