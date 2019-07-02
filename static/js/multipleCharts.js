@@ -6,7 +6,7 @@ async function makeDashboard(fileName) {
 
     DATA = await d3.csv(fileName, type);
     CF = crossfilter(DATA);
-    date = CF.dimension(d => d.date)
+    date = CF.dimension(d => d.date);
 
     createMap();
     makeTimeSeries();
