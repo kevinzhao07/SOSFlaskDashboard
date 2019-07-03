@@ -25,7 +25,7 @@ function updateHtmlTable(data = date.top(10)) {
 
 function formatHTMLthings(d){
   if (d instanceof Date){
-    var formatted = d3.timeFormat("%b %d %Y")(d)
+    var formatted = d3.timeFormat("%b %d, %Y")(d)
     return formatted;
   }
   else{
