@@ -2,7 +2,7 @@
 async function makeDashboard(fileName) {
     // parse the date / time
     parseDate = d3.timeParse("%Y-%m-%d");
-    formatDate = d3.timeFormat("%b %d %Y");
+    formatDate = d3.timeFormat("%b %d, %Y");
 
     DATA = await d3.csv(fileName, type);
     CF = crossfilter(DATA);
