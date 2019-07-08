@@ -1,0 +1,41 @@
+/*  print view css */
+
+/*  Referenced: https://www.sitepoint.com/css-printer-friendly-pages/ */
+/* Referenced: https://www.smashingmagazine.com/2011/11/how-to-set-up-a-print-style-sheet/ */
+
+
+@page{
+  margin: 0.25in !important;
+}
+
+
+
+@media print {
+  .sidebuff{
+    color: white !important;
+    opacity: 0 !important;
+  }
+  .sidenav{
+    color: white !important;
+    opacity: 0 !important;
+  }
+
+ .accordion .list-group-item-text a{
+    color: white !important;
+    opacity: 0 !important;
+  }
+
+  * {
+    /* https://www.lockedownseo.com/chrome-print-preview-differs-from-dev-tools/ */
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+    /* .row.content{
+      width: 612px !important;
+  } */
+  h1, h2, h3, h4, h5, h6{
+    font-size: 19pt !important;
+  }
+
+
+}
