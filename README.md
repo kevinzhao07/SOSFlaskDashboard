@@ -25,7 +25,7 @@ Referenced during creation of html page templates:
 - `requirements.txt` : things you need to have installed to run this program
 - `/templates`
     - `dashboard.html`
-        - bootstrap layout template for dashboard with map positioned next to time series, a series of 3 infographics arranged in a row below this, and then a table. the side navigation occupies 1 column.
+        - bootstrap layout template for dashboard with map positioned on top, then time series under the map, then a series of 3 infographics arranged in a row. under this is a table. the side navigation occupies 2 columns.
     - `landing.html`
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - `search.html`
@@ -38,6 +38,8 @@ Referenced during creation of html page templates:
             - styles the map and tooltips in `search.html`
         - `nondatastyle.css`
             - styles non-dashboard pages (`landing.html`, `search.html`)
+        - `print.css`
+            - styles the print view for the dashboard. currently very primitive
         - `style.css`
             - styles `dashboard.html`
         - `tablecharts.css`
@@ -97,6 +99,9 @@ Referenced during creation of html page templates:
         - `multipleCharts.js`
             - runs the function definitions defined in `ageChart.js`, `genderChart.js`, `htmlTable.js`, `raceChart.js`, and `timeSeries.js`
             - function definition for creating infographics from csv defined here
+        - `navfromsearchq.js`
+            - codes the navigation to correct dashboard page after a place name is input into the search bar
+            - used by `search.html`
         - `raceChart.js`
             - creates and updates the bar graphs for race representation
             - function definitions are referenced in `multipleCharts.js`
