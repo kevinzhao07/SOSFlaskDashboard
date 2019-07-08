@@ -99,7 +99,7 @@ Referenced during creation of html page templates:
         - `multipleCharts.js`
             - runs the function definitions defined in `ageChart.js`, `genderChart.js`, `htmlTable.js`, `raceChart.js`, and `timeSeries.js`
             - function definition for creating infographics from csv defined here
-        - `navfromsearcg.js`
+        - `navfromsearchq.js`
             - codes the navigation to correct dashboard page after a place name is input into the search bar
             - used by `search.html`
         - `raceChart.js`
