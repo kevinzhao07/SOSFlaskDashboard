@@ -29,7 +29,7 @@ Referenced during creation of html page templates:
     - `landing.html`
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - `search.html`
-        - bootstrap layout template for search page. Contains 3 interactable county/city maps for each data source as well as a list of counties for each. An autocomplete search bar exists but is not currently functional.
+        - bootstrap layout template for search page. Contains 3 interactable county/city maps for each data source as well as a list of counties for each. Search bar supports autocomplete and defaults to navigating to data source EMS.
 - `/static`
     - `/css`
         - `map.css`
@@ -38,6 +38,8 @@ Referenced during creation of html page templates:
             - styles the map and tooltips in `search.html`
         - `nondatastyle.css`
             - styles non-dashboard pages (`landing.html`, `search.html`)
+        - `print.css`
+            - styles the print view for the dashboard. currently very primitive
         - `style.css`
             - styles `dashboard.html`
         - `tablecharts.css`
@@ -97,6 +99,9 @@ Referenced during creation of html page templates:
         - `multipleCharts.js`
             - runs the function definitions defined in `ageChart.js`, `genderChart.js`, `htmlTable.js`, `raceChart.js`, and `timeSeries.js`
             - function definition for creating infographics from csv defined here
+        - `navfromsearch.js`
+            - codes the navigation to correct dashboard page after a place name is input into the search bar
+            - used by search.html
         - `raceChart.js`
             - creates and updates the bar graphs for race representation
             - function definitions are referenced in `multipleCharts.js`
