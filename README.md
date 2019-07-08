@@ -25,11 +25,11 @@ Referenced during creation of html page templates:
 - `requirements.txt` : things you need to have installed to run this program
 - `/templates`
     - `dashboard.html`
-        - bootstrap layout template for dashboard with map positioned on top, then time series under the map, then a series of 3 infographics arranged in a row. under this is a table. the side navigation occupies 2 columns.
+        - bootstrap layout template for dashboard with map positioned next to time series, a series of 3 infographics arranged in a row below this, and then a table. the side navigation occupies 1 column.
     - `landing.html`
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - `search.html`
-        - bootstrap layout template for search page. Contains 3 interactable county/city maps for each data source as well as a list of counties for each. An autocomplete search bar exists but is not currently functional.
+        - bootstrap layout template for search page. Contains 3 interactable county/city maps for each data source as well as a list of counties for each. Search bar supports autocomplete and defaults to navigating to data source EMS.
 - `/static`
     - `/css`
         - `map.css`
