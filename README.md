@@ -26,10 +26,6 @@ Referenced during creation of html page templates:
 - `/templates`
     - `dashboard.html`
         - bootstrap layout template for dashboard with map positioned on top, then time series under the map, then a series of 3 infographics arranged in a row. under this is a table. the side navigation occupies 2 columns.
-    - `dashboard2.html`
-        - bootstrap layout template for dashboard with map positioned next to time series, a series of 3 infographics arranged in a row below this, and then a table. the side navigation occupies 1 column.
-    - `dashboard3.html`
-        - bootstrap layout template for dashboard with map positioned next to a moving image (currently png placeholder) of map trends. Time series is positioned under the map and moving images. a row of 3 infographics is placed under this, and a table is under the infographics. the side navigation occupies 1 column.
     - `landing.html`
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - `search.html`
@@ -38,10 +34,6 @@ Referenced during creation of html page templates:
     - `/css`
         - `map.css`
             - formats and styles the mapbox item for `dashboard.html`
-        - `map2.css`
-            - formats and styles the mapbox item for `dashboard2.html`
-        - `map3.css`
-            - formats and styles the mapbox item for `dashboard3.html`
         - `michigan.css`
             - styles the map and tooltips in `search.html`
         - `nondatastyle.css`
@@ -50,32 +42,24 @@ Referenced during creation of html page templates:
             - styles the print view for the dashboard. currently very primitive
         - `style.css`
             - styles `dashboard.html`
-        - `style2.css`
-            - styles `dashboard2.html`
-        - `style3.css`
-            - `styles dashboard3.html`
         - `tablecharts.css`
             - styles the d3 infographics (bar graphs and donut) for `dashboard.html`
-        - `tablecharts2.css`
-            - styles the d3 infographics (bar graphs and donut) for `dashboard2.html` and `dashboard3.html`
         - `timetable.css`
             - styles the d3 time series (2 bar graphs with moving average) for `dashboard.html`
-        - `timetable2.css`
-            - styles the d3 time series (2 bar graphs with moving average) for `dashboard2.html` and `dashboard3.html`
     - `/data`
         - `cities.csv`
             - names cities of interest and their latitude and longitudes
             - used in `search.html`
         - `map_fake.csv`
             - fake data of approximately 1000 coordinates, dates, demographics
-            - used in `dashboard.html`, `dashboard2.html`, and `dashboard3.html`
+            - used in `dashboard.html`
     - `/geojson`
         - `/cities`
             - geoJSON-format information about cities of interest
-            - used by `dashboard.html`, `dashboard2.html`, `dashboard3.html`
+            - used by `dashboard.html`
         - `/counties`
             - geoJSON-format information about counties
-            - used by `dashboard.html`, `dashboard2.html`, `dashboard3.html`
+            - used by `dashboard.html`
         - `gz_2010_iz_050_00_5m_MI_counties.topojson`
             - topojson-format information
             - used by `search.html`
@@ -115,7 +99,7 @@ Referenced during creation of html page templates:
         - `multipleCharts.js`
             - runs the function definitions defined in `ageChart.js`, `genderChart.js`, `htmlTable.js`, `raceChart.js`, and `timeSeries.js`
             - function definition for creating infographics from csv defined here
-        - `navfromsearch.js`
+        - `navfromsearcg.js`
             - codes the navigation to correct dashboard page after a place name is input into the search bar
             - used by `search.html`
         - `raceChart.js`
@@ -124,7 +108,7 @@ Referenced during creation of html page templates:
         - `timeSeries.js`
             - creates and updates the time time series
             - function definitions are referenced in `multipleCharts.js`
-    - `/markers` - svg map markers used by leaflet mapbox in `dashboard.html`, `dashboard2.html`, and `dashboard3.html`
+    - `/markers` - svg map markers used by leaflet mapbox in `dashboard.html`
         - ambulance_icon_blues.svg
         - hospital_icon_blues.svg
         - morguetable_5.svg
