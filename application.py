@@ -21,7 +21,7 @@ def homepage():
 @application.route('/dashboard', methods=['GET'])
 def navtocorrect():
     arguments=['city', 'county', 'src']
-    source = request.args.get('src')
+    source = request.args.get('src', default = "EMS", type = str)
     city = request.args.get('city')
     county = request.args.get('county')
 
@@ -66,32 +66,6 @@ def navtocorrect():
 
 
     return render_template("dashboard.html", data=data, names=names, cities=cities, counties=counties)
-
-
-
-# @application.route('/<string:placename>/<string:datasource>/', methods=['GET'])
-# def dashboard(placename, datasource):
-#     placename = placename.title()
-#     datasource = datasource.upper()
-#
-#     if placename in cities:
-#         folder = 'cities'
-#         county_flag = ''
-#     else:
-#         folder = 'counties'
-#         county_flag = 'County'
-#
-#     data = {
-#         'placename': placename,
-#         'datasource': datasource,
-#         'county_flag': county_flag,
-#         'titlename': src_dict[datasource],
-#         'f_geojson': f'geojson/{folder}/{placename}.geojson',
-#         'center': center_dict[placename]['center'],
-#         'zoom' : center_dict[placename].get('zoom', 10)
-#     }
-#
-#     return render_template("dashboard2.html", data=data, names=names, cities=cities)
 
 #%% Run Flask app
 # python application.py
