@@ -25,7 +25,6 @@
 
   <!-- general style -->
   <link rel="stylesheet" media="screen"  href="/static/css/style.css">
-  <link media="print" href="/static/css/print.css">
 
   <!--timetable -->
   <link rel="stylesheet" href="/static/css/timetable.css">
@@ -44,6 +43,9 @@
 
   <!-- searchpage michigan-->
   <link rel="stylesheet" href="/static/css/michigan.css">
+
+  <!-- print style -->
+  <link media="print" href="/static/css/print.css">
 </head>
 
 <body>
@@ -81,7 +83,7 @@
     <div class="row content">
 
       <!-- side navigation -->
-      <div class="col-sm-1 sidenav text-right push-1 d-print-none">
+      <div class="col-sm-1 sidenav text-right push-1">
         <div id="accordion" class="accordion">
           <div class="panel list-group">
           {% for each in names %}
