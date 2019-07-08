@@ -29,7 +29,7 @@ Referenced during creation of html page templates:
     - `landing.html`
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - `search.html`
-        - bootstrap layout template for search page. Contains 3 interactable county/city maps for each data source as well as a list of counties for each. An autocomplete search bar exists but is not currently functional.
+        - bootstrap layout template for search page. Contains 3 interactable county/city maps for each data source as well as a list of counties for each. Search bar supports autocomplete and defaults to navigating to data source EMS. 
 - `/static`
     - `/css`
         - `map.css`
