@@ -33,7 +33,7 @@ Referenced during creation of html page templates:
     - `landing.html`
         - very low-fidelity static HTML of a possible landing page. contains a modal login window.
     - `search.html`
-        - bootstrap layout template for search page. Contains 3 interactable county/city maps for each data source as well as a list of counties for each. An autocomplete search bar exists but is not currently functional.
+        - bootstrap layout template for search page. Contains 1 interactable county/city map, radio buttons for data source, and a search bar with autocomplete.
 - `/static`
     - `/css`
         - `map.css`
@@ -121,6 +121,9 @@ Referenced during creation of html page templates:
         - `raceChart.js`
             - creates and updates the bar graphs for race representation
             - function definitions are referenced in `multipleCharts.js`
+        - `srcFromRadio.js`
+            - selects and sets data source from radio buttons
+            - used by `search.html`
         - `timeSeries.js`
             - creates and updates the time time series
             - function definitions are referenced in `multipleCharts.js`
