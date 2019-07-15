@@ -45,7 +45,19 @@ gender_dict = {'F':'Female',
                'Unknown (Unable to Determine)':'Unknown',
                'Not Applicable':'Unknown',
                }
-center_dict = {
+center_dict = { "City" :
+    {'Ann Arbor': {
+        'center': '{lat: 42.28, lng: -83.73}',
+        'zoom' : 12,
+        'minwidth': 550,
+        'minheight':400
+    },
+    'Ypsilanti':{
+        'center': '{lat: 42.24, lng: -83.61}',
+        'zoom' : 13,
+        'minwidth' : 500,
+        'minheight' : 400
+    },
     'Detroit': {
         'center': '{lat: 42.35, lng: -83.10}',
         'zoom': 11,
@@ -76,27 +88,28 @@ center_dict = {
         'minwidth': 150, #optimal: 300
         'minheight': 200, #optimal: 400
     },
-    'Kalamazoo (City)':{
+    'Kalamazoo':{
         'center': '{lat:42.29, lng: -85.58}',
         'zoom': 12,
         'minwidth':150,
         'minheight': 200
     },
-    'Muskegon (City)':{
+    'Muskegon':{
         'center':  '{lat:43.23, lng: -86.25}',
         'zoom': 12,
         'minwidth':150,
         'minheight': 200
     },
 
-    'Saginaw (City)':{
+    'Saginaw':{
         'center': '{lat: 43.42, lng: -83.95}',
         'zoom': 12,
         'minwidth': 150,
         'minheight': 200
-    },
+    }},
 
-    'Alcona': {
+    'County':
+    {'Alcona': {
         'center': '{lat:44.68, lng:-83.58}',
         'minwidth': 450,
         'minheight': 400
@@ -521,33 +534,47 @@ center_dict = {
         'center': '{lat:44.28, lng:-85.58}',
         'minwidth': 400,
         'minheight': 400
-    },
+    }}
 }
-cities = ['Bay City','Detroit','Flint','Grand Rapids','Pontiac', 'Saginaw (City)', 'Kalamazoo (City)', 'Muskegon (City)']
 
 
+name_case_ls = ['Saginaw', 'Kalamazoo', 'Muskegon']
 name_cases = [{'Saginaw' : 'Saginaw (City)'}, {'Kalamazoo' : 'Kalamazoo (City)'}, {'Muskegon' : 'Muskegon (City)'}]
 counties=[]
-
-
-for county in center_dict.keys():
-    if county not in cities:
-        counties.append(county)
+cities = []
 
 
 placenames={}
 names={}
-for item in center_dict:
-    if item[0] not in placenames:
-        placenames[item[0]]=[item]
 
+for county in center_dict["County"].keys():
+    counties.append(county)
+
+for city in center_dict["City"].keys():
+    if city in name_case_ls:
+        city = city + " (City)"
+        cities.append(city)
     else:
-        placenames[item[0]].append(item)
-        placenames[item[0]].sort()
+        cities.append(city)
+
+
+for eachcounty in counties:
+    if eachcounty[0] not in placenames:
+        placenames[eachcounty[0]]=[eachcounty]
+    else:
+        placenames[eachcounty[0]].append(eachcounty)
+
+
+for eachcity in cities:
+    if eachcity[0] not in placenames:
+        placenames[eachcity[0]] = [eachcity]
+        placenames[eachcity[0]].sort()
+    else:
+        placenames[eachcity[0]].append(eachcity)
+        placenames[eachcity[0]].sort()
 
 
 keyalphabet=sorted(placenames.keys())
-
 
 for letter in keyalphabet:
     names[letter]=placenames[letter]

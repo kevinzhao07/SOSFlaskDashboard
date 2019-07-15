@@ -47,45 +47,58 @@
   </script>
   <nav class="navbar navbar-expand-lg fixed-top">
     <a class="navbar-brand" href="/">SOS Michigan Opioid Epidemic Dashboard</a>
-    <form class="formthing navbar-form navbar-right form-inline ml-auto" onsubmit="return navPlace()">
-      <!-- autocomplete is defined in nondatastyle.css -->
-      <input class="nav-item form-control autocomplete" method="GET" autocomplete="off" id="searchbar" placeholder="City or County Name" aria-label="Search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
   </nav>
 
   <div class="container-fluid container-top-buffer">
     <div class="row content">
       <div class="col-sm-1 sidebuff"></div>
-      <div class="col-sm-10 text-center top-buffer center-align">
-        <h2> SOS Reports </h2>
 
-        <div class="row content">
-          {% for src in ['EMS','ED','ME'] %}
-          <!-- iterate through each data source,: add a heading, div ID of the source name, map, and list of counties for each -->
-            <div class="col-sm-4 eachcol center-align" id="{{ src }}">
-              <h3 class="col">{{ src }}</h3>
-              <div class="{{ 'map'+src }} extraMapPadding"></div>
-              <div class='row content'>
-                <div class='col-sm-6 text-center'>
-                  <!-- application.py defines data as a list of counties -->
-                  {% for county in data.counties[:42] %}
-                  <!-- county list is split in half for better layout -->
-                    <p class="countynames"><a href='/dashboard?src={{ src }}&county={{ county }}'>{{ county }}</a></p>
-                  {% endfor %}
-                </div>
-                <div class='col-sm-6 text-center'>
-                  {% for county in data.counties[42:] %}
-                    <p class="countynames"><a href='/dashboard?src={{ src }}&county={{ county }}'>{{ county }}</a></p>
-                  {% endfor %}
-                </div>
+      <div class="col-sm-10 text-center top-buffer center-align">
+        <h1 class="header">S.O.S. Dashboard</h1>
+        <div class="container">
+
+          <div class="row content">
+            <div class="col-sm-12 d-flex justify-content-center">
+              <div class="onemap" id="onemap"></div>
+            </div>
+
+          </div>
+
+          <div class = "row content">
+            <div class = "col-sm-12 text-center">
+              <h4>Please select data source:</h4>
+            </div>
+          </div>
+
+          <div class="row content">
+            <div class="col-sm-12 d-flex justify-content-center">
+
+              <div class="form-check form-check-inline radios"  id = "radios">
+                <input class="form-check-input" type="radio" name="Radio" id="EMSRadio" value="EMS" onchange = "updateGlobal(this)" checked> EMS
+              </div>
+              <div class="form-check form-check-inline radios">
+                <input class="form-check-input" type="radio" name="Radio" id="EDRadio" value="ED" onchange = "updateGlobal(this)"> ED
+              </div>
+              <div class="form-check form-check-inline radios">
+                <input class="form-check-input" type="radio" name="Radio" id="MERadio" value="ME" onchange = "updateGlobal(this)"> ME
               </div>
             </div>
-          {% endfor %}
+          </div>
+
+          <div class = "row content">
+            <div class="col-sm-12 d-flex justify-content-center">
+              <form class = "form-inline formthing" onsubmit="return navPlace()">
+                <input class="form-control autocomplete" method="GET" autocomplete="off" id="searchthing" placeholder="City or County Name" aria-label="Search" type="text">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="col-sm-1 sidebuff"></div>
     </div>
+  </div>
   </div>
   <footer class="footer">
     <div class="footstyle container-fluid text-center">
@@ -120,17 +133,17 @@
   <script src= "/static/js/makeMichigan.js"></script>
   <script src= "/static/js/autocomplete.js"></script>
   <script src= "/static/js/navfromsearch.js"></script>
+  <script src="/static/js/srcFromRadio.js"></script>
   <script>
-  //create maps for each source, defined in makeMichigan.js
-  make_map(EMS, "EMS");
-  make_map(ED, "ED");
-  make_map(ME, "ME");
+  var globalDataSource="";
+  updateGlobal();
+  make_map(ONE, "ONE");
 
   // flask variable setting because this cannot be in an external js doc. used in autocomplete.js
   var inputOptions = {{ placenames|safe }};
 
   //run autocomplete, defined in autocomplete.js
-  autocomplete(document.getElementById("searchbar"), inputOptions);
+  autocomplete(document.getElementById("searchthing"), inputOptions);
 </script>
 
 </body>

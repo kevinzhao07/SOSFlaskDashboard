@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> SOS Reports</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- icon  -->
+  <link rel="icon" type="image/png" href="/static/images/icon_t.png">
+
+  <!-- BS and FA -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- d3 -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.7/crossfilter.min.js"></script>
+  <script src="//d3js.org/topojson.v3.min.js"></script>
+
+  <!-- general style -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/nondatastyle.css">
+
+  <!--timetable -->
+  <link rel="stylesheet" href="/static/css/timetable.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!--mapbox -->
+  <link rel="stylesheet" href="/static/css/map.css">
+  <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet'>
+
+  <!-- three charts -->
+  <link rel="stylesheet" href="/static/css/tablecharts.css">
+
+  <!-- searchpage michigan-->
+  <link rel="stylesheet" href="/static/css/michigan.css">
+</head>
+
+</head>
+<body>
+  <script>
+    cities = {{ cities|tojson|safe }};
+    counties = {{ counties|tojson|safe }};
+    var dataSource = "";
+    console.log(dataSource);
+  </script>
+
+  <div class="container-fluid container-top-buffer">
+    <div class="row content">
+      <div class="col-sm-12 text-center top-buffer center-align">
+        <h2> SOS Reports </h2>
+      </div>
+    </div>
+    <div class="row content">
+        <div class= "col-sm-12 eachcol center-align">
+          <div class= "mapEMS d-flex justify-content-center"></div>
+        </div>
+      </div>
+    </div>
+    <div class= "row content">
+      <div class = "col-sm-12">
+        <form action = "/">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Radio" id="EMSRadio" value="EMS"> EMS
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Radio" id="EDRadio" value="ED"> ED
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Radio" id="MEadio" value="ME"> ME
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+              <div class="row content">
+                <div class="col-sm">
+                  <form class="formthing form-inline ml-auto" onsubmit="return navPlace()">
+                    <!-- autocomplete is defined in nondatastyle.css -->
+                    <input class="form-control autocomplete" method="GET" autocomplete="off" id="searchthing" placeholder="City or County Name" aria-label="Search">
+                </div>
+              </div>
+              <div class='row content'>
+                <div class='col-sm-3 text-center'>
+                  <!-- application.py defines data as a list of counties -->
+                  {% for county in data.counties[:21] %}
+                  <!-- county list is split in half for better layout -->
+                    <p class="countynames"><a href='/dashboard?src={{ src }}&county={{ county }}'>{{ county }}</a></p>
+                  {% endfor %}
+                </div>
+                <div class='col-sm-3 text-center'>
+                  {% for county in data.counties[21:42] %}
+                    <p class="countynames"><a href='/dashboard?src={{ src }}&county={{ county }}'>{{ county }}</a></p>
+                  {% endfor %}
+                </div>
+                <div class='col-sm-3 text-center'>
+                  {% for county in data.counties[42:63] %}
+                    <p class="countynames"><a href='/dashboard?src={{ src }}&county={{ county }}'>{{ county }}</a></p>
+                  {% endfor %}
+                </div>
+                <div class='col-sm-3 text-center'>
+                  {% for county in data.counties[63:] %}
+                    <p class="countynames"><a href='/dashboard?src={{ src }}&county={{ county }}'>{{ county }}</a></p>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-1 sidebuff"></div>
+    </div>
+  </div>
+
+
+  <!-- scripts -->
+  <script src= "/static/js/makeMichigan.js"></script>
+  <script src= "/static/js/autocomplete.js"></script>
+  <script src= "/static/js/navfromsearch.js"></script>
+  <sript src = "/static/js/srcFromRadio.js"></script>
+  <script>
+  //create maps for each source, defined in makeMichigan.js
+  make_map(EMS, "EMS");
+  make_map(ED, "ED");
+  make_map(ME, "ME");
+
+  // flask variable setting because this cannot be in an external js doc. used in autocomplete.js
+  var inputOptions = {{ placenames|safe }};
+
+  //run autocomplete, defined in autocomplete.js
+  autocomplete(document.getElementById("searchthing"), inputOptions);
+</script>
+
+</body>
+</html>

@@ -25,7 +25,7 @@ Referenced during creation of html page templates:
 - `requirements.txt` : things you need to have installed to run this program
 - `/templates`
     - `dashboard.html`
-        - bootstrap layout template for dashboard with map positioned on top, then time series under the map, then a series of 3 infographics arranged in a row. under this is a table. the side navigation occupies 2 columns.
+        - bootstrap layout template for dashboard with map positioned on top, then time series under the map, then a series of 3 infographics arranged in a row. under this is a table. the side navigation occupies 1 column.
     - `dashboard2.html`
         - bootstrap layout template for dashboard with map positioned next to time series, a series of 3 infographics arranged in a row below this, and then a table. the side navigation occupies 1 column.
     - `dashboard3.html`
