@@ -149,10 +149,29 @@ font-weight: bold;
 font-size: 36px;
 }
 
-
 #Pct{
 font-weight: bold;
 /* color: green; */
+}
+
+.eachDemographic{
+  padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 5px;
+}
+
+.timetable-insert{
+  padding-top: 50px;
+}
+.timetableAdjust{
+  background-color: #2E4B70;
+  color: white;
+  padding: 5px;
+  border-style: none;
+}
+
+.timetableAdjust:hover{
+  background-color: #00274c;
 }
 
 
@@ -196,6 +215,13 @@ div.sticky-top{
     position: relative;
     top: 100%;
     transform: translateY(-100%);
+}
+
+.resetButton{
+  height: 20px;
+  background-color: white;
+  border-style: hidden;
+  font-size: 12px;
 }
 
 @media screen and (min-width:700px){

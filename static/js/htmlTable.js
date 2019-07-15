@@ -8,16 +8,16 @@ function makeHtmlTable() {
       .join('th')
         .text((d,i) => i = 1 ? formatHTMLthings(d): d);
     tbody = table.append('tbody');
-    console.log(DATA.columns);
+
     updateAll(date.top(10));
   }
 
 // updates HTML table
 function updateHtmlTable(data = date.top(Infinity)) {
-    rows = tbody.selectAll('tr')
+    row = tbody.selectAll('tr')
         .data(data)
         .join('tr')
-    rows.selectAll('td')
+    row.selectAll('td')
         .data((d) => d3.values(d).slice(0,-2))
         .join('td')
         .text((d,i) => i = 1 ? formatHTMLthings(d) : d)

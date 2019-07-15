@@ -17,10 +17,11 @@ async function makeDashboard(fileName) {
 }
 
 // updates all maps
-function updateAll(data = date.top(10)) {
-    updateHtmlTable(data);
+function updateAll(data = date.top(Infinity)) {
+    data = reduceData(data);
     updateMap(map.getBounds());
     updateTimeSeries();
+    updateHtmlTable(data);
     summaryStats(x.domain());
     updateAge();
     updateGender();

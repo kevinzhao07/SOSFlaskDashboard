@@ -7,30 +7,16 @@ function makeTimeSeries() {
   movingAvgData = movingAverage(data, 7);
 
   // set the dimensions and margins of the graph
-  margin = {top: 20, right: 20, bottom: 110, left: 40},
+  margin = {top: 20, right: 20, bottom: 140, left: 40},
   width = 960 - margin.left - margin.right,
-  height = 400 - margin.top - margin.bottom;
-  margin2 = {top: 400-70, right: 20, bottom: 30, left: 40},
-  height2 = 400 - margin2.top - margin2.bottom;
+  height = 300 - margin.top - margin.bottom;
+  margin2 = {top: 300-70, right: 20, bottom: 30, left: 40},
+  height2 = 300 - margin2.top - margin2.bottom;
 
   // append timetable svg
   svg = d3.select(".timetable").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-
-  // append timetable svg, referenced from https://eddyerburgh.me/create-responsive-bar-chart-d3-js
-
-    // responsive size, commented out
-  // var svg = d3.select(".timetable").append("svg")
-  // .attr('preserveAspectRatio', 'xMinYMin meet')
-  // .attr(
-  //     'viewBox',
-  //     '0 0 ' +
-  //       (width + margin.left + margin.right) +
-  //       ' ' +
-  //       (height + margin.top + margin.bottom)
-  //   )
-
 
   // set the ranges
   x = d3.scaleTime().range([0, width]),
@@ -40,8 +26,8 @@ function makeTimeSeries() {
 
   // sets ticks for timetable graph
   xAxis = d3.axisBottom(x),
-    yAxis = d3.axisRight(y).ticks(4),
-    xAxis2 = d3.axisBottom(x2);
+  yAxis = d3.axisRight(y).ticks(4),
+  xAxis2 = d3.axisBottom(x2);
 
   // Add brush in x-dimension
   brush = d3.brushX()
@@ -138,7 +124,7 @@ function makeTimeSeries() {
   // add the context brush
   beginDate = d3.timeDay.offset(endDate, -7)
 
-  context.append("g")
+  selection = context.append("g")
     .attr("class", "brush")
     .call(brush)
     .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
@@ -192,21 +178,21 @@ function brushed() {
 
 // brush snapping function
 function brushended() {
-    if (!d3.event.sourceEvent) return; // Only transition after input.
-    if (!d3.event.selection) brushed(); // Empty selection returns default brush
-    dateRange = d3.event.selection.map(x2.invert),
-        dayRange = dateRange.map(d3.timeDay.round);
+  if (!d3.event.sourceEvent) return; // Only transition after input.
+  if (!d3.event.selection) brushed(); // Empty selection returns default brush
+  dateRange = d3.event.selection.map(x2.invert),
+      dayRange = dateRange.map(d3.timeDay.round);
 
-    // If empty when rounded, use floor & ceil instead.
-    if (dayRange[0] >= dayRange[1]) {
-        dayRange[0] = d3.timeDay.floor(dateRange[0]);
-        dayRange[1] = d3.timeDay.offset(dayRange[0]);
-    }
-    d3.select(this)
-      .transition()
-      .call(d3.event.target.move, dayRange.map(x2));
+  // If empty when rounded, use floor & ceil instead.
+  if (dayRange[0] >= dayRange[1]) {
+      dayRange[0] = d3.timeDay.floor(dateRange[0]);
+      dayRange[1] = d3.timeDay.offset(dayRange[0]);
+  }
+  d3.select(this)
+    .transition()
+    .call(d3.event.target.move, dayRange.map(x2));
 
-    updateAll();
+  updateAll(date.top(Infinity));
 }
 
 // calculates simple moving average over N days
@@ -233,4 +219,67 @@ function resampleDates(data) {
   return dayRange.map(day => {
     return data.find(d => d.key >= day && d.key < d3.timeHour.offset(day,1)) || {'key':day, 'value':0}
   })
+}
+
+function oneWeek() {
+  endDate = d3.timeDay.offset(d3.max(data, d => d.key),1)
+  x.domain([d3.min(data, d => d.key), endDate]);
+  beginDate = d3.timeDay.offset(endDate, -7)
+
+  selection.attr("class", "brush")
+      .call(brush)
+      .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
+  date.filter([beginDate, endDate]);
+  updateAll(date.top(Infinity));
+}
+
+function twoWeeks() {
+  endDate = d3.timeDay.offset(d3.max(data, d => d.key),1)
+  x.domain([d3.min(data, d => d.key), endDate]);
+  beginDate = d3.timeDay.offset(endDate, -14)
+
+  selection.attr("class", "brush")
+      .call(brush)
+      .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
+  date.filter([beginDate, endDate]);
+  updateAll(date.top(Infinity));
+}
+
+function oneMonth() {
+  endDate = d3.timeDay.offset(d3.max(data, d => d.key),1)
+  x.domain([d3.min(data, d => d.key), endDate]);
+  beginDate = d3.timeMonth.offset(endDate, -1)
+
+  selection.attr("class", "brush")
+      .call(brush)
+      .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
+  date.filter([beginDate, endDate]);
+  updateAll(date.top(Infinity));
+}
+
+function threeMonths() {
+  endDate = d3.timeDay.offset(d3.max(data, d => d.key),1)
+  x.domain([d3.min(data, d => d.key), endDate]);
+  beginDate = d3.timeMonth.offset(endDate, -3)
+
+  selection.attr("class", "brush")
+      .call(brush)
+      .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
+  date.filter([beginDate, endDate]);
+  updateAll(date.top(Infinity));
+}
+
+function yearToDate() {
+  endDate = d3.timeDay.offset(d3.max(data, d => d.key),1)
+  x.domain([d3.min(data, d => d.key), endDate]);
+  var days = endDate.getDay();
+  var months = endDate.getMonth();
+  beginDate = d3.timeMonth.offset(endDate, -months)
+
+  selection.attr("class", "brush")
+      .call(brush)
+      .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
+  date.filter([beginDate, endDate]);
+  updateAll(date.top(Infinity));
+
 }
