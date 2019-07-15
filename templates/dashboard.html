@@ -46,6 +46,16 @@
 
   <!-- print style -->
   <link rel ="stylesheet" media="print" href="/static/css/print.css">
+
+  <!-- javascript files -->
+  <script src="/static/js/ageChart.js"></script>
+  <script src="/static/js/genderChart.js"></script>
+  <script src="/static/js/htmlTable.js"></script>
+  <script src="/static/js/map.js"></script>
+  <script src="/static/js/raceChart.js"></script>
+  <script src="/static/js/timeSeries.js"></script>
+  <script src="/static/js/multipleCharts.js"></script>
+
 </head>
 
 <body>
@@ -149,30 +159,44 @@
 
           <!-- Timeseries -->
           <div class="timetable-insert">
+            <button class= "timetableAdjust" onclick="oneWeek();"> one week </button>
+            <button class= "timetableAdjust" onclick="twoWeeks();"> two weeks </button>
+            <button class= "timetableAdjust" onclick="oneMonth();"> one month </button>
+            <button class= "timetableAdjust"  onclick="threeMonths();"> three months </button>
+            <button class= "timetableAdjust" onclick="yearToDate();"> YTD </button>
             <div class="timetable bottombuffer"></div>
           </div>
 
           <!-- Demographics -->
-            <div class="row demographics">
-              {% for item in ["Age", "Gender", "Race"] %}
-                <div class="col-sm-4 mx-auto">
-                  <div class="row-content text-center bottombuffer">
-                    <h4>{{ item }}</h4>
-                  </div>
-                  <div class="row {{item}}-chart top-buffer center-block">
-                    {% if item == "Age" %}
-                      <svg id="age"></svg>
-                    {% endif %}
-                    {% if item == "Gender" %}
-                      <svg id="gender"></svg>
-                    {% endif %}
-                    {% if item == "Race" %}
-                      <svg id="race"></svg>
-                    {% endif %}
-                </div>
+          <div class="row demographics">
+          {% for item in ["Age", "Gender", "Race"] %}
+            <div class="col-sm-4 mx-auto">
+              <div class="row-content text-center bottombuffer">
+                <h4 class="eachDemographic">{{ item }}</h4>
               </div>
-              {% endfor %}
+              <div class="row {{item}}-chart center-block f-flex alogn-items-centerS">
+                {% if item == "Age" %}
+                  <button class="resetButton"onclick="resetAge()"> reset age </button>
+                  <svg id="age"></svg>
+                {% endif %}
+                {% if item == "Gender" %}
+                  <button class="resetButton" onclick="resetGender()"> reset gender </button>
+                  <svg id="gender"></svg>
+                {% endif %}
+                {% if item == "Race" %}
+                  <button class="resetButton" onclick="resetRace()"> reset race </button>
+                  <svg id="race"></svg>
+                {% endif %}
+              </div>
             </div>
+          {% endfor %}
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <button class="resetButton" onclick="resetAll()"> reset demographics </button>
+            </div>
+          </div>
+
 
           <!-- Table -->
           <h2 class="top-buffer">Table</h2>
@@ -214,14 +238,6 @@
       </div>
     </div>
   </footer>
-  <!-- javascript files -->
-  <script src="/static/js/ageChart.js"></script>
-  <script src="/static/js/genderChart.js"></script>
-  <script src="/static/js/htmlTable.js"></script>
-  <script src="/static/js/map.js"></script>
-  <script src="/static/js/raceChart.js"></script>
-  <script src="/static/js/timeSeries.js"></script>
-  <script src="/static/js/multipleCharts.js"></script>
   <!-- setting leaflet-mapbox icons through Flask -->
   {% if data.src == "EMS" %}
     <script>
