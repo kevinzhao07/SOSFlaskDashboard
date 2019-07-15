@@ -11,19 +11,20 @@
 
 
 @media print {
-  .col-sm-2{
-    width: 0px;
+  .sidebuff{
+    color: white !important;
+    opacity: 0 !important;
+  }
+  .sidenav{
+    color: white !important;
+    opacity: 0 !important;
   }
 
-  #content{
-    width: 150vw !important;
+ .accordion .list-group-item-text a{
+    color: white !important;
+    opacity: 0 !important;
   }
-  #sosTable{
-    width: 100vw !important;
-  }
-  .col-sm-1{
-    width: 0px;
-  }
+
   * {
     /* https://www.lockedownseo.com/chrome-print-preview-differs-from-dev-tools/ */
     -webkit-transition: none !important;
@@ -33,7 +34,7 @@
       width: 612px !important;
   } */
   h1, h2, h3, h4, h5, h6{
-    font-size: 14pt !important;
+    font-size: 19pt !important;
   }
 
 

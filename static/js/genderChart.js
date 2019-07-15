@@ -1,75 +1,73 @@
 function makeGenderChart() {
 
+    // set up dimension and groups
     gender = CF.dimension(d => d.Gender);
     gendergrp = gender.group();
     dataGender = gendergrp.all();
+    var genderArray = [];
 
     // set up dimensions for gender donut chart
-    var marginGender = {top: -30, right: 0, bottom: 0, left: -50},
-      widthGender = 360 - marginGender.left - marginGender.right,
+    var marginGender = {top: -30, right: 0, bottom: 0, left: 0},
+      widthGender = 480 - marginGender.left - marginGender.right,
       heightGender = 360 - marginGender.top - marginGender.bottom,
       radius = Math.min(widthGender, heightGender) / 2;
 
-    var genderArray = [];
-
     // append gender graph 'svg'
     var svgGender = d3.select("#gender")
-    .attr("width", widthGender)
-    .attr("height", heightGender)
-    .append("g")
-    .attr("transform", `translate(${widthGender/2},${heightGender/2})`);
-
+        .attr("width", widthGender)
+        .attr("height", heightGender)
+        .append("g")
+        .attr('viewBox','0 0 '+Math.min(width,height) +' '+Math.min(width,height) )
+        .attr("transform", `translate(${widthGender/2},${heightGender/2})`);
 
     // sets up arc and dimensions of dount table
     pie = d3.pie()
-    .value(d => d.value)
-    .sort(null);
+        .value(d => d.value)
+        .sort(null);
 
     arc = d3.arc()
-    .outerRadius(radius * 0.9)
-    .innerRadius(radius * 0.5)
+        .outerRadius(radius * 0.9)
+        .innerRadius(radius * 0.5)
 
     // sets color of donut chart
-    const color = d3.schemePaired.slice(6);
-
+    color = d3.schemePaired.slice(6);
     slices = svgGender.datum(dataGender).selectAll("path")
-    .data(pie)
-    .join("path")
-    .attr("fill", (d,i) => color[i] )
-    .attr("d", arc)
-    .each(function(d) {// store the initial angles
-        this._current = d
-    })
+        .data(pie)
+        .join("path")
+        .attr("fill", (d,i) => color[i] )
+        .attr("d", arc)
+        .each(function(d) {// store the initial angles
+            this._current = d
+        })
 
-    // onclick
-    .on('click', function(d,i) { // set up crossfilter
+        // onclick
+        .on('click', function(d,i) { // set up crossfilter
 
-        if (genderArray.includes(d.data.key)) { // remove filter
-            genderArray.splice(genderArray.indexOf(d.data.key),1)
-            d3.select(this).attr('fill', color[i])
-        }
+            if (genderArray.includes(d.data.key)) { // remove filter
+                genderArray.splice(genderArray.indexOf(d.data.key),1)
+                d3.select(this).attr('fill', color[i])
+            }
+            else { // add filter
+                genderArray.push(d.data.key)
+                d3.select(this).attr('fill', 'red')
+            }
 
-        else { // add filter
-            genderArray.push(d.data.key)
-            d3.select(this).attr('fill', '#E0BBE4')
-        }
+            // filters dimension
+            genderArray.length === 0 ? gender.filterAll() : gender.filter(d => genderArray.includes(d));
 
-        // filters dimension
-        genderArray.length === 0 ? gender.filterAll() : gender.filter(d => genderArray.includes(d));
+            // filters other graphs
+            updateAll(gender.bottom(Infinity));
 
-        // filters other graphs
-        updateAll(gender.top(10));
-
-    });
+        });
 
     // puts label on donut chart
     label = svgGender.datum(dataGender).selectAll('text')
-    .data(pie)
-    .join('text')
-    .attr('transform', d => 'translate(' + arc.centroid(d) + ')')
-    .attr('dy','0.35em')
-    .style('opacity', d => d.data.value==0 ? 0 : 1)
-    .each(function(d) { // store the initial angles
+        .data(pie)
+        .join('text')
+        .attr('transform', d => 'translate(' + arc.centroid(d) + ')')
+        .attr('dy','0.35em')
+        .style('opacity', d => d.data.value==0 ? 0 : 1)
+        .each(function(d) { // store the initial angles
     const angles = { startAngle: d.startAngle, endAngle: d.endAngle };
     this._current = angles;
     });
@@ -87,7 +85,6 @@ function makeGenderChart() {
         .attr("x", 0)
         .attr("y", "1.5em")
         .text(d => d.data.value);
-
 }
 
 // update donut table
@@ -117,5 +114,6 @@ function updateGender() {
             return `translate(${arc.centroid(interpolate(t))})`;
             };
         });
+
     labelCount.text(d => d.data.value)
-    }
+}

@@ -27,6 +27,33 @@ function updateAll(data = date.top(10)) {
     updateRace();
 }
 
+
+function reduceData(data) {
+    if (data.length > 10) {
+        var middle = new Array({"date": "...", "county": "...", "Age": "...", "Gender": "...", "Race": "...", "lng": "...", "lat": "..."});
+        var wholeData = data;
+        var topData0 = wholeData[0];
+        var topData1 = wholeData[1];
+        var topData2 = wholeData[2];
+        var topData3 = wholeData[3];
+        var topData4 = wholeData[4];
+
+        var topData = [topData0, topData1, topData2, topData3, topData4];
+
+        var bottomData4 = wholeData[wholeData.length - 5];
+        var bottomData3 = wholeData[wholeData.length - 4];
+        var bottomData2 = wholeData[wholeData.length - 3];
+        var bottomData1 = wholeData[wholeData.length - 2];
+        var bottomData0 = wholeData[wholeData.length - 1];
+
+        var bottomData = [bottomData4, bottomData3, bottomData2, bottomData1, bottomData0];
+
+        data = topData.concat(middle);
+        data = data.concat(bottomData);
+    }
+    return data;
+}
+
 // read in data
 function type(d) {
     d.date = parseDate(d.date);
@@ -60,5 +87,32 @@ function summaryStats(dayRange) {
     }
 
 function resetAll() {
+  // remove selected filters
+    resetGender();
+    resetAge();
+    resetRace();
 
+    // update bars to reflect unfiltering
+    updateAll(date.top(Infinity));
+}
+
+function resetGender() {
+    genderArray = [];
+    gender.filterAll();
+    slices.attr("fill", (d,i) => color[i]);
+    updateAll(gender.bottom(Infinity));
+}
+
+function resetAge() {
+    ageArray = [];
+    age.filterAll();
+    barsAge.style("fill", "lightblue");
+    updateAll(age.bottom(Infinity));
+}
+
+function resetRace() {
+    raceArray = [];
+    race.filterAll();
+    barsRace.style("fill", "pink");
+    updateAll(race.bottom(Infinity));
 }

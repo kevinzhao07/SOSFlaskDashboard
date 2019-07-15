@@ -13,7 +13,7 @@ function makeHtmlTable() {
   }
 
 // updates HTML table
-function updateHtmlTable(data = date.top(10)) {
+function updateHtmlTable(data = date.top(Infinity)) {
     rows = tbody.selectAll('tr')
         .data(data)
         .join('tr')

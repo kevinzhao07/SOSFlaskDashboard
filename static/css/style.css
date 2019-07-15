@@ -92,28 +92,28 @@ margin-top: 60px;
 }
 
 .accordion .list-group-item-text a{
-color: white !important;
+color: white;
 }
 .accordion .list-group-item-text a:hover{
-background-color:#B5CEEE!important;
-color: #00274c !important;
+background-color:#B5CEEE;
+color: #00274c;
 }
 .accordion .list-group-item-text a:focus{
-background-color:#B5CEEE!important;
-color: #00274c !important;
+background-color:#B5CEEE;
+color: #00274c;
 text-decoration: none;
 text-transform: uppercase;
 font-weight: bold;
 }
 
 .accordion .list-group a{
-  background-color: #00274c !important;
-  color: white !important;
+  background-color: #00274c;
+  color: white;
   font-size: 14px;
   border: none;
 }
 .accordion .list-group{
-  background-color: #00274c !important;
+  background-color: #00274c;
   border: none;
 }
 .btn{
@@ -167,18 +167,18 @@ font-weight: bold;
 }
 
 .footer .list-group{
-  background-color: transparent !important;
+  background-color: transparent;
 }
 .footer .list-group-item{
 
   font-size: 16px;
   display: block;
   padding: 10px;
-  background-color: transparent !important;
+  background-color: transparent;
 }
 .footlink{
-  color: white !important;
-  text-decoration: underline !important;
+  color: white;
+  text-decoration: underline;
   margin: 5px;
 }
 
