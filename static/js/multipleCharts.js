@@ -67,6 +67,7 @@ function type(d) {
 function summaryStats(dayRange) {
     const days = (dayRange[1] - dayRange[0]) / 86400000
     const prevDayRange = [d3.timeDay.offset(dayRange[0],-days), dayRange[0]];
+    dayRange[1] = d3.timeSecond.offset(dayRange[1],-1);
     date.filter(prevDayRange)
     const N0 = CF.groupAll().value()
     date.filter(dayRange)
@@ -80,12 +81,40 @@ function summaryStats(dayRange) {
     .html(d => d)
     d3.select('#Pct')
     .datum(pctChange)
-    .attr('style', d => d > 0 ? 'color:red' : 'color:green')
+    .attr('style', d => colorCode(d))
     d3.select('#Np')
     .datum(delta)
-    .attr('style', d => d > 0 ? 'color:red' : 'color:green')
-    .html(d => d > 0 ? `<i class= "fa fa-arrow-up"></i> ${d}` : d < 0 ? `<i class ="fa fa-arrow-down"></i> ${Math.abs(d)}` : d)
+    .attr('style', d => colorCode(d))
+    .html(d => arrowUpDown(d))
+
+    // console.log(dayRange[1])
     }
+
+function colorCode(data){
+  if (data > 0){
+    return 'color:red';
+
+  }
+  else if (data < 0){
+    return 'color:green';
+  }
+  else{
+    return 'color:black';
+  }
+}
+
+function arrowUpDown(data){
+  if (data > 0){
+    return `<i class= "fa fa-arrow-up"></i> ${data}`;
+  }
+  else if (data < 0){
+    return `<i class ="fa fa-arrow-down"></i> ${Math.abs(data)}`;
+  }
+  else{
+    return `${data}`;
+  }
+}
+
 
 function resetAll() {
   // remove selected filters
