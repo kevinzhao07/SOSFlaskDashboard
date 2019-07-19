@@ -50,6 +50,8 @@ Referenced during creation of html page templates:
             - styles the print view for the dashboard. currently very primitive
         - `style.css`
             - styles `dashboard.html`
+        - `style.json`
+            - a JSON-format file with the Mapbox style information for the main maps used on the dashboard.
         - `style2.css`
             - styles `dashboard2.html`
         - `style3.css`
