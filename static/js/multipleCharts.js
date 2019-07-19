@@ -8,6 +8,12 @@ async function makeDashboard(fileName) {
     CF = crossfilter(DATA);
     date = CF.dimension(d => d.date);
 
+    rows = 10;
+    lastFilter = "date";
+    selected10 = true;
+    selected20 = false;
+    selected50 = false;
+
     createMap();
     makeTimeSeries();
     makeAgeChart();
@@ -30,29 +36,50 @@ function updateAll(data = date.top(Infinity)) {
 
 
 function reduceData(data) {
-    if (data.length > 10) {
-        var middle = new Array({"date": "...", "county": "...", "Age": "...", "Gender": "...", "Race": "...", "lng": "...", "lat": "..."});
-        var wholeData = data;
-        var topData0 = wholeData[0];
-        var topData1 = wholeData[1];
-        var topData2 = wholeData[2];
-        var topData3 = wholeData[3];
-        var topData4 = wholeData[4];
-
-        var topData = [topData0, topData1, topData2, topData3, topData4];
-
-        var bottomData4 = wholeData[wholeData.length - 5];
-        var bottomData3 = wholeData[wholeData.length - 4];
-        var bottomData2 = wholeData[wholeData.length - 3];
-        var bottomData1 = wholeData[wholeData.length - 2];
-        var bottomData0 = wholeData[wholeData.length - 1];
-
-        var bottomData = [bottomData4, bottomData3, bottomData2, bottomData1, bottomData0];
-
-        data = topData.concat(middle);
-        data = data.concat(bottomData);
+    if (data.length > rows) {
+        const middle = new Array({"date": "...", "county": "...", "Age": "...", "Gender": "...", "Race": "...", "lng": "...", "lat": "..."});
+        const topData = data.slice(0,rows/2);
+        const bottomData = data.slice(-rows/2);
+        var data = [...topData, ...middle, ...bottomData];
     }
     return data;
+}
+
+
+function changeRows(N) {
+  rows = N;
+  if (lastFilter == "age") {
+      var newData = reduceData(age.bottom(Infinity));
+  }
+  if (lastFilter == "date") {
+      var newData = reduceData(date.top(Infinity));
+  }
+  if (lastFilter == "race") {
+      var newData = reduceData(race.bottom(Infinity));
+  }
+  if (lastFilter == "gender") {
+      var newData = reduceData(gender.bottom(Infinity));
+  }
+  updateHtmlTable(newData);
+
+  removeAllClasses();
+  if (N == 10) {
+      d3.selectAll(".ten")
+          .classed("selected", true);
+  }
+  if (N == 20) {
+      d3.selectAll(".twenty")
+          .classed("selected", true);
+  }
+  if (N == 50) {
+      d3.selectAll(".fifty")
+          .classed("selected", true);
+  }
+}
+
+function removeAllClasses() {
+  d3.selectAll(".change")
+      .classed("selected", false);
 }
 
 // read in data

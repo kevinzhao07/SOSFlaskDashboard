@@ -9,6 +9,9 @@
 .onemap{
   padding-bottom: 20px;
 }
+.tallerpage{
+  height: 200px;
+}
 
 p a{
     color: #00274c;
@@ -21,6 +24,9 @@ p a:hover{
 p a:focus{
   text-transform: uppercase;
   font-weight: bold;
+}
+.header{
+  margin-bottom: 10px;
 }
 
 .county{

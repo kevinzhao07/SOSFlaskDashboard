@@ -19,7 +19,7 @@ function makeRaceChart() {
 
     // set up dimensions for race chart
     marginRace = {top: 15, right: 40, bottom: 40, left: 170},
-    widthRace = 450 - marginRace.left - marginRace.right,
+    widthRace = 500 - marginRace.left - marginRace.right,
     heightRace = 400 - marginRace.top - marginRace.bottom;
 
     // append race 'svg'
@@ -58,6 +58,8 @@ function makeRaceChart() {
         // onclick
         .on('click', function(d) {
 
+            lastFilter = "race";
+
             // if clicked, filter table
             if (raceArray.includes(d.key)) {
                 d3.select(this)
@@ -66,7 +68,7 @@ function makeRaceChart() {
             }
             else {
                 d3.select(this)
-                    .style("fill", "red");
+                    .style("fill", "#EC6F6F");
                 raceArray.push(d.key);
             }
 

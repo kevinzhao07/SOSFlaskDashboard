@@ -41,7 +41,11 @@ function createMap() {// Mapbox section
     drawMarkers();
 
         // spatial filtering on map event
-    map.on('moveend zoomend', function() { updateAll(date.bottom(10));})
+        // spatial filtering on map event
+        map.on('moveend zoomend', function() {
+            lastFilter = "date";
+            updateAll(date.top(Infinity));
+        })
 }
 
 

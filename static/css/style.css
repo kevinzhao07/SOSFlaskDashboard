@@ -163,17 +163,6 @@ font-weight: bold;
 .timetable-insert{
   padding-top: 50px;
 }
-.timetableAdjust{
-  background-color: #2E4B70;
-  color: white;
-  padding: 5px;
-  border-style: none;
-}
-
-.timetableAdjust:hover{
-  background-color: #00274c;
-}
-
 
 .rightbuff{
   background-color:#00274c;
@@ -222,6 +211,45 @@ div.sticky-top{
   background-color: white;
   border-style: hidden;
   font-size: 12px;
+}
+
+.tablebuttondiv{
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+.tablebutton{
+  background-color: #2E4B70;
+  color: white;
+  padding: 8px;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.timetablebutton{
+  background-color: #2E4B70;
+  color: white;
+  padding: 8px;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.timetablebutton:focus{
+  background-color:  #00274c;
+  color: white;
+}
+.tablebutton:focus{
+  background-color:  #00274c;
+  color: white;
+}
+.timetablebutton:hover{
+  background-color: #243c59;
+}
+
+.tablebutton:hover{
+  background-color:#243c59;
+}
+.selected{
+  background-color: #00274c;
 }
 
 @media screen and (min-width:700px){

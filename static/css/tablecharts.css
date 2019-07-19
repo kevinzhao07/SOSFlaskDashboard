@@ -1,9 +1,9 @@
 /* bar chart text */
 .chart {
     font-weight: bold;
-    font-family: 'Helvetica';
     text-anchor: middle;
 }
+
 
 /* text inside donut chart */
 .count {
@@ -15,6 +15,7 @@
 .total {
     font-size: 3em;
     text-anchor: middle;
-    font-family: 'Helvetica';
-
+}
+.age-group {
+    font-weight: 700;
 }

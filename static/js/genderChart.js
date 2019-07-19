@@ -43,13 +43,15 @@ function makeGenderChart() {
         // onclick
         .on('click', function(d,i) { // set up crossfilter
 
+            lastFilter = "gender";
+
             if (genderArray.includes(d.data.key)) { // remove filter
                 genderArray.splice(genderArray.indexOf(d.data.key),1)
                 d3.select(this).attr('fill', color[i])
             }
             else { // add filter
                 genderArray.push(d.data.key)
-                d3.select(this).attr('fill', 'red')
+                d3.select(this).attr('fill', '#A54B4B')
             }
 
             // filters dimension
@@ -85,10 +87,10 @@ function makeGenderChart() {
         .attr("x", 0)
         .attr("y", "1.5em")
         .text(d => d.data.value);
-}
+  }
 
-// update donut table
-function updateGender() {
+  // update donut table
+  function updateGender() {
     let easement = d3.easeSin;
     let T = 750;
 
@@ -116,4 +118,4 @@ function updateGender() {
         });
 
     labelCount.text(d => d.data.value)
-}
+  }
