@@ -159,11 +159,11 @@
 
           <!-- Timeseries -->
           <div class="timetable-insert">
-            <button class= "timetableAdjust" onclick="oneWeek();"> one week </button>
-            <button class= "timetableAdjust" onclick="twoWeeks();"> two weeks </button>
-            <button class= "timetableAdjust" onclick="oneMonth();"> one month </button>
-            <button class= "timetableAdjust"  onclick="threeMonths();"> three months </button>
-            <button class= "timetableAdjust" onclick="yearToDate();"> YTD </button>
+            <button class="timetablebutton" onclick="changeDate('oneweek');"> 1W </button>
+            <button class="timetablebutton" onclick="changeDate('twoweeks');"> 2W </button>
+            <button class="timetablebutton" onclick="changeDate('onemonth');"> 1M </button>
+            <button class="timetablebutton" onclick="changeDate('threemonths');"> 3M </button>
+            <button class="timetablebutton" onclick="changeDate('yeartodate');"> YTD </button>
             <div class="timetable bottombuffer"></div>
           </div>
 
@@ -199,7 +199,11 @@
 
 
           <!-- Table -->
-          <h2 class="top-buffer">Table</h2>
+          <div class="tablebuttondiv">
+            <button onclick="changeRows(10);" class="ten change selected tablebutton"> 10 rows </button>
+            <button onclick="changeRows(20);" class="twenty change tablebutton"> 20 rows </button>
+            <button onclick="changeRows(50);" class="fifty change tablebutton"> 50 rows </button>
+          </div>
           <div class="table-responsive bottombuffer">
             <table id="sosTable" class="table table-bordered table-striped table-hover"></table>
           </div>

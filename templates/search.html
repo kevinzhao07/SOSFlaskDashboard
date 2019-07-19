@@ -53,8 +53,8 @@
     <div class="row content">
       <div class="col-sm-1 sidebuff"></div>
 
-      <div class="col-sm-10 text-center top-buffer center-align">
-        <h1 class="header">S.O.S. Dashboard</h1>
+      <div class="col-sm-10 top-buffer center-align">
+        <h2 class="header text-center">S.O.S. Dashboard</h2>
         <div class="container">
 
           <div class="row content">
@@ -93,6 +93,9 @@
               </form>
             </div>
           </div>
+        <div class = "row content">
+          <div class="col-sm-12 tallerpage"></div>
+        </div>
 
         </div>
       </div>
@@ -100,35 +103,21 @@
     </div>
   </div>
   </div>
-  <footer class="footer">
+  <!-- footer -->
+  <footer class="footer d-print-none">
     <div class="footstyle container-fluid text-center">
       <div class="row text-center">
+        {% for thing in ["Links", "Contact","Help"] %}
           <div class="col-sm-4 text-center">
-            <h4>Links</h4>
+              <h4>{{ thing }}</h4>
             <div class="list-group">
               <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
               <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
             </div>
           </div>
-          <div class="col-sm-4 text-center">
-            <h4>Contact</h4>
-            <div class="list-group">
-              <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
-              <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
-            </div>
-          </div>
-          <div class="col-sm-4 text-center">
-            <h4>Help</h4>
-            <div class="list-group">
-              <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
-              <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
-  </footer>
-
   <!-- scripts -->
   <script src= "/static/js/makeMichigan.js"></script>
   <script src= "/static/js/autocomplete.js"></script>
