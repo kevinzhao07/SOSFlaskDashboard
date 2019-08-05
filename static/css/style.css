@@ -119,16 +119,19 @@ font-weight: bold;
 .btn{
   margin: 10px;
 }
+
 .centerimage img{
 width:100%;
 padding: 5px;
 }
+
 #dashboard-landing-img{
   width:80%;
   padding: 5px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
 .sidebuff{
   height: 100%;
   background-color: #00274c;
@@ -137,6 +140,7 @@ padding: 5px;
 h2{
 font-weight: bold;
 }
+
 #datasource{
 font-weight: bold;
 }
@@ -159,7 +163,9 @@ font-weight: bold;
   padding-top: 40px;
   padding-bottom: 5px;
 }
-
+#gender{
+  background-color: #F8F8F8;
+}
 .timetable-insert{
   padding-top: 50px;
 }

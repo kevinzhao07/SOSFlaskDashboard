@@ -7,7 +7,7 @@ function makeTimeSeries() {
   movingAvgData = movingAverage(data, 7);
 
   // set the dimensions and margins of the graph
-  margin = {top: 20, right: 20, bottom: 140, left: 40},
+  margin = {top: 20, right: 20, bottom: 100, left: 40},
   width = 960 - margin.left - margin.right,
   height = 300 - margin.top - margin.bottom;
   margin2 = {top: 300-70, right: 20, bottom: 30, left: 40},
