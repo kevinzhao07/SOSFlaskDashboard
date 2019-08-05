@@ -36,6 +36,8 @@
   <link rel="stylesheet" href="/static/css/map.css">
   <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/1.1.0/mapbox-gl.js"></script>
 
 
   <!-- three charts -->
@@ -130,6 +132,15 @@
                   <h2 id="countyname">{{ data.placename }}</h2>
                 {% endif %}
                 <h4 id="datasource">{{ data.src }} - SIMULATED</h4>
+                {% if data.src == 'EMS' %}
+                  <img src = "/static/markers/ambulance_icon_blues.svg" alt = "ambulance represents EMS data">
+                {% endif %}
+                {% if data.src == 'ME' %}
+                  <img src = "/static/markers/morguetable_5.svg" alt = "morgue table represents ME data">
+                {% endif %}
+                {% if data.src == "ED" %}
+                  <img src = "/static/markers/hospital_icon_blues.svg" alt = "hospital represents ED data">
+                {% endif %}
               </div>
               <div class="col-sm-4">
                 <div class="row vbottom">
