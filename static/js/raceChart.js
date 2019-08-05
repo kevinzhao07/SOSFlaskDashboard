@@ -53,7 +53,7 @@ function makeRaceChart() {
         .attr("height", yRace.bandwidth())
         .attr("x", 0)
         .attr("width", d=>xRace(d.value))
-        .style("fill",'#A6CEE3')
+        .style("fill",'#CAB2D6')
 
         // onclick
         .on('click', function(d) {
@@ -63,7 +63,7 @@ function makeRaceChart() {
             // if clicked, filter table
             if (raceArray.includes(d.key)) {
                 d3.select(this)
-                .style("fill", '#A6CEE3')
+                .style("fill", '#CAB2D6')
                 .attr('stroke-width', 0)
                 .attr('stroke', '')
                 raceArray.splice(raceArray.indexOf(d.key),1);

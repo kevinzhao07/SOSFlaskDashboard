@@ -100,22 +100,35 @@ function summaryStats(dayRange) {
     date.filter(dayRange)
     const N1 = CF.groupAll().value()
     const delta = N1-N0
-    const pctChange = N0 > 0 ? delta/N0: ""
-    const formatPct = d3.format('+,.0%')(pctChange)
+    const formatPct = d3.format('+,.0%')
+    const pctChange = N0 > 0 ? formatPct(delta/N0) : "N/A"
     const fDate = dayRange.map(formatDate)
     d3.selectAll('.summary')
-    .data([fDate[0],fDate[1],N1,delta,formatPct])
-    .html(d => d)
+        .data([fDate[0],fDate[1],N1,delta,pctChange])
+        .html(d => d)
     d3.select('#Pct')
-    .datum(pctChange)
-    .attr('style', d => colorCode(d))
+        .datum(pctChange)
+        .attr('style', d => colorCodePct(d))
     d3.select('#Np')
-    .datum(delta)
-    .attr('style', d => colorCode(d))
-    .html(d => arrowUpDown(d))
+        .datum(delta)
+        .attr('style', d => colorCode(d))
+        .html(d => arrowUpDown(d))
 
     // console.log(dayRange[1])
     }
+
+function colorCodePct(data){
+  if (data.includes("+")){
+    return 'color:red';
+
+  }
+  else if (data.includes("-")){
+    return 'color:green';
+  }
+  else{
+    return 'color:black';
+  }
+}
 
 function colorCode(data){
   if (data > 0){
@@ -156,20 +169,26 @@ function resetAll() {
 function resetGender() {
     genderArray = [];
     gender.filterAll();
-    slices.attr("fill", (d,i) => color[i]);
+    slices.attr("fill", (d,i) => color[i])
+        .attr('stroke', '')
+        .attr('stroke-width', 0);
     updateAll(gender.bottom(Infinity));
 }
 
 function resetAge() {
     ageArray = [];
     age.filterAll();
-    barsAge.style("fill", "lightblue");
+    barsAge.style("fill", "#FB9A99")
+        .attr('stroke', '')
+        .attr('stroke-width', 0);
     updateAll(age.bottom(Infinity));
 }
 
 function resetRace() {
     raceArray = [];
     race.filterAll();
-    barsRace.style("fill", "pink");
+    barsRace.style("fill", "#CAB2D6")
+        .attr('stroke', '')
+        .attr('stroke-width', 0);
     updateAll(race.bottom(Infinity));
 }

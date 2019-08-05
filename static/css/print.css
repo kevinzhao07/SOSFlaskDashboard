@@ -5,12 +5,15 @@
 
 
 @page{
-  margin: 0.25in !important;
+  size:  auto;   /* auto is the initial value */
+  margin: 0mm;  /* this affects the margin in the printer settings */
 }
 
-
-
 @media print {
+  body {
+    /* border: solid 1px red ; */
+    margin: 0mm; /* margin you want for the content */
+  }
   .sidebuff{
     color: white !important;
     opacity: 0 !important;
@@ -36,6 +39,17 @@
   h1, h2, h3, h4, h5, h6{
     font-size: 19pt !important;
   }
-
-
+  .sticky-top{
+    position: relative !important;
+  }
+  .map-insert{
+    padding-top: 10px !important;
+  }
+  th{
+    background-color: white !important;
+    color: black !important;
+  }
+  .demographics{
+    page-break-before: always !important;
+  }
 }
