@@ -30,7 +30,7 @@ function makeGenderChart() {
         .innerRadius(radius * 0.5)
 
     // sets color of donut chart
-    color = d3.schemePaired.slice(6);
+    color = d3.schemePaired;
     slices = svgGender.datum(dataGender).selectAll("path")
         .data(pie)
         .join("path")
@@ -48,10 +48,14 @@ function makeGenderChart() {
             if (genderArray.includes(d.data.key)) { // remove filter
                 genderArray.splice(genderArray.indexOf(d.data.key),1)
                 d3.select(this).attr('fill', color[i])
+                .attr('stroke-width', 0)
+                .attr('stroke', '')
             }
             else { // add filter
                 genderArray.push(d.data.key)
-                d3.select(this).attr('fill', '#A54B4B')
+                d3.select(this).attr('fill', '#d4f2e0')
+                  .attr('stroke-width', 4)
+                  .attr('stroke', '#95dfb3')
             }
 
             // filters dimension
@@ -66,9 +70,11 @@ function makeGenderChart() {
     label = svgGender.datum(dataGender).selectAll('text')
         .data(pie)
         .join('text')
+        .attr('class', 'label')
         .attr('transform', d => 'translate(' + arc.centroid(d) + ')')
         .attr('dy','0.35em')
         .style('opacity', d => d.data.value==0 ? 0 : 1)
+        // .attr('fill', 'white')
         .each(function(d) { // store the initial angles
     const angles = { startAngle: d.startAngle, endAngle: d.endAngle };
     this._current = angles;

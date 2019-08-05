@@ -53,7 +53,7 @@ function makeRaceChart() {
         .attr("height", yRace.bandwidth())
         .attr("x", 0)
         .attr("width", d=>xRace(d.value))
-        .style("fill", "pink")
+        .style("fill",'#A6CEE3')
 
         // onclick
         .on('click', function(d) {
@@ -63,12 +63,17 @@ function makeRaceChart() {
             // if clicked, filter table
             if (raceArray.includes(d.key)) {
                 d3.select(this)
-                .style("fill", "pink")
-                raceArray.splice(raceArray.indexOf(d.key),1)
+                .style("fill", '#A6CEE3')
+                .attr('stroke-width', 0)
+                .attr('stroke', '')
+                raceArray.splice(raceArray.indexOf(d.key),1);
             }
             else {
                 d3.select(this)
-                    .style("fill", "#EC6F6F");
+                    // .style("fill", "#EC6F6F")
+                    .style('fill', '#d4f2e0')
+                    .attr('stroke-width', 4)
+                    .attr('stroke', '#95dfb3')
                 raceArray.push(d.key);
             }
 

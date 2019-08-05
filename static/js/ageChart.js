@@ -49,7 +49,7 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
         .attr("height", yAge.bandwidth())
         .attr("x", d=>xAge(d.value))
         .attr("width", function(d) {return widthAge - xAge(d.value)})
-        .style("fill", "lightblue")
+        .style("fill", '#A6CEE3')
 
         // onclick
         .on('click', function(d) {
@@ -59,12 +59,17 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
             // if clicked, filter table
             if (ageArray.includes(d.key)) {
                 d3.select(this)
-                .style("fill", "lightblue")
+                .style("fill", '#A6CEE3')
+                .attr('stroke-width', 0)
+                .attr('stroke', '')
                 ageArray.splice(ageArray.indexOf(d.key),1)
             }
             else {
                 d3.select(this)
-                    .style("fill", "#117190");
+                    // .style("fill", "#117190");
+                    .style('fill', '#d4f2e0')
+                    .attr('stroke-width', 4)
+                    .attr('stroke', '#95dfb3');
                 ageArray.push(d.key);
             }
 
