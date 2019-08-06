@@ -254,5 +254,5 @@ function makeTimeSeries() {
       .call(brush)
       .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
     date.filter([beginDate, endDate]);
-    updateAll(date.top(Infinity));
+    updateAll(date.bottom(Infinity));
   }

@@ -82,7 +82,7 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
             }
 
             // updates graphs
-            updateAll(age.bottom(Infinity));
+            updateAll(date.top(Infinity));
         });
 
 

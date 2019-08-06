@@ -6,7 +6,6 @@ async function makeDashboard(fileName) {
 
     DATA = await d3.csv(fileName, type);
     CF = crossfilter(DATA);
-    date = CF.dimension(d => d.date);
 
     rows = 10;
     lastFilter = "date";
@@ -14,8 +13,8 @@ async function makeDashboard(fileName) {
     selected20 = false;
     selected50 = false;
 
-    createMap();
     makeTimeSeries();
+    createMap();
     makeAgeChart();
     makeGenderChart();
     makeRaceChart();
@@ -172,7 +171,7 @@ function resetGender() {
     slices.attr("fill", (d,i) => color[i])
         .attr('stroke', '')
         .attr('stroke-width', 0);
-    updateAll(gender.bottom(Infinity));
+    updateAll(date.top(Infinity));
 }
 
 function resetAge() {
@@ -181,7 +180,7 @@ function resetAge() {
     barsAge.style("fill", "#FB9A99")
         .attr('stroke', '')
         .attr('stroke-width', 0);
-    updateAll(age.bottom(Infinity));
+    updateAll(date.top(Infinity));
 }
 
 function resetRace() {
@@ -190,5 +189,5 @@ function resetRace() {
     barsRace.style("fill", "#CAB2D6")
         .attr('stroke', '')
         .attr('stroke-width', 0);
-    updateAll(race.bottom(Infinity));
+    updateAll(date.top(Infinity));
 }

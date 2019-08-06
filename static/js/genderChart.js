@@ -62,7 +62,7 @@ function makeGenderChart() {
             genderArray.length === 0 ? gender.filterAll() : gender.filter(d => genderArray.includes(d));
 
             // filters other graphs
-            updateAll(gender.bottom(Infinity));
+            updateAll(date.top(Infinity));
 
         });
 
