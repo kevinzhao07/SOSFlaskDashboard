@@ -6,11 +6,64 @@ function makeHtmlTable() {
       .selectAll('th')
       .data(d => DATA.columns.slice(0, -2))
       .join('th')
-        .text((d,i) => i = 1 ? formatHTMLthings(d): d);
+        .text((d,i) => i = 1 ? formatHTMLthings(d): d)
     tbody = table.append('tbody');
 
     updateAll(date.top(10));
-  }
+
+    var clicks = {"date": 0, "county": 0, "age": 0, "gender": 0, "race": 0};
+    thead
+        .on("click", function(d) {
+          // if (d == "county") {
+          //   clicks.county++;
+          //     var countyNames = CF.dimension(function(d){return d.county;});
+          //   if (clicks.county % 2 == 0) {
+          //     sortTable(countyNames.top(Infinity))
+          //
+          //   } else {
+          //     sortTable(countyNames.bottom(Infinity))
+          //
+          //   } //close else
+          // } //close if d is county
+
+          if (d == "Age") {
+            clicks.age++;
+            var agesToSort = CF.dimension(function(d){return d.Age;});
+            if (clicks.age % 2 == 0) {
+              sortTable(agesToSort.top(Infinity));
+
+            } else {
+              sortTable(agesToSort.bottom(Infinity));
+
+            } //close else
+          } //close if d is age
+
+          if (d == "Gender") {
+            clicks.gender++;
+            var gendersToSort = CF.dimension(function(d){return d.Gender;});
+            if (clicks.gender % 2 == 0) {
+              sortTable(gendersToSort.top(Infinity))
+
+            } else {
+              sortTable(gendersToSort.bottom(Infinity))
+
+            } //close else
+          } //close if d is gender
+
+          if (d == "Race") {
+            clicks.race++;
+            var racesToSort = CF.dimension(function(d){return d.Race;});
+            if (clicks.race % 2 == 0) {
+              sortTable(racesToSort.top(Infinity))
+
+            } else {
+              sortTable(racesToSort.bottom(Infinity))
+
+            } //close else
+          } //close if d is race
+        } //close function
+      ); //close on click
+}
 
 // updates HTML table
 function updateHtmlTable(data = date.top(Infinity)) {
@@ -32,146 +85,8 @@ function formatHTMLthings(d){
     return d;
   }
 }
-//
-// /**  sort functionality **/
-// headers
-//   .on("click", function(d) {
-//     if (d == "Date") {
-//       clicks.title++;
-//       // even number of clicks
-//       if (clicks.title % 2 == 0) {
-//         // sort ascending: alphabetically
-//         rows.sort(function(a,b) {
-//           if (a.title.toUpperCase() < b.title.toUpperCase()) {
-//             return -1;
-//           } else if (a.title.toUpperCase() > b.title.toUpperCase()) {
-//             return 1;
-//           } else {
-//             return 0;
-//           }
-//         });
-//       // odd number of clicks
-//       } else if (clicks.title % 2 != 0) {
-//         // sort descending: alphabetically
-//         rows.sort(function(a,b) {
-//           if (a.title.toUpperCase() < b.title.toUpperCase()) {
-//             return 1;
-//           } else if (a.title.toUpperCase() > b.title.toUpperCase()) {
-//             return -1;
-//           } else {
-//             return 0;
-//           }
-//         });
-//       }
-//     }
-//     if (d == "Views") {
-//     clicks.views++;
-//       // even number of clicks
-//       if (clicks.views % 2 == 0) {
-//         // sort ascending: numerically
-//         rows.sort(function(a,b) {
-//           if (+a.views < +b.views) {
-//             return -1;
-//           } else if (+a.views > +b.views) {
-//             return 1;
-//           } else {
-//             return 0;
-//           }
-//         });
-//       // odd number of clicks
-//       } else if (clicks.views % 2 != 0) {
-//         // sort descending: numerically
-//         rows.sort(function(a,b) {
-//           if (+a.views < +b.views) {
-//             return 1;
-//           } else if (+a.views > +b.views) {
-//             return -1;
-//           } else {
-//             return 0;
-//           }
-//         });
-//       }
-//     }
-//     if (d == "Created On") {
-//       clicks.created_on++;
-//       if (clicks.created_on % 2 == 0) {
-//         // sort ascending: by date
-//         rows.sort(function(a,b) {
-//           // grep date and time, split them apart, make Date objects for comparing
-//         var date = /[\d]{4}-[\d]{2}-[\d]{2}/.exec(a.created_on);
-//         date = date[0].split("-");
-//         var time = /[\d]{2}:[\d]{2}:[\d]{2}/.exec(a.created_on);
-//         time = time[0].split(":");
-//         var a_date_obj = new Date(+date[0],(+date[1]-1),+date[2],+time[0],+time[1],+time[2]);
-//
-//           date = /[\d]{4}-[\d]{2}-[\d]{2}/.exec(b.created_on);
-//         date = date[0].split("-");
-//         time = /[\d]{2}:[\d]{2}:[\d]{2}/.exec(b.created_on);
-//         time = time[0].split(":");
-//         var b_date_obj = new Date(+date[0],(+date[1]-1),+date[2],+time[0],+time[1],+time[2]);
-//
-//           if (a_date_obj < b_date_obj) {
-//             return -1;
-//           } else if (a_date_obj > b_date_obj) {
-//             return 1;
-//           } else {
-//             return 0;
-//           }
-//         });
-//       // odd number of clicks
-//       } else if (clicks.created_on % 2 != 0) {
-//         // sort descending: by date
-//         rows.sort(function(a,b) {
-//           // grep date and time, split them apart, make Date objects for comparing
-//         var date = /[\d]{4}-[\d]{2}-[\d]{2}/.exec(a.created_on);
-//         date = date[0].split("-");
-//         var time = /[\d]{2}:[\d]{2}:[\d]{2}/.exec(a.created_on);
-//         time = time[0].split(":");
-//         var a_date_obj = new Date(+date[0],(+date[1]-1),+date[2],+time[0],+time[1],+time[2]);
-//
-//           date = /[\d]{4}-[\d]{2}-[\d]{2}/.exec(b.created_on);
-//         date = date[0].split("-");
-//         time = /[\d]{2}:[\d]{2}:[\d]{2}/.exec(b.created_on);
-//         time = time[0].split(":");
-//         var b_date_obj = new Date(+date[0],(+date[1]-1),+date[2],+time[0],+time[1],+time[2]);
-//
-//           if (a_date_obj < b_date_obj) {
-//             return 1;
-//           } else if (a_date_obj > b_date_obj) {
-//             return -1;
-//           } else {
-//             return 0;
-//           }
-//         });
-//       }
-//     }
-//     if (d == "URL") {
-//       clicks.url++;
-//     // even number of clicks
-//       if (clicks.url % 2 == 0) {
-//         // sort ascending: alphabetically
-//         rows.sort(function(a,b) {
-//           if (a.thumb_url_default.toUpperCase() < b.thumb_url_default.toUpperCase()) {
-//             return -1;
-//           } else if (a.thumb_url_default.toUpperCase() > b.thumb_url_default.toUpperCase()) {
-//             return 1;
-//           } else {
-//             return 0;
-//           }
-//         });
-//       // odd number of clicks
-//       } else if (clicks.url % 2 != 0) {
-//         // sort descending: alphabetically
-//         rows.sort(function(a,b) {
-//           if (a.thumb_url_default.toUpperCase() < b.thumb_url_default.toUpperCase()) {
-//             return 1;
-//           } else if (a.thumb_url_default.toUpperCase() > b.thumb_url_default.toUpperCase()) {
-//             return -1;
-//           } else {
-//             return 0;
-//           }
-//         });
-//       }
-//     }
-//   }) // end of click listeners
-// });
+
+function sortTable(data){
+  data = reduceData(data)
+  updateHtmlTable(data)
+}
