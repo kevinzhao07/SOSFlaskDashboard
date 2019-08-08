@@ -32,7 +32,7 @@ function makeHtmlTable() {
           toggleToAsc(this); //take the clicked thing and run toggleToAsc on it
           sortColumn = d; //replace initial value in sortColumn with the val in "d"
           resortedData = getSortedData(sortColumn); //take the val in "d" and run getSortedData on it, return a sorted data set
-          sortTable(resortedData); // update table with the resorted data
+          sortTable(resortedData) // update table with the resorted data
 
           function toggleToAsc(element){
             current = element;
