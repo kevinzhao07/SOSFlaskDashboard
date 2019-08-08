@@ -62,6 +62,7 @@ function changeRows(N) {
   }
 
   if (sortColumn == "Age") {
+
       var newData = reduceData(data);
   }
   if (sortColumn == "date") {
