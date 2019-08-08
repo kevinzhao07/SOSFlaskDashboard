@@ -24,7 +24,6 @@ function createMap() {// Mapbox section
           weight: 2,
           opacity: 1,
           color: '#72add4',
-          dashArray: '3',
           fillOpacity: 0.30
       };
   }
