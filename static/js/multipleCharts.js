@@ -47,6 +47,7 @@ function reduceData(data) {
 
 function changeRows(N) {
   rows = N;
+  data = getSortedData(sortColumn);
   if (lastFilter == "age") {
       var newData = reduceData(age.bottom(Infinity));
   }
@@ -61,16 +62,17 @@ function changeRows(N) {
   }
 
   if (sortColumn == "Age") {
-      var newData = reduceData(age.bottom(Infinity));
+
+      var newData = reduceData(data);
   }
   if (sortColumn == "date") {
-      var newData = reduceData(date.top(Infinity));
+      var newData = reduceData(data);
   }
   if (sortColumn == "Race") {
-      var newData = reduceData(race.bottom(Infinity));
+      var newData = reduceData(data);
   }
   if (sortColumn == "Gender") {
-      var newData = reduceData(gender.bottom(Infinity));
+      var newData = reduceData(data);
   }
 
   updateHtmlTable(newData);
