@@ -59,6 +59,20 @@ function changeRows(N) {
   if (lastFilter == "gender") {
       var newData = reduceData(gender.bottom(Infinity));
   }
+
+  if (sortColumn == "Age") {
+      var newData = reduceData(age.bottom(Infinity));
+  }
+  if (sortColumn == "date") {
+      var newData = reduceData(date.top(Infinity));
+  }
+  if (sortColumn == "Race") {
+      var newData = reduceData(race.bottom(Infinity));
+  }
+  if (sortColumn == "Gender") {
+      var newData = reduceData(gender.bottom(Infinity));
+  }
+
   updateHtmlTable(newData);
 
   removeAllClasses();
