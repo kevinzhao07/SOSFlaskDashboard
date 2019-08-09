@@ -24,19 +24,19 @@ async function makeDashboard(fileName) {
 }
 
 // updates all maps
-function updateAll() {
-    updateMap(map.getBounds());
-    updateTimeSeries();
-    summaryStats(x.domain());
-    updateAge();
-    updateGender();
-    updateRace();
-    tableData = getSortedData(sortColumn);
-    // console.log(tableData);
+function updateAll(updateCharts = true) {
+    if (updateCharts) {
+      updateMap(map.getBounds());
+      updateTimeSeries();
+      summaryStats(x.domain());
+      updateAge();
+      updateGender();
+      updateRace();
+    }
+    let tableData = getSortedData(sortColumn);
     tableData = reduceData(tableData);
     updateHtmlTable(tableData);
 }
-
 
 function reduceData(data) {
     if (data.length > rows) {
@@ -51,9 +51,7 @@ function reduceData(data) {
 
 function changeRows(N) {
   rows = N;
-  let tableData = getSortedData(sortColumn);
-  tableData = reduceData(tableData);
-  updateHtmlTable(tableData);
+  updateAll(updateCharts=false)
   d3.selectAll(".change").classed("selected", false);
   if (N == 10) {
       d3.selectAll(".ten").classed("selected", true);
