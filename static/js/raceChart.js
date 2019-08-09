@@ -86,8 +86,9 @@ function makeRaceChart() {
             }
 
             // updates all other graphs and table
-            usedData = getSortedData(sortColumn);
+            var usedData = getSortedData(sortColumn);
             updateAll(usedData);
+            // console.log(usedData);
         });
 
     // adds text for bars on race
@@ -120,7 +121,7 @@ function makeRaceChart() {
     .selectAll(".tick text")
         .style("font-size","16px")
         .attr("y", 15);
-
+// console.log(data);
 }
 
 // update race bars

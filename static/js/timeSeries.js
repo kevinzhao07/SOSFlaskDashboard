@@ -1,5 +1,4 @@
 function makeTimeSeries() {
-
   // set up dimensions
   date = CF.dimension(d => d.date)
   dategrp = date.group();
@@ -132,7 +131,7 @@ function makeTimeSeries() {
 
     // draw markers on Mapbox
     date.filter([beginDate, endDate]);
-  }
+}
 
   // updates timetable graph
   function updateTimeSeries() {

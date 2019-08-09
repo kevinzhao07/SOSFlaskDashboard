@@ -9,6 +9,7 @@ async function makeDashboard(fileName) {
 
     rows = 10;
     lastFilter = "date";
+    sortColumn = "date";
     selected10 = true;
     selected20 = false;
     selected50 = false;
@@ -19,17 +20,21 @@ async function makeDashboard(fileName) {
     makeGenderChart();
     makeRaceChart();
     makeHtmlTable();
+
 }
 
 // updates all maps
-function updateAll(data = date.top(Infinity)) {
+function updateAll() {
     updateMap(map.getBounds());
     updateTimeSeries();
-    updateHtmlTable(data);
     summaryStats(x.domain());
     updateAge();
     updateGender();
     updateRace();
+    tableData = getSortedData(sortColumn);
+    console.log(tableData);
+    tableData = reduceData(tableData);
+    updateHtmlTable(tableData);
 }
 
 

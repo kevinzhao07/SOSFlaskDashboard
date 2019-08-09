@@ -82,8 +82,10 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
             }
 
             // updates graphs
-            usedData = getSortedData(sortColumn);
+            var usedData = getSortedData(sortColumn);
             updateAll(usedData);
+            // console.log(usedData);
+
         });
 
 

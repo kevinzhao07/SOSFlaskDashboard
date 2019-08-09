@@ -62,10 +62,10 @@ function makeGenderChart() {
             genderArray.length === 0 ? gender.filterAll() : gender.filter(d => genderArray.includes(d));
 
             // filters other graphs
-            usedData = getSortedData(sortColumn);
+            var usedData = getSortedData(sortColumn);
             updateAll(usedData);
 
-
+            // console.log(usedData);
         });
 
     // puts label on donut chart

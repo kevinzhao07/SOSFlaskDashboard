@@ -42,7 +42,10 @@ function createMap() {// Mapbox section
         // spatial filtering on map event
         map.on('moveend zoomend', function() {
             lastFilter = "date";
-            updateAll(date.top(Infinity));
+            var usedData = getSortedData(sortColumn);
+            updateAll(usedData);
+            // console.log(usedData);
+            // updateAll(date.top(Infinity));
         })
 }
 

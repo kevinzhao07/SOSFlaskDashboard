@@ -7,6 +7,7 @@ var descending = "fa-sort-desc";
 
 function makeHtmlTable() {
     // selects table to add
+    // console.log(data);
     table = d3.select("#sosTable")
     thead = table.append('thead').append('tr')
       .selectAll('th')
@@ -16,9 +17,6 @@ function makeHtmlTable() {
         .attr('class', (d,i) => DATA.columns.slice(0,-2)[i] + " sortable")
     tbody = table.append('tbody');
 
-    updateAll(date.top(10)); //the update has to happen here for the timeseries to load the correct data
-
-    var clicks = {"date": 0, "county": 0, "age": 0, "gender": 0, "race": 0};
     thead
         .html(function(d){  //this function adds neutral sort-state arrows
           const theseNames = ['Age', 'Gender', 'Race', 'date']
@@ -32,7 +30,8 @@ function makeHtmlTable() {
           toggleToAsc(this); //take the clicked thing and run toggleToAsc on it
           sortColumn = d; //replace initial value in sortColumn with the val in "d"
           resortedData = getSortedData(sortColumn); //take the val in "d" and run getSortedData on it, return a sorted data set
-          sortTable(resortedData) // update table with the resorted data
+          reducedData = reduceData(resortedData);
+          updateAll(reducedData); // update table with the resorted data
 
           function toggleToAsc(element){
             current = element;
@@ -64,10 +63,13 @@ function makeHtmlTable() {
 
         } //close function
       ); //close on click
+      // console.log(date.top(Infinity));
+      updateAll(sortColumn);
+      // console.log(data);
 }
 
 // updates HTML table
-function updateHtmlTable(data = date.top(Infinity)) {
+function updateHtmlTable(data) {
     row = tbody.selectAll('tr')
         .data(data)
         .join('tr')
@@ -85,11 +87,6 @@ function formatHTMLthings(d){
   else{
     return d;
   }
-}
-
-function sortTable(data){
-  data = reduceData(data)
-  updateHtmlTable(data)
 }
 function getSortedData(sortColumn){
 
