@@ -32,7 +32,7 @@ function updateAll() {
     updateGender();
     updateRace();
     tableData = getSortedData(sortColumn);
-    console.log(tableData);
+    // console.log(tableData);
     tableData = reduceData(tableData);
     updateHtmlTable(tableData);
 }
@@ -51,53 +51,17 @@ function reduceData(data) {
 
 function changeRows(N) {
   rows = N;
-  data = getSortedData(sortColumn);
-  if (lastFilter == "age") {
-      var newData = reduceData(age.bottom(Infinity));
-  }
-  if (lastFilter == "date") {
-      var newData = reduceData(date.top(Infinity));
-  }
-  if (lastFilter == "race") {
-      var newData = reduceData(race.bottom(Infinity));
-  }
-  if (lastFilter == "gender") {
-      var newData = reduceData(gender.bottom(Infinity));
-  }
-
-  if (sortColumn == "Age") {
-      var newData = reduceData(data);
-  }
-  if (sortColumn == "date") {
-      var newData = reduceData(data);
-  }
-  if (sortColumn == "Race") {
-      var newData = reduceData(data);
-  }
-  if (sortColumn == "Gender") {
-      var newData = reduceData(data);
-  }
-
-  updateHtmlTable(newData);
-
-  removeAllClasses();
+  let tableData = getSortedData(sortColumn);
+  tableData = reduceData(tableData);
+  updateHtmlTable(tableData);
+  d3.selectAll(".change").classed("selected", false);
   if (N == 10) {
-      d3.selectAll(".ten")
-          .classed("selected", true);
+      d3.selectAll(".ten").classed("selected", true);
+  } else if (N == 20) {
+      d3.selectAll(".twenty").classed("selected", true);
+  } else if (N == 50) {
+      d3.selectAll(".fifty").classed("selected", true);
   }
-  if (N == 20) {
-      d3.selectAll(".twenty")
-          .classed("selected", true);
-  }
-  if (N == 50) {
-      d3.selectAll(".fifty")
-          .classed("selected", true);
-  }
-}
-
-function removeAllClasses() {
-  d3.selectAll(".change")
-      .classed("selected", false);
 }
 
 // read in data

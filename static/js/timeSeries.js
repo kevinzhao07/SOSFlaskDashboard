@@ -135,6 +135,7 @@ function makeTimeSeries() {
 
   // updates timetable graph
   function updateTimeSeries() {
+    // console.log(data);
     easeFunc = d3.easeQuad
     T = 750
 
@@ -178,6 +179,7 @@ function makeTimeSeries() {
 
   // brush snapping function
   function brushended() {
+
     if (!d3.event.sourceEvent) return; // Only transition after input.
     if (!d3.event.selection) brushed(); // Empty selection returns default brush
     dateRange = d3.event.selection.map(x2.invert),
@@ -193,7 +195,12 @@ function makeTimeSeries() {
       .call(d3.event.target.move, dayRange.map(x2));
 
     lastFilter = "date";
-    updateAll(date.top(Infinity));
+    // updateAll(date.top(Infinity));
+    // console.log(sortColumn);
+    var usedData = getSortedData(sortColumn);
+    // console.log(usedData);
+    updateAll(usedData);
+
   }
 
   // calculates simple moving average over N days
@@ -253,5 +260,9 @@ function makeTimeSeries() {
       .call(brush)
       .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
     date.filter([beginDate, endDate]);
-    updateAll(date.bottom(Infinity));
+    // updateAll(date.bottom(Infinity));
+    var usedData = getSortedData(sortColumn);
+    // console.log(usedData);
+    updateAll(usedData);
+
   }
