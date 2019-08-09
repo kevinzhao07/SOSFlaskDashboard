@@ -29,8 +29,8 @@ function createMap() {// Mapbox section
   }
 
     L.control.layers(layers).addTo(map); // add basemap control
-    featureLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
-    boxLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
+    featureLayer = L.mapbox.featureLayer().addTo(map);
+    const citycountyLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
 
 
 
