@@ -16,7 +16,7 @@ function makeHtmlTable() {
         .attr('class', (d,i) => DATA.columns.slice(0,-2)[i] + " sortable")
     tbody = table.append('tbody');
 
-    updateAll(date.top(10));
+    updateAll(date.top(10)); //the update has to happen here for the timeseries to load the correct data
 
     var clicks = {"date": 0, "county": 0, "age": 0, "gender": 0, "race": 0};
     thead
@@ -60,6 +60,7 @@ function makeHtmlTable() {
               d3.select(current).select('i').classed(descending, false).classed(ascending, true);
             }
           }
+          // usedData = getSortedData(sortColumn);
 
         } //close function
       ); //close on click

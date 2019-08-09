@@ -23,7 +23,6 @@ async function makeDashboard(fileName) {
 
 // updates all maps
 function updateAll(data = date.top(Infinity)) {
-    data = reduceData(data);
     updateMap(map.getBounds());
     updateTimeSeries();
     updateHtmlTable(data);
@@ -177,7 +176,8 @@ function resetAll() {
     resetRace();
 
     // update bars to reflect unfiltering
-    updateAll(date.top(Infinity));
+    usedData = getSortedData(sortColumn);
+    updateAll(usedData);
 }
 
 function resetGender() {
@@ -186,7 +186,8 @@ function resetGender() {
     slices.attr("fill", (d,i) => color[i])
         .attr('stroke', '')
         .attr('stroke-width', 0);
-    updateAll(date.top(Infinity));
+    usedData = getSortedData(sortColumn);
+    updateAll(usedData);
 }
 
 function resetAge() {
@@ -195,7 +196,8 @@ function resetAge() {
     barsAge.style("fill", "#FB9A99")
         .attr('stroke', '')
         .attr('stroke-width', 0);
-    updateAll(date.top(Infinity));
+    usedData = getSortedData(sortColumn);
+    updateAll(usedData);
 }
 
 function resetRace() {
@@ -204,5 +206,6 @@ function resetRace() {
     barsRace.style("fill", "#CAB2D6")
         .attr('stroke', '')
         .attr('stroke-width', 0);
-    updateAll(date.top(Infinity));
+    usedData = getSortedData(sortColumn);
+    updateAll(usedData);
 }
