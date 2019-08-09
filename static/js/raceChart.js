@@ -86,7 +86,8 @@ function makeRaceChart() {
             }
 
             // updates all other graphs and table
-            updateAll(date.top(Infinity));
+            usedData = getSortedData(sortColumn);
+            updateAll(usedData);
         });
 
     // adds text for bars on race
