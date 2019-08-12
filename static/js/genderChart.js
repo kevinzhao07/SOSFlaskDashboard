@@ -1,16 +1,15 @@
 function makeGenderChart() {
-
     // set up dimension and groups
-    gender = CF.dimension(d => d.Gender);
-    gendergrp = gender.group();
-    dataGender = gendergrp.all();
+    genderDim = CF.dimension(d => d.Gender);
+    genderGrp = genderDim.group();
+    dataGender = genderGrp.all();
     var genderArray = [];
 
     // set up dimensions for gender donut chart
     var marginGender = {top: -30, right: 0, bottom: 0, left: 0},
-      widthGender = 480 - marginGender.left - marginGender.right,
-      heightGender = 360 - marginGender.top - marginGender.bottom,
-      radius = Math.min(widthGender, heightGender) / 2;
+        widthGender = 480 - marginGender.left - marginGender.right,
+        heightGender = 360 - marginGender.top - marginGender.bottom,
+        radius = Math.min(widthGender, heightGender) / 2;
 
     // append gender graph 'svg'
     var svgGender = d3.select("#gender")
@@ -38,11 +37,9 @@ function makeGenderChart() {
         .attr("d", arc)
         .each(function(d) {// store the initial angles
             this._current = d
-        })
-
+        })// close each function
         // onclick
-        .on('click', function(d,i) { // set up crossfilter
-
+        .on('click', function(d,i) {// set up crossfilter
             lastFilter = "gender";
 
             if (genderArray.includes(d.data.key)) { // remove filter
@@ -50,23 +47,19 @@ function makeGenderChart() {
                 d3.select(this).attr('fill', color[i])
                 .attr('stroke-width', 0)
                 .attr('stroke', '')
-            }
-            else { // add filter
+            } else {// add filter
                 genderArray.push(d.data.key)
                 d3.select(this).attr('fill', '#d4f2e0')
                   .attr('stroke-width', 4)
                   .attr('stroke', '#95dfb3')
             }
-
             // filters dimension
-            genderArray.length === 0 ? gender.filterAll() : gender.filter(d => genderArray.includes(d));
+            genderArray.length === 0 ? genderDim.filterAll() :
+              genderDim.filter(d => genderArray.includes(d));
 
             // filters other graphs
-            var usedData = getSortedData(sortColumn);
-            updateAll(usedData);
-
-            // console.log(usedData);
-        });
+            updateAll();
+        }); //close onclick
 
     // puts label on donut chart
     label = svgGender.datum(dataGender).selectAll('text')
@@ -76,12 +69,10 @@ function makeGenderChart() {
         .attr('transform', d => 'translate(' + arc.centroid(d) + ')')
         .attr('dy','0.35em')
         .style('opacity', d => d.data.value==0 ? 0 : 1)
-        // .attr('fill', 'white')
         .each(function(d) { // store the initial angles
-    const angles = { startAngle: d.startAngle, endAngle: d.endAngle };
-    this._current = angles;
-    });
-
+            const angles = { startAngle: d.startAngle, endAngle: d.endAngle };
+            this._current = angles;
+            });
     // label top line
     label.append("tspan")
         .attr('class', 'count age-group')
@@ -95,14 +86,14 @@ function makeGenderChart() {
         .attr("x", 0)
         .attr("y", "1.5em")
         .text(d => d.data.value);
-  }
+};
 
   // update donut table
-  function updateGender() {
+function updateGender() {
     let easement = d3.easeSin;
     let T = 750;
 
-    // changes arc angle of donut table
+  // changes arc angle of donut table
     function arcTween(a) {
         let i = d3.interpolate(this._current, a);
         this._current = i(0);
@@ -125,5 +116,5 @@ function makeGenderChart() {
             };
         });
 
-    labelCount.text(d => d.data.value)
-  }
+    labelCount.text(d => d.data.value);
+};

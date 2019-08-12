@@ -1,17 +1,16 @@
 function makeTimeSeries() {
-  // set up dimensions
-  date = CF.dimension(d => d.date)
-  dategrp = date.group();
-  data = dategrp.all();
-  movingAvgData = movingAverage(data, 7);
+    // set up dimensions
+    dateDim = CF.dimension(d => d.date)
+    dateGrp = dateDim.group();
+    data = dateGrp.all();
+    movingAvgData = movingAverage(data, 7);
 
-  // set the dimensions and margins of the graph
-  margin = {top: 20, right: 20, bottom: 100, left: 40},
-  width = 960 - margin.left - margin.right,
-  height = 300 - margin.top - margin.bottom;
-  margin2 = {top: 300-70, right: 20, bottom: 30, left: 40},
-  height2 = 300 - margin2.top - margin2.bottom;
-
+    // set the dimensions and margins of the graph
+    margin = {top: 20, right: 20, bottom: 100, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+    margin2 = {top: 300-70, right: 20, bottom: 30, left: 40},
+    height2 = 300 - margin2.top - margin2.bottom;
 
     // append timetable svg
     svg = d3.select(".timetable").append("svg")
@@ -130,14 +129,13 @@ function makeTimeSeries() {
       .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
 
     // draw markers on Mapbox
-    date.filter([beginDate, endDate]);
-}
+    dateDim.filter([beginDate, endDate]);
+};
 
-  // updates timetable graph
-  function updateTimeSeries() {
-    // console.log(data);
-    easeFunc = d3.easeQuad
-    T = 750
+// updates timetable graph
+function updateTimeSeries() {
+    easeFunc = d3.easeQuad;
+    T = 750;
 
     // bar transition
     bars.data(data) // bind new data
@@ -158,11 +156,11 @@ function makeTimeSeries() {
       .transition().ease(easeFunc).duration(T)
         .attr('d', movingAvg2)
 
-    summaryStats(x.domain())
-  }
+    summaryStats(x.domain());
+};
 
-  // brush function
-  function brushed() {
+// brush function
+function brushed() {
     const selection = d3.event.selection || x2.range(); // default brush selection
     x.domain(selection.map(x2.invert, x2)); // new focus x-domain
     ms = x.domain()[1] - x.domain()[0]
@@ -175,11 +173,10 @@ function makeTimeSeries() {
     focus.select(".axis--x")
         .call(xAxis)
     summaryStats((x.domain()))
-  }
+};
 
-  // brush snapping function
-  function brushended() {
-
+// brush snapping function
+function brushended() {
     if (!d3.event.sourceEvent) return; // Only transition after input.
     if (!d3.event.selection) brushed(); // Empty selection returns default brush
     dateRange = d3.event.selection.map(x2.invert),
@@ -195,17 +192,11 @@ function makeTimeSeries() {
       .call(d3.event.target.move, dayRange.map(x2));
 
     lastFilter = "date";
-    // updateAll(date.top(Infinity));
-    // console.log(sortColumn);
-    var usedData = getSortedData(sortColumn);
-    // console.log(usedData);
-    updateAll(usedData);
-
-  }
-
-  // calculates simple moving average over N days
-  // assumes no missing dates (best dataset format)
-  function movingAverage(data, N) {
+    updateAll();
+};
+// calculates simple moving average over N days
+// assumes no missing dates (best dataset format)
+function movingAverage(data, N) {
     const data2 = resampleDates(data)
     return data2.map((row, idx, total) => {
       const startIdx = Math.max(0, idx-N+1)
@@ -217,52 +208,42 @@ function makeTimeSeries() {
         avg: sum / movingWindow.length,
       };
     });
-  };
+};
 
-  // resamples dates to make sure there are no missing dates
-  function resampleDates(data) {
+// resamples dates to make sure there are no missing dates
+function resampleDates(data) {
     const startDate = d3.min(data, d => d.key)
     const endDate = d3.max(data, d => d.key)
     dayRange = d3.timeDay.range(startDate, d3.timeDay.offset(endDate,1), 1)
     return dayRange.map(day => {
       return data.find(d => d.key >= day && d.key < d3.timeHour.offset(day,1)) || {'key':day, 'value':0}
     })
-  }
+};
 
-  function changeDate(time) {
+function changeDate(time) {
     endDate = d3.timeDay.offset(d3.max(data, d => d.key),1)
     x.domain([d3.min(data, d => d.key), endDate]);
 
     if (time == 'oneweek') {
       beginDate = d3.timeDay.offset(endDate, -7)
-    }
-
+    };
     if (time == 'twoweeks') {
       beginDate = d3.timeDay.offset(endDate, -14)
-    }
-
+    };
     if (time == "onemonth") {
       beginDate = d3.timeMonth.offset(endDate, -1)
-    }
-
+    };
     if (time == "threemonths") {
       beginDate = d3.timeMonth.offset(endDate, -3)
-    }
-
+    };
     if (time == 'yeartodate') {
-      var days = endDate.getDate();
-      var months = endDate.getMonth();
-      beginDate = d3.timeDay.offset(endDate, -days + 1);
-      beginDate = d3.timeMonth.offset(beginDate, -months);
-    }
+      beginDate = d3.timeYear.offset(endDate, -1);
+    };
 
     selection.attr("class", "brush")
       .call(brush)
       .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
-    date.filter([beginDate, endDate]);
-    // updateAll(date.bottom(Infinity));
-    var usedData = getSortedData(sortColumn);
-    // console.log(usedData);
-    updateAll(usedData);
 
-  }
+    dateDim.filter([beginDate, endDate]);
+    updateAll();
+};

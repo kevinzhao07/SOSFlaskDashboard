@@ -1,0 +1,47 @@
+## Dashboard Tests
+
+- Navigate to Clare County EMS and make sure that there is **1 marker** on the map.
+    - Upper right stats should show 1 total, up 1 incident, and N/A percent.
+    - The date range should be Dec 25, 1984 to Dec 31, 1984.
+    - Clicking on the marker shows a popup with Dec 31, 1984 // Clare // 45-54 // White // Female
+    - The **time series** shows 1 incident on Mon 31
+        - The average line exists
+        - The bar height should be 1
+        - The brushed area/ macro view should show shorter bars with an average line that stays close to the x-axis
+    - The **demographic charts** show data for 1 incident
+        - There is 1 bar in the 45-54 age range
+        - The gender donut shows data for 1 female
+        - There is 1 bar in the White race category
+    - The **HTML table** shows 1 data point
+        - Dec 31, 1984 // Clare // 45-54 // Female // White
+- Expand the time frame to 3 Months using the time series period buttons
+    - Upper right stats should be 9 total, down 4 incidents, and -31%
+    - Map loads 4 markers inside Clare County and 5 markers outside Clare County
+    - The time series has updated to show 9 total incidents
+        - The brushed area expands to show data from October to 1985
+        - The average line exists
+        - Bars have a height of 1
+    - The demographics show data for 9 incidents
+        - 5 data in the 25-34 range, 2 in the 45-54 range, and 2 in the 55+ range
+        - 5 male incidents and 4 female incidents
+        - 4 White, 2 Black, 1 Hispanic/Latino, 1 American Indian/Alaska Native, 1 Unknown
+    - The html table shows 9 incidents
+        - Table should be organized reverse chronologically
+- Select Year-To-Date for 45 data points
+    - HTML table shows reduced data to 10 points
+        - Clicking 20 rows shows reduced data to 20 points
+        - Clicking 50 rows shows all data points
+- Sort HTML table by **age ascending** and click **25-34, 35-44, 45-54, Male, Female, White, and Black**
+    - Upper right shows 28 total, 28 increase, N/A percent
+    - Table remains sorted by Age and has 25-34 at the top
+- Sort by Race, Gender, and Date to check ascending and descending sorts
+- Reset gender and race using reset button on gender chart and race chart
+    - Upper right shows 35 total, 35 increase, N/A percent
+    - Table remains sorted by last selected parameter (date, age, gender, race)
+- Reset demographics using the button under demographic charts
+    - Upper right shows 45 total, 45 increase, N/A percent
+    - HTML table should remain sorted by last selected filter
+- Navigate to Charlevoix County and brush from mid-January (Jan 15) to the end (present?)
+    - Check that Gender shows 2 Unknowns
+    - Check that there are 54 data points, up 51 incidents, 1,7000% increase
+    - Toggle to 50 rows and check that the data is reduced

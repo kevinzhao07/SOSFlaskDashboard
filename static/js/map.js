@@ -15,7 +15,6 @@ function createMap() {// Mapbox section
         .setMaxBounds([[36,-92],[52,-80]])
         .setMinZoom(5)
 
-
     map.scrollWheelZoom.disable();
 
     function style(feature) {
@@ -32,51 +31,42 @@ function createMap() {// Mapbox section
     featureLayer = L.mapbox.featureLayer().addTo(map);
     const citycountyLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
 
-
-
-
-    lat = CF.dimension(d => d.lat)
-    lng = CF.dimension(d => d.lng)
+    latDim = CF.dimension(d => d.lat)
+    lngDim = CF.dimension(d => d.lng)
     drawMarkers();
 
         // spatial filtering on map event
         map.on('moveend zoomend', function() {
             lastFilter = "date";
-            var usedData = getSortedData(sortColumn);
-            updateAll(usedData);
-            // console.log(usedData);
-            // updateAll(date.top(Infinity));
+            updateAll();
         })
-}
-
+};
 
 // draw map markers
-function drawMarkers(days,offset) {
-
-  for (pt of date.top(Infinity)) {
-    m_county = pt.county
-    m_age =  pt.Age
-    m_race = pt.Race
-    m_gender = pt.Gender
-    featureLayer.addLayer(L.marker([pt.lat, pt.lng], {
-        icon:tableIcon,
-        opacity: d3.max([1 - (offset-1)/days, 0]),
-      })
-      .bindPopup('<p>'+formatDate(pt.date)+'<br>'+`${m_county}`+'<br>'+`${m_age}`+' '+`${m_race}`+' '+`${m_gender}`+'</p>')
-    );
-  };
-}
-
+function drawMarkers(days, offset) {
+    for (pt of latDim.top(Infinity)) {
+      m_county = pt.county
+      m_age =  pt.Age
+      m_race = pt.Race
+      m_gender = pt.Gender
+      featureLayer.addLayer(L.marker([pt.lat, pt.lng], {
+          icon: tableIcon,
+          opacity: d3.max([1 - (offset-1)/days, 0]),
+        })
+        .bindPopup(`<p>${formatDate(pt.date)}<br>${m_county}<br>${m_age} ${m_race} ${m_gender}</p>`))
+    };
+};
 
 function updateMap(bounds) {
-    lat.filter([bounds.getSouth(), bounds.getNorth()])
-    lng.filter([bounds.getWest(), bounds.getEast()])
+    latDim.filter([bounds.getSouth(), bounds.getNorth()])
+    lngDim.filter([bounds.getWest(), bounds.getEast()])
 
     featureLayer.clearLayers()
 
-    for (pt of date.top(Infinity)) {
-      days = (dayRange[1] - dayRange[0]) / 86400000
-      offset = (dayRange[1] - pt.date) / 86400000
+    for (pt of latDim.top(Infinity)) {
+      days = (dayRange[1] - dayRange[0]) / 86400000;
+      offset = (dayRange[1] - pt.date) / 86400000;
       drawMarkers(days, offset);
+
     };
-  }
+};

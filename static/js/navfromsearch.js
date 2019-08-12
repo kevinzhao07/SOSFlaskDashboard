@@ -1,19 +1,12 @@
 function navPlace(){
-event.preventDefault();
+    event.preventDefault();
 
-var placeName = document.querySelector("#searchthing").value;
-var form = document.querySelector(".formthing");
+    var placeName = document.querySelector("#searchthing").value;
+    var form = document.querySelector(".formthing");
 
-if(cities.includes(placeName)){
-  console.log("True");
-
-  location.href = "/dashboard" + "?src=EMS&" + "city="+placeName;
-
-}
-else{
-  console.log("False");
-  location.href  = "/dashboard" + "?src=EMS&" + "county="+placeName;
-};
-
-console.log(location.href );
+    if (cities.includes(placeName)) {
+      location.href = "/dashboard" + "?src=EMS&" + "city=" + placeName;
+    } else {
+      location.href  = "/dashboard" + "?src=EMS&" + "county=" + placeName;
+    };
 };

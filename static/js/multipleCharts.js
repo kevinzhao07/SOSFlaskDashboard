@@ -20,10 +20,8 @@ async function makeDashboard(fileName) {
     makeGenderChart();
     makeRaceChart();
     makeHtmlTable();
-
-}
-
-// updates all maps
+};
+// updates all
 function updateAll(updateCharts = true) {
     if (updateCharts) {
       updateMap(map.getBounds());
@@ -36,7 +34,7 @@ function updateAll(updateCharts = true) {
     let tableData = getSortedData(sortColumn);
     tableData = reduceData(tableData);
     updateHtmlTable(tableData);
-}
+};
 
 function reduceData(data) {
     if (data.length > rows) {
@@ -46,21 +44,16 @@ function reduceData(data) {
         var data = [...topData, ...middle, ...bottomData];
     }
     return data;
-}
-
+};
 
 function changeRows(N) {
-  rows = N;
-  updateAll(updateCharts=false)
-  d3.selectAll(".change").classed("selected", false);
-  if (N == 10) {
-      d3.selectAll(".ten").classed("selected", true);
-  } else if (N == 20) {
-      d3.selectAll(".twenty").classed("selected", true);
-  } else if (N == 50) {
+    rows = N;
+    updateAll(updateCharts=false)
+    d3.selectAll(".change").classed("selected", false);
+      N == 10 ? d3.selectAll(".ten").classed("selected", true) :
+      N == 20 ? d3.selectAll(".twenty").classed("selected", true) :
       d3.selectAll(".fifty").classed("selected", true);
-  }
-}
+};
 
 // read in data
 function type(d) {
@@ -68,16 +61,16 @@ function type(d) {
     d.lat = +d.lat;
     d.lng = +d.lng;
     return d;
-}
+};
 
 // Calculate descriptive statistics
 function summaryStats(dayRange) {
     const days = (dayRange[1] - dayRange[0]) / 86400000
     const prevDayRange = [d3.timeDay.offset(dayRange[0],-days), dayRange[0]];
     dayRange[1] = d3.timeSecond.offset(dayRange[1],-1);
-    date.filter(prevDayRange)
+    dateDim.filter(prevDayRange)
     const N0 = CF.groupAll().value()
-    date.filter(dayRange)
+    dateDim.filter(dayRange)
     const N1 = CF.groupAll().value()
     const delta = N1-N0
     const formatPct = d3.format('+,.0%')
@@ -93,48 +86,25 @@ function summaryStats(dayRange) {
         .datum(delta)
         .attr('style', d => colorCode(d))
         .html(d => arrowUpDown(d))
-
-    // console.log(dayRange[1])
-    }
+    };
 
 function colorCodePct(data){
-  if (data.includes("+")){
-    return 'color:red';
-
-  }
-  else if (data.includes("-")){
-    return 'color:green';
-  }
-  else{
-    return 'color:black';
-  }
-}
+    return data.includes("+") ? 'color:red' :
+      data.includes("-") ? 'color:green' :
+      'color:black';
+};
 
 function colorCode(data){
-  if (data > 0){
-    return 'color:red';
-
-  }
-  else if (data < 0){
-    return 'color:green';
-  }
-  else{
-    return 'color:black';
-  }
-}
+    return data > 0 ? 'color:red' :
+      data < 0 ? 'color:green' :
+      'color:black';
+};
 
 function arrowUpDown(data){
-  if (data > 0){
-    return `<i class= "fa fa-arrow-up"></i> ${data}`;
-  }
-  else if (data < 0){
-    return `<i class ="fa fa-arrow-down"></i> ${Math.abs(data)}`;
-  }
-  else{
-    return `${data}`;
-  }
-}
-
+    return data > 0 ? `<i class= "fa fa-arrow-up"></i> ${data}` :
+    data < 0 ? `<i class ="fa fa-arrow-down"></i> ${Math.abs(data)}` :
+    `${data}`;
+};
 
 function resetAll() {
   // remove selected filters
@@ -143,36 +113,32 @@ function resetAll() {
     resetRace();
 
     // update bars to reflect unfiltering
-    usedData = getSortedData(sortColumn);
-    updateAll(usedData);
-}
+    updateAll();
+};
 
 function resetGender() {
     genderArray = [];
-    gender.filterAll();
+    genderDim.filterAll();
     slices.attr("fill", (d,i) => color[i])
         .attr('stroke', '')
         .attr('stroke-width', 0);
-    usedData = getSortedData(sortColumn);
-    updateAll(usedData);
-}
+    updateAll();
+};
 
 function resetAge() {
     ageArray = [];
-    age.filterAll();
+    ageDim.filterAll();
     barsAge.style("fill", "#FB9A99")
         .attr('stroke', '')
         .attr('stroke-width', 0);
-    usedData = getSortedData(sortColumn);
-    updateAll(usedData);
-}
+    updateAll();
+};
 
 function resetRace() {
     raceArray = [];
-    race.filterAll();
+    raceDim.filterAll();
     barsRace.style("fill", "#CAB2D6")
         .attr('stroke', '')
         .attr('stroke-width', 0);
-    usedData = getSortedData(sortColumn);
-    updateAll(usedData);
-}
+    updateAll();
+};

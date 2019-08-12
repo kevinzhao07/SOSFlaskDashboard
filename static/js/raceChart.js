@@ -1,9 +1,8 @@
 function makeRaceChart() {
-
     // set up race
-    race = CF.dimension(d => d.Race);
-    racegrp = race.group();
-    dataRace = racegrp.all();
+    raceDim = CF.dimension(d => d.Race);
+    raceGrp = raceDim.group();
+    dataRace = raceGrp.all();
     raceArray = [];
 
     var white = dataRace[7];
@@ -37,8 +36,8 @@ function makeRaceChart() {
         .range([heightRace, 0]);
 
     // sets domain of race graph
-    xRace.domain([0, d3.max(dataRace, d=>d.value)]);
-    yRace.domain(dataRace.map(function(d) { return d.key;}));
+    xRace.domain([0, d3.max(dataRace, d => d.value)]);
+    yRace.domain(dataRace.map(d => d.key));
 
     // scales the yAxis race graph
     yAxisRace = d3.axisLeft()
@@ -57,9 +56,7 @@ function makeRaceChart() {
 
         // onclick
         .on('click', function(d) {
-
             lastFilter = "race";
-
             // if clicked, filter table
             if (raceArray.includes(d.key)) {
                 d3.select(this)
@@ -67,28 +64,19 @@ function makeRaceChart() {
                 .attr('stroke-width', 0)
                 .attr('stroke', '')
                 raceArray.splice(raceArray.indexOf(d.key),1);
-            }
-            else {
-                d3.select(this)
-                    // .style("fill", "#EC6F6F")
+            } else {
+                  d3.select(this)
                     .style('fill', '#d4f2e0')
                     .attr('stroke-width', 4)
                     .attr('stroke', '#95dfb3')
                 raceArray.push(d.key);
             }
-
             // if unclicked
-            if (raceArray.length == 0) {
-                race.filterAll();
-            }
-            else {
-                race.filter(d => raceArray.includes(d));
-            }
+            raceArray.length == 0 ? raceDim.filterAll() :
+              raceDim.filter(d => raceArray.includes(d));
 
             // updates all other graphs and table
-            var usedData = getSortedData(sortColumn);
-            updateAll(usedData);
-            // console.log(usedData);
+            updateAll();
         });
 
     // adds text for bars on race
@@ -97,9 +85,9 @@ function makeRaceChart() {
         .enter().append("text")
         .attr("class", "chart")
         .style("font-size","16px")
-        .attr("x", d=>xRace(d.value) + 12)
-        .attr("y", d=>yRace(d.key) + yRace.bandwidth() - 14)
-        .text(d=>d.value);
+        .attr("x", d => xRace(d.value) + 12)
+        .attr("y", d => yRace(d.key) + yRace.bandwidth() - 14)
+        .text(d => d.value);
 
     // add y axis labels and size
     svgRace.append("g")
@@ -121,13 +109,12 @@ function makeRaceChart() {
     .selectAll(".tick text")
         .style("font-size","16px")
         .attr("y", 15);
-// console.log(data);
-}
+};
 
 // update race bars
 function updateRace() {
-    max = d3.max(dataRace, d=>d.value);
-    newMax = Math.max(max, 5);
+    let max = d3.max(dataRace, d=>d.value);
+    let newMax = Math.max(max, 5);
 
     xRace.domain([0,newMax]);
     svgRace.select(".x")
@@ -142,17 +129,16 @@ function updateRace() {
 
     barsRaceLabel.data(dataRace)
         .transition().duration(200)
-        .attr("x", d=>xRace(d.value) + 14)
-        .text(d=>d.value);
-    }
-
+        .attr("x", d => xRace(d.value) + 14)
+        .text(d => d.value);
+};
 
 // wraps axis text to two lines
 function wrap(text, width) {
     text.each(function() {
-    var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word;
+        var text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word;
 
         if (words.length != 1 && words.length != 3) {
             var line = [],
@@ -174,4 +160,4 @@ function wrap(text, width) {
             }
         }
     });
-}
+};

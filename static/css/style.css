@@ -1,32 +1,41 @@
-.navbar{
+.navbar {
   border-radius: 0;
   margin-bottom: 0;
   background-color: black;
 }
-.navbar a:hover{
+
+.navbar a:hover {
   color: black !important;
   background-color: #CCC !important;
 }
-.navbar .active{
+
+.navbar .active {
   font-weight: bold;
 }
-.navbar a{
+
+.navbar a {
   color:#FFFFFF !important;
 }
 
-.topdatebuff{
+.topdatebuff {
   padding-top: 50px;
+}
+
+.content {
+  height: 100%;
 }
 
 .row.content {
   height:auto;
 }
-.sidenav{
+
+.sidenav {
   padding-top: 120px;
   background-color:#00274c !important;
-  height: 100%;
+  height: inherit;
 }
-.footer{
+
+.footer {
   position: absolute;
   background-color: black;
   right: 0;
@@ -35,195 +44,209 @@
   padding: 45px;
   width: 100%;
 }
-li{
+
+li {
   list-style: none;
 }
 
-#race, #age, #gender{
+#race, #age, #gender {
   width: 100%;
   margin: 5px;
 }
-section{
+
+section {
   margin-top: 40px;
 }
+
 table {
-border-collapse: collapse;
-}
-
-th {
-background-color: #2E4B70;
-color: white;
-text-align: center;
-
+  border-collapse: collapse;
 }
 
 table, th, td {
-padding: 10px;
-font-weight: 400;
-text-transform: capitalize;
+  padding: 10px;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
-th{
-font-weight: 600;
-}
-.container-top-buffer{
-margin-top:20px;
-}
-.top-buffer{
-margin-top:50px;
-margin-bottom: 25px;
-}
-.section-buffer{
-margin-top: 60px;
+th {
+  background-color: #2E4B70;
+  color: white;
+  text-align: center;
+  font-weight: 600;
 }
 
-.list-group-item-action{
+.container-top-buffer {
+  margin-top:20px;
+}
+
+.top-buffer {
+  margin-top:50px;
+  margin-bottom: 25px;
+}
+
+.section-buffer {
+  margin-top: 60px;
+}
+
+.list-group-item-action {
   font-size: 20px !important;
   margin: 5px;
 }
+
 .accordion .list-group-item-action:after {
     font-family: 'FontAwesome';
     content: "\f078";
 
 }
+
 .accordion .list-group-item-action.collapsed:after {
     /* symbol for "collapsed" panels */
     content: "\f053";
 }
 
-.accordion .list-group-item-text a{
-color: white;
-}
-.accordion .list-group-item-text a:hover{
-background-color:#B5CEEE;
-color: #00274c;
-}
-.accordion .list-group-item-text a:focus{
-background-color:#B5CEEE;
-color: #00274c;
-text-decoration: none;
-text-transform: uppercase;
-font-weight: bold;
+.accordion .list-group-item-text a {
+  color: white;
 }
 
-.accordion .list-group a{
+.accordion .list-group-item-text a:hover {
+  background-color:#B5CEEE;
+  color: #00274c;
+}
+
+.accordion .list-group-item-text a:focus {
+  background-color:#B5CEEE;
+  color: #00274c;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.accordion .list-group a {
   background-color: #00274c;
   color: white;
   font-size: 14px;
   border: none;
 }
-.accordion .list-group{
+
+.accordion .list-group {
   background-color: #00274c;
   border: none;
 }
-.btn{
+
+.btn {
   margin: 10px;
 }
 
-.centerimage img{
-width:100%;
-padding: 5px;
+.centerimage img {
+  width:100%;
+  padding: 5px;
 }
 
-#dashboard-landing-img{
+#dashboard-landing-img {
   width:80%;
   padding: 5px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.sidebuff{
-  height: 100%;
+.sidebuff {
+  height: inherit;
   background-color: #00274c;
 }
 
-h2{
-font-weight: bold;
+h2 {
+  font-weight: bold;
 }
 
-#datasource{
-font-weight: bold;
+#datasource {
+  font-weight: bold;
 }
 
-#N{
-font-size: 80px;
+#N {
+  font-size: 80px;
 }
-#Np{
-font-weight: bold;
-font-size: 36px;
-}
-
-#Pct{
-font-weight: bold;
-/* color: green; */
+#Np {
+  font-weight: bold;
+  font-size: 36px;
 }
 
-.eachDemographic{
+#Pct {
+  font-weight: bold;
+}
+
+#gender {
+  background-color: #F8F8F8;
+}
+
+.eachDemographic {
   padding: 10px;
   padding-top: 40px;
   padding-bottom: 5px;
 }
-#gender{
-  background-color: #F8F8F8;
+
+.backtotop {
+  padding: 15px;
 }
-.timetable-insert{
+
+.timetable-insert {
   padding-top: 50px;
 }
 
-.rightbuff{
+.rightbuff {
   background-color:#00274c;
   height: 100%;
 }
 
-.footstyle{
+.footstyle {
   background-color: black;
   color: white;
 }
 
-.footer .list-group{
+.footer .list-group {
   background-color: transparent;
 }
-.footer .list-group-item{
 
+.footer .list-group-item {
   font-size: 16px;
   display: block;
   padding: 10px;
   background-color: transparent;
 }
-.footlink{
+
+.footlink {
   color: white;
   text-decoration: underline;
   margin: 5px;
 }
 
-.footlink:hover{
+.footlink:hover {
   font-weight: bold;
 }
 
-div.sticky-top{
+div.sticky-top {
   background-color: white;
   top: 50px;
   padding: 5px;
 }
 /*  https://stackoverflow.com/questions/29258382/bootstrap-align-divs-to-top-middle-and-bottom */
-.vbottom{
-    position: relative;
-    top: 100%;
-    transform: translateY(-100%);
+.vbottom {
+  position: relative;
+  top: 100%;
+  transform: translateY(-100%);
 }
 
-.resetButton{
+.resetButton {
   height: 20px;
   background-color: white;
   border-style: hidden;
   font-size: 12px;
 }
 
-.tablebuttondiv{
+.tablebuttondiv {
   padding-top: 50px;
   padding-bottom: 15px;
 }
-.tablebutton{
+.tablebutton {
   background-color: #2E4B70;
   color: white;
   padding: 8px;
@@ -231,7 +254,7 @@ div.sticky-top{
   border-radius: 5px;
 }
 
-.timetablebutton{
+.timetablebutton {
   background-color: #2E4B70;
   color: white;
   padding: 8px;
@@ -239,50 +262,30 @@ div.sticky-top{
   border-radius: 5px;
 }
 
-.timetablebutton:focus{
+.timetablebutton:focus {
   background-color:  #00274c;
   color: white;
 }
-.tablebutton:focus{
+
+.tablebutton:focus {
   background-color:  #00274c;
   color: white;
 }
-.timetablebutton:hover{
+
+.timetablebutton:hover {
   background-color: #243c59;
 }
 
-.tablebutton:hover{
+.tablebutton:hover {
   background-color:#243c59;
 }
-.selected{
+
+.selected {
   background-color: #00274c;
 }
 
-@media screen and (min-width:700px){
-.row.content{
-  height: 4700px;
-}
-.sidenav{
-  padding-top: 50px;
-}
-}
-@media screen and (min-width:1000px){
-  .row.content{
-    height:4700px;
-  }
-}
-@media screen and (min-width: 1100px){
-  .row.content{
-    height:4500px;
-  }
-}
-@media screen and (min-width: 1300px){
-  .row.content{
-    height:3200px;
-  }
-}
-@media screen and (min-width: 1500px){
-  .body{
-    height: 3200px;
+@media screen and (min-width:700px) {
+  .sidenav {
+    padding-top: 50px;
   }
 }

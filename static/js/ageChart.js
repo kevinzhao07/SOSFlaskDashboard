@@ -1,8 +1,8 @@
 function makeAgeChart() {// set up dimensions of age horizontal bar graph
 
-    age = CF.dimension(d => d.Age);
-    agegrp = age.group();
-    dataAge = agegrp.all();
+    ageDim = CF.dimension(d => d.Age);
+    ageGrp = ageDim.group();
+    dataAge = ageGrp.all();
     ageArray = [];
 
     var first = dataAge[0];
@@ -33,9 +33,9 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
         .padding(0.2)
         .range([heightAge, 0]);
 
-    xAge.domain([0, d3.max(dataAge, d=>d.value)]);
+    xAge.domain([0, d3.max(dataAge, d => d.value)]);
 
-    yAge.domain(dataAge.map(function(d) { return d.key;}));
+    yAge.domain(dataAge.map(d => d.key));
 
     yAxis1 = d3.axisRight()
         .scale(yAge);
@@ -45,17 +45,15 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
         .data(dataAge)
         .enter().append("rect")
         .attr("class", "barAge")
-        .attr("y", d=>yAge(d.key))
+        .attr("y", d => yAge(d.key))
         .attr("height", yAge.bandwidth())
-        .attr("x", d=>xAge(d.value))
-        .attr("width", function(d) {return widthAge - xAge(d.value)})
+        .attr("x", d => xAge(d.value))
+        .attr("width", d => widthAge - xAge(d.value))
         .style("fill", '#FB9A99')
 
         // onclick
         .on('click', function(d) {
-
             lastFilter = "age";
-
             // if clicked, filter table
             if (ageArray.includes(d.key)) {
                 d3.select(this)
@@ -63,8 +61,7 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
                 .attr('stroke-width', 0)
                 .attr('stroke', '')
                 ageArray.splice(ageArray.indexOf(d.key),1)
-            }
-            else {
+            } else {
                 d3.select(this)
                     // .style("fill", "#117190");
                     .style('fill', '#d4f2e0')
@@ -72,22 +69,13 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
                     .attr('stroke', '#95dfb3');
                 ageArray.push(d.key);
             }
-
             // if unclicked
-            if (ageArray.length == 0) {
-                age.filterAll();
-            }
-            else {
-                age.filter(d => ageArray.includes(d));
-            }
+            ageArray.length == 0 ? ageDim.filterAll() :
+              ageDim.filter(d => ageArray.includes(d));
 
             // updates graphs
-            var usedData = getSortedData(sortColumn);
-            updateAll(usedData);
-            // console.log(usedData);
-
+            updateAll();
         });
-
 
     // adds text for bars on age
     barsAgeLabel = svgAge.selectAll("text")
@@ -95,9 +83,9 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
         .enter().append("text")
         .attr("class", "chart")
         .style("font-size","16px")
-        .attr("x", d=>xAge(d.value) - 32)
-        .attr("y", d=>yAge(d.key) + yAge.bandwidth() - 18)
-        .text(d=>d.value);
+        .attr("x", d => xAge(d.value) - 32)
+        .attr("y", d => yAge(d.key) + yAge.bandwidth() - 18)
+        .text(d => d.value);
 
     // adds text on y axis for age graph
     svgAge.append("g")
@@ -120,12 +108,11 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
         .selectAll(".tick text")
         .style("font-size","16px")
         .attr("y", 10);
-
-}
+};
 
 function updateAge() {
-    max = d3.max(dataAge, d=>d.value);
-    newMax = Math.max(max, 5);
+    let max = d3.max(dataAge, d => d.value);
+    let newMax = Math.max(max, 5);
 
     xAge.domain([0,newMax]);
     svgAge.select(".x")
@@ -136,11 +123,11 @@ function updateAge() {
 
     barsAge.data(dataAge)
         .transition().duration(200)
-        .attr("x", d=>xAge(d.value))
+        .attr("x", d => xAge(d.value))
         .attr("width", d => (widthAge - xAge(d.value)));
 
     barsAgeLabel.data(dataAge)
         .transition().duration(200)
-        .attr("x", d=>xAge(d.value) - 18)
+        .attr("x", d => xAge(d.value) - 18)
         .text(d => d.value);
-  }
+  };

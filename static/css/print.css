@@ -4,7 +4,7 @@
 /* Referenced: https://www.smashingmagazine.com/2011/11/how-to-set-up-a-print-style-sheet/ */
 
 
-@page{
+@page {
   size:  auto;   /* auto is the initial value */
   margin: 0mm;  /* this affects the margin in the printer settings */
 }
@@ -14,16 +14,16 @@
     /* border: solid 1px red ; */
     margin: 0mm; /* margin you want for the content */
   }
-  .sidebuff{
+  .sidebuff {
     color: white !important;
     opacity: 0 !important;
   }
-  .sidenav{
+  .sidenav {
     color: white !important;
     opacity: 0 !important;
   }
 
- .accordion .list-group-item-text a{
+ .accordion .list-group-item-text a {
     color: white !important;
     opacity: 0 !important;
   }
@@ -33,23 +33,25 @@
     -webkit-transition: none !important;
     transition: none !important;
   }
-    /* .row.content{
-      width: 612px !important;
-  } */
-  h1, h2, h3, h4, h5, h6{
+
+  h1, h2, h3, h4, h5, h6 {
     font-size: 19pt !important;
   }
-  .sticky-top{
+
+  .sticky-top {
     position: relative !important;
   }
-  .map-insert{
+
+  .map-insert {
     padding-top: 10px !important;
   }
-  th{
+
+  th {
     background-color: white !important;
     color: black !important;
   }
-  .demographics{
+
+  .demographics {
     page-break-before: always !important;
   }
 }

@@ -74,7 +74,7 @@ async function make_map(svgname) {
 
   };
 
-  function type(d) {
+function type(d) {
     d.lat = +d.lat;
     d.lng = +d.lng;
     return d

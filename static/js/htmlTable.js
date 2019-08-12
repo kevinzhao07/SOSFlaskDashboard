@@ -7,7 +7,6 @@ var descending = "fa-sort-desc";
 
 function makeHtmlTable() {
     // selects table to add
-    // console.log(data);
     table = d3.select("#sosTable")
     thead = table.append('thead').append('tr')
       .selectAll('th')
@@ -20,18 +19,12 @@ function makeHtmlTable() {
     thead
         .html(function(d){  //this function adds neutral sort-state arrows
           const theseNames = ['Age', 'Gender', 'Race', 'date']
-          if (theseNames.includes(d)){
-            return d + ' <i class="fa fa-sort"></i>'
-          } else {
-            return d
-          }
+          return theseNames.includes(d) ? d + ' <i class="fa fa-sort"></i>' : d
         })
         .on("click", function(d) {
           toggleToAsc(this); //take the clicked thing and run toggleToAsc on it
           sortColumn = d; //replace initial value in sortColumn with the val in "d"
-          resortedData = getSortedData(sortColumn); //take the val in "d" and run getSortedData on it, return a sorted data set
-          reducedData = reduceData(resortedData);
-          updateAll(reducedData); // update table with the resorted data
+          updateAll(updateCharts = false); // update table only
 
           function toggleToAsc(element){
             current = element;
@@ -45,6 +38,7 @@ function makeHtmlTable() {
               d3.select(previous).select('i').classed(neutral, true).classed(ascending, false).classed(descending, false);
               d3.select(current).select('i').classed(ascending, true).classed(neutral, false);
               previous = current;
+
             } else {
               // console.log("current is not previous and previous is empty");
               d3.select(current).select('i').classed(ascending, true).classed(neutral, false);
@@ -53,20 +47,13 @@ function makeHtmlTable() {
           }
 
           function toggleAscDesc(){
-            if(d3.select(current).select('i').classed(ascending)){
-              d3.select(current).select('i').classed(descending, true).classed(ascending, false);
-            } else{
+            d3.select(current).select('i').classed(ascending) ? d3.select(current).select('i').classed(descending, true).classed(ascending, false) :
               d3.select(current).select('i').classed(descending, false).classed(ascending, true);
-            }
           }
-          // usedData = getSortedData(sortColumn);
-
         } //close function
       ); //close on click
-      // console.log(date.top(Infinity));
-      updateAll(sortColumn);
-      // console.log(data);
-}
+      updateAll();
+};
 
 // updates HTML table
 function updateHtmlTable(data) {
@@ -77,48 +64,30 @@ function updateHtmlTable(data) {
         .data((d) => d3.values(d).slice(0,-2))
         .join('td')
         .text((d,i) => i = 1 ? formatHTMLthings(d) : d)
-}
+};
 
 function formatHTMLthings(d){
-  if (d instanceof Date){
-    var formatted = d3.timeFormat("%b %d, %Y")(d)
-    return formatted;
-  }
-  else{
-    return d;
-  }
-}
-function getSortedData(sortColumn){
+  return d instanceof Date ?  d3.timeFormat("%b %d, %Y")(d) : d;
+};
 
+function getSortedData(sortColumn){
   if (sortColumn == "date") {
-    if (d3.select('.date').select('i').classed(descending)) {
-      return date.top(Infinity);
-    } else {
-      return date.bottom(Infinity);
-    } //close else
+    return d3.select('.date').select('i').classed(descending) ? dateDim.top(Infinity) :
+      dateDim.bottom(Infinity);
   } //close if date
 
   if (sortColumn == "Age") {
-    if ((d3.select('.Age').select('i').classed(descending))) {
-    return age.top(Infinity);
-    } else {
-    return age.bottom(Infinity);
-    } //close else
+    return d3.select('.Age').select('i').classed(descending) ? ageDim.top(Infinity) :
+      ageDim.bottom(Infinity);
   } //close if age
 
   if (sortColumn == "Gender") {
-    if ((d3.select('.Gender').select('i').classed(descending))) {
-      return gender.top(Infinity);
-    } else {
-      return gender.bottom(Infinity);
-    } //close else
+  return d3.select('.Gender').select('i').classed(descending) ? genderDim.top(Infinity) :
+      genderDim.bottom(Infinity);
   } //close if gender
 
   if (sortColumn == "Race") {
-    if ((d3.select('.Race').select('i').classed(descending))) {
-      return race.top(Infinity);
-    } else {
-      return race.bottom(Infinity);
-    } //close else
+    return d3.select('.Race').select('i').classed(descending) ? raceDim.top(Infinity) :
+      raceDim.bottom(Infinity);
   } //close if race
-}
+};

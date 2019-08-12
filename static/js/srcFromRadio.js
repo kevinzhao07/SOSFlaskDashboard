@@ -1,26 +1,19 @@
 function updateGlobal() {
-  var emsButton = document.querySelector("#EMSRadio");
-  // console.log(emsButton);
+    var emsButton = document.querySelector("#EMSRadio");
 
-  var edButton = document.querySelector("#EDRadio");
-  // console.log(edButton);
+    var edButton = document.querySelector("#EDRadio");
 
-  var meButton = document.querySelector("#MERadio");
-  // console.log(meButton);
+    var meButton = document.querySelector("#MERadio");
 
-if (emsButton.checked){
-  globalDataSource = emsButton.value;
-  // console.log(globalDataSource);
-}
+    if (emsButton.checked){
+      globalDataSource = emsButton.value;
+    };
 
-if (edButton.checked){
-  globalDataSource = edButton.value;
-  // console.log(globalDataSource);
-}
+    if (edButton.checked){
+      globalDataSource = edButton.value;
+    };
 
-if (meButton.checked){
-  globalDataSource = meButton.value;
-  // console.log(globalDataSource);
-}
-
-}
+    if (meButton.checked){
+      globalDataSource = meButton.value;
+    };
+};

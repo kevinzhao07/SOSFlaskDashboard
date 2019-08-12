@@ -10,14 +10,12 @@
   clip-path: url(#clip) !important; /* clip line with rectangle */
 }
 
-.axis{
+.axis {
   font-size: 14px !important;
 }
+
 .brush .extent {
-  stroke:#fff;
-  fill-opacity:0.125;
-  shape-rendering:crispEdges;
+  stroke: #fff;
+  fill-opacity: 0.125;
+  shape-rendering: crispEdges;
 }
- /* .summary{
-  font-weight: bold;
-} */

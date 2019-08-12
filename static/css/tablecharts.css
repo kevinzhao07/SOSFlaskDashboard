@@ -1,21 +1,21 @@
 /* bar chart text */
 .chart {
-    font-weight: bold;
-    text-anchor: middle;
+  font-weight: bold;
+  text-anchor: middle;
 }
-
 
 /* text inside donut chart */
 .count {
-    font: 16px sans-serif;
-    text-anchor: middle;
+  font: 16px sans-serif;
+  text-anchor: middle;
 }
 
 /* text for label */
 .total {
-    font-size: 3em;
-    text-anchor: middle;
+  font-size: 3em;
+  text-anchor: middle;
 }
+
 .age-group {
-    font-weight: 700;
+  font-weight: 700;
 }
