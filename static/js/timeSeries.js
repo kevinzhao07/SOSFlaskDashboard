@@ -237,7 +237,10 @@ function changeDate(time) {
       beginDate = d3.timeMonth.offset(endDate, -3)
     };
     if (time == 'yeartodate') {
-      beginDate = d3.timeYear.offset(endDate, -1);
+      var days = endDate.getDate();
+      var months = endDate.getMonth();
+      beginDate = d3.timeDay.offset(endDate, -days + 1);
+      beginDate = d3.timeMonth.offset(beginDate, -months);
     };
 
     selection.attr("class", "brush")
