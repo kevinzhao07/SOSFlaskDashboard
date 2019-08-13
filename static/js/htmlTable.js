@@ -46,9 +46,7 @@ function makeHtmlTable() {
           }
         } //close function
       ); //close on click
-    //updateAll();
-    let tableData = reduceData(dateDim.top(Infinity));
-    updateHtmlTable(tableData);
+    updateAll();
 };
 
 // updates HTML table

@@ -1,5 +1,10 @@
 // creates all charts
 async function makeDashboard(fileName) {
+    previous = "";
+    neutral = "fa-sort";
+    ascending = "fa-sort-asc";
+    descending = "fa-sort-desc";
+
     // parse the date / time
     parseDate = d3.timeParse("%Y-%m-%d");
     formatDate = d3.timeFormat("%b %d, %Y");
@@ -13,13 +18,6 @@ async function makeDashboard(fileName) {
     selected10 = true;
     selected20 = false;
     selected50 = false;
-
-    previous = "";
-    sortColumn = "date"
-    neutral = "fa-sort";
-    ascending = "fa-sort-asc";
-    descending = "fa-sort-desc";
-
 
     makeTimeSeries();
     createMap();
