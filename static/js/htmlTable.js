@@ -1,10 +1,4 @@
 // creates the HTML table
-var previous = "";
-var sortColumn = "date"
-var neutral = "fa-sort";
-var ascending = "fa-sort-asc";
-var descending = "fa-sort-desc";
-
 function makeHtmlTable() {
     // selects table to add
     table = d3.select("#sosTable")
@@ -52,7 +46,9 @@ function makeHtmlTable() {
           }
         } //close function
       ); //close on click
-      updateAll();
+    //updateAll();
+    let tableData = reduceData(dateDim.top(Infinity));
+    updateHtmlTable(tableData);
 };
 
 // updates HTML table

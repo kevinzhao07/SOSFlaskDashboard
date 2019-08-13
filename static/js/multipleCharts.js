@@ -14,6 +14,13 @@ async function makeDashboard(fileName) {
     selected20 = false;
     selected50 = false;
 
+    previous = "";
+    sortColumn = "date"
+    neutral = "fa-sort";
+    ascending = "fa-sort-asc";
+    descending = "fa-sort-desc";
+
+
     makeTimeSeries();
     createMap();
     makeAgeChart();
