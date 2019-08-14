@@ -51,15 +51,6 @@ function reduceData(data) {
     return data;
 };
 
-function changeRows(N) {
-    rows = N;
-    updateAll(updateCharts=false)
-    d3.selectAll(".change").classed("selected", false);
-      N == 10 ? d3.selectAll(".ten").classed("selected", true) :
-      N == 20 ? d3.selectAll(".twenty").classed("selected", true) :
-      d3.selectAll(".fifty").classed("selected", true);
-};
-
 // read in data
 function type(d) {
     d.date = parseDate(d.date);
@@ -118,32 +109,5 @@ function resetAll() {
     resetRace();
 
     // update bars to reflect unfiltering
-    updateAll();
-};
-
-function resetGender() {
-    genderArray = [];
-    genderDim.filterAll();
-    slices.attr("fill", (d,i) => color[i])
-        .attr('stroke', '')
-        .attr('stroke-width', 0);
-    updateAll();
-};
-
-function resetAge() {
-    ageArray = [];
-    ageDim.filterAll();
-    barsAge.style("fill", "#FB9A99")
-        .attr('stroke', '')
-        .attr('stroke-width', 0);
-    updateAll();
-};
-
-function resetRace() {
-    raceArray = [];
-    raceDim.filterAll();
-    barsRace.style("fill", "#CAB2D6")
-        .attr('stroke', '')
-        .attr('stroke-width', 0);
     updateAll();
 };

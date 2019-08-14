@@ -131,3 +131,12 @@ function updateAge() {
         .attr("x", d => xAge(d.value) - 18)
         .text(d => d.value);
   };
+
+function resetAge() {
+    ageArray = [];
+    ageDim.filterAll();
+    barsAge.style("fill", "#FB9A99")
+        .attr('stroke', '')
+        .attr('stroke-width', 0);
+    updateAll();
+};

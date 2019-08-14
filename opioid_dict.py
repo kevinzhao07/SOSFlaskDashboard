@@ -52,7 +52,13 @@ center_dict = { "City" :
         'minwidth': 550,
         'minheight':400
     },
-    'Ypsilanti':{
+    'Port Huron': {
+        'center':  '{lat:42.98, lng:-82.44}',
+        'zoom': 12,
+        'minwidth':150,
+        'minheight': 200
+    },
+    'Ypsilanti': {
         'center': '{lat: 42.24, lng: -83.61}',
         'zoom' : 13,
         'minwidth' : 500,

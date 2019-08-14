@@ -118,3 +118,12 @@ function updateGender() {
 
     labelCount.text(d => d.data.value);
 };
+
+function resetGender() {
+    genderArray = [];
+    genderDim.filterAll();
+    slices.attr("fill", (d,i) => color[i])
+        .attr('stroke', '')
+        .attr('stroke-width', 0);
+    updateAll();
+};

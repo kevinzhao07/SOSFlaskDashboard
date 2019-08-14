@@ -1,47 +1,65 @@
 ## Dashboard Tests
 
-- Navigate to Clare County EMS and make sure that there is **1 marker** on the map.
+- Navigate to Baraga County EMS and make sure that there is **1 marker** on the map.
     - Upper right stats should show 1 total, up 1 incident, and N/A percent.
-    - The date range should be Dec 25, 1984 to Dec 31, 1984.
-    - Clicking on the marker shows a popup with Dec 31, 1984 // Clare // 45-54 // White // Female
-    - The **time series** shows 1 incident on Mon 31
+    - The date range should be Aug 03 2019 to Aug 09, 2019.
+    - Clicking on the marker shows a popup with Aug 09, 2019 // Baraga 25-34 Black Male
+    - The **time series** shows 1 incident on Fri 09
         - The average line exists
         - The bar height should be 1
         - The brushed area/ macro view should show shorter bars with an average line that stays close to the x-axis
     - The **demographic charts** show data for 1 incident
-        - There is 1 bar in the 45-54 age range
-        - The gender donut shows data for 1 female
-        - There is 1 bar in the White race category
+        - There is 1 bar in the 25-34 age range
+        - The gender donut shows data for 1 Male
+        - There is 1 bar in the Black race category
     - The **HTML table** shows 1 data point
-        - Dec 31, 1984 // Clare // 45-54 // Female // White
+        - Aug 09, 2019 // Baraga // 25-34 // Male // Black
 - Expand the time frame to 3 Months using the time series period buttons
-    - Upper right stats should be 9 total, down 4 incidents, and -31%
-    - Map loads 4 markers inside Clare County and 5 markers outside Clare County
+    - Upper right stats should be 9 total, up 7 incidents, and +350%
+    - Map loads 6 markers inside Baraga County and 3 markers outside Baraga County
     - The time series has updated to show 9 total incidents
-        - The brushed area expands to show data from October to 1985
+        - The brushed area expands to show data from May to August
         - The average line exists
         - Bars have a height of 1
     - The demographics show data for 9 incidents
-        - 5 data in the 25-34 range, 2 in the 45-54 range, and 2 in the 55+ range
-        - 5 male incidents and 4 female incidents
-        - 4 White, 2 Black, 1 Hispanic/Latino, 1 American Indian/Alaska Native, 1 Unknown
+        - 1 data 0-25 range, 3 in the 25-34 range, 2 in the 35-44 range, 2 in the 45-54 range, and 2 in the 55+ range
+        - 4 male incidents and 5 female incidents
+        - 4 White, 5 Black
     - The html table shows 9 incidents
-        - Table should be organized reverse chronologically
-- Select Year-To-Date for 45 data points
+        - Table is not sorted in any particular order
+- Go to Clare County and toggle the time series
+    - 1 week 0 points
+    - 2 weeks 1 point - marker shows up on map, bar shows up on Wed 31 for 45-54 Hispanic/Latino Male
+    - 1 month 4 points - markers show up on map, 1 in Clare county and 3 outside
+    - 3 months 9 points - 4 markers in Clare county and 5 outside
+    - YTD 28 points - 11 markers in Clare county and the rest on either side
     - HTML table shows reduced data to 10 points
         - Clicking 20 rows shows reduced data to 20 points
         - Clicking 50 rows shows all data points
 - Sort HTML table by **age ascending** and click **25-34, 35-44, 45-54, Male, Female, White, and Black**
-    - Upper right shows 28 total, 28 increase, N/A percent
+    - Upper right shows 17 total, 6 increase, +55%
     - Table remains sorted by Age and has 25-34 at the top
 - Sort by Race, Gender, and Date to check ascending and descending sorts
 - Reset gender and race using reset button on gender chart and race chart
-    - Upper right shows 35 total, 35 increase, N/A percent
+    - Upper right shows 22 total, 9 increase, +69%
     - Table remains sorted by last selected parameter (date, age, gender, race)
 - Reset demographics using the button under demographic charts
-    - Upper right shows 45 total, 45 increase, N/A percent
+    - Upper right shows 28 total, 11 increase, +65%
     - HTML table should remain sorted by last selected filter
-- Navigate to Charlevoix County and brush from mid-January (Jan 15) to the end (present?)
-    - Check that Gender shows 2 Unknowns
-    - Check that there are 54 data points, up 51 incidents, 1,7000% increase
-    - Toggle to 50 rows and check that the data is reduced
+- Navigate to Charlevoix County
+    - Check that Gender shows 1 Unknown
+- Brush from 2019 to current
+    - Check that Gender shows 2 Unknown and Race shows 2 Unknown
+    - Find these points in the HTML table by sorting Gender descending
+        - Jan 19, 2019 // Charlevoix // 0-25 // Unknown // Unknown
+        - Aug 07, 2019 // Emmet // 25-34 // Unknown // Hispanic or Latino
+## General Checks
+- check for transitions
+- check for marker loads
+- check for time series data
+- In YTD
+    - brush a small box and move it around to check that incident decreases show a down arrow and green and negative percent
+    - check for 0 incidents showing black 0. 0 increases or decreases should show +/ 0% in red/green
+    - check that N/A percents exist and are in black
+- For demographic charts
+    - check that demographics are selected and the charts are highlighted. other demographic charts should transition to updated values

@@ -161,3 +161,12 @@ function wrap(text, width) {
         }
     });
 };
+
+function resetRace() {
+    raceArray = [];
+    raceDim.filterAll();
+    barsRace.style("fill", "#CAB2D6")
+        .attr('stroke', '')
+        .attr('stroke-width', 0);
+    updateAll();
+};
