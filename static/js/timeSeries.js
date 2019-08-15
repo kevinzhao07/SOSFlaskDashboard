@@ -6,10 +6,10 @@ function makeTimeSeries() {
     movingAvgData = movingAverage(data, 7);
 
     // set the dimensions and margins of the graph
-    margin = {top: 20, right: 20, bottom: 100, left: 40},
-    width = 960 - margin.left - margin.right,
+    margin = {top: 20, right: 30, bottom: 100, left: 50},
+    width = 900 - margin.left - margin.right,
     height = 300 - margin.top - margin.bottom;
-    margin2 = {top: 300-70, right: 20, bottom: 30, left: 40},
+    margin2 = {top: 300-70, right: 30, bottom: 30, left: 50},
     height2 = 300 - margin2.top - margin2.bottom;
 
     // append timetable svg
@@ -24,7 +24,7 @@ function makeTimeSeries() {
     y2 = d3.scaleLinear().range([height2, 0]);
 
     // sets ticks for timetable graph
-    xAxis = d3.axisBottom(x),
+    xAxis = d3.axisBottom(x),4
     yAxis = d3.axisRight(y).ticks(4),
     xAxis2 = d3.axisBottom(x2);
 

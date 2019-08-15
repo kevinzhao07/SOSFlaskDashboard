@@ -1,23 +1,44 @@
 // creates all charts
-async function makeDashboard(fileName) {
+// async function makeDashboard(fileName) {
+//     previous = "";
+//     neutral = "fa-sort";
+//     ascending = "fa-sort-asc";
+//     descending = "fa-sort-desc";
+//
+//     // parse the date / time
+//     parseDate = d3.timeParse("%Y-%m-%d");
+//     formatDate = d3.timeFormat("%b %d, %Y");
+//
+//     DATA = await d3.csv(fileName, type);
+//     CF = crossfilter(DATA);
+//
+//     rows = 10;
+//     sortColumn = "date";
+//     selected10 = true;
+//     selected20 = false;
+//     selected50 = false;
+//
+//     makeTimeSeries();
+//     createMap();
+//     makeAgeChart();
+//     makeGenderChart();
+//     makeRaceChart();
+//     makeHtmlTable();
+// };
+async function makeDashboard(fileName, citycounty) {
     previous = "";
     neutral = "fa-sort";
     ascending = "fa-sort-asc";
     descending = "fa-sort-desc";
-
     // parse the date / time
     parseDate = d3.timeParse("%Y-%m-%d");
     formatDate = d3.timeFormat("%b %d, %Y");
-
     DATA = await d3.csv(fileName, type);
     CF = crossfilter(DATA);
-
+    countyDim = CF.dimension(d => d.county);
+    countyDim.filter(d => d === citycounty);
     rows = 10;
     sortColumn = "date";
-    selected10 = true;
-    selected20 = false;
-    selected50 = false;
-
     makeTimeSeries();
     createMap();
     makeAgeChart();
@@ -25,6 +46,7 @@ async function makeDashboard(fileName) {
     makeRaceChart();
     makeHtmlTable();
 };
+
 // updates all
 function updateAll(updateCharts = true) {
     if (updateCharts) {
