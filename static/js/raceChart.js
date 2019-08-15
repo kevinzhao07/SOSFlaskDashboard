@@ -56,7 +56,6 @@ function makeRaceChart() {
 
         // onclick
         .on('click', function(d) {
-            lastFilter = "race";
             // if clicked, filter table
             if (raceArray.includes(d.key)) {
                 d3.select(this)

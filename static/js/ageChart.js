@@ -53,7 +53,6 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
 
         // onclick
         .on('click', function(d) {
-            lastFilter = "age";
             // if clicked, filter table
             if (ageArray.includes(d.key)) {
                 d3.select(this)

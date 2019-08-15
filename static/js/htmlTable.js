@@ -1,10 +1,3 @@
-// creates the HTML table
-var previous = "";
-var sortColumn = "date"
-var neutral = "fa-sort";
-var ascending = "fa-sort-asc";
-var descending = "fa-sort-desc";
-
 function makeHtmlTable() {
     // selects table to add
     table = d3.select("#sosTable")
@@ -96,7 +89,8 @@ function changeRows(N) {
     rows = N;
     updateAll(updateCharts=false)
     d3.selectAll(".change").classed("selected", false);
-      N == 10 ? d3.selectAll(".ten").classed("selected", true) :
-      N == 20 ? d3.selectAll(".twenty").classed("selected", true) :
-      d3.selectAll(".fifty").classed("selected", true);
+    const selection = N == 10 ? d3.select(".ten") :
+                      N == 20 ? d3.selectAll(".twenty") :
+                                d3.selectAll(".fifty")
+    selection.classed("selected", true)
 };

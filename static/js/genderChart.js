@@ -40,7 +40,6 @@ function makeGenderChart() {
         })// close each function
         // onclick
         .on('click', function(d,i) {// set up crossfilter
-            lastFilter = "gender";
 
             if (genderArray.includes(d.data.key)) { // remove filter
                 genderArray.splice(genderArray.indexOf(d.data.key),1)

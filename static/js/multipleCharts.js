@@ -13,7 +13,6 @@ async function makeDashboard(fileName) {
     CF = crossfilter(DATA);
 
     rows = 10;
-    lastFilter = "date";
     sortColumn = "date";
     selected10 = true;
     selected20 = false;
