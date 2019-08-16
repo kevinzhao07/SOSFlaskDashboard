@@ -94,3 +94,13 @@ function changeRows(N) {
                                 d3.selectAll(".fifty")
     selection.classed("selected", true)
 };
+
+function reduceData(data) {
+    if (data.length > rows) {
+        const middle = new Array({"date": "...", "county": "...", "Age": "...", "Gender": "...", "Race": "...", "lng": "...", "lat": "..."});
+        const topData = data.slice(0,rows/2);
+        const bottomData = data.slice(-rows/2);
+        var data = [...topData, ...middle, ...bottomData];
+    }
+    return data;
+};

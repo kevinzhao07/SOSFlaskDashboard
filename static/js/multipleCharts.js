@@ -1,30 +1,5 @@
 // creates all charts
-// async function makeDashboard(fileName) {
-//     previous = "";
-//     neutral = "fa-sort";
-//     ascending = "fa-sort-asc";
-//     descending = "fa-sort-desc";
-//
-//     // parse the date / time
-//     parseDate = d3.timeParse("%Y-%m-%d");
-//     formatDate = d3.timeFormat("%b %d, %Y");
-//
-//     DATA = await d3.csv(fileName, type);
-//     CF = crossfilter(DATA);
-//
-//     rows = 10;
-//     sortColumn = "date";
-//     selected10 = true;
-//     selected20 = false;
-//     selected50 = false;
-//
-//     makeTimeSeries();
-//     createMap();
-//     makeAgeChart();
-//     makeGenderChart();
-//     makeRaceChart();
-//     makeHtmlTable();
-// };
+
 async function makeDashboard(fileName, citycounty) {
     previous = "";
     neutral = "fa-sort";
@@ -50,26 +25,16 @@ async function makeDashboard(fileName, citycounty) {
 // updates all
 function updateAll(updateCharts = true) {
     if (updateCharts) {
-      updateMap(map.getBounds());
-      updateTimeSeries();
-      summaryStats(x.domain());
-      updateAge();
-      updateGender();
-      updateRace();
+        updateMap(map.getBounds());
+        updateTimeSeries();
+        summaryStats(x.domain());
+        updateAge();
+        updateGender();
+        updateRace();
     }
     let tableData = getSortedData(sortColumn);
     tableData = reduceData(tableData);
     updateHtmlTable(tableData);
-};
-
-function reduceData(data) {
-    if (data.length > rows) {
-        const middle = new Array({"date": "...", "county": "...", "Age": "...", "Gender": "...", "Race": "...", "lng": "...", "lat": "..."});
-        const topData = data.slice(0,rows/2);
-        const bottomData = data.slice(-rows/2);
-        var data = [...topData, ...middle, ...bottomData];
-    }
-    return data;
 };
 
 // read in data
@@ -107,28 +72,25 @@ function summaryStats(dayRange) {
 
 function colorCodePct(data){
     return data.includes("+") ? 'color:red' :
-      data.includes("-") ? 'color:green' :
-      'color:black';
+           data.includes("-") ? 'color:green' :
+           'color:black';
 };
 
 function colorCode(data){
     return data > 0 ? 'color:red' :
-      data < 0 ? 'color:green' :
-      'color:black';
+           data < 0 ? 'color:green' :
+           'color:black';
 };
 
 function arrowUpDown(data){
     return data > 0 ? `<i class= "fa fa-arrow-up"></i> ${data}` :
-    data < 0 ? `<i class ="fa fa-arrow-down"></i> ${Math.abs(data)}` :
-    `${data}`;
+           data < 0 ? `<i class ="fa fa-arrow-down"></i> ${Math.abs(data)}` :
+           `${data}`;
 };
 
 function resetAll() {
-  // remove selected filters
     resetGender();
     resetAge();
     resetRace();
-
-    // update bars to reflect unfiltering
     updateAll();
 };
