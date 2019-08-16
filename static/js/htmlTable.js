@@ -1,12 +1,13 @@
 function makeHtmlTable() {
+    const headers = DATA.columns.slice(0, -2)
     // selects table to add
     table = d3.select("#sosTable")
     thead = table.append('thead').append('tr')
       .selectAll('th')
-      .data(d => DATA.columns.slice(0, -2))
+      .data(d => headers)
       .join('th')
         .text((d,i) => i = 1 ? formatHTMLthings(d): d)
-        .attr('class', (d,i) => DATA.columns.slice(0,-2)[i] + " sortable")
+        .attr('class', (d,i) => headers[i] + " sortable")
     tbody = table.append('tbody');
     thead.html(d => d + ' <i class="fa fa-sort"></i>') // this function adds neutral sort-state arrows
         .on("click", function(d) {
@@ -76,7 +77,7 @@ function toggleToAsc(current){
         previous = current;
     }
 }
-function toggleAscDesc(selection) {
+function toggleAscDesc(column) {
     column.classed(ascending) ? column.classed(descending, true).classed(ascending, false) :
                                 column.classed(descending, false).classed(ascending, true)
 }
