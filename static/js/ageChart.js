@@ -60,8 +60,7 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
                 ageArray.push(d.key);
             }
             // if unclicked
-            ageArray.length == 0 ? ageDim.filterAll() :
-              ageDim.filter(d => ageArray.includes(d));
+            ageArray.length > 0 ? ageeDim.filter(d => ageArray.includes(d)) : ageDim.filterAll()
 
             // updates graphs
             updateAll();

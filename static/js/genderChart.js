@@ -53,8 +53,7 @@ function makeGenderChart() {
                   .attr('stroke', '#95dfb3')
             }
             // filters dimension
-            genderArray.length === 0 ? genderDim.filterAll() :
-              genderDim.filter(d => genderArray.includes(d));
+            genderArray.length > 0 ? genderDim.filter(d => genderArray.includes(d)) : genderDim.filterAll()
 
             // filters other graphs
             updateAll();

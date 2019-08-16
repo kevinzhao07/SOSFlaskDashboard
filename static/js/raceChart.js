@@ -5,16 +5,16 @@ function makeRaceChart() {
     dataRace = raceGrp.all();
     raceArray = [];
 
-    var white = dataRace[7];
-    var black = dataRace[2]
-    var hispanic = dataRace[3]
-    var asian = dataRace[1]
-    var american = dataRace[0]
-    var native = dataRace[4]
-    var other = dataRace[5]
-    var unknown = dataRace[6];
+    const white = dataRace[7];
+    const black = dataRace[2]
+    const hispanic = dataRace[3]
+    const asian = dataRace[1]
+    const american = dataRace[0]
+    const native = dataRace[4]
+    const other = dataRace[5]
+    const unknown = dataRace[6];
 
-    dataRace = [unknown, other, native, american, asian, hispanic, black, white];
+    dataRace = [white, black, hispanic, asian, american, native, other, unknown];
 
     // set up dimensions for race chart
     marginRace = {top: 15, right: 40, bottom: 40, left: 170},
@@ -33,7 +33,7 @@ function makeRaceChart() {
         .range([0, widthRace])
     yRace = d3.scaleBand()
         .padding(0.2)
-        .range([heightRace, 0]);
+        .range([0, heightRace]);
 
     // sets domain of race graph
     xRace.domain([0, d3.max(dataRace, d => d.value)]);
@@ -54,27 +54,22 @@ function makeRaceChart() {
         .attr("width", d=>xRace(d.value))
         .style("fill",'#CAB2D6')
 
-        // onclick
         .on('click', function(d) {
-            // if clicked, filter table
             if (raceArray.includes(d.key)) {
                 d3.select(this)
-                .style("fill", '#CAB2D6')
-                .attr('stroke-width', 0)
-                .attr('stroke', '')
+                    .style("fill", '#CAB2D6')
+                    .attr('stroke-width', 0)
+                    .attr('stroke', '')
                 raceArray.splice(raceArray.indexOf(d.key),1);
             } else {
-                  d3.select(this)
+                d3.select(this)
                     .style('fill', '#d4f2e0')
                     .attr('stroke-width', 4)
                     .attr('stroke', '#95dfb3')
                 raceArray.push(d.key);
             }
-            // if unclicked
-            raceArray.length == 0 ? raceDim.filterAll() :
-              raceDim.filter(d => raceArray.includes(d));
+            raceArray.length > 0 ? raceDim.filter(d => raceArray.includes(d)) : raceDim.filterAll()
 
-            // updates all other graphs and table
             updateAll();
         });
 
