@@ -163,8 +163,8 @@ function updateTimeSeries() {
 function brushed() {
     const selection = d3.event.selection || x2.range(); // default brush selection
     x.domain(selection.map(x2.invert, x2)); // new focus x-domain
-    ms = x.domain()[1] - x.domain()[0]
-    days = ms / 1000 / 60 / 60 / 24
+    const ms = x.domain()[1] - x.domain()[0]
+    const days = ms / 1000 / 60 / 60 / 24
     focus.selectAll(".bar")
         .attr("x", d => x(d3.timeHour.offset(d.key,1)))
         .attr("width", width / days * 22/24)
@@ -172,7 +172,7 @@ function brushed() {
         .attr("d", movingAvg1);
     focus.select(".axis--x")
         .call(xAxis)
-    summaryStats((x.domain()))
+    summaryStats(x.domain())
 };
 
 // brush snapping function
@@ -191,7 +191,6 @@ function brushended() {
       .transition()
       .call(d3.event.target.move, dayRange.map(x2));
 
-    lastFilter = "date";
     updateAll();
 };
 // calculates simple moving average over N days
@@ -224,21 +223,11 @@ function changeDate(time) {
     endDate = d3.timeDay.offset(d3.max(data, d => d.key),1)
     x.domain([d3.min(data, d => d.key), endDate]);
 
-    if (time == 'oneweek') {
-      beginDate = d3.timeDay.offset(endDate, -7)
-    };
-    if (time == 'twoweeks') {
-      beginDate = d3.timeDay.offset(endDate, -14)
-    };
-    if (time == "onemonth") {
-      beginDate = d3.timeMonth.offset(endDate, -1)
-    };
-    if (time == "threemonths") {
-      beginDate = d3.timeMonth.offset(endDate, -3)
-    };
-    if (time == 'yeartodate') {
-      beginDate = d3.timeYear(new Date) //this should return 1/1/YYYY
-    };
+    beginDate = time == 'oneweek' ? d3.timeDay.offset(endDate, -7) :
+                time == 'twoweeks' ? d3.timeDay.offset(endDate, -14) :
+                time == "onemonth" ? d3.timeMonth.offset(endDate, -1) :
+                time == "threemonths" ? d3.timeMonth.offset(endDate, -3) :
+                                        d3.timeYear(new Date);
 
     selection.attr("class", "brush")
       .call(brush)
