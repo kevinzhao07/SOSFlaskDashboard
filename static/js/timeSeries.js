@@ -24,8 +24,8 @@ function makeTimeSeries() {
     y2 = d3.scaleLinear().range([height2, 0]);
 
     // sets ticks for timetable graph
-    xAxis = d3.axisBottom(x),4
-    yAxis = d3.axisRight(y).ticks(4),
+    xAxis = d3.axisBottom(x)
+    yAxis = d3.axisRight(y).ticks(3)
     xAxis2 = d3.axisBottom(x2);
 
     // Add brush in x-dimension
@@ -64,7 +64,7 @@ function makeTimeSeries() {
     // scale the range of the data
     endDate = d3.timeDay.offset(d3.max(data, d => d.key),1)
     x.domain([d3.min(data, d => d.key), endDate]);
-    y.domain([0, d3.max(data, d => d.value)]);
+    y.domain([0, d3.max([3, d3.max(data, d => d.value)])]);
     x2.domain(x.domain());
     y2.domain(y.domain());
 
@@ -237,10 +237,7 @@ function changeDate(time) {
       beginDate = d3.timeMonth.offset(endDate, -3)
     };
     if (time == 'yeartodate') {
-      var days = endDate.getDate();
-      var months = endDate.getMonth();
-      beginDate = d3.timeDay.offset(endDate, -days + 1);
-      beginDate = d3.timeMonth.offset(beginDate, -months);
+      beginDate = d3.timeYear(new Date) //this should return 1/1/YYYY
     };
 
     selection.attr("class", "brush")
