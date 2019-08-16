@@ -163,8 +163,7 @@ function updateTimeSeries() {
 function brushed() {
     const selection = d3.event.selection || x2.range(); // default brush selection
     x.domain(selection.map(x2.invert, x2)); // new focus x-domain
-    const ms = x.domain()[1] - x.domain()[0]
-    const days = ms / 1000 / 60 / 60 / 24
+    const days = (x.domain()[1] - x.domain()[0]) / 86400000;
     focus.selectAll(".bar")
         .attr("x", d => x(d3.timeHour.offset(d.key,1)))
         .attr("width", width / days * 22/24)

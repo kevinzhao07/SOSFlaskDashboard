@@ -18,13 +18,13 @@ function createMap() {// Mapbox section
     map.scrollWheelZoom.disable();
 
     function style(feature) {
-      return {
-          fillColor: '#adcfe6',
-          weight: 2,
-          opacity: 1,
-          color: '#72add4',
-          fillOpacity: 0.30
-      };
+        return {
+            fillColor: '#adcfe6',
+            weight: 2,
+            opacity: 1,
+            color: '#72add4',
+            fillOpacity: 0.30
+        };
   }
 
     L.control.layers(layers).addTo(map); // add basemap control
@@ -35,38 +35,28 @@ function createMap() {// Mapbox section
     lngDim = CF.dimension(d => d.lng)
     drawMarkers();
 
-        // spatial filtering on map event
-        map.on('moveend zoomend', function() {
-            lastFilter = "date";
-            updateAll();
-        })
+    // spatial filtering on map event
+    map.on('moveend zoomend', function() {
+        lastFilter = "date";
+        updateAll();
+    });
 };
 
 // draw map markers
-function drawMarkers(days, offset) {
-    for (pt of latDim.top(Infinity)) {
-      mCounty = pt.county
-      mAge =  pt.Age
-      mRace = pt.Race
-      mGender = pt.Gender
-      featureLayer.addLayer(L.marker([pt.lat, pt.lng], {
-          icon: tableIcon,
-          opacity: d3.max([1 - (offset-1)/days, 0]),
-        })
-        .bindPopup(`<p>${formatDate(pt.date)}<br>${mCounty}<br>${mAge} ${mRace} ${mGender}</p>`))
-    };
+function drawMarkers() {
+    const days = (dayRange[1] - dayRange[0]) / 86400000;
+    for (let pt of latDim.top(Infinity)) {
+        const offset = (dayRange[1] - pt.date) / 86400000;
+        featureLayer.addLayer(L.marker([pt.lat, pt.lng], {
+            icon: tableIcon,
+            opacity: d3.max([1 - (offset-1)/days, 0]),
+          })
+          .bindPopup(`<p>${formatDate(pt.date)}<br>${pt.county}<br>${pt.Age} ${pt.Race} ${pt.Gender}</p>`))
+      };
 };
-
 function updateMap(bounds) {
     latDim.filter([bounds.getSouth(), bounds.getNorth()])
     lngDim.filter([bounds.getWest(), bounds.getEast()])
-
     featureLayer.clearLayers()
-
-    for (pt of latDim.top(Infinity)) {
-      days = (dayRange[1] - dayRange[0]) / 86400000;
-      offset = (dayRange[1] - pt.date) / 86400000;
-      drawMarkers(days, offset);
-
-    };
+    drawMarkers()
 };
