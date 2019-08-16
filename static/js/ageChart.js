@@ -5,18 +5,9 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
     dataAge = ageGrp.all();
     ageArray = [];
 
-    var first = dataAge[0];
-    var second = dataAge[1];
-    var third = dataAge[2];
-    var fourth = dataAge[3];
-    var fifth = dataAge[4];
-
-    dataAge = [fifth, fourth, third, second, first];
-
     marginAge = {top: 30, right: 75, bottom: 40, left: 45},
         widthAge = 450 - marginAge.left - marginAge.right,
         heightAge = 400 - marginAge.top - marginAge.bottom;
-
 
     // append age graph 'svg'
     svgAge = d3.select("#age")
@@ -31,7 +22,7 @@ function makeAgeChart() {// set up dimensions of age horizontal bar graph
         .range([widthAge, 0])
     yAge = d3.scaleBand()
         .padding(0.2)
-        .range([heightAge, 0]);
+        .range([0, heightAge]);
 
     xAge.domain([0, d3.max(dataAge, d => d.value)]);
 
