@@ -45,15 +45,15 @@ function createMap() {// Mapbox section
 // draw map markers
 function drawMarkers(days, offset) {
     for (pt of latDim.top(Infinity)) {
-      m_county = pt.county
-      m_age =  pt.Age
-      m_race = pt.Race
-      m_gender = pt.Gender
+      mCounty = pt.county
+      mAge =  pt.Age
+      mRace = pt.Race
+      mGender = pt.Gender
       featureLayer.addLayer(L.marker([pt.lat, pt.lng], {
           icon: tableIcon,
           opacity: d3.max([1 - (offset-1)/days, 0]),
         })
-        .bindPopup(`<p>${formatDate(pt.date)}<br>${m_county}<br>${m_age} ${m_race} ${m_gender}</p>`))
+        .bindPopup(`<p>${formatDate(pt.date)}<br>${mCounty}<br>${mAge} ${mRace} ${mGender}</p>`))
     };
 };
 

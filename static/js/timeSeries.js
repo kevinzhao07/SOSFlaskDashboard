@@ -179,8 +179,8 @@ function brushed() {
 function brushended() {
     if (!d3.event.sourceEvent) return; // Only transition after input.
     if (!d3.event.selection) brushed(); // Empty selection returns default brush
-    dateRange = d3.event.selection.map(x2.invert),
-        dayRange = dateRange.map(d3.timeDay.round);
+    const dateRange = d3.event.selection.map(x2.invert);
+    dayRange = dateRange.map(d3.timeDay.round);
 
     // If empty when rounded, use floor & ceil instead.
     if (dayRange[0] >= dayRange[1]) {
