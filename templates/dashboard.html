@@ -57,6 +57,7 @@
   <script src="/static/js/raceChart.js"></script>
   <script src="/static/js/timeSeries.js"></script>
   <script src="/static/js/dashboard.js"></script>
+  <script src ="/static/js/spatialtoggle.js"></script>
 
 </head>
 
@@ -164,8 +165,21 @@
           </div>
 
           <!-- Map -->
-          <div class="map-insert" align="center">
-            <div class="map" id="map"></div>
+          <div class = "row">
+            <div class = "col-sm-11">
+              <div class="map-insert" align="center">
+                <div class="map" id="map"></div>
+              </div>
+            </div>
+            <div class="col-sm-1">
+              <div class="map-toggle" align="center">
+                <label class="switch">
+                  <input type="checkbox" onchange="checkYes(); return false;">
+                  <span class="slider round"></span>
+                </label>
+                <p>Toggle Spatial Filter</p>
+            </div>
+            </div>
           </div>
 
           <!-- Timeseries -->

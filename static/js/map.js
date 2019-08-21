@@ -55,6 +55,7 @@ function drawMarkers() {
       };
 };
 function updateMap(bounds) {
+  // if yesToggled = true, don't redraw? else do what you usually do
     latDim.filter([bounds.getSouth(), bounds.getNorth()])
     lngDim.filter([bounds.getWest(), bounds.getEast()])
     featureLayer.clearLayers()
