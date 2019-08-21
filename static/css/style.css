@@ -66,6 +66,7 @@ table, th, td {
   padding: 10px;
   font-weight: 400;
   text-transform: capitalize;
+
 }
 
 th {
@@ -282,6 +283,11 @@ div.sticky-top {
 
 .selected {
   background-color: #00274c;
+}
+
+.table-condensed th{
+  background-color: white;
+  color: black;
 }
 
 @media screen and (min-width:700px) {

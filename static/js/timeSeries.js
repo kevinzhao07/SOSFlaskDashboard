@@ -218,15 +218,26 @@ function resampleDates(data) {
     })
 };
 
-function changeDate(time) {
-    endDate = d3.timeDay.offset(d3.max(data, d => d.key),1)
-    x.domain([d3.min(data, d => d.key), endDate]);
+function changeDate(time, end = "none") {
+    if (end === "none"){
+        endDate = d3.timeDay.offset(d3.max(data, d => d.key),1);
+        x.domain([d3.min(data, d => d.key), endDate]);
+    } else {
+        endDate = end;
+        x.domain([d3.min(data, d => d.key), endDate]);
+        // console.log(endDate);
+    }
+
+    // console.log(endDate);
 
     beginDate = time == 'oneweek' ? d3.timeDay.offset(endDate, -7) :
                 time == 'twoweeks' ? d3.timeDay.offset(endDate, -14) :
                 time == "onemonth" ? d3.timeMonth.offset(endDate, -1) :
                 time == "threemonths" ? d3.timeMonth.offset(endDate, -3) :
-                                        d3.timeYear(new Date);
+                time == "yeartodate" ? d3.timeYear(new Date) :
+                                       time;
+
+    // console.log(beginDate);
 
     selection.attr("class", "brush")
       .call(brush)

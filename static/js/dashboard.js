@@ -47,6 +47,7 @@ function type(d) {
 
 // Calculate descriptive statistics
 function summaryStats(dayRange) {
+    console.log(dayRange)
     const days = (dayRange[1] - dayRange[0]) / 86400000
     const prevDayRange = [d3.timeDay.offset(dayRange[0],-days), dayRange[0]];
     dayRange[1] = d3.timeSecond.offset(dayRange[1],-1);
