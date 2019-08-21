@@ -34,11 +34,15 @@
 
   <!--mapbox -->
   <link rel="stylesheet" href="/static/css/map.css">
-  <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
-  <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/1.1.0/mapbox-gl.js"></script>
+  <!-- <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet'> -->
 
+  <!--mapbox gl -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/1.2.1/mapbox-gl.js'></script>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/1.2.1/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.css' type='text/css' />
+  <div id='map'></div>
 
   <!-- three charts -->
   <link rel="stylesheet" href="/static/css/tablecharts.css">
@@ -53,7 +57,7 @@
   <script src="/static/js/ageChart.js"></script>
   <script src="/static/js/genderChart.js"></script>
   <script src="/static/js/htmlTable.js"></script>
-  <script src="/static/js/map.js"></script>
+  <script src="/static/js/mapgl.js"></script>
   <script src="/static/js/raceChart.js"></script>
   <script src="/static/js/timeSeries.js"></script>
   <script src="/static/js/dashboard.js"></script>
@@ -165,7 +169,7 @@
 
           <!-- Map -->
           <div class="map-insert" align="center">
-            <div class="map" id="map"></div>
+            <div class="map" id="mapObj"></div>
           </div>
 
           <!-- Timeseries -->
@@ -258,9 +262,9 @@
     </div>
   </footer>
   <!-- setting leaflet-mapbox icons through Flask -->
-  {% if data.src == "EMS" %}
+  <!-- {% if data.src == "EMS" %}
     <script>
-    var tableIcon = L.icon({
+    var tableIcon = mapboxgl.Marker({
 
         iconUrl: '/static/markers/ambulance_icon_blues.svg',
         iconSize:     [25,25], // size of the icon
@@ -270,7 +274,7 @@
   {% endif %}
   {% if data.src == "ED" %}
     <script>
-    var tableIcon = L.icon({
+    var tableIcon = mapboxgl.Marker({
 
         iconUrl: '/static/markers/hospital_icon_blues.svg',
         iconSize:     [25,25], // size of the icon
@@ -280,14 +284,14 @@
   {% endif %}
   {% if data.src == "ME" %}
     <script>
-    var tableIcon = L.icon({
+    var tableIcon = mapboxgl.Marker({
 
         iconUrl: '/static/markers/morguetable_5.svg',
         iconSize:     [25,25], // size of the icon
         iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
       });
     </script>
-  {% endif %}
+  {% endif %} -->
 
   <script>
   // Mapbox - Flask variables

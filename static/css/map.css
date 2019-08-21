@@ -1,6 +1,15 @@
-#map {
-  top: 0;
-  bottom: 0;
-  width: 750px;
-  height: 550px;
+#mapObj {
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 750px !important;
+  height: 550px !important;
+}
+
+.marker {
+  background-image: url('/static/markers/morguetable_5.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
 }
