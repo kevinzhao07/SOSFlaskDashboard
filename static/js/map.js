@@ -35,11 +35,7 @@ function createMap() {// Mapbox section
     lngDim = CF.dimension(d => d.lng)
     drawMarkers();
 
-    // spatial filtering on map event
-    map.on('moveend zoomend', function() {
-        lastFilter = "date";
-        updateAll();
-    });
+
 };
 
 // draw map markers

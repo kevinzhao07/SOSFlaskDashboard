@@ -6,6 +6,11 @@ function checkYes(){
 
     if (yesToggled){
         //do this toggle function with false passed in;
+        // spatial filtering on map event
+        map.on('moveend zoomend', function() {
+            lastFilter = "date";
+            updateAll();
+        });
         console.log('toggle on state')
         yesToggled = false;
     } else {
