@@ -29,13 +29,16 @@ function createMap() {// Mapbox section
 
     L.control.layers(layers).addTo(map); // add basemap control
     featureLayer = L.mapbox.featureLayer().addTo(map);
-    const citycountyLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
+    citycountyLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
 
     latDim = CF.dimension(d => d.lat)
     lngDim = CF.dimension(d => d.lng)
     drawMarkers();
 
-
+    // spatial filtering on map event
+    map.on('moveend zoomend', function() {
+        updateAll();
+    });
 };
 
 // draw map markers
@@ -51,7 +54,6 @@ function drawMarkers() {
       };
 };
 function updateMap(bounds) {
-  // if yesToggled = true, don't redraw? else do what you usually do
     latDim.filter([bounds.getSouth(), bounds.getNorth()])
     lngDim.filter([bounds.getWest(), bounds.getEast()])
     featureLayer.clearLayers()

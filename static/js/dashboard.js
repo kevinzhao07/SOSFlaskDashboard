@@ -5,6 +5,7 @@ async function makeDashboard(fileName, citycounty) {
     neutral = "fa-sort";
     ascending = "fa-sort-asc";
     descending = "fa-sort-desc";
+    bool = false;
     // parse the date / time
     parseDate = d3.timeParse("%Y-%m-%d");
     formatDate = d3.timeFormat("%b %d, %Y");
@@ -25,7 +26,7 @@ async function makeDashboard(fileName, citycounty) {
 // updates all
 function updateAll(updateCharts = true) {
     if (updateCharts) {
-        updateMap(map.getBounds());
+        toggMap(bool);
         updateTimeSeries();
         summaryStats(x.domain());
         updateAge();

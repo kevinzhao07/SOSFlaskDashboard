@@ -57,7 +57,6 @@
   <script src="/static/js/raceChart.js"></script>
   <script src="/static/js/timeSeries.js"></script>
   <script src="/static/js/dashboard.js"></script>
-  <script src ="/static/js/spatialtoggle.js"></script>
 
 </head>
 
@@ -174,7 +173,7 @@
             <div class="col-sm-1">
               <div class="map-toggle" align="center">
                 <label class="switch">
-                  <input type="checkbox" onchange="checkYes(); return false;">
+                  <input type="checkbox" id = "toggle-button" onclick="checkYes();">
                   <span class="slider round"></span>
                 </label>
                 <p>Toggle Spatial Filter</p>
@@ -312,5 +311,6 @@
     // populate data graphics
     makeDashboard("/static/data/map_fake.csv", "{{ data.placename }}");
 </script>
+<script src ="/static/js/spatialtoggle.js"></script>
 </body>
 </html>
