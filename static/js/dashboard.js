@@ -26,7 +26,7 @@ async function makeDashboard(fileName, citycounty) {
 // updates all
 function updateAll(updateCharts = true) {
     if (updateCharts) {
-        toggMap(bool);
+        updateMap(bool);
         updateTimeSeries();
         summaryStats(x.domain());
         updateAge();

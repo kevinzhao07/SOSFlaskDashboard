@@ -53,9 +53,16 @@ function drawMarkers() {
           .bindPopup(`<p>${formatDate(pt.date)}<br>${pt.county}<br>${pt.Age} ${pt.Race} ${pt.Gender}</p>`))
       };
 };
-function updateMap(bounds) {
-    latDim.filter([bounds.getSouth(), bounds.getNorth()])
-    lngDim.filter([bounds.getWest(), bounds.getEast()])
-    featureLayer.clearLayers()
-    drawMarkers()
+
+function updateMap(boole){
+    if (boole === true){
+        let bounds = map.getBounds();
+        latDim.filter([bounds.getSouth(), bounds.getNorth()])
+        lngDim.filter([bounds.getWest(), bounds.getEast()])
+    } else {
+        latDim.filterAll();
+        lngDim.filterAll();
+    }
+    featureLayer.clearLayers();
+    drawMarkers();
 };
