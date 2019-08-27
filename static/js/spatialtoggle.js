@@ -1,10 +1,13 @@
-function toggleSpatialFilter(){
+function toggleMapFilter(){
     var toggleBtn = document.getElementById('toggle-button');
     if (toggleBtn.checked){
         bool = true
-        updateAll(bool);
+        updateAll();
+        d3.select('.disclaim').html("total*");
     } else {
         bool = false
-        updateAll(bool);
+        updateAll();
+        d3.select('.numberExcl').html("");
+        d3.select('.disclaim').html("total");
     };
 };

@@ -999,3 +999,7 @@ date,county,Age,Gender,Race,lng,lat
 2019-08-09,Baraga,25-34,Male,Black,-88.35451375475616,46.64490068598834
 2019-08-09,Antrim,25-34,Male,Black,-85.14913963946542,44.958798705405435
 2019-08-09,Gratiot,45-54,Female,White,-84.58989072879034,43.290095756935074
+2019-08-09,Baraga,45-54,Male,Black,0,0
+2019-08-04,Baraga,0-25,Male,White,0,0
+2019-08-06,Baraga,0-25,Female,White,0,0
+2019-08-10,Baraga,45-54,Male,White,0,0

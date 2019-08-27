@@ -155,12 +155,15 @@
               <div class= "col-sm-4 text-right">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="summary" id="N"></h2><p>total</p>
+                    <h2 class="summary" id="N"></h2><p class = "disclaim">total</p>
                   </div>
                   <div class="col-sm-4 text-left">
                     <h3 class="summary" id="Np"></h3><p>incident(s)</p>
                     <h3 class="summary" id="Pct"></h3>
                   </div>
+                </div>
+                <div class = "excludedpoints">
+                  <p class = "numberExcl"></p>
                 </div>
               </div>
           </div>
@@ -175,7 +178,7 @@
             <div class="col-sm-1">
               <div class="map-toggle" align="center">
                 <label class="switch">
-                  <input type="checkbox" id = "toggle-button" onclick="toggleSpatialFilter();">
+                  <input type="checkbox" id = "toggle-button" onclick="toggleMapFilter();">
                   <span class="slider round"></span>
                 </label>
                 <p>Toggle Spatial Filter</p>

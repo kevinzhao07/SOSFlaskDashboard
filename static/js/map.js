@@ -56,6 +56,7 @@ function drawMarkers() {
 
 function updateMap(boole){
     if (boole === true){
+        pointExclusions();
         let bounds = map.getBounds();
         latDim.filter([bounds.getSouth(), bounds.getNorth()])
         lngDim.filter([bounds.getWest(), bounds.getEast()])
@@ -65,4 +66,10 @@ function updateMap(boole){
     }
     featureLayer.clearLayers();
     drawMarkers();
+
+    function pointExclusions(){
+        let nonDisplayed = lngDim.filter(d => d == 0 ).top(Infinity).length
+        d3.select('.numberExcl').html("* " + nonDisplayed +  " incidents excluded " + '<i class="fa fa-info-circle" aria-hidden="true"></i>')
+        lngDim.filterAll();
+    };
 };

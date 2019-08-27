@@ -347,6 +347,11 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.numberExcl{
+  font-style: italic;
+  font-size: 12px;
+}
+
 /* .map-toggle{
   padding: 5px;
   border: 1px solid black;
