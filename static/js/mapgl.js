@@ -60,12 +60,12 @@ function drawMarkers() {
         el.style.height = '25px'
 
         popup = new mapboxgl.Popup()
-                        .setHTML(`<p>${formatDate(latDim.top(Infinity)[i].date)}<br>${latDim.top(Infinity)[i].county}<br>${latDim.top(Infinity)[i].Age} ${latDim.top(Infinity)[i].Race} ${latDim.top(Infinity)[i].Gender}</p>`);
+                            .setHTML(`<p>${formatDate(latDim.top(Infinity)[i].date)}<br>${latDim.top(Infinity)[i].county}<br>${latDim.top(Infinity)[i].Age} ${latDim.top(Infinity)[i].Race} ${latDim.top(Infinity)[i].Gender}</p>`);
 
         marker =  new mapboxgl.Marker(el)
-                          .setLngLat([latDim.top(Infinity)[i].lng,latDim.top(Infinity)[i].lat])
-                          .setPopup(popup) // sets a popup on this marker
-                          .addTo(map)
+                              .setLngLat([latDim.top(Infinity)[i].lng,latDim.top(Infinity)[i].lat])
+                              .setPopup(popup) // sets a popup on this marker
+                              .addTo(map)
     }
 };
 function updateMap(bounds) {
