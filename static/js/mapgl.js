@@ -16,15 +16,10 @@ function createMap() {// Mapbox section
         center: [centerMapbox.lng, centerMapbox.lat],
         zoom: zoomMapbox-1,
         maxBounds: [[-92,36],[-80,52]]
-    })
-        // .setView(centerMapbox, zoomMapbox)
-        // .addLayer(layers.Main) // default layer
-        // .addControl(L.mapbox.geocoderControl('mapbox.places', {autocomplete: true}))
-        // .setMaxBounds([[36,-92],[52,-80]])
-        // .setMinZoom(5)
+    });
 
-        map.dragRotate.disable();
-        map.touchZoomRotate.disableRotation();
+    map.dragRotate.disable();
+    map.touchZoomRotate.disableRotation();
 
     //add source
     map.on('load', function(){
@@ -47,55 +42,35 @@ function createMap() {// Mapbox section
 
     drawMarkers();
 
-
-    // map.scrollWheelZoom.disable();
-
-  //   function style(feature) {
-  //       return {
-  //           fillColor: '#adcfe6',
-  //           weight: 2,
-  //           opacity: 1,
-  //           color: '#72add4',
-  //           fillOpacity: 0.30
-  //       };
-  // }
-    //
-    // L.control.layers(layers).addTo(map); // add basemap control
-    // featureLayer = L.mapbox.featureLayer().addTo(map);
-    // const citycountyLayer = L.mapbox.featureLayer(county_geojson, {style : style}).addTo(map);
-
-    // drawMarkers();
-    //
-    // // spatial filtering on map event
-    // map.on('moveend zoomend', function() {
-    //     lastFilter = "date";
-    //     // updateAll();
-    // });
-};
+    // spatial filtering on map event
+    map.on('moveend zoomend', function() {
+        updateAll();
+    });
+}
 
 // draw map markers
 function drawMarkers() {
-    const days = (dayRange[1] - dayRange[0]) / 86400000;
-    for (let pt of latDim.top(Infinity)) {
-        const offset = (dayRange[1] - pt.date) / 86400000;
-        var thing = document.createElement('div');
-        thing.className = 'marker';
-        new mapboxgl.Marker(thing)
-            .setLngLat([pt.lng, pt.lat])
-            .addto(map)
-        // {
-        //     icon: tableIcon,
-        //     opacity: d3.max([1 - (offset-1)/days, 0]),
-        //   })
-            .setPopup(new mapboxgl.Popup({ offset : 25 })
-              .setHTML(`<p>${formatDate(pt.date)}<br>${pt.county}<br>${pt.Age} ${pt.Race} ${pt.Gender}</p>`)
-              .addto(map)
-            )
-      };
+    const days = (x.domain()[1] - x.domain()[0]) / 86400000;
+    for (var i = 0; i < latDim.top(Infinity).length; i++ ) {
+        const offset = (x.domain()[1] - latDim.top(Infinity)[i].date) / 86400000;
+        var el = document.createElement('div');
+        el.className = 'marker';
+        el.style.backgroundImage = iconImg;
+        el.style.width = '25px'
+        el.style.height = '25px'
+
+        popup = new mapboxgl.Popup()
+                        .setHTML(`<p>${formatDate(latDim.top(Infinity)[i].date)}<br>${latDim.top(Infinity)[i].county}<br>${latDim.top(Infinity)[i].Age} ${latDim.top(Infinity)[i].Race} ${latDim.top(Infinity)[i].Gender}</p>`);
+
+        marker =  new mapboxgl.Marker(el)
+                          .setLngLat([latDim.top(Infinity)[i].lng,latDim.top(Infinity)[i].lat])
+                          .setPopup(popup) // sets a popup on this marker
+                          .addTo(map)
+    }
 };
-// function updateMap(bounds) {
-//     latDim.filter([bounds.getSouth(), bounds.getNorth()])
-//     lngDim.filter([bounds.getWest(), bounds.getEast()])
-//     featureLayer.clearLayers()
-//     drawMarkers()
-// };
+function updateMap(bounds) {
+    latDim.filter([bounds.getSouth(), bounds.getNorth()])
+    lngDim.filter([bounds.getWest(), bounds.getEast()])
+    d3.selectAll('.marker').remove();
+    drawMarkers();
+};

@@ -42,7 +42,9 @@
   <link href='https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/1.2.1/mapbox-gl.css' rel='stylesheet' />
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.min.js'></script>
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.css' type='text/css' />
-  <div id='map'></div>
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
+  <script src = "https://npmcdn.com/csv2geojson@latest/csv2geojson.js"></script> -->
 
   <!-- three charts -->
   <link rel="stylesheet" href="/static/css/tablecharts.css">
@@ -292,6 +294,21 @@
       });
     </script>
   {% endif %} -->
+  {% if data.src == "EMS" %}
+    <script>
+      var iconImg = 'url(/static/markers/ambulance_icon_blues.svg)'
+    </script>
+  {% endif %}
+  {% if data.src == "ED" %}
+    <script>
+    var iconImg = 'url(/static/markers/hospital_icon_blues.svg)'
+    </script>
+  {% endif %}
+  {% if data.src == "ME" %}
+    <script>
+    var iconImg = 'url(/static/markers/morguetable_5.svg)'
+    </script>
+  {% endif %}
 
   <script>
   // Mapbox - Flask variables
