@@ -1,11 +1,6 @@
 // create svg of map
 function createMap() {// Mapbox section
     mapboxgl.accessToken = 'pk.eyJ1Ijoic3RjaG9pIiwiYSI6ImNqd2pkNWN0NzAyNnE0YW8xeTl5a3VqMXQifQ.Rq3qT82-ysDHcMsHGTBiQg';
-    layers = {
-        'Light':'mapbox://styles/mapbox/light-v10',
-        'Dark': 'mapbox://styles/mapbox/dark-v10',
-        'Main': 'mapbox://styles/stchoi/cjwky60dk0toy1cm8fnhngzrv'
-    };
 
     latDim = CF.dimension(d => d.lat)
     lngDim = CF.dimension(d => d.lng)
@@ -24,19 +19,19 @@ function createMap() {// Mapbox section
     //add source
     map.on('load', function(){
         map.addSource('citycounty',{
-          type : 'geojson',
-          data: county_geojson
+            type : 'geojson',
+            data: county_geojson
         });
 
         //add layer
         map.addLayer({
-          id: 'citycountyLayer',
-          type: 'fill',
-          source: 'citycounty',
-          paint:{
-            'fill-color' : '#adcfe6',
-            'fill-opacity' : 0.40
-          }
+            id: 'citycountyLayer',
+            type: 'fill',
+            source: 'citycounty',
+            paint:{
+                'fill-color' : '#adcfe6',
+                'fill-opacity' : 0.40
+            }
         });
     });
 
