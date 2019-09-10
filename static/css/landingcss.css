@@ -1,0 +1,95 @@
+.content{
+    padding-top: 0px;
+}
+
+.container-top-buffer {
+    margin-top:50px;
+  }
+  
+h2{
+    text-align: center;
+    padding: 5px;
+}
+p{
+    text-align: center;
+    padding: 5px;
+}
+h3{
+    text-align: center;
+    padding: 5px;
+}
+
+.introduction{
+    font-size: 18px;
+}
+
+ul li{
+    list-style-type: circle; 
+}
+
+.whatInfo p{
+    text-align: left;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mapbg{
+background-color: #f8f8f8;
+}
+
+.mich{
+    padding: 15px;
+}
+
+.mich .county {
+fill: #7e732f;
+fill-opacity: 0.9;
+}
+
+.tooltip p {
+margin: 2px !important;
+}
+
+path.county {
+stroke: #fff !important;
+}
+
+path.county:hover{
+fill: #ffcb05 !important;
+cursor: pointer !important;
+}
+
+.notipc{
+    margin: 20px;
+    display: inline-block;
+    height: 50px;
+}
+.isIpc{
+    background-color: white;
+    margin: 20px;
+    display: inline-block;
+    height: 20px;
+}
+
+.pleasereachout{
+    padding-top: 25px;
+    font-size: 20px;
+}
+.modal-body form-group{
+    padding-bottom: 25px;
+}
+
+.incidentcount{
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #f5f5f5;
+    background-color: white;
+}
+
+.numberIncidents{
+    font-weight: bold;
+    font-size: 18px;
+}

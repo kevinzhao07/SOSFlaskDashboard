@@ -6,7 +6,11 @@ application = Flask(__name__)
 application.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 @application.route('/')
-def homepage():
+def landing():
+    return render_template('landing.html')
+
+@application.route('/search')
+def searchpage():
     data = {
       'counties': counties,
     }

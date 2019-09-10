@@ -2,10 +2,13 @@
 <html lang="en" dir="ltr">
 <head>
   <!--Title of landing login page-->
-  <title>SOS Dashboard - Login</title>
+  <title>SOS Michigan Opioid Epidemic </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  <!-- icon  -->
+  <link rel="icon" type="image/png" href="/static/images/icon_t.png">
+
   <!-- BS and FA -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,110 +17,151 @@
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.7/crossfilter.min.js"></script>
   <script src="//d3js.org/topojson.v3.min.js"></script>
-
-  <!-- general style -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/nondatastyle.css">
-
-  <!--timetable -->
-  <link rel="stylesheet" href="css/timetable.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
 
-  <!--mapbox -->
-  <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
-  <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet'>
-  <link rel="stylesheet" href="css/map.css">
-
-  <!-- three charts -->
-  <link rel="stylesheet" href="css/tablecharts.css">
-
-  <!-- searchpage michigan-->
-  <link rel="stylesheet" href="css/michigan.css">
+  <!-- general style -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/landingcss.css">
 
 
 </head>
-  <body>
-    <header></header>
-    <nav class="navbar navbar-expand-sm fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">SOS Michigan Opioid Epidemic Dashboard</a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a  class="nav-link" href="#">EMS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ED</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ME</a>
-          </li>
-        </ul>
+<body>
+  <!-- accessibility skip to main tab index -->
+  <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <header>
+    <!-- cool image, perhaps -->
+  </header>
+
+  <!-- top navigation -->
+  <nav class="navbar navbar-expand-sm fixed-top d-print-none">
+    <div class = "container-fluid">
+      <div class = "navbar-header">
+          <a class="navbar-brand" href="/">SOS Michigan Opioid Epidemic Dashboard</a>
       </div>
-    </nav>
-    <div class="container-fluid container-top-buffer">
-      <div class="row content">
-        <div class="col-sm-1 sidebuff"></div>
-          <div class="col-sm-10 top-buffer">
-            <div class="row content">
-              <div class="col-sm-12 text-center">
-                <img src="images/SOS_icon_logo_white.png" id="dashboard-landing-img" class="img-fluid mx-auto d-block" alt="image of logo"/>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login">Login</button>
-              </div>
-            </div>
-            <div class="modal fade" id="login">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4 class= "modal-title">Login</h4>
-                  </div>
-                  <div class= "modal-body">
-                    <form role="form">
-                      <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" placeholder="email"/>
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" placeholder="password"/>
-                      </div>
-                  <div class="modal-footer">
-                    <button type="button" class="submit" data-dismiss="modal">Login</button>
-                  </div>
-                </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a data-toggle="modal" data-target="#login"><span class="fa fa-sign-in"></span> Login</a></li>
+      </ul>
+     </div>
+  </nav>
+  <div class="modal fade" id="login">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class= "modal-title">Login</h4>
           </div>
-        <div class="col-sm-1 sidebuff"></div>
+          <div class= "modal-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="email" class="form-control" placeholder="username"/>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="password"/>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="submit-to-search" data-dismiss="modal">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-    <footer class="footer">
-        <div class="footstyle container-fluid text-center">
-          <div class="row text-center">
-              <div class="col-sm-4 text-center">
-                <h4>Links</h4>
-                <ul>
-                  <li><a class="footlink" href="#">Link1</a></li>
-                  <li><a class="footlink" href="#">Link2</a></li>
-                </ul>
+  </div>
+
+  <div class="container-fluid container-top-buffer">
+    <div class="row">
+      <div class="col-sm-1 sidebuff"></div>
+      <div class = "col-sm-10">
+        <div class= "row content">
+
+          <div class = "col-sm-12">
+            <div class = "whatsSOS">
+                <h2>What is SOS?</h2>
+                <div class = "row">
+                  <div class = "col-sm-2"></div>
+                  <div class = "col-sm-8">
+                      <p class = "introduction"><b>SOS</b> is a near real-time opioid overdose surveillance system created through a partnership between the <b><a href = "https://injurycenter.umich.edu/" target="_blank">University of Michigan Injury Prevention Center</a></b>  and <b>Michigan High Intensity Drug Trafficking Areas (HIDTA)</b>. SOS provides near real-time mapping of <b>non-fatal </b>and  <b>fatal</b> overdose cases, as well as aggregate data briefs, to facilitate timely public health and public safety responses. </p>
+                  </div>
+                  <div class = "col-sm-2"></div>
+                </div>
+            </div>
+           <div class = "row mapbg">
+             <div class = "row incidentcount">
+               <div class = "col-sm-12">
+                 <p class = "numberIncidents">Total Incidents: </p>
+               </div>
+             </div>
+             <div class = "col-sm-12 d-flex justify-content-center">
+                <div class = "mich" id="mich"></div>
+             </div>
+           </div>
+            <div class= "whatInfo">
+              <div class ="row">
+                <div class="col-sm-1"></div>
+                <div class = "col-sm-10">
+                    <h3>What information does SOS Report?</h3>
+                    <p>SOS currently collects data from the following sources:</p>
+                    <div class = "row">
+                      <div class = "col-sm-6">
+                        <ul>
+                            <li>
+                                <p class = "name">Emergency Medical Services (EMS)</p>EMS data is obtained through the <b>Michigan EMS Information System (MI-EMSIS)</b> and includes statewide cases of naloxone administration. Naloxone administration may not indicate an opioid overdose, as naloxone is commonly administered by first responders to any unresponsive patient. Naloxone administration incident and city location is displayed on the SOS map as reported by EMS agencies to MI-EMSIS. Not all EMS agencies report incidents on a real-time basis and cases may be under-reported. 
+                            </li>
+                          </ul>
+                      </div>
+                       <div class = "col-sm-6">
+                          <ul>
+                              <li>
+                                  <p class = "name">Medical Examiners (ME)</p>Fatal suspected opioid overdose data is obtained through the electronic death database, <b>Medicolegal Death Investigation Log (MDILog)</b> and individual county medical examiners. Suspected overdose cases are determined through death investigators and updated to SOS on a regular basis. As toxicology reports become available, SOS is updated to reflect confirmed opioid related deaths. 
+                              </li>
+                            </ul>
+                       </div> 
+                    </div>
+                    <p>Due to the near-real time nature of SOS, all data collected is provisional and subject to change. Data may not always be complete and data should not be considered a definitive opioid overdose. All locations of the map are approximate. </p>
+                </div>
+                <div class = "col-sm-1"></div>
               </div>
-              <div class="col-sm-4 text-center">
-                <h4>Contact</h4>
-                <ul>
-                  <li><a class="footlink" href="#">Email</a></li>
-                  <li><a class="footlink" href="#">Phone</a></li>
-                </ul>
-              </div>
-              <div class="col-sm-4 text-center">
-                <h4>Help</h4>
-                <ul>
-                  <li><a class="footlink" href="#">About the data</a></li>
-                  <li><a class="footlink" href="#">About this site</a></li>
-                </ul>
+              
+            </div>
+
+            <div class= "whoHasAccess">
+              <h3>Who has access to SOS?</h3>
+              <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                  <p>SOS is available to public health and public safety stakeholders involved in opioid overdose response and prevention efforts. The University of Michigan Injury Prevention Center monitors those accessing SOS to ensure proper use.
+                    </p>
+                </div>
+                <div class="col-sm-1"></div>
               </div>
             </div>
+            <p class = "pleasereachout">Please reach out to <a href = "mailto:SOS.Reports@umich.edu">SOS.Reports@umich.edu</a> with any questions or to request access.</p>
           </div>
+        </div>
+          <div class="row">
+          <div class = "col-sm-12 d-flex justify-content-center align-items-center">
+            <img class="isIpc" src = "/static/images/IPC.png"></img>
+            <img class = "notipc" src = "/static/images/SOS.png"></img>
+            <img class = "notipc" src = "/static/images/hidta.png"></img>
+          </div>
+        </div>
+      </div>
+      
+      <div class = "col-sm-1 sidebuff"></div>
+    </div>
+    <footer class="footer d-print-none">
+      <div class="container-fluid logos">
+      
+      </div>
     </footer>
-  </body>
+  <!-- scripts -->
+    <script src= "/static/js/makeMich.js"></script>
+    <script src = "/static/js/logintosearch.js"></script>
+    <script>makeMichMap(mich, "mich");</script>
+</body>
 </html>
