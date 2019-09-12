@@ -284,6 +284,23 @@ div.sticky-top {
   background-color: #00274c;
 }
 
+.disclaimer{
+  font-style: oblique;
+  font-size: 10px;
+}
+
+.notipc{
+  margin: 20px;
+  display: inline-block;
+  height: 50px;
+}
+.isIpc{
+  background-color: white;
+  margin: 20px;
+  display: inline-block;
+  height: 20px;
+}
+
 @media screen and (min-width:700px) {
   .sidenav {
     padding-top: 50px;

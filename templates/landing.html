@@ -43,35 +43,10 @@
           <a class="navbar-brand" href="/">SOS Michigan Opioid Epidemic Dashboard</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
-          <li><a data-toggle="modal" data-target="#login"><span class="fa fa-sign-in"></span> Login</a></li>
+          <li><a href = "/login"><span class="fa fa-sign-in"></span> Login</a></li>
       </ul>
      </div>
   </nav>
-  <div class="modal fade" id="login">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class= "modal-title">Login</h4>
-          </div>
-          <div class= "modal-body">
-            <form role="form">
-              <div class="form-group">
-                <label for="username">Username</label>
-                <input type="email" class="form-control" placeholder="username"/>
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" placeholder="password"/>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="submit-to-search" data-dismiss="modal">Login</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="container-fluid container-top-buffer">
     <div class="row">
@@ -144,24 +119,20 @@
           </div>
         </div>
           <div class="row">
-          <div class = "col-sm-12 d-flex justify-content-center align-items-center">
-            <img class="isIpc" src = "/static/images/IPC.png"></img>
-            <img class = "notipc" src = "/static/images/SOS.png"></img>
-            <img class = "notipc" src = "/static/images/hidta.png"></img>
-          </div>
+            <div class = "col-sm-12 d-flex justify-content-center align-items-center">
+              <img class="isIpc" src = "/static/images/IPC.png"></img>
+              <img class = "notipc" src = "/static/images/SOS.png"></img>
+              <img class = "notipc" src = "/static/images/hidta.png"></img>
+            </div>
         </div>
       </div>
       
       <div class = "col-sm-1 sidebuff"></div>
     </div>
     <footer class="footer d-print-none">
-      <div class="container-fluid logos">
-      
-      </div>
     </footer>
   <!-- scripts -->
     <script src= "/static/js/makeMich.js"></script>
-    <script src = "/static/js/logintosearch.js"></script>
     <script>makeMichMap(mich, "mich");</script>
 </body>
 </html>

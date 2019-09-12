@@ -2,20 +2,6 @@ let width = 550;
 let height = width;
 
 //Create SVG element and append map to the SVG
-let EMS = d3.select(".mapEMS")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-let ED = d3.select(".mapED")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-let ME = d3.select(".mapME")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
 
 let ONE = d3.select(".onemap")
     .append("svg")

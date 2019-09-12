@@ -15,9 +15,13 @@
 
 }
 
-.mapEMS, .mapED, .mapME {
+.mapEMS, .mapED, .mapME, .onemap {
   margin-bottom : 20px;
   padding: 5px;
+}
+
+.onemap.county{
+  fill :#9b9a6d;
 }
 
 /* commented out code was used to debug map position */

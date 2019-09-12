@@ -68,27 +68,34 @@
 
   <!-- top navigation -->
   <nav class="navbar navbar-expand-sm fixed-top d-print-none">
-    <a class="navbar-brand" href="/">SOS Michigan Opioid Epidemic Dashboard</a>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      {% for eachsource in ['EMS', 'ED', 'ME'] %}
-        <li class="nav-item">
-        <!-- check the data source and apply active class. also check for city or county. -->
-        {% if data.src == eachsource %}
-          {% if data.placename in cities %}
-            <a class="nav-link active" href="?src={{ eachsource }}&city={{data.placename}}">{{ eachsource }}</a>
+    <div class = "container-fluid">
+      <div class = "navbar-header">
+          <a class="navbar-brand" href="/search">SOS Michigan Opioid Epidemic Dashboard</a>
+      </div>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        {% for eachsource in ['EMS', 'ME'] %}
+          <li class="nav-item">
+          <!-- check the data source and apply active class. also check for city or county. -->
+          {% if data.src == eachsource %}
+            {% if data.placename in cities %}
+              <a class="nav-link active" href="?src={{ eachsource }}&city={{data.placename}}">{{ eachsource }}</a>
+            {% else %}
+              <a class="nav-link active" href="?src={{ eachsource }}&county={{data.placename}}">{{ eachsource }}</a>
+            {% endif %}
           {% else %}
-            <a class="nav-link active" href="?src={{ eachsource }}&county={{data.placename}}">{{ eachsource }}</a>
+            {% if data.placename in cities %}
+              <a class="nav-link" href="?src={{ eachsource }}&city={{data.placename}}">{{ eachsource }}</a>
+            {% else %}
+              <a class="nav-link" href="?src={{ eachsource }}&county={{data.placename}}">{{ eachsource }}</a>
+            {% endif %}
           {% endif %}
-        {% else %}
-          {% if data.placename in cities %}
-            <a class="nav-link" href="?src={{ eachsource }}&city={{data.placename}}">{{ eachsource }}</a>
-          {% else %}
-            <a class="nav-link" href="?src={{ eachsource }}&county={{data.placename}}">{{ eachsource }}</a>
-          {% endif %}
-        {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li class = "signout"><a href = "/logout"><span class="fa fa-sign-out"></span> Logout</a></li>
+      </ul>
+     </div>
   </nav>
 
   <div class="container-fluid container-top-buffer">
@@ -138,9 +145,9 @@
                 {% if data.src == 'ME' %}
                   <img src = "/static/markers/morguetable_5.svg" alt = "morgue table represents ME data">
                 {% endif %}
-                {% if data.src == "ED" %}
+                <!-- {% if data.src == "ED" %}
                   <img src = "/static/markers/hospital_icon_blues.svg" alt = "hospital represents ED data">
-                {% endif %}
+                {% endif %} -->
               </div>
               <div class="col-sm-4">
                 <div class="row vbottom">
@@ -166,6 +173,13 @@
           <!-- Map -->
           <div class="map-insert" align="center">
             <div class="map" id="map"></div>
+          </div>
+          <div class="mapdiclaimer">
+            <p class = "disclaimer">*Total counts are based on mailing address, which may not correspond with municipal boundaries
+            </p>
+            <p class = "disclaimer">*Some incidents may be unmappable due to incomplete location information 
+
+            </p>
           </div>
 
           <!-- Timeseries -->
@@ -237,10 +251,23 @@
               <a href="#content">Back to Top</a>
             </div>
           </div>
+          <div class="row discs">
+            <div class="col-sm-12">
+              <p class="disclaimer">Due to the near-real time nature of SOS, all data collected is provisional and subject to change. Data may not always be complete and data should not be considered a definitive opioid overdose count. All locations on the map are approximate.
+                <br>Please reach out to <a href="mailto:SOS.Reports@umich.edu">SOS.Reports@umich.edu</a> with any questions.
+                <br>University of Michigan 2019 	&#8482;
+              </p>
+            </div>
+          </div>
+          <div class="row logos">
+            <div class = "col-sm-12 d-flex justify-content-center align-items-center">
+              <img class="isIpc" src = "/static/images/IPC.png"></img>
+              <img class = "notipc" src = "/static/images/SOS.png"></img>
+              <img class = "notipc" src = "/static/images/hidta.png"></img>
+            </div>
+          </div>
         </div>
-
-
-  <div class="col-sm-1 sidebuff">  </div>
+    <div class="col-sm-1 sidebuff">  </div>
   </div>
   <footer class="footer d-print-none">
     <div class="footstyle container-fluid text-center">
@@ -268,7 +295,7 @@
       });
     </script>
   {% endif %}
-  {% if data.src == "ED" %}
+  <!-- {% if data.src == "ED" %}
     <script>
     var tableIcon = L.icon({
 
@@ -277,7 +304,7 @@
         iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
       });
     </script>
-  {% endif %}
+  {% endif %} -->
   {% if data.src == "ME" %}
     <script>
     var tableIcon = L.icon({
