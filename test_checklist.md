@@ -1,4 +1,5 @@
 ## Dashboard Tests
+### NOTE: NEEDS TO BE UPDATED!!
 ##### Updated 8/16/2019
 
 ### Data and data updates properly update map, charts/time series, and table. Upper Right always shows updated information

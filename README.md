@@ -27,11 +27,17 @@ Referenced during creation of html page templates:
     - `dashboard.html`
         - bootstrap layout template for dashboard with map positioned on top, then time series under the map, then a series of 3 infographics arranged in a row. under this is a table. the side navigation occupies 1 column.
     - `landing.html`
-        - very low-fidelity static HTML of a possible landing page. contains a modal login window.
+        - a landing page with more information about this project.
+    - `login.html`
+        - a login page.
     - `search.html`
         - bootstrap layout template for search page. Contains 1 interactable county/city map, radio buttons for data source, and a search bar with autocomplete.
 - `/static`
     - `/css`
+        - `landingcss.css`
+            - styles the landing page
+        - `logincss.css`
+            - styles the login page
         - `map.css`
             - formats and styles the mapbox item for `dashboard.html`
         - `michigan.css`
@@ -49,12 +55,17 @@ Referenced during creation of html page templates:
         - `timetable.css`
             - styles the d3 time series (2 bar graphs with moving average) for `dashboard.html`
     - `/data`
+        - `/map_fake_history`
+            - contains previous versions of map_fake.csv
         - `cities.csv`
             - names cities of interest and their latitude and longitudes
             - used in `search.html`
         - `map_fake.csv`
-            - fake data of approximately 1000 coordinates, dates, demographics
+            - fake data of approximately 2000 coordinates, dates, demographics
             - used in `dashboard.html`
+        - `gz_2010_iz_050_00_5m_MI_counties.topojson`
+            - topojson-format information
+            - used by `search.html`
     - `/geojson`
         - `/cities`
             - geoJSON-format information about cities of interest
@@ -65,6 +76,7 @@ Referenced during creation of html page templates:
         - `gz_2010_iz_050_00_5m_MI_counties.topojson`
             - topojson-format information
             - used by `search.html`
+
     - `/images` - includes favicon (icon_t) and placeholders
         - hidta.png
         - icon.png
@@ -78,12 +90,17 @@ Referenced during creation of html page templates:
             - function definitions are referenced in `multipleCharts.js`
         - `autocomplete.js`
             - codes the autocomplete search used in `search.html`
+        - `dashboard.js`
+            - runs the function definitions defined in `ageChart.js`, `genderChart.js`, `htmlTable.js`, `raceChart.js`, and `timeSeries.js`
+            - function definition for creating infographics from csv defined here
         - `genderChart.js`
             - creates and updates the gender donut
             - function definitions are referenced in `multipleCharts.js`
         - `htmlTable.js`
             - creates and updates the HTML table
-            - function definitions are referenced in `multipleCharts.js`        
+            - function definitions are referenced in `multipleCharts.js`  
+        - `makeMich.js`
+            - creates d3 svg for landing page      
         - `makeMichigan.js`
             - creates the d3 svg maps of Michigan counties and cities
             - used in `search.html`
@@ -91,9 +108,6 @@ Referenced during creation of html page templates:
             - creates mapbox-leaflet map used in main view
             - function definitions are referenced in `multipleCharts.js`
             - Flask-created variables are present in-line in `dashboard.html`
-        - `multipleCharts.js`
-            - runs the function definitions defined in `ageChart.js`, `genderChart.js`, `htmlTable.js`, `raceChart.js`, and `timeSeries.js`
-            - function definition for creating infographics from csv defined here
         - `navfromsearch.js`
             - codes the navigation to correct dashboard page after a place name is input into the search bar
             - used by `search.html`
