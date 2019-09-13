@@ -1,12 +1,17 @@
-let width = 550;
+let width = 400;
 let height = width;
 
 //Create SVG element and append map to the SVG
 
-let mich = d3.select(".mich")
+let michEms = d3.select("#michEms")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
+
+let michMe = d3.select('#michMe')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height);
 
 // Load topojson data
 async function makeMichMap(svgname, filename) {
@@ -16,10 +21,10 @@ async function makeMichMap(svgname, filename) {
   DATA.map(d => counties.set(d.county, d.value));
   const TOTAL = DATA.reduce((total,d) => total + d.value, 0)
 
-  d3.select('.numberIncidents')
+  d3.select('#totalCount')
       .text(`Total Naxolone Incidents: ${TOTAL}`)
 
-  let tooltipDiv = d3.select(".mich")
+  let tooltipDiv = d3.select('.mich')
       .append("div")
       .attr("class", "tooltips")
       .attr("data-toggle", "tooltip")

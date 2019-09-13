@@ -1,21 +1,5 @@
-.EMS.county {
-  fill: #a79d96; /* ANGELL HALL ASH */
-}
-
-.ED.county {
-  fill: #9b9a6d ; /* BURTON TOWER BEIGE */
-}
-
-.ME.county {
-  fill: #989c97 ; /* THE ROCK GRAY */
-}
-
-#ED{
-  background-color: rgba(228,225,223, 0.25)
-
-}
-
-.mapEMS, .mapED, .mapME, .onemap {
+/* search page map */
+.onemap {
   margin-bottom : 20px;
   padding: 5px;
 }
@@ -24,19 +8,6 @@
   fill :#9b9a6d;
 }
 
-/* commented out code was used to debug map position */
-/*
-.mapEMS{
-  background-color: blue;
-}
-
-.mapED{
-  background-color: red;
-}
-
-.mapME{
-  background-color: green;
-} */
 
 .tooltip p {
   margin: 2px !important;
@@ -58,4 +29,19 @@ circle.city {
 
 .extraMapPadding {
   padding-bottom: 20px;
+}
+
+/* landing page map */
+.mich{
+  padding: 15px;
+}
+
+.mich .county {
+fill: #587abc;
+fill-opacity: 0.9;
+}
+
+.mich{
+  display: inline-block;
+  margin-top:10px;
 }

@@ -25,6 +25,7 @@
   <!-- general style -->
   <link rel="stylesheet" href="/static/css/style.css">
   <link rel="stylesheet" href="/static/css/landingcss.css">
+  <link rel="stylesheet" href="/static/css/michigan.css">
 
 
 </head>
@@ -53,10 +54,18 @@
       <div class="col-sm-1 sidebuff"></div>
       <div class = "col-sm-10">
         <div class= "row content">
-
           <div class = "col-sm-12">
+            <div class = "row logosontop">
+              <div class = "col-sm-12 d-flex justify-content-between align-items-center">
+                  <a href="https://injurycenter.umich.edu/" target="_blank"><img class="topIPC" src = "/static/images/IPC.png"></img></a>
+                  <img class = "topHIDTA" src = "/static/images/hidta.png"></img>
+              </div>
+            </div>
+            <div class="welcome">
+              <h2>Welcome to System for Opioid Overdose Surveilance</h2>
+            </div>
             <div class = "whatsSOS">
-                <h2>What is SOS?</h2>
+                <h3>What is SOS?</h3>
                 <div class = "row">
                   <div class = "col-sm-2"></div>
                   <div class = "col-sm-8">
@@ -66,15 +75,40 @@
                 </div>
             </div>
            <div class = "row mapbg">
+
              <div class = "row incidentcount">
                <div class = "col-sm-12">
-                 <p class = "numberIncidents"></p>
-               </div>
-             </div>
-             <div class = "col-sm-12 d-flex justify-content-center">
-                <div class = "mich" id="mich"></div>
-             </div>
-           </div>
+                 <p class = "numberIncidents" id="totalCount"></p>
+               </div> <!--close col-->
+             </div> <!--close row incidentcount-->
+
+             <div class = "col-sm-6">
+                <div class = "row label">
+                  <div class = "col-sm-12 d-flex justify-content-center text-center">
+                      <h6>EMS Incidents</h6>
+                  </div>
+                </div>
+                <div class= "row mapstuff">
+                  <div class="col-sm-12">
+                      <div class = "mich" id="michEms"></div>
+                  </div>
+                </div>
+             </div> <!--close col6-->
+             <div class = "col-sm-6">
+                <div class = "row label">
+                  <div class = "col-sm-12 d-flex justify-content-center text-center">
+                      <h6>ME Incidents</h6>
+                  </div>
+                </div>
+                <div class= "row mapstuff">
+                  <div class="col-sm-12 d-flex justify-content-center">
+                      <div class = "mich" id="michMe"></div>
+                  </div>
+                </div>
+             </div> <!--close col6-->
+
+           </div> <!--close row mapbg-->
+
             <div class= "whatInfo">
               <div class ="row">
                 <div class="col-sm-1"></div>
@@ -120,7 +154,7 @@
         </div>
           <div class="row">
             <div class = "col-sm-12 d-flex justify-content-center align-items-center">
-              <img class="isIpc" src = "/static/images/IPC.png"></img>
+              <a href="https://injurycenter.umich.edu/" target="_blank"><img class="isIpc" src = "/static/images/IPC.png"></img></a>
               <img class = "notipc" src = "/static/images/SOS.png"></img>
               <img class = "notipc" src = "/static/images/hidta.png"></img>
             </div>
@@ -134,7 +168,8 @@
   <!-- scripts -->
     <script src= "/static/js/makeLandingMichSvg.js"></script>
     <script>
-      makeMichMap(mich, "/static/data/countyCounts.csv");
+      makeMichMap(michEms, "/static/data/countyCounts.csv");
+      makeMichMap(michMe, "/static/data/countyCounts.csv");
     </script>
 </body>
 </html>

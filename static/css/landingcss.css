@@ -9,6 +9,7 @@
 h2{
     text-align: center;
     padding: 5px;
+    padding-top: 10px;
 }
 p{
     text-align: center;
@@ -38,15 +39,6 @@ ul li{
 
 .mapbg{
 background-color: #f8f8f8;
-}
-
-.mich{
-    padding: 15px;
-}
-
-.mich .county {
-fill: #7e732f;
-fill-opacity: 0.9;
 }
 
 .tooltip p {
@@ -83,13 +75,25 @@ cursor: pointer !important;
 }
 
 .incidentcount{
+    display: block;
+    height: 35px;
+    width: 100%;
     margin: 10px;
     padding: 5px;
-    border: 1px solid #f5f5f5;
-    background-color: white;
 }
 
 .numberIncidents{
     font-weight: bold;
     font-size: 18px;
+}
+
+.topIPC{
+    display: inline-block;
+    margin: 5px;
+    height: 20px;
+}
+.topHIDTA{
+    display: inline-block;
+    margin: 5px;
+    height: 50px;
 }
