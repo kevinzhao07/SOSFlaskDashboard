@@ -9,8 +9,16 @@ let mich = d3.select(".mich")
     .attr("height", height);
 
 // Load topojson data
-async function makeMichMap(svgname) {
-  // Append Div for tooltip to SVG
+async function makeMichMap(svgname, filename) {
+  // Read in County Data
+  const DATA = await d3.csv(filename, type);
+  let counties = new Map();
+  DATA.map(d => counties.set(d.county, d.value));
+  const TOTAL = DATA.reduce((total,d) => total + d.value, 0)
+
+  d3.select('.numberIncidents')
+      .text(`Total Naxolone Incidents: ${TOTAL}`)
+
   let tooltipDiv = d3.select(".mich")
       .append("div")
       .attr("class", "tooltips")
@@ -37,14 +45,16 @@ async function makeMichMap(svgname) {
       .attr("d", path)
       .attr("id", "tooltips")
       .attr("data-toggle", "tooltip")
-      .attr("title", d => d.properties.name)
-      $(function() {
-        $('[data-toggle="tooltip"]').tooltip()
+      .attr("title", d => {
+          const name = d.properties.name
+          return name + ': ' + counties.get(name)
       })
-  };
+      $(function() {
+          $('[data-toggle="tooltip"]').tooltip()
+      })
+};
 
 function type(d) {
-    d.lat = +d.lat;
-    d.lng = +d.lng;
-    return d
+  d.value = +d.value;
+  return d
 };

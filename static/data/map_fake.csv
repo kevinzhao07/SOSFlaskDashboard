@@ -73,9 +73,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-10,U,Shiawassee,25-34,Male,Black,-84.13166,42.91578
 2018-08-10,U,Shiawassee,45-54,Male,Other,-84.1924,42.85291
 2018-08-10,U,Shiawassee,25-34,Male,Black,-84.23414,43.04852
-2018-08-10,U,St Clair,35-44,Male,Native Hawaiian or Other Pacific Islander,-82.70495,42.91846
-2018-08-10,U,St Joseph,35-44,Female,White,-85.57313,41.84176
-2018-08-10,U,St Joseph,25-34,Female,Hispanic or Latino,-85.52008,41.90238
+2018-08-10,U,St. Clair,35-44,Male,Native Hawaiian or Other Pacific Islander,-82.70495,42.91846
+2018-08-10,U,St. Joseph,35-44,Female,White,-85.57313,41.84176
+2018-08-10,U,St. Joseph,25-34,Female,Hispanic or Latino,-85.52008,41.90238
 2018-08-10,U,Washtenaw,45-54,Male,White,-83.82261,42.13691
 2018-08-10,U,Washtenaw,25-34,Female,White,-83.78951,42.16459
 2018-08-10,Detroit,Wayne,45-54,Male,Black,-83.31251,42.17995
@@ -305,8 +305,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-14,U,Roscommon,35-44,Female,Black,-84.54829,44.4563
 2018-08-14,U,Sanilac,25-34,Male,Asian,-82.79382,43.32862
 2018-08-14,U,Schoolcraft,35-44,Male,Black,0.0,0.0
-2018-08-14,U,St Clair,35-44,Female,White,-82.77708,43.00318
-2018-08-14,U,St Clair,35-44,Female,Hispanic or Latino,-82.61351,42.98363
+2018-08-14,U,St. Clair,35-44,Female,White,-82.77708,43.00318
+2018-08-14,U,St. Clair,35-44,Female,Hispanic or Latino,-82.61351,42.98363
 2018-08-14,U,Tuscola,35-44,Female,Hispanic or Latino,-83.36493,43.3694
 2018-08-14,U,Wexford,0-25,Male,Black,-85.64806,44.41533
 2018-08-15,U,Alger,25-34,Male,Black,-86.69899,46.47066
@@ -373,8 +373,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-15,U,Oscoda,0-25,Male,White,-84.18212,44.64253
 2018-08-15,U,Otsego,35-44,Female,Black,-84.70198,44.95981
 2018-08-15,U,Roscommon,35-44,Male,Hispanic or Latino,-84.58987,44.37123
-2018-08-15,U,St Clair,55+,Female,White,-82.76611,42.84557
-2018-08-15,U,St Joseph,0-25,Male,Black,-85.616,42.03353
+2018-08-15,U,St. Clair,55+,Female,White,-82.76611,42.84557
+2018-08-15,U,St. Joseph,0-25,Male,Black,-85.616,42.03353
 2018-08-15,U,Van Buren,25-34,Female,Hispanic or Latino,-86.025,42.23055
 2018-08-15,U,Van Buren,0-25,Female,White,-85.96638,42.24356
 2018-08-16,U,Alger,35-44,Female,White,-86.57282,46.34794
@@ -416,7 +416,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-16,U,Otsego,25-34,Male,Asian,-84.68953,44.96568
 2018-08-16,Saginaw,Saginaw,0-25,Male,White,-83.9891,43.4028
 2018-08-16,U,Schoolcraft,0-25,Male,Hispanic or Latino,-86.11094,46.18213
-2018-08-16,U,St Joseph,0-25,Female,Asian,-85.59608,41.9165
+2018-08-16,U,St. Joseph,0-25,Female,Asian,-85.59608,41.9165
 2018-08-16,U,Tuscola,25-34,Female,Other,-83.31696,43.51374
 2018-08-16,Ann Arbor,Washtenaw,25-34,Female,Black,-83.71288,42.30624
 2018-08-16,Lincoln Park,Wayne,25-34,Female,Asian,-83.28092,42.33237
@@ -475,7 +475,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-17,U,Sanilac,0-25,Male,White,-82.79492,43.33062
 2018-08-17,U,Schoolcraft,35-44,Male,Black,-86.13271,46.28878
 2018-08-17,U,Schoolcraft,35-44,Male,White,-86.1583,46.28666
-2018-08-17,U,St Clair,0-25,Male,Native Hawaiian or Other Pacific Islander,-82.63549,42.83247
+2018-08-17,U,St. Clair,0-25,Male,Native Hawaiian or Other Pacific Islander,-82.63549,42.83247
 2018-08-17,U,Tuscola,25-34,Female,Native Hawaiian or Other Pacific Islander,-83.44575,43.47529
 2018-08-17,U,Van Buren,35-44,Female,White,-85.9804,42.16196
 2018-08-17,U,Wexford,25-34,Female,Asian,-85.47671,44.37432
@@ -588,7 +588,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-19,U,Shiawassee,25-34,Female,White,-84.10852,43.05323
 2018-08-19,U,Shiawassee,25-34,Female,White,-84.02928,42.98717
 2018-08-19,U,Shiawassee,0-25,Male,Black,-84.13783,43.01343
-2018-08-19,U,St Joseph,55+,Female,Native Hawaiian or Other Pacific Islander,-85.52126,41.82144
+2018-08-19,U,St. Joseph,55+,Female,Native Hawaiian or Other Pacific Islander,-85.52126,41.82144
 2018-08-20,U,Antrim,25-34,Male,Asian,-85.1555,44.95946
 2018-08-20,U,Arenac,25-34,Male,Black,-83.96834,44.04328
 2018-08-20,U,Barry,25-34,Female,Black,-85.28815,42.63149
@@ -640,10 +640,10 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-20,U,Schoolcraft,25-34,Female,American Indian or Alaska Native,-86.2322,46.25936
 2018-08-20,U,Schoolcraft,0-25,Male,Black,0.0,0.0
 2018-08-20,U,Shiawassee,25-34,Female,White,-84.07727,42.92456
-2018-08-20,U,St Clair,35-44,Male,Black,0.0,0.0
-2018-08-20,U,St Clair,45-54,Male,Hispanic or Latino,-82.71568,42.91561
-2018-08-20,U,St Joseph,25-34,Male,White,-85.48478,41.89264
-2018-08-20,U,St Joseph,35-44,Female,White,-85.56189,41.98077
+2018-08-20,U,St. Clair,35-44,Male,Black,0.0,0.0
+2018-08-20,U,St. Clair,45-54,Male,Hispanic or Latino,-82.71568,42.91561
+2018-08-20,U,St. Joseph,25-34,Male,White,-85.48478,41.89264
+2018-08-20,U,St. Joseph,35-44,Female,White,-85.56189,41.98077
 2018-08-20,U,Van Buren,35-44,Female,White,-85.99723,42.13449
 2018-08-20,U,Van Buren,55+,Female,White,-86.00975,42.18044
 2018-08-20,Detroit,Wayne,25-34,Male,White,-83.4269,42.24303
@@ -693,7 +693,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-21,U,Roscommon,25-34,Male,White,0.0,0.0
 2018-08-21,U,Saginaw,25-34,Female,Hispanic or Latino,-84.13293,43.47227
 2018-08-21,U,Shiawassee,25-34,Female,Black,-84.268,42.97537
-2018-08-21,U,St Joseph,35-44,Male,White,-85.62643,41.99234
+2018-08-21,U,St. Joseph,35-44,Male,White,-85.62643,41.99234
 2018-08-21,U,Tuscola,35-44,Female,American Indian or Alaska Native,-83.33473,43.56625
 2018-08-21,U,Tuscola,25-34,Male,Black,-83.45188,43.43759
 2018-08-21,U,Tuscola,25-34,Female,Black,-83.40142,43.5244
@@ -867,7 +867,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-24,U,Saginaw,35-44,Female,Black,-84.06268,43.3772
 2018-08-24,U,Schoolcraft,35-44,Male,White,0.0,0.0
 2018-08-24,U,Schoolcraft,45-54,Female,Black,0.0,0.0
-2018-08-24,U,St Clair,35-44,Male,Black,-82.81067,42.87141
+2018-08-24,U,St. Clair,35-44,Male,Black,-82.81067,42.87141
 2018-08-25,U,Alcona,55+,Male,Black,-83.71857,44.70979
 2018-08-25,U,Alcona,25-34,Female,Asian,-83.52813,44.60933
 2018-08-25,U,Alger,55+,Female,White,-86.51614,46.44679
@@ -928,7 +928,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-25,U,Ottawa,0-25,Male,Black,-86.11938,42.97429
 2018-08-25,U,Ottawa,35-44,Female,White,-85.9879,43.02747
 2018-08-25,U,Schoolcraft,45-54,Male,White,-86.20109,46.22705
-2018-08-25,U,St Joseph,25-34,Male,Hispanic or Latino,-85.47674,41.88583
+2018-08-25,U,St. Joseph,25-34,Male,Hispanic or Latino,-85.47674,41.88583
 2018-08-25,U,Tuscola,35-44,Female,White,-83.32257,43.39425
 2018-08-25,U,Tuscola,25-34,Male,Black,-83.53212,43.5888
 2018-08-25,U,Van Buren,0-25,Male,Black,-86.02572,42.30644
@@ -997,8 +997,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-26,U,Schoolcraft,0-25,Male,Black,-86.22657,46.18622
 2018-08-26,U,Schoolcraft,35-44,Male,White,-86.14471,46.2517
 2018-08-26,U,Shiawassee,0-25,Male,Native Hawaiian or Other Pacific Islander,-84.0931,42.94309
-2018-08-26,U,St Clair,35-44,Female,White,-82.66977,42.99136
-2018-08-26,U,St Joseph,0-25,Female,White,-85.51564,41.92177
+2018-08-26,U,St. Clair,35-44,Female,White,-82.66977,42.99136
+2018-08-26,U,St. Joseph,0-25,Female,White,-85.51564,41.92177
 2018-08-26,U,Tuscola,55+,Female,White,-83.55352,43.60131
 2018-08-26,U,Washtenaw,25-34,Male,Asian,-83.7277,42.18592
 2018-08-27,U,Alpena,0-25,Male,White,-83.53801,45.10445
@@ -1054,7 +1054,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-27,U,Saginaw,35-44,Male,Native Hawaiian or Other Pacific Islander,-84.08935,43.39946
 2018-08-27,U,Sanilac,25-34,Male,White,-82.88051,43.45757
 2018-08-27,U,Shiawassee,25-34,Male,Hispanic or Latino,-84.18351,42.98886
-2018-08-27,U,St Joseph,25-34,Female,White,-85.44671,42.00119
+2018-08-27,U,St. Joseph,25-34,Female,White,-85.44671,42.00119
 2018-08-27,U,Tuscola,35-44,Male,White,-83.45469,43.46767
 2018-08-27,U,Tuscola,55+,Male,White,-83.38354,43.58515
 2018-08-27,U,Tuscola,35-44,Female,Other,-83.32632,43.53717
@@ -1125,7 +1125,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-28,U,Osceola,45-54,Female,Black,-85.27627,44.10137
 2018-08-28,U,Saginaw,25-34,Female,White,-84.08733,43.37045
 2018-08-28,U,Sanilac,25-34,Male,Hispanic or Latino,0.0,0.0
-2018-08-28,U,St Joseph,35-44,Female,Black,-85.41623,41.96829
+2018-08-28,U,St. Joseph,35-44,Female,Black,-85.41623,41.96829
 2018-08-28,U,Tuscola,35-44,Male,Hispanic or Latino,-83.40612,43.46596
 2018-08-28,Ypsilanti,Washtenaw,0-25,Female,White,-83.85806,42.1239
 2018-08-28,Dearborn,Wayne,0-25,Female,White,-83.24771,42.21537
@@ -1244,7 +1244,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-08-30,U,Oscoda,35-44,Female,White,-84.10759,44.72252
 2018-08-30,U,Ottawa,55+,Female,White,-85.98049,42.96797
 2018-08-30,U,Schoolcraft,45-54,Female,Black,-86.33009,46.17692
-2018-08-30,U,St Joseph,35-44,Male,Black,0.0,0.0
+2018-08-30,U,St. Joseph,35-44,Male,Black,0.0,0.0
 2018-08-30,U,Tuscola,35-44,Male,White,-83.50099,43.33076
 2018-08-30,U,Van Buren,55+,Female,Asian,-86.08553,42.22757
 2018-08-30,Ann Arbor,Washtenaw,25-34,Female,Asian,-83.73236,42.3574
@@ -1365,8 +1365,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-01,U,Roscommon,25-34,Male,White,-84.64424,44.43666
 2018-09-01,U,Sanilac,25-34,Male,White,-82.70067,43.46088
 2018-09-01,U,Shiawassee,25-34,Female,Native Hawaiian or Other Pacific Islander,-84.16738,42.96166
-2018-09-01,U,St Clair,45-54,Female,Black,-82.66745,42.83275
-2018-09-01,U,St Clair,0-25,Male,Black,-82.78585,42.85946
+2018-09-01,U,St. Clair,45-54,Female,Black,-82.66745,42.83275
+2018-09-01,U,St. Clair,0-25,Male,Black,-82.78585,42.85946
 2018-09-01,Ypsilanti,Washtenaw,25-34,Female,Native Hawaiian or Other Pacific Islander,-83.87074,42.31947
 2018-09-01,Lincoln Park,Wayne,25-34,Male,American Indian or Alaska Native,-83.16602,42.39905
 2018-09-02,U,Alcona,55+,Male,White,-83.62905,44.67716
@@ -1423,7 +1423,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-02,U,Schoolcraft,35-44,Male,American Indian or Alaska Native,-86.26731,46.2353
 2018-09-02,U,Schoolcraft,25-34,Male,Black,-86.24108,46.10032
 2018-09-02,U,Shiawassee,25-34,Female,Asian,-84.24726,43.00376
-2018-09-02,U,St Joseph,35-44,Male,American Indian or Alaska Native,-85.67785,41.84659
+2018-09-02,U,St. Joseph,35-44,Male,American Indian or Alaska Native,-85.67785,41.84659
 2018-09-03,U,Alcona,0-25,Male,Unknown,-83.55696,44.66984
 2018-09-03,U,Antrim,25-34,Female,White,-85.06719,44.84156
 2018-09-03,U,Barry,25-34,Female,White,-85.24495,42.59515
@@ -1465,7 +1465,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-03,U,Roscommon,35-44,Female,White,-84.56221,44.25936
 2018-09-03,U,Roscommon,55+,Male,Black,-84.57355,44.35714
 2018-09-03,U,Roscommon,45-54,Female,White,-84.58623,44.39506
-2018-09-03,U,St Joseph,25-34,Male,Black,-85.63622,41.85876
+2018-09-03,U,St. Joseph,25-34,Male,Black,-85.63622,41.85876
 2018-09-03,U,Tuscola,35-44,Male,Black,-83.51024,43.49873
 2018-09-03,Ypsilanti,Washtenaw,0-25,Male,Hispanic or Latino,-83.84962,42.10591
 2018-09-03,U,Wexford,25-34,Male,Hispanic or Latino,-85.50047,44.31671
@@ -1585,8 +1585,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-05,Saginaw,Saginaw,35-44,Male,White,-83.92551,43.3719
 2018-09-05,U,Sanilac,35-44,Female,White,-82.75232,43.34759
 2018-09-05,U,Shiawassee,35-44,Female,Black,-84.03282,42.95807
-2018-09-05,U,St Clair,0-25,Female,White,-82.79906,42.96995
-2018-09-05,U,St Clair,0-25,Female,Black,-82.6634,43.0653
+2018-09-05,U,St. Clair,0-25,Female,White,-82.79906,42.96995
+2018-09-05,U,St. Clair,0-25,Female,Black,-82.6634,43.0653
 2018-09-06,U,Alcona,55+,Male,Black,-83.64602,44.66804
 2018-09-06,U,Allegan,25-34,Male,Native Hawaiian or Other Pacific Islander,-85.78601,42.60009
 2018-09-06,U,Alpena,0-25,Male,Black,-83.6668,44.97844
@@ -1632,7 +1632,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-06,U,Osceola,25-34,Male,Black,-85.32192,44.052
 2018-09-06,U,Otsego,25-34,Male,White,-84.6675,45.07694
 2018-09-06,U,Roscommon,25-34,Female,Black,-84.46528,44.39007
-2018-09-06,U,St Clair,45-54,Male,Black,-82.74035,42.821
+2018-09-06,U,St. Clair,45-54,Male,Black,-82.74035,42.821
 2018-09-06,Detroit,Wayne,35-44,Female,Black,0.0,0.0
 2018-09-06,Detroit,Wayne,25-34,Female,Black,-83.41119,42.41654
 2018-09-06,Lincoln Park,Wayne,35-44,Female,White,-83.35625,42.38511
@@ -1688,7 +1688,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-07,U,Roscommon,35-44,Female,White,-84.53686,44.32586
 2018-09-07,U,Shiawassee,45-54,Female,Hispanic or Latino,-84.0906,42.9459
 2018-09-07,U,Shiawassee,35-44,Male,White,-84.10002,43.00334
-2018-09-07,U,St Clair,35-44,Female,Black,-82.64533,42.87085
+2018-09-07,U,St. Clair,35-44,Female,Black,-82.64533,42.87085
 2018-09-07,U,Tuscola,25-34,Female,Black,-83.40295,43.43772
 2018-09-07,U,Van Buren,0-25,Male,Black,0.0,0.0
 2018-09-07,U,Van Buren,0-25,Male,Black,-86.06295,42.28805
@@ -1773,7 +1773,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-08,U,Saginaw,35-44,Male,American Indian or Alaska Native,-84.06866,43.33965
 2018-09-08,U,Sanilac,25-34,Male,Black,-82.75504,43.38977
 2018-09-08,U,Shiawassee,45-54,Male,American Indian or Alaska Native,-84.09306,42.99858
-2018-09-08,U,St Joseph,55+,Female,Black,-85.58243,41.85495
+2018-09-08,U,St. Joseph,55+,Female,Black,-85.58243,41.85495
 2018-09-08,U,Tuscola,25-34,Female,White,-83.506,43.4814
 2018-09-08,U,Wayne,45-54,Female,Asian,-83.28762,42.27613
 2018-09-08,U,Wexford,25-34,Female,Hispanic or Latino,-85.5123,44.30487
@@ -1835,8 +1835,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-09,U,Schoolcraft,0-25,Male,Black,-86.32832,46.10967
 2018-09-09,U,Shiawassee,0-25,Male,Black,-84.12558,42.8114
 2018-09-09,U,Shiawassee,25-34,Female,Native Hawaiian or Other Pacific Islander,-84.08731,42.96108
-2018-09-09,U,St Joseph,35-44,Male,Black,-85.58783,42.06906
-2018-09-09,U,St Joseph,25-34,Male,Black,-85.49926,41.88735
+2018-09-09,U,St. Joseph,35-44,Male,Black,-85.58783,42.06906
+2018-09-09,U,St. Joseph,25-34,Male,Black,-85.49926,41.88735
 2018-09-09,U,Tuscola,35-44,Female,Black,-83.45089,43.3841
 2018-09-09,U,Van Buren,25-34,Unknown,Asian,-86.0338,42.336
 2018-09-09,U,Van Buren,35-44,Male,White,-85.99104,42.28562
@@ -1932,7 +1932,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-11,U,Saginaw,35-44,Male,Black,-83.98096,43.36781
 2018-09-11,U,Saginaw,35-44,Male,White,-83.91518,43.3534
 2018-09-11,U,Schoolcraft,0-25,Female,Hispanic or Latino,-86.25042,46.25601
-2018-09-11,U,St Joseph,25-34,Female,White,-85.56892,41.97176
+2018-09-11,U,St. Joseph,25-34,Female,White,-85.56892,41.97176
 2018-09-11,Detroit,Wayne,35-44,Male,White,-83.35129,42.38232
 2018-09-12,U,Alcona,0-25,Female,White,-83.51111,44.66555
 2018-09-12,U,Alger,0-25,Female,Black,-86.5313,46.45402
@@ -2025,7 +2025,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-13,U,Shiawassee,45-54,Female,White,-84.23232,42.84692
 2018-09-13,U,Shiawassee,45-54,Male,Black,-84.14774,42.89342
 2018-09-13,U,Shiawassee,25-34,Female,American Indian or Alaska Native,-84.23419,42.90301
-2018-09-13,U,St Joseph,0-25,Male,White,-85.40939,41.81267
+2018-09-13,U,St. Joseph,0-25,Male,White,-85.40939,41.81267
 2018-09-13,U,Wexford,25-34,Male,White,-85.51751,44.28188
 2018-09-14,U,Alcona,0-25,Female,White,-83.52257,44.62258
 2018-09-14,U,Alger,55+,Male,Hispanic or Latino,-86.63257,46.36397
@@ -2068,7 +2068,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-14,Saginaw,Saginaw,25-34,Female,Native Hawaiian or Other Pacific Islander,-84.15283,43.3269
 2018-09-14,U,Shiawassee,45-54,Male,Black,-84.13491,42.99059
 2018-09-14,U,Shiawassee,0-25,Male,Asian,-84.11842,42.91204
-2018-09-14,U,St Clair,55+,Male,Black,-82.60908,42.97303
+2018-09-14,U,St. Clair,55+,Male,Black,-82.60908,42.97303
 2018-09-14,Dearborn,Wayne,35-44,Male,White,-83.351,42.21173
 2018-09-15,U,Alcona,25-34,Female,Black,-83.67519,44.80062
 2018-09-15,U,Alger,55+,Female,Asian,-86.56419,46.31896
@@ -2114,7 +2114,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-15,Hazel Park,Oakland,25-34,Female,Black,-83.39996,42.73238
 2018-09-15,U,Osceola,25-34,Female,Black,-85.24642,43.9376
 2018-09-15,U,Roscommon,25-34,Male,Black,-84.74924,44.25666
-2018-09-15,U,St Clair,35-44,Female,White,-82.61078,42.96358
+2018-09-15,U,St. Clair,35-44,Female,White,-82.61078,42.96358
 2018-09-15,U,Tuscola,25-34,Female,Unknown,-83.39438,43.58713
 2018-09-15,U,Tuscola,25-34,Female,Black,-83.46693,43.49978
 2018-09-15,U,Van Buren,35-44,Male,White,-85.93556,42.31105
@@ -2163,7 +2163,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-16,U,Muskegon,55+,Female,White,-85.9913,43.21356
 2018-09-16,U,Ontonagon,0-25,Male,Hispanic or Latino,-89.39624,46.73686
 2018-09-16,U,Otsego,25-34,Female,White,-84.51647,45.05138
-2018-09-16,U,St Joseph,25-34,Female,White,-85.55652,41.82012
+2018-09-16,U,St. Joseph,25-34,Female,White,-85.55652,41.82012
 2018-09-16,U,Tuscola,35-44,Female,White,-83.32985,43.35166
 2018-09-16,U,Wexford,25-34,Male,Black,-85.58278,44.19142
 2018-09-17,U,Alcona,25-34,Male,Black,-83.64345,44.53198
@@ -2209,7 +2209,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-17,U,Shiawassee,25-34,Female,White,-84.24145,42.91118
 2018-09-17,U,Shiawassee,0-25,Female,White,-84.06281,42.87282
 2018-09-17,U,Shiawassee,0-25,Female,American Indian or Alaska Native,-84.12388,42.81854
-2018-09-17,U,St Clair,0-25,Male,Black,-82.7615,42.92552
+2018-09-17,U,St. Clair,0-25,Male,Black,-82.7615,42.92552
 2018-09-17,Ann Arbor,Washtenaw,25-34,Female,White,-83.9289,42.3166
 2018-09-17,U,Washtenaw,35-44,Male,Asian,-83.8227,42.21374
 2018-09-17,Dearborn,Wayne,25-34,Female,Black,-83.36032,42.20523
@@ -2263,9 +2263,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-18,U,Oscoda,45-54,Male,Asian,-84.20652,44.70574
 2018-09-18,U,Presque Isle,35-44,Male,White,-83.81743,45.33859
 2018-09-18,U,Sanilac,25-34,Male,Black,-82.92175,43.34631
-2018-09-18,U,St Clair,45-54,Male,Black,-82.68124,43.06759
-2018-09-18,U,St Joseph,35-44,Male,Asian,-85.39291,41.84263
-2018-09-18,U,St Joseph,25-34,Female,Black,-85.4943,41.79663
+2018-09-18,U,St. Clair,45-54,Male,Black,-82.68124,43.06759
+2018-09-18,U,St. Joseph,35-44,Male,Asian,-85.39291,41.84263
+2018-09-18,U,St. Joseph,25-34,Female,Black,-85.4943,41.79663
 2018-09-18,U,Tuscola,35-44,Female,White,0.0,0.0
 2018-09-18,U,Van Buren,25-34,Male,White,-85.92404,42.28085
 2018-09-18,Dearborn,Wayne,35-44,Female,White,-83.16092,42.21728
@@ -2315,8 +2315,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-19,U,Sanilac,35-44,Male,Black,-82.91581,43.49604
 2018-09-19,U,Shiawassee,45-54,Female,Asian,-84.02928,43.06945
 2018-09-19,U,Shiawassee,25-34,Male,Black,-84.23561,42.8784
-2018-09-19,U,St Clair,55+,Female,Black,-82.61279,43.06028
-2018-09-19,U,St Clair,0-25,Male,White,-82.61787,42.97883
+2018-09-19,U,St. Clair,55+,Female,Black,-82.61279,43.06028
+2018-09-19,U,St. Clair,0-25,Male,White,-82.61787,42.97883
 2018-09-20,U,Alger,25-34,Female,Black,-86.60786,46.45109
 2018-09-20,U,Antrim,25-34,Male,Black,-85.15692,44.91328
 2018-09-20,U,Antrim,45-54,Male,White,-85.04788,44.89407
@@ -2365,7 +2365,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-20,U,Sanilac,25-34,Male,Black,-82.9035,43.31636
 2018-09-20,U,Schoolcraft,0-25,Female,White,-86.30614,46.19948
 2018-09-20,U,Schoolcraft,55+,Female,White,-86.33211,46.2321
-2018-09-20,U,St Clair,0-25,Male,White,-82.71795,43.07142
+2018-09-20,U,St. Clair,0-25,Male,White,-82.71795,43.07142
 2018-09-20,Livonia,Wayne,25-34,Female,White,-83.23454,42.43362
 2018-09-21,U,Alcona,45-54,Female,Black,-83.72821,44.59218
 2018-09-21,U,Allegan,55+,Male,White,-85.94709,42.43772
@@ -2434,8 +2434,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-21,U,Schoolcraft,25-34,Female,White,-86.25084,46.25528
 2018-09-21,U,Schoolcraft,45-54,Male,Black,-86.26214,46.13452
 2018-09-21,U,Shiawassee,25-34,Male,Asian,-84.16547,43.08798
-2018-09-21,U,St Joseph,35-44,Male,Black,-85.60297,41.84643
-2018-09-21,U,St Joseph,35-44,Male,White,0.0,0.0
+2018-09-21,U,St. Joseph,35-44,Male,Black,-85.60297,41.84643
+2018-09-21,U,St. Joseph,35-44,Male,White,0.0,0.0
 2018-09-21,U,Wayne,35-44,Female,White,-83.20701,42.17868
 2018-09-21,U,Wexford,25-34,Male,White,-85.55074,44.40431
 2018-09-21,U,Wexford,25-34,Male,Black,-85.55808,44.33836
@@ -2483,8 +2483,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-22,Saginaw,Saginaw,35-44,Male,Hispanic or Latino,-84.1643,43.28247
 2018-09-22,U,Sanilac,25-34,Female,Black,0.0,0.0
 2018-09-22,U,Shiawassee,35-44,Female,White,-84.18803,42.88904
-2018-09-22,U,St Joseph,35-44,Male,Asian,-85.47004,41.96792
-2018-09-22,U,St Joseph,55+,Male,Unknown,-85.54276,41.9752
+2018-09-22,U,St. Joseph,35-44,Male,Asian,-85.47004,41.96792
+2018-09-22,U,St. Joseph,55+,Male,Unknown,-85.54276,41.9752
 2018-09-22,U,Tuscola,35-44,Female,Black,-83.34682,43.51251
 2018-09-22,U,Van Buren,25-34,Male,Black,-85.94035,42.40355
 2018-09-22,Livonia,Wayne,35-44,Male,White,-83.26879,42.2169
@@ -2549,7 +2549,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-23,U,Otsego,35-44,Male,Asian,-84.66867,44.98262
 2018-09-23,U,Roscommon,45-54,Female,Black,-84.57813,44.22942
 2018-09-23,U,Roscommon,35-44,Female,White,-84.52202,44.35714
-2018-09-23,U,St Clair,45-54,Male,Black,-82.51978,42.90865
+2018-09-23,U,St. Clair,45-54,Male,Black,-82.51978,42.90865
 2018-09-23,Lincoln Park,Wayne,35-44,Male,Asian,-83.15878,42.33165
 2018-09-23,U,Wexford,25-34,Male,White,-85.64482,44.40371
 2018-09-24,U,Alger,55+,Male,White,-86.45031,46.37641
@@ -2612,7 +2612,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-24,Saginaw,Saginaw,0-25,Male,White,-84.0384,43.28355
 2018-09-24,U,Shiawassee,0-25,Male,Other,-84.20913,43.05095
 2018-09-24,U,Shiawassee,45-54,Male,American Indian or Alaska Native,-84.21068,42.90232
-2018-09-24,U,St Joseph,25-34,Male,American Indian or Alaska Native,-85.5123,41.9056
+2018-09-24,U,St. Joseph,25-34,Male,American Indian or Alaska Native,-85.5123,41.9056
 2018-09-24,Ann Arbor,Washtenaw,0-25,Male,Black,-83.82642,42.26128
 2018-09-24,Lincoln Park,Wayne,25-34,Male,Asian,-83.34356,42.32956
 2018-09-24,U,Wexford,25-34,Female,Asian,-85.62282,44.32279
@@ -2668,7 +2668,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-25,U,Saginaw,35-44,Unknown,White,-83.90987,43.40988
 2018-09-25,U,Sanilac,25-34,Male,White,-82.94149,43.49699
 2018-09-25,U,Schoolcraft,0-25,Male,White,-86.20258,46.26163
-2018-09-25,U,St Clair,45-54,Male,Hispanic or Latino,-82.72182,43.03351
+2018-09-25,U,St. Clair,45-54,Male,Hispanic or Latino,-82.72182,43.03351
 2018-09-25,U,Van Buren,25-34,Female,White,-86.04244,42.19373
 2018-09-25,U,Van Buren,25-34,Female,Black,-86.03721,42.21123
 2018-09-25,U,Van Buren,0-25,Female,Black,-85.8933,42.28699
@@ -2741,9 +2741,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-26,U,Schoolcraft,55+,Female,White,-86.26017,46.13282
 2018-09-26,U,Shiawassee,25-34,Male,White,-84.08826,42.89129
 2018-09-26,U,Shiawassee,25-34,Female,White,-84.26209,43.00231
-2018-09-26,U,St Joseph,25-34,Female,White,-85.50169,41.99716
-2018-09-26,U,St Joseph,25-34,Female,Hispanic or Latino,-85.44327,41.91375
-2018-09-26,U,St Joseph,35-44,Female,Black,-85.48683,42.06186
+2018-09-26,U,St. Joseph,25-34,Female,White,-85.50169,41.99716
+2018-09-26,U,St. Joseph,25-34,Female,Hispanic or Latino,-85.44327,41.91375
+2018-09-26,U,St. Joseph,35-44,Female,Black,-85.48683,42.06186
 2018-09-26,U,Tuscola,35-44,Female,White,-83.30539,43.37861
 2018-09-26,U,Tuscola,25-34,Female,American Indian or Alaska Native,-83.39974,43.58739
 2018-09-26,U,Van Buren,25-34,Female,Black,-86.09019,42.15083
@@ -2918,8 +2918,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-29,U,Schoolcraft,35-44,Female,Hispanic or Latino,-86.15777,46.12325
 2018-09-29,U,Shiawassee,45-54,Female,American Indian or Alaska Native,0.0,0.0
 2018-09-29,U,Shiawassee,0-25,Male,Other,-84.09282,42.88781
-2018-09-29,U,St Joseph,25-34,Female,Black,-85.48034,41.79617
-2018-09-29,U,St Joseph,25-34,Male,White,0.0,0.0
+2018-09-29,U,St. Joseph,25-34,Female,Black,-85.48034,41.79617
+2018-09-29,U,St. Joseph,25-34,Male,White,0.0,0.0
 2018-09-29,Dearborn,Wayne,35-44,Female,Black,-83.26437,42.41447
 2018-09-29,Lincoln Park,Wayne,55+,Female,Hispanic or Latino,-83.2484,42.28671
 2018-09-29,U,Wexford,0-25,Male,White,-85.60437,44.27262
@@ -2974,7 +2974,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-09-30,U,Osceola,25-34,Male,Black,-85.2668,43.9599
 2018-09-30,U,Roscommon,25-34,Male,White,-84.50357,44.36817
 2018-09-30,U,Schoolcraft,0-25,Male,Black,-86.16224,46.2607
-2018-09-30,U,St Joseph,55+,Male,Black,-85.51448,41.88958
+2018-09-30,U,St. Joseph,55+,Male,Black,-85.51448,41.88958
 2018-09-30,U,Wayne,35-44,Female,Black,-83.21738,42.20938
 2018-09-30,U,Wexford,0-25,Male,Hispanic or Latino,-85.57799,44.23307
 2018-09-30,U,Wexford,0-25,Male,Black,-85.45888,44.44611
@@ -3080,7 +3080,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-02,U,Sanilac,25-34,Male,White,-82.86952,43.4755
 2018-10-02,U,Sanilac,35-44,Female,Black,-82.79602,43.48234
 2018-10-02,U,Shiawassee,0-25,Female,Black,-84.07298,42.81513
-2018-10-02,U,St Joseph,35-44,Male,White,-85.38996,41.95032
+2018-10-02,U,St. Joseph,35-44,Male,White,-85.38996,41.95032
 2018-10-02,U,Tuscola,25-34,Female,Black,-83.45006,43.51327
 2018-10-03,U,Alpena,35-44,Female,White,-83.58013,44.93789
 2018-10-03,U,Alpena,0-25,Female,White,-83.6253,45.04004
@@ -3127,7 +3127,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-03,U,Oscoda,25-34,Male,American Indian or Alaska Native,-84.20095,44.55865
 2018-10-03,U,Presque Isle,25-34,Male,Black,-83.83913,45.3044
 2018-10-03,U,Saginaw,35-44,Female,Black,-84.10785,43.28064
-2018-10-03,U,St Joseph,25-34,Male,American Indian or Alaska Native,-85.45391,42.02975
+2018-10-03,U,St. Joseph,25-34,Male,American Indian or Alaska Native,-85.45391,42.02975
 2018-10-03,U,Tuscola,35-44,Male,American Indian or Alaska Native,0.0,0.0
 2018-10-03,U,Van Buren,55+,Female,Black,-86.13309,42.35558
 2018-10-03,U,Van Buren,55+,Male,White,-86.11985,42.28579
@@ -3184,7 +3184,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-05,U,Shiawassee,0-25,Male,White,-84.21091,43.00548
 2018-10-05,U,Shiawassee,25-34,Male,White,-84.25633,42.95739
 2018-10-05,U,Shiawassee,45-54,Male,Hispanic or Latino,0.0,0.0
-2018-10-05,U,St Joseph,35-44,Female,Black,-85.47976,41.83106
+2018-10-05,U,St. Joseph,35-44,Female,Black,-85.47976,41.83106
 2018-10-05,U,Tuscola,25-34,Male,Black,-83.51567,43.6269
 2018-10-05,U,Van Buren,35-44,Female,Black,-85.99315,42.13135
 2018-10-05,U,Van Buren,0-25,Female,Black,-86.10933,42.31549
@@ -3305,7 +3305,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-07,U,Roscommon,55+,Male,White,-84.72046,44.35855
 2018-10-07,U,Roscommon,25-34,Male,White,-84.50157,44.36381
 2018-10-07,U,Shiawassee,25-34,Male,Black,-84.0375,42.91871
-2018-10-07,U,St Joseph,35-44,Male,White,0.0,0.0
+2018-10-07,U,St. Joseph,35-44,Male,White,0.0,0.0
 2018-10-07,U,Van Buren,25-34,Male,White,-85.93615,42.11989
 2018-10-07,U,Van Buren,35-44,Female,Asian,-85.96433,42.20074
 2018-10-07,Lincoln Park,Wayne,35-44,Female,Black,0.0,0.0
@@ -3426,8 +3426,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-09,U,Presque Isle,25-34,Female,Hispanic or Latino,-83.99622,45.42419
 2018-10-09,U,Roscommon,25-34,Male,Black,-84.71915,44.37784
 2018-10-09,U,Shiawassee,25-34,Male,Hispanic or Latino,-84.01274,43.00345
-2018-10-09,U,St Joseph,55+,Male,White,-85.49438,41.85202
-2018-10-09,U,St Joseph,35-44,Male,White,-85.56913,41.79982
+2018-10-09,U,St. Joseph,55+,Male,White,-85.49438,41.85202
+2018-10-09,U,St. Joseph,35-44,Male,White,-85.56913,41.79982
 2018-10-11,U,Alcona,45-54,Female,Black,-83.57461,44.65901
 2018-10-11,U,Antrim,35-44,Male,White,0.0,0.0
 2018-10-11,Bay City,Bay,Unknown,Male,Black,-84.12548,43.84043
@@ -3473,11 +3473,11 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-11,U,Shiawassee,25-34,Male,White,-84.0744,42.89789
 2018-10-11,U,Shiawassee,25-34,Female,Asian,-84.07386,43.0058
 2018-10-11,U,Shiawassee,45-54,Female,Black,-84.00745,43.00775
-2018-10-11,U,St Joseph,35-44,Male,White,-85.46139,41.79933
-2018-10-11,U,St Joseph,35-44,Female,Black,-85.38055,41.81827
-2018-10-11,U,St Joseph,55+,Male,White,-85.60557,41.79171
-2018-10-11,U,St Joseph,35-44,Female,Hispanic or Latino,-85.44031,41.88837
-2018-10-11,U,St Joseph,55+,Male,White,-85.57988,41.90035
+2018-10-11,U,St. Joseph,35-44,Male,White,-85.46139,41.79933
+2018-10-11,U,St. Joseph,35-44,Female,Black,-85.38055,41.81827
+2018-10-11,U,St. Joseph,55+,Male,White,-85.60557,41.79171
+2018-10-11,U,St. Joseph,35-44,Female,Hispanic or Latino,-85.44031,41.88837
+2018-10-11,U,St. Joseph,55+,Male,White,-85.57988,41.90035
 2018-10-11,U,Tuscola,25-34,Female,Hispanic or Latino,-83.4966,43.46979
 2018-10-11,U,Tuscola,35-44,Unknown,Hispanic or Latino,-83.39633,43.44902
 2018-10-11,U,Van Buren,0-25,Female,White,-86.02637,42.24307
@@ -3541,8 +3541,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-12,Saginaw,Saginaw,35-44,Male,White,-84.02123,43.35624
 2018-10-12,U,Saginaw,0-25,Male,Black,-84.19204,43.33425
 2018-10-12,U,Shiawassee,25-34,Male,Black,-84.21643,42.86531
-2018-10-12,U,St Clair,35-44,Female,Unknown,-82.6869,43.02828
-2018-10-12,U,St Joseph,0-25,Female,Black,-85.48154,41.94481
+2018-10-12,U,St. Clair,35-44,Female,Unknown,-82.6869,43.02828
+2018-10-12,U,St. Joseph,0-25,Female,Black,-85.48154,41.94481
 2018-10-12,U,Tuscola,55+,Male,White,-83.29544,43.58396
 2018-10-12,Ann Arbor,Washtenaw,45-54,Male,American Indian or Alaska Native,-83.69471,42.3555
 2018-10-12,U,Wexford,25-34,Female,Asian,-85.46995,44.18014
@@ -3610,7 +3610,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-13,U,Shiawassee,0-25,Female,Black,-84.06329,42.94468
 2018-10-13,U,Shiawassee,25-34,Male,Asian,-84.154,42.91332
 2018-10-13,U,Shiawassee,0-25,Female,White,-84.09272,43.0355
-2018-10-13,U,St Joseph,55+,Female,White,-85.603,41.84788
+2018-10-13,U,St. Joseph,55+,Female,White,-85.603,41.84788
 2018-10-13,U,Wayne,35-44,Female,White,-83.35059,42.40191
 2018-10-13,U,Wexford,25-34,Female,Asian,-85.4871,44.35745
 2018-10-14,U,Alger,25-34,Male,Black,-86.61007,46.49608
@@ -3667,9 +3667,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-14,U,Schoolcraft,55+,Male,Hispanic or Latino,-86.13436,46.18716
 2018-10-14,U,Schoolcraft,35-44,Female,Hispanic or Latino,-86.17641,46.25646
 2018-10-14,U,Shiawassee,35-44,Female,White,-84.23839,43.02143
-2018-10-14,U,St Joseph,55+,Female,White,-85.65214,41.85341
-2018-10-14,U,St Joseph,25-34,Female,Black,-85.50358,41.79804
-2018-10-14,U,St Joseph,35-44,Female,White,-85.45567,41.8811
+2018-10-14,U,St. Joseph,55+,Female,White,-85.65214,41.85341
+2018-10-14,U,St. Joseph,25-34,Female,Black,-85.50358,41.79804
+2018-10-14,U,St. Joseph,35-44,Female,White,-85.45567,41.8811
 2018-10-14,Ann Arbor,Washtenaw,55+,Female,White,-83.77328,42.27361
 2018-10-14,Lincoln Park,Wayne,45-54,Female,White,-83.27449,42.37041
 2018-10-14,Livonia,Wayne,25-34,Male,Unknown,-83.26646,42.3387
@@ -3718,7 +3718,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-15,U,Roscommon,35-44,Female,Hispanic or Latino,-84.71313,44.26582
 2018-10-15,U,Sanilac,35-44,Female,Hispanic or Latino,-82.81438,43.55366
 2018-10-15,U,Schoolcraft,35-44,Female,Black,-86.15165,46.16571
-2018-10-15,U,St Clair,45-54,Male,Black,-82.71066,42.95372
+2018-10-15,U,St. Clair,45-54,Male,Black,-82.71066,42.95372
 2018-10-15,Ypsilanti,Washtenaw,25-34,Female,White,-83.9566,42.34835
 2018-10-15,U,Wayne,45-54,Male,White,-83.36126,42.2951
 2018-10-16,U,Alger,0-25,Male,Hispanic or Latino,-86.46105,46.45895
@@ -3788,8 +3788,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-16,U,Sanilac,0-25,Female,Hispanic or Latino,-82.80956,43.49284
 2018-10-16,U,Schoolcraft,35-44,Female,White,-86.21077,46.11645
 2018-10-16,U,Shiawassee,0-25,Male,Black,-84.11803,42.94629
-2018-10-16,U,St Clair,35-44,Male,White,-82.62565,42.95493
-2018-10-16,U,St Joseph,25-34,Female,Asian,-85.57355,42.02389
+2018-10-16,U,St. Clair,35-44,Male,White,-82.62565,42.95493
+2018-10-16,U,St. Joseph,25-34,Female,Asian,-85.57355,42.02389
 2018-10-16,U,Tuscola,35-44,Female,Black,-83.36147,43.33539
 2018-10-16,U,Van Buren,55+,Male,Black,-86.11119,42.21469
 2018-10-16,U,Van Buren,25-34,Female,Black,-85.89789,42.27038
@@ -3837,7 +3837,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-17,Saginaw,Saginaw,35-44,Male,White,-84.00908,43.42399
 2018-10-17,U,Schoolcraft,45-54,Female,White,-86.2403,46.11839
 2018-10-17,U,Schoolcraft,25-34,Male,White,-86.06626,46.21845
-2018-10-17,U,St Clair,0-25,Male,Black,-82.76571,42.89912
+2018-10-17,U,St. Clair,0-25,Male,Black,-82.76571,42.89912
 2018-10-17,U,Van Buren,55+,Female,Black,-86.04146,42.26785
 2018-10-17,Detroit,Wayne,25-34,Male,Asian,-83.26703,42.33901
 2018-10-17,U,Wayne,35-44,Female,Native Hawaiian or Other Pacific Islander,-83.36023,42.32919
@@ -3886,7 +3886,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-18,U,Roscommon,25-34,Male,Black,-84.74385,44.3354
 2018-10-18,U,Sanilac,25-34,Male,Asian,-82.80861,43.36707
 2018-10-18,U,Schoolcraft,55+,Female,Black,-86.28939,46.18591
-2018-10-18,U,St Joseph,55+,Female,Hispanic or Latino,-85.61361,41.85383
+2018-10-18,U,St. Joseph,55+,Female,Hispanic or Latino,-85.61361,41.85383
 2018-10-18,U,Tuscola,35-44,Male,White,-83.51139,43.34567
 2018-10-18,Dearborn,Wayne,35-44,Female,Black,-83.24752,42.21175
 2018-10-18,Livonia,Wayne,0-25,Male,Hispanic or Latino,0.0,0.0
@@ -3941,9 +3941,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-19,U,Schoolcraft,25-34,Female,White,-86.23043,46.17762
 2018-10-19,U,Schoolcraft,0-25,Female,White,-86.24042,46.13326
 2018-10-19,U,Shiawassee,25-34,Female,White,-84.22564,42.96701
-2018-10-19,U,St Clair,45-54,Male,Black,-82.68734,42.87221
-2018-10-19,U,St Clair,35-44,Female,Black,-82.63578,42.9435
-2018-10-19,U,St Clair,35-44,Male,White,-82.59837,42.81531
+2018-10-19,U,St. Clair,45-54,Male,Black,-82.68734,42.87221
+2018-10-19,U,St. Clair,35-44,Female,Black,-82.63578,42.9435
+2018-10-19,U,St. Clair,35-44,Male,White,-82.59837,42.81531
 2018-10-19,U,Van Buren,55+,Female,White,-86.13526,42.22133
 2018-10-19,U,Van Buren,0-25,Male,Black,-85.93961,42.18292
 2018-10-19,U,Washtenaw,0-25,Female,Black,-83.84605,42.1507
@@ -3994,8 +3994,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-20,U,Sanilac,25-34,Male,Black,-82.90299,43.38456
 2018-10-20,U,Schoolcraft,0-25,Male,White,-86.31092,46.23636
 2018-10-20,U,Shiawassee,25-34,Male,White,-84.07961,43.07132
-2018-10-20,U,St Clair,45-54,Male,White,-82.63032,42.9667
-2018-10-20,U,St Joseph,35-44,Female,Black,-85.59821,41.98752
+2018-10-20,U,St. Clair,45-54,Male,White,-82.63032,42.9667
+2018-10-20,U,St. Joseph,35-44,Female,Black,-85.59821,41.98752
 2018-10-20,U,Tuscola,25-34,Female,Black,-83.38844,43.46108
 2018-10-20,Detroit,Wayne,35-44,Male,Hispanic or Latino,-83.16503,42.31598
 2018-10-20,U,Wexford,25-34,Female,White,-85.55521,44.27784
@@ -4048,7 +4048,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-21,Saginaw,Saginaw,25-34,Male,White,-84.18229,43.20471
 2018-10-21,U,Saginaw,0-25,Male,Black,-84.15116,43.38396
 2018-10-21,U,Shiawassee,45-54,Male,Black,-84.17069,42.93691
-2018-10-21,U,St Clair,0-25,Female,Other,-82.66039,42.86909
+2018-10-21,U,St. Clair,0-25,Female,Other,-82.66039,42.86909
 2018-10-21,Ypsilanti,Washtenaw,55+,Female,White,-83.81663,42.25
 2018-10-22,U,Alger,0-25,Female,White,-86.51533,46.31875
 2018-10-22,U,Allegan,35-44,Male,White,-86.01908,42.59908
@@ -4102,7 +4102,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-22,U,Sanilac,25-34,Female,White,-82.89754,43.33897
 2018-10-22,U,Schoolcraft,35-44,Female,Hispanic or Latino,-86.24589,46.15877
 2018-10-22,U,Schoolcraft,25-34,Male,Black,0.0,0.0
-2018-10-22,U,St Joseph,35-44,Female,White,-85.56079,41.9057
+2018-10-22,U,St. Joseph,35-44,Female,White,-85.56079,41.9057
 2018-10-22,U,Van Buren,25-34,Male,White,0.0,0.0
 2018-10-22,U,Van Buren,25-34,Male,Black,-86.0256,42.18147
 2018-10-22,Ypsilanti,Washtenaw,55+,Male,White,-83.74253,42.16774
@@ -4296,7 +4296,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-25,U,Shiawassee,25-34,Female,Black,-84.2347,43.05373
 2018-10-25,U,Shiawassee,0-25,Male,White,-84.01187,42.87641
 2018-10-25,U,Shiawassee,45-54,Female,Black,-84.15291,42.90914
-2018-10-25,U,St Clair,0-25,Female,Black,-82.68025,42.94359
+2018-10-25,U,St. Clair,0-25,Female,Black,-82.68025,42.94359
 2018-10-25,Ann Arbor,Washtenaw,55+,Female,White,-83.73734,42.23473
 2018-10-25,Dearborn,Wayne,35-44,Male,Black,-83.2434,42.31295
 2018-10-25,Livonia,Wayne,35-44,Male,Black,-83.33643,42.33909
@@ -4349,7 +4349,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-26,U,Roscommon,25-34,Male,Black,-84.55574,44.35263
 2018-10-26,U,Roscommon,25-34,Male,Black,-84.6271,44.43509
 2018-10-26,U,Shiawassee,0-25,Male,Asian,-84.22104,42.97989
-2018-10-26,U,St Joseph,0-25,Male,Black,-85.59294,41.97144
+2018-10-26,U,St. Joseph,0-25,Male,Black,-85.59294,41.97144
 2018-10-26,U,Wexford,0-25,Unknown,White,-85.59207,44.44185
 2018-10-27,U,Alcona,55+,Female,White,-83.56771,44.71101
 2018-10-27,U,Antrim,35-44,Female,White,-85.18965,45.04754
@@ -4396,7 +4396,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-27,U,Sanilac,0-25,Female,White,-82.91136,43.36645
 2018-10-27,U,Schoolcraft,25-34,Female,White,-86.10187,46.19922
 2018-10-27,U,Schoolcraft,35-44,Female,Black,-86.15812,46.08678
-2018-10-27,U,St Joseph,25-34,Male,Hispanic or Latino,-85.48379,41.83468
+2018-10-27,U,St. Joseph,25-34,Male,Hispanic or Latino,-85.48379,41.83468
 2018-10-27,U,Tuscola,35-44,Female,Black,-83.35547,43.40168
 2018-10-27,U,Wexford,0-25,Female,White,-85.55095,44.41231
 2018-10-27,U,Wexford,0-25,Female,Asian,0.0,0.0
@@ -4467,8 +4467,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-28,U,Schoolcraft,0-25,Female,White,-86.17703,46.06502
 2018-10-28,U,Shiawassee,45-54,Female,Black,-84.04949,42.85346
 2018-10-28,U,Shiawassee,0-25,Female,White,-84.18625,42.98969
-2018-10-28,U,St Clair,0-25,Male,White,-82.61749,42.85352
-2018-10-28,U,St Clair,45-54,Male,Black,-82.66111,42.95767
+2018-10-28,U,St. Clair,0-25,Male,White,-82.61749,42.85352
+2018-10-28,U,St. Clair,45-54,Male,Black,-82.66111,42.95767
 2018-10-28,U,Van Buren,25-34,Female,White,-86.01927,42.38268
 2018-10-28,U,Van Buren,25-34,Female,Native Hawaiian or Other Pacific Islander,-86.03281,42.3391
 2018-10-29,U,Alcona,55+,Female,White,-83.59483,44.73651
@@ -4540,7 +4540,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-29,U,Schoolcraft,25-34,Unknown,Black,-86.2841,46.11329
 2018-10-29,U,Shiawassee,25-34,Female,Hispanic or Latino,-84.04953,43.08326
 2018-10-29,U,Shiawassee,45-54,Female,Black,-84.09743,42.85673
-2018-10-29,U,St Clair,55+,Female,White,-82.73944,43.06779
+2018-10-29,U,St. Clair,55+,Female,White,-82.73944,43.06779
 2018-10-29,Ann Arbor,Washtenaw,25-34,Female,Black,-83.8351,42.31296
 2018-10-29,Ann Arbor,Washtenaw,25-34,Male,White,-83.90909,42.19176
 2018-10-29,U,Wexford,25-34,Male,Black,-85.65752,44.29691
@@ -4598,8 +4598,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-30,U,Roscommon,35-44,Female,White,-84.52974,44.40958
 2018-10-30,U,Schoolcraft,0-25,Female,White,-86.30155,46.2545
 2018-10-30,U,Shiawassee,45-54,Female,Other,-84.09646,42.85393
-2018-10-30,U,St Clair,0-25,Male,Black,-82.6656,42.83752
-2018-10-30,U,St Joseph,35-44,Male,Black,-85.42319,41.86666
+2018-10-30,U,St. Clair,0-25,Male,Black,-82.6656,42.83752
+2018-10-30,U,St. Joseph,35-44,Male,Black,-85.42319,41.86666
 2018-10-30,U,Tuscola,35-44,Male,Hispanic or Latino,-83.41168,43.4286
 2018-10-30,Ann Arbor,Washtenaw,25-34,Female,Black,-83.91403,42.17211
 2018-10-30,Ypsilanti,Washtenaw,55+,Male,White,-83.84668,42.23157
@@ -4659,7 +4659,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-10-31,U,Oscoda,0-25,Female,Asian,-84.17253,44.73759
 2018-10-31,U,Oscoda,45-54,Male,White,-84.08849,44.57823
 2018-10-31,U,Roscommon,45-54,Male,Unknown,-84.63472,44.32418
-2018-10-31,U,St Clair,45-54,Female,White,-82.70055,42.98392
+2018-10-31,U,St. Clair,45-54,Female,White,-82.70055,42.98392
 2018-10-31,U,Van Buren,35-44,Male,White,-86.0999,42.27415
 2018-10-31,Lincoln Park,Wayne,25-34,Female,Black,-83.15021,42.42906
 2018-10-31,U,Wexford,25-34,Male,Black,-85.486,44.20789
@@ -4730,9 +4730,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-02,U,Schoolcraft,35-44,Female,Black,-86.23463,46.19867
 2018-11-02,U,Schoolcraft,25-34,Female,White,-86.12717,46.13556
 2018-11-02,U,Schoolcraft,25-34,Male,Black,-86.28996,46.23553
-2018-11-02,U,St Clair,35-44,Female,White,-82.67435,43.05282
-2018-11-02,U,St Clair,0-25,Male,Black,-82.64581,43.01324
-2018-11-02,U,St Joseph,55+,Male,Asian,-85.45049,41.84206
+2018-11-02,U,St. Clair,35-44,Female,White,-82.67435,43.05282
+2018-11-02,U,St. Clair,0-25,Male,Black,-82.64581,43.01324
+2018-11-02,U,St. Joseph,55+,Male,Asian,-85.45049,41.84206
 2018-11-02,U,Van Buren,55+,Male,Black,-86.13857,42.25924
 2018-11-02,U,Wexford,25-34,Female,White,-85.45703,44.37943
 2018-11-02,U,Wexford,25-34,Female,White,-85.48472,44.25394
@@ -4791,8 +4791,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-03,U,Presque Isle,25-34,Male,Black,-83.86593,45.31626
 2018-11-03,U,Roscommon,25-34,Male,White,-84.61566,44.27952
 2018-11-03,U,Schoolcraft,45-54,Male,Black,-86.23235,46.08041
-2018-11-03,U,St Joseph,55+,Male,American Indian or Alaska Native,-85.54793,41.81943
-2018-11-03,U,St Joseph,0-25,Male,American Indian or Alaska Native,-85.5378,41.86079
+2018-11-03,U,St. Joseph,55+,Male,American Indian or Alaska Native,-85.54793,41.81943
+2018-11-03,U,St. Joseph,0-25,Male,American Indian or Alaska Native,-85.5378,41.86079
 2018-11-03,U,Tuscola,35-44,Male,White,-83.32018,43.33937
 2018-11-03,U,Tuscola,35-44,Male,Black,-83.35996,43.44737
 2018-11-03,Ann Arbor,Washtenaw,25-34,Female,Black,-83.86111,42.27659
@@ -4859,8 +4859,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-04,U,Sanilac,35-44,Female,Black,-82.76848,43.45371
 2018-11-04,U,Schoolcraft,0-25,Male,Hispanic or Latino,-86.23446,46.0997
 2018-11-04,U,Shiawassee,25-34,Male,Asian,-84.03345,43.00565
-2018-11-04,U,St Clair,35-44,Female,White,-82.68394,42.88338
-2018-11-04,U,St Joseph,55+,Male,White,-85.39537,41.79882
+2018-11-04,U,St. Clair,35-44,Female,White,-82.68394,42.88338
+2018-11-04,U,St. Joseph,55+,Male,White,-85.39537,41.79882
 2018-11-04,U,Van Buren,35-44,Male,White,-86.09171,42.1579
 2018-11-04,Lincoln Park,Wayne,55+,Female,White,-83.18495,42.34155
 2018-11-04,U,Wexford,25-34,Female,Black,-85.61958,44.20712
@@ -4908,9 +4908,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-05,U,Schoolcraft,25-34,Female,White,-86.17461,46.09879
 2018-11-05,U,Schoolcraft,25-34,Female,White,-86.14964,46.07311
 2018-11-05,U,Shiawassee,0-25,Female,Black,-84.11458,42.81364
-2018-11-05,U,St Clair,0-25,Female,Hispanic or Latino,-82.80451,42.87393
-2018-11-05,U,St Joseph,0-25,Male,Black,-85.48594,41.89774
-2018-11-05,U,St Joseph,0-25,Male,Black,-85.59052,41.81751
+2018-11-05,U,St. Clair,0-25,Female,Hispanic or Latino,-82.80451,42.87393
+2018-11-05,U,St. Joseph,0-25,Male,Black,-85.48594,41.89774
+2018-11-05,U,St. Joseph,0-25,Male,Black,-85.59052,41.81751
 2018-11-05,U,Tuscola,25-34,Male,White,-83.42998,43.38333
 2018-11-05,U,Van Buren,55+,Male,Black,-86.01836,42.22307
 2018-11-05,Detroit,Wayne,25-34,Female,Black,-83.33187,42.24709
@@ -4961,7 +4961,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-06,U,Saginaw,25-34,Male,White,-84.01906,43.38264
 2018-11-06,U,Saginaw,25-34,Male,American Indian or Alaska Native,-84.20352,43.22269
 2018-11-06,U,Sanilac,0-25,Male,Black,-82.92711,43.33684
-2018-11-06,U,St Joseph,35-44,Female,White,-85.579,42.00097
+2018-11-06,U,St. Joseph,35-44,Female,White,-85.579,42.00097
 2018-11-06,U,Van Buren,0-25,Female,White,-86.13097,42.16556
 2018-11-06,Detroit,Wayne,0-25,Male,Hispanic or Latino,-83.23566,42.15355
 2018-11-06,U,Wayne,45-54,Female,Black,0.0,0.0
@@ -5016,7 +5016,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-07,U,Newaygo,55+,Male,Hispanic or Latino,-85.74506,43.49885
 2018-11-07,Hazel Park,Oakland,25-34,Male,White,-83.37314,42.7875
 2018-11-07,U,Oceana,35-44,Male,Black,-86.16941,43.55608
-2018-11-07,U,St Clair,0-25,Female,Other,-82.69509,42.92071
+2018-11-07,U,St. Clair,0-25,Female,Other,-82.69509,42.92071
 2018-11-07,U,Washtenaw,25-34,Female,Hispanic or Latino,-83.91451,42.34316
 2018-11-07,Ypsilanti,Washtenaw,35-44,Female,Black,0.0,0.0
 2018-11-07,U,Wexford,25-34,Male,American Indian or Alaska Native,-85.67846,44.37686
@@ -5066,7 +5066,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-08,U,Roscommon,Unknown,Female,Black,-84.63102,44.23034
 2018-11-08,U,Sanilac,35-44,Female,Black,-82.71342,43.44028
 2018-11-08,U,Shiawassee,45-54,Female,Black,-84.05356,42.93671
-2018-11-08,U,St Clair,35-44,Male,White,-82.65942,42.85514
+2018-11-08,U,St. Clair,35-44,Male,White,-82.65942,42.85514
 2018-11-08,U,Tuscola,35-44,Male,Hispanic or Latino,-83.4373,43.47129
 2018-11-08,U,Tuscola,25-34,Male,White,-83.4129,43.40376
 2018-11-08,U,Van Buren,35-44,Male,Black,-85.99931,42.17133
@@ -5172,7 +5172,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-10,U,Roscommon,45-54,Male,White,-84.55625,44.32524
 2018-11-10,U,Schoolcraft,0-25,Male,Black,0.0,0.0
 2018-11-10,U,Shiawassee,25-34,Male,Hispanic or Latino,-84.26331,42.90146
-2018-11-10,U,St Joseph,35-44,Female,White,-85.57571,41.85439
+2018-11-10,U,St. Joseph,35-44,Female,White,-85.57571,41.85439
 2018-11-10,U,Van Buren,35-44,Female,Black,-86.06038,42.22103
 2018-11-10,U,Wexford,0-25,Female,White,-85.50943,44.34721
 2018-11-10,U,Wexford,25-34,Male,White,-85.55855,44.32527
@@ -5235,9 +5235,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-11,U,Sanilac,0-25,Male,Black,-82.70285,43.32103
 2018-11-11,U,Shiawassee,0-25,Female,Black,-84.19522,42.83402
 2018-11-11,U,Shiawassee,25-34,Female,Black,-84.14377,42.96916
-2018-11-11,U,St Clair,35-44,Male,White,-82.81812,43.00142
-2018-11-11,U,St Clair,0-25,Female,Black,-82.72242,42.90042
-2018-11-11,U,St Clair,35-44,Male,White,-82.70453,42.78939
+2018-11-11,U,St. Clair,35-44,Male,White,-82.81812,43.00142
+2018-11-11,U,St. Clair,0-25,Female,Black,-82.72242,42.90042
+2018-11-11,U,St. Clair,35-44,Male,White,-82.70453,42.78939
 2018-11-11,U,Tuscola,55+,Male,White,-83.35797,43.5739
 2018-11-11,U,Van Buren,25-34,Male,Hispanic or Latino,0.0,0.0
 2018-11-11,U,Washtenaw,25-34,Male,White,-83.80761,42.11045
@@ -5303,8 +5303,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-12,U,Saginaw,35-44,Female,Unknown,-84.04304,43.35376
 2018-11-12,U,Sanilac,35-44,Female,Hispanic or Latino,-82.71584,43.49186
 2018-11-12,U,Shiawassee,25-34,Male,Asian,-84.25014,42.83237
-2018-11-12,U,St Joseph,25-34,Male,Unknown,-85.53571,42.01223
-2018-11-12,U,St Joseph,55+,Female,White,-85.52103,41.89486
+2018-11-12,U,St. Joseph,25-34,Male,Unknown,-85.53571,42.01223
+2018-11-12,U,St. Joseph,55+,Female,White,-85.52103,41.89486
 2018-11-12,U,Van Buren,25-34,Female,Asian,-86.13022,42.33773
 2018-11-12,U,Van Buren,25-34,Male,White,-86.07578,42.27196
 2018-11-12,U,Washtenaw,25-34,Male,American Indian or Alaska Native,-83.74947,42.24729
@@ -5409,7 +5409,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-14,U,Shiawassee,45-54,Female,Black,-84.10305,42.96644
 2018-11-14,U,Shiawassee,35-44,Female,Asian,-84.22136,42.96994
 2018-11-14,U,Shiawassee,45-54,Male,White,-84.05463,43.03867
-2018-11-14,U,St Joseph,25-34,Female,Hispanic or Latino,-85.44767,41.83816
+2018-11-14,U,St. Joseph,25-34,Female,Hispanic or Latino,-85.44767,41.83816
 2018-11-14,U,Tuscola,25-34,Male,Black,-83.30723,43.52776
 2018-11-14,U,Tuscola,25-34,Female,White,-83.37689,43.51235
 2018-11-14,Lincoln Park,Wayne,25-34,Male,White,-83.2363,42.3131
@@ -5579,8 +5579,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-17,U,Roscommon,25-34,Female,White,-84.72866,44.40309
 2018-11-17,U,Roscommon,0-25,Female,Asian,-84.63766,44.39282
 2018-11-17,U,Roscommon,25-34,Female,White,-84.52612,44.23347
-2018-11-17,U,St Clair,55+,Female,White,-82.68468,43.00609
-2018-11-17,U,St Joseph,0-25,Female,White,-85.41211,41.76724
+2018-11-17,U,St. Clair,55+,Female,White,-82.68468,43.00609
+2018-11-17,U,St. Joseph,0-25,Female,White,-85.41211,41.76724
 2018-11-17,Ypsilanti,Washtenaw,45-54,Male,White,-83.83355,42.34413
 2018-11-18,U,Alpena,25-34,Male,Asian,-83.50794,44.96728
 2018-11-18,U,Alpena,25-34,Female,Asian,-83.46891,45.04255
@@ -5689,7 +5689,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-20,U,Osceola,25-34,Male,White,-85.47985,43.88819
 2018-11-20,U,Oscoda,55+,Female,Black,-84.14703,44.59976
 2018-11-20,U,Otsego,35-44,Female,Black,-84.70115,45.07896
-2018-11-20,U,St Clair,35-44,Female,Black,-82.69147,43.03018
+2018-11-20,U,St. Clair,35-44,Female,Black,-82.69147,43.03018
 2018-11-20,U,Washtenaw,25-34,Male,Asian,-83.72786,42.36425
 2018-11-20,Ypsilanti,Washtenaw,55+,Female,White,-83.81112,42.20793
 2018-11-20,U,Wayne,35-44,Female,White,-83.19799,42.40955
@@ -5802,8 +5802,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-22,U,Otsego,25-34,Female,White,-84.63306,44.96202
 2018-11-22,Saginaw,Saginaw,25-34,Male,Asian,-84.13669,43.37663
 2018-11-22,U,Shiawassee,45-54,Male,Black,-84.19172,42.94497
-2018-11-22,U,St Clair,0-25,Female,Black,-82.59651,42.84868
-2018-11-22,U,St Joseph,0-25,Female,Black,-85.59077,42.05194
+2018-11-22,U,St. Clair,0-25,Female,Black,-82.59651,42.84868
+2018-11-22,U,St. Joseph,0-25,Female,Black,-85.59077,42.05194
 2018-11-22,U,Tuscola,35-44,Female,Asian,0.0,0.0
 2018-11-22,Dearborn,Wayne,35-44,Female,White,-83.27446,42.30323
 2018-11-22,U,Wexford,35-44,Female,Black,-85.59615,44.30267
@@ -5855,8 +5855,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-23,U,Oscoda,45-54,Male,White,-84.06145,44.7349
 2018-11-23,U,Saginaw,0-25,Male,White,-84.09216,43.41719
 2018-11-23,U,Sanilac,35-44,Male,White,-82.74527,43.42787
-2018-11-23,U,St Clair,35-44,Male,White,-82.6358,43.03103
-2018-11-23,U,St Joseph,25-34,Male,Black,-85.55583,41.98733
+2018-11-23,U,St. Clair,35-44,Male,White,-82.6358,43.03103
+2018-11-23,U,St. Joseph,25-34,Male,Black,-85.55583,41.98733
 2018-11-23,U,Van Buren,55+,Male,Unknown,-86.03416,42.30916
 2018-11-23,U,Van Buren,35-44,Male,Black,-86.13353,42.32603
 2018-11-23,Dearborn,Wayne,35-44,Male,Hispanic or Latino,-83.30493,42.14614
@@ -5959,10 +5959,10 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-25,U,Saginaw,35-44,Male,Asian,-84.12514,43.356
 2018-11-25,U,Sanilac,35-44,Male,Black,-82.69259,43.39879
 2018-11-25,U,Shiawassee,0-25,Male,Hispanic or Latino,-84.1565,42.92566
-2018-11-25,U,St Clair,0-25,Male,White,-82.62249,42.96002
-2018-11-25,U,St Clair,45-54,Female,Black,-82.79393,43.02723
-2018-11-25,U,St Clair,35-44,Female,Asian,-82.60553,42.90847
-2018-11-25,U,St Joseph,35-44,Female,Black,-85.5139,41.88409
+2018-11-25,U,St. Clair,0-25,Male,White,-82.62249,42.96002
+2018-11-25,U,St. Clair,45-54,Female,Black,-82.79393,43.02723
+2018-11-25,U,St. Clair,35-44,Female,Asian,-82.60553,42.90847
+2018-11-25,U,St. Joseph,35-44,Female,Black,-85.5139,41.88409
 2018-11-25,U,Tuscola,35-44,Male,Black,-83.49269,43.52676
 2018-11-25,U,Van Buren,25-34,Female,White,-86.0307,42.22983
 2018-11-25,U,Wayne,25-34,Male,White,-83.19137,42.26898
@@ -6090,8 +6090,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-27,U,Sanilac,25-34,Male,Black,-82.68069,43.30853
 2018-11-27,U,Schoolcraft,35-44,Male,White,-86.28941,46.06957
 2018-11-27,U,Shiawassee,35-44,Female,Asian,-84.1853,42.91397
-2018-11-27,U,St Clair,55+,Male,White,-82.61817,43.0182
-2018-11-27,U,St Clair,35-44,Female,Other,-82.76756,42.88279
+2018-11-27,U,St. Clair,55+,Male,White,-82.61817,43.0182
+2018-11-27,U,St. Clair,35-44,Female,Other,-82.76756,42.88279
 2018-11-27,U,Van Buren,55+,Unknown,White,-86.15887,42.21567
 2018-11-28,U,Alcona,25-34,Male,Asian,-83.51945,44.71899
 2018-11-28,U,Alcona,55+,Male,Black,-83.55747,44.84701
@@ -6198,7 +6198,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-11-29,U,Roscommon,Unknown,Female,Asian,-84.55834,44.35123
 2018-11-29,U,Schoolcraft,35-44,Female,Black,-86.12837,46.06092
 2018-11-29,U,Shiawassee,0-25,Male,Hispanic or Latino,-84.08856,42.84634
-2018-11-29,U,St Clair,45-54,Male,Asian,-82.69316,42.86656
+2018-11-29,U,St. Clair,45-54,Male,Asian,-82.69316,42.86656
 2018-11-29,U,Van Buren,25-34,Female,Hispanic or Latino,-86.00488,42.32043
 2018-11-29,U,Washtenaw,25-34,Female,Unknown,-83.86577,42.15545
 2018-11-29,U,Wexford,25-34,Female,White,-85.64145,44.27392
@@ -6303,9 +6303,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-01,U,Otsego,35-44,Female,Other,-84.68775,44.8813
 2018-12-01,U,Presque Isle,35-44,Female,Black,-83.8178,45.21207
 2018-12-01,U,Schoolcraft,0-25,Male,Black,-86.06417,46.16831
-2018-12-01,U,St Clair,45-54,Male,White,0.0,0.0
-2018-12-01,U,St Clair,35-44,Female,White,-82.76983,42.87681
-2018-12-01,U,St Joseph,25-34,Male,White,-85.46183,41.96077
+2018-12-01,U,St. Clair,45-54,Male,White,0.0,0.0
+2018-12-01,U,St. Clair,35-44,Female,White,-82.76983,42.87681
+2018-12-01,U,St. Joseph,25-34,Male,White,-85.46183,41.96077
 2018-12-01,U,Tuscola,25-34,Female,White,-83.43228,43.45636
 2018-12-01,U,Tuscola,35-44,Male,White,-83.50221,43.31476
 2018-12-01,U,Tuscola,25-34,Male,White,-83.42359,43.44652
@@ -6401,7 +6401,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-03,U,Ontonagon,25-34,Female,Black,-89.3248,46.74271
 2018-12-03,U,Ontonagon,35-44,Male,White,-89.30705,46.68476
 2018-12-03,U,Roscommon,Unknown,Male,White,-84.62664,44.42139
-2018-12-03,U,St Joseph,35-44,Male,Black,-85.6435,41.97389
+2018-12-03,U,St. Joseph,35-44,Male,Black,-85.6435,41.97389
 2018-12-03,U,Tuscola,25-34,Male,White,-83.45732,43.36062
 2018-12-04,U,Alcona,0-25,Female,White,-83.66006,44.66794
 2018-12-04,U,Alcona,55+,Female,Black,-83.64662,44.65032
@@ -6451,7 +6451,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-04,U,Sanilac,35-44,Male,White,-82.84033,43.46172
 2018-12-04,U,Schoolcraft,0-25,Male,Native Hawaiian or Other Pacific Islander,-86.28837,46.07972
 2018-12-04,U,Schoolcraft,25-34,Male,Black,0.0,0.0
-2018-12-04,U,St Joseph,35-44,Male,Black,-85.63951,41.82808
+2018-12-04,U,St. Joseph,35-44,Male,Black,-85.63951,41.82808
 2018-12-04,U,Tuscola,35-44,Female,White,-83.4343,43.35249
 2018-12-06,U,Alger,25-34,Male,Black,-86.72424,46.34202
 2018-12-06,U,Alpena,0-25,Female,Other,-83.66125,45.07378
@@ -6558,7 +6558,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-07,U,Saginaw,25-34,Female,White,-84.07146,43.32171
 2018-12-07,U,Schoolcraft,35-44,Female,Black,-86.10413,46.1821
 2018-12-07,U,Shiawassee,0-25,Female,White,-84.02727,42.86743
-2018-12-07,U,St Joseph,35-44,Male,Black,-85.53659,42.03018
+2018-12-07,U,St. Joseph,35-44,Male,Black,-85.53659,42.03018
 2018-12-07,U,Tuscola,35-44,Female,White,-83.35619,43.53067
 2018-12-07,U,Van Buren,25-34,Female,Black,-86.12666,42.15587
 2018-12-07,U,Van Buren,35-44,Female,White,-86.10429,42.1611
@@ -6618,7 +6618,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-08,U,Sanilac,25-34,Female,Hispanic or Latino,-82.94459,43.47938
 2018-12-08,U,Sanilac,0-25,Male,Black,-82.73976,43.45796
 2018-12-08,U,Shiawassee,25-34,Male,White,-84.1733,43.03495
-2018-12-08,U,St Joseph,55+,Male,White,-85.66114,41.98265
+2018-12-08,U,St. Joseph,55+,Male,White,-85.66114,41.98265
 2018-12-08,U,Tuscola,35-44,Male,White,-83.33594,43.46634
 2018-12-08,U,Van Buren,25-34,Female,Hispanic or Latino,-85.97398,42.1847
 2018-12-08,Livonia,Wayne,25-34,Male,Black,-83.2269,42.26523
@@ -6781,7 +6781,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-11,Saginaw,Saginaw,25-34,Male,White,-84.05238,43.36016
 2018-12-11,Saginaw,Saginaw,25-34,Female,Hispanic or Latino,-83.9318,43.29647
 2018-12-11,U,Schoolcraft,55+,Male,Black,-86.28545,46.08626
-2018-12-11,U,St Clair,0-25,Female,Black,-82.67226,42.89268
+2018-12-11,U,St. Clair,0-25,Female,Black,-82.67226,42.89268
 2018-12-11,U,Tuscola,35-44,Female,White,-83.49555,43.49113
 2018-12-11,U,Van Buren,25-34,Male,Black,-86.04726,42.12698
 2018-12-11,Ypsilanti,Washtenaw,55+,Female,White,-83.69141,42.38645
@@ -6906,7 +6906,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-13,U,Roscommon,Unknown,Female,Asian,-84.67443,44.38814
 2018-12-13,U,Saginaw,35-44,Male,Hispanic or Latino,-84.03883,43.45086
 2018-12-13,U,Schoolcraft,25-34,Female,Asian,-86.17765,46.11044
-2018-12-13,U,St Clair,35-44,Female,White,-82.73143,42.96905
+2018-12-13,U,St. Clair,35-44,Female,White,-82.73143,42.96905
 2018-12-13,U,Tuscola,55+,Male,Black,-83.45907,43.39982
 2018-12-13,U,Tuscola,35-44,Female,Black,-83.36736,43.35394
 2018-12-13,U,Van Buren,55+,Female,Other,-86.09031,42.36178
@@ -6972,7 +6972,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-14,U,Saginaw,25-34,Male,Black,-84.00656,43.28432
 2018-12-14,U,Schoolcraft,45-54,Male,Black,-86.24225,46.11647
 2018-12-14,U,Schoolcraft,45-54,Male,Hispanic or Latino,-86.16993,46.06082
-2018-12-14,U,St Clair,45-54,Female,Black,-82.51459,42.94331
+2018-12-14,U,St. Clair,45-54,Female,Black,-82.51459,42.94331
 2018-12-14,U,Tuscola,55+,Male,Asian,-83.2849,43.46267
 2018-12-14,U,Tuscola,25-34,Female,Black,-83.42218,43.37146
 2018-12-14,U,Van Buren,0-25,Male,White,-85.94085,42.11406
@@ -7113,7 +7113,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-16,U,Roscommon,35-44,Male,Hispanic or Latino,-84.54679,44.26086
 2018-12-16,U,Sanilac,25-34,Female,White,-82.98563,43.3935
 2018-12-16,U,Schoolcraft,0-25,Male,White,-86.29319,46.19084
-2018-12-16,U,St Joseph,0-25,Female,White,-85.47525,41.80892
+2018-12-16,U,St. Joseph,0-25,Female,White,-85.47525,41.80892
 2018-12-16,U,Tuscola,25-34,Female,Hispanic or Latino,-83.49881,43.51838
 2018-12-16,U,Tuscola,55+,Female,Black,-83.49121,43.45985
 2018-12-16,U,Van Buren,25-34,Male,American Indian or Alaska Native,-86.13302,42.3825
@@ -7178,7 +7178,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-17,U,Ontonagon,25-34,Female,Black,-89.21671,46.66891
 2018-12-17,U,Oscoda,45-54,Female,White,-84.05475,44.62115
 2018-12-17,U,Otsego,35-44,Female,White,-84.55442,45.1046
-2018-12-17,U,St Joseph,35-44,Male,White,-85.51305,41.90238
+2018-12-17,U,St. Joseph,35-44,Male,White,-85.51305,41.90238
 2018-12-17,U,Van Buren,25-34,Male,Black,-86.10367,42.31187
 2018-12-17,U,Van Buren,25-34,Female,White,-86.08308,42.29151
 2018-12-17,U,Van Buren,25-34,Male,Black,-85.99152,42.3609
@@ -7247,8 +7247,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-18,U,Roscommon,35-44,Male,Hispanic or Latino,-84.60328,44.41076
 2018-12-18,U,Sanilac,0-25,Female,Asian,-82.84441,43.45278
 2018-12-18,U,Sanilac,25-34,Female,Black,-82.92264,43.314
-2018-12-18,U,St Clair,35-44,Female,White,-82.61069,42.80175
-2018-12-18,U,St Clair,45-54,Male,Hispanic or Latino,-82.79202,42.97389
+2018-12-18,U,St. Clair,35-44,Female,White,-82.61069,42.80175
+2018-12-18,U,St. Clair,45-54,Male,Hispanic or Latino,-82.79202,42.97389
 2018-12-18,Detroit,Wayne,0-25,Male,White,0.0,0.0
 2018-12-19,U,Alcona,25-34,Male,White,-83.65605,44.7184
 2018-12-19,U,Alcona,55+,Female,White,-83.59229,44.72778
@@ -7300,7 +7300,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-19,U,Schoolcraft,45-54,Female,White,-86.12868,46.10645
 2018-12-19,U,Schoolcraft,25-34,Male,Black,-86.19526,46.23656
 2018-12-19,U,Shiawassee,35-44,Male,Unknown,-84.07339,42.86391
-2018-12-19,U,St Clair,35-44,Male,Black,-82.72269,42.89889
+2018-12-19,U,St. Clair,35-44,Male,Black,-82.72269,42.89889
 2018-12-19,U,Tuscola,35-44,Male,White,-83.42726,43.35983
 2018-12-19,U,Van Buren,25-34,Male,Black,-86.01955,42.1935
 2018-12-19,U,Van Buren,25-34,Female,Black,-85.98815,42.33906
@@ -7412,7 +7412,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-21,U,Schoolcraft,45-54,Female,White,-86.11315,46.15577
 2018-12-21,U,Schoolcraft,25-34,Female,Black,-86.20221,46.18149
 2018-12-21,U,Shiawassee,25-34,Male,Black,0.0,0.0
-2018-12-21,U,St Clair,45-54,Male,Black,-82.61672,43.01581
+2018-12-21,U,St. Clair,45-54,Male,Black,-82.61672,43.01581
 2018-12-21,U,Tuscola,55+,Unknown,Black,-83.47312,43.45194
 2018-12-21,U,Tuscola,35-44,Male,White,0.0,0.0
 2018-12-21,U,Van Buren,25-34,Female,Hispanic or Latino,-85.96247,42.2725
@@ -7531,7 +7531,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-23,U,Roscommon,35-44,Female,Black,-84.58167,44.21195
 2018-12-23,U,Schoolcraft,0-25,Male,White,-86.29946,46.14717
 2018-12-23,U,Shiawassee,0-25,Female,White,-84.19561,43.06999
-2018-12-23,U,St Clair,45-54,Male,White,-82.70683,43.01696
+2018-12-23,U,St. Clair,45-54,Male,White,-82.70683,43.01696
 2018-12-23,U,Van Buren,25-34,Female,Hispanic or Latino,-86.00335,42.29901
 2018-12-24,U,Alcona,45-54,Male,White,0.0,0.0
 2018-12-24,U,Alger,55+,Male,Hispanic or Latino,-86.49091,46.40619
@@ -7596,8 +7596,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-24,U,Roscommon,25-34,Male,Black,-84.55861,44.3381
 2018-12-24,U,Saginaw,25-34,Male,Native Hawaiian or Other Pacific Islander,-84.09721,43.28705
 2018-12-24,U,Shiawassee,35-44,Female,Asian,-84.23716,42.83341
-2018-12-24,U,St Clair,0-25,Male,Black,-82.79616,43.05393
-2018-12-24,U,St Joseph,35-44,Male,Black,-85.44954,41.88496
+2018-12-24,U,St. Clair,0-25,Male,Black,-82.79616,43.05393
+2018-12-24,U,St. Joseph,35-44,Male,Black,-85.44954,41.88496
 2018-12-24,U,Tuscola,35-44,Female,Unknown,-83.40093,43.36259
 2018-12-24,U,Van Buren,25-34,Female,White,-86.0394,42.21998
 2018-12-24,Ann Arbor,Washtenaw,0-25,Female,White,-83.89049,42.19522
@@ -7732,7 +7732,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-26,U,Sanilac,25-34,Male,Black,-82.85821,43.41965
 2018-12-26,U,Schoolcraft,35-44,Female,White,-86.10822,46.17536
 2018-12-26,U,Schoolcraft,0-25,Female,White,-86.336,46.12879
-2018-12-26,U,St Clair,35-44,Female,White,-82.64593,43.00397
+2018-12-26,U,St. Clair,35-44,Female,White,-82.64593,43.00397
 2018-12-27,U,Alger,25-34,Male,White,-86.67831,46.51104
 2018-12-27,U,Alpena,25-34,Female,Black,-83.74711,45.06333
 2018-12-27,U,Alpena,25-34,Female,Black,-83.54128,45.01161
@@ -7781,7 +7781,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-27,U,Sanilac,0-25,Male,White,-82.79156,43.49427
 2018-12-27,U,Schoolcraft,0-25,Female,Black,-86.14956,46.14249
 2018-12-27,U,Schoolcraft,55+,Female,White,-86.1288,46.14072
-2018-12-27,U,St Clair,45-54,Female,Black,-82.58546,43.05936
+2018-12-27,U,St. Clair,45-54,Female,Black,-82.58546,43.05936
 2018-12-27,U,Tuscola,55+,Male,Black,-83.51826,43.59792
 2018-12-27,U,Wexford,25-34,Female,White,-85.51513,44.38096
 2018-12-28,U,Alpena,25-34,Female,White,-83.5887,45.1172
@@ -7931,8 +7931,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-30,U,Roscommon,45-54,Female,Black,-84.49523,44.32762
 2018-12-30,U,Roscommon,25-34,Female,Hispanic or Latino,-84.64061,44.28995
 2018-12-30,U,Shiawassee,45-54,Unknown,White,-84.18401,42.96918
-2018-12-30,U,St Clair,0-25,Male,Asian,-82.73933,42.95969
-2018-12-30,U,St Joseph,55+,Female,Asian,-85.41541,41.92756
+2018-12-30,U,St. Clair,0-25,Male,Asian,-82.73933,42.95969
+2018-12-30,U,St. Joseph,55+,Female,Asian,-85.41541,41.92756
 2018-12-30,U,Van Buren,55+,Female,Asian,-86.03728,42.15474
 2018-12-30,U,Van Buren,25-34,Male,Black,0.0,0.0
 2018-12-30,Livonia,Wayne,25-34,Female,Asian,0.0,0.0
@@ -7982,7 +7982,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2018-12-31,U,Ottawa,45-54,Female,Black,0.0,0.0
 2018-12-31,U,Presque Isle,25-34,Female,White,-83.91457,45.26461
 2018-12-31,U,Sanilac,0-25,Female,American Indian or Alaska Native,0.0,0.0
-2018-12-31,U,St Clair,0-25,Male,White,-82.66808,42.82926
+2018-12-31,U,St. Clair,0-25,Male,White,-82.66808,42.82926
 2018-12-31,U,Tuscola,25-34,Female,Black,-83.52756,43.60549
 2019-01-02,U,Alger,55+,Female,White,-86.66078,46.38648
 2019-01-02,U,Allegan,0-25,Male,Hispanic or Latino,-85.87803,42.49489
@@ -8042,7 +8042,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-02,U,Schoolcraft,55+,Male,White,-86.18611,46.1367
 2019-01-02,U,Shiawassee,25-34,Female,White,-84.22935,43.06432
 2019-01-02,U,Shiawassee,35-44,Female,Hispanic or Latino,-84.10861,42.9541
-2019-01-02,U,St Joseph,35-44,Female,White,-85.53759,41.90492
+2019-01-02,U,St. Joseph,35-44,Female,White,-85.53759,41.90492
 2019-01-02,U,Van Buren,35-44,Male,Black,-86.04727,42.22953
 2019-01-02,U,Washtenaw,35-44,Female,Black,-83.85665,42.36641
 2019-01-02,U,Washtenaw,25-34,Female,Black,-83.79736,42.29073
@@ -8153,8 +8153,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-04,U,Ottawa,55+,Male,Black,-85.9265,42.87923
 2019-01-04,U,Presque Isle,45-54,Female,Hispanic or Latino,-83.92218,45.40361
 2019-01-04,U,Schoolcraft,0-25,Male,Hispanic or Latino,-86.1658,46.24984
-2019-01-04,U,St Clair,35-44,Female,Native Hawaiian or Other Pacific Islander,-82.67968,42.91678
-2019-01-04,U,St Joseph,0-25,Unknown,Hispanic or Latino,-85.46278,41.93926
+2019-01-04,U,St. Clair,35-44,Female,Native Hawaiian or Other Pacific Islander,-82.67968,42.91678
+2019-01-04,U,St. Joseph,0-25,Unknown,Hispanic or Latino,-85.46278,41.93926
 2019-01-04,U,Tuscola,35-44,Female,Black,-83.4346,43.43634
 2019-01-04,U,Tuscola,25-34,Female,Black,-83.45456,43.42067
 2019-01-04,Dearborn,Wayne,35-44,Unknown,Other,-83.35951,42.2655
@@ -8208,9 +8208,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-05,Saginaw,Saginaw,35-44,Male,White,-83.97897,43.45593
 2019-01-05,U,Sanilac,35-44,Male,White,-82.78656,43.55637
 2019-01-05,U,Schoolcraft,55+,Female,White,-86.27704,46.18938
-2019-01-05,U,St Clair,35-44,Female,Black,-82.67844,42.96919
-2019-01-05,U,St Joseph,55+,Female,Black,0.0,0.0
-2019-01-05,U,St Joseph,0-25,Female,Unknown,-85.67919,41.99132
+2019-01-05,U,St. Clair,35-44,Female,Black,-82.67844,42.96919
+2019-01-05,U,St. Joseph,55+,Female,Black,0.0,0.0
+2019-01-05,U,St. Joseph,0-25,Female,Unknown,-85.67919,41.99132
 2019-01-05,U,Wexford,25-34,Female,Black,-85.64998,44.18225
 2019-01-06,U,Alcona,45-54,Female,Hispanic or Latino,0.0,0.0
 2019-01-06,U,Alcona,25-34,Male,Asian,-83.59942,44.55987
@@ -8405,7 +8405,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-08,U,Roscommon,35-44,Female,Asian,-84.60099,44.35962
 2019-01-08,U,Roscommon,35-44,Female,Black,-84.56603,44.37816
 2019-01-08,U,Schoolcraft,25-34,Male,White,-86.14544,46.33765
-2019-01-08,U,St Clair,35-44,Female,White,-82.83596,42.86052
+2019-01-08,U,St. Clair,35-44,Female,White,-82.83596,42.86052
 2019-01-08,U,Tuscola,35-44,Male,White,-83.57075,43.4424
 2019-01-08,Detroit,Wayne,55+,Male,Asian,-83.30732,42.19449
 2019-01-09,U,Alcona,25-34,Male,White,-83.54898,44.59766
@@ -8458,7 +8458,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-09,U,Roscommon,Unknown,Male,White,-84.45018,44.40082
 2019-01-09,U,Schoolcraft,35-44,Female,Black,-86.08401,46.05785
 2019-01-09,U,Shiawassee,35-44,Male,White,-84.2031,42.875
-2019-01-09,U,St Clair,45-54,Male,Black,-82.76889,42.8658
+2019-01-09,U,St. Clair,45-54,Male,Black,-82.76889,42.8658
 2019-01-09,U,Van Buren,0-25,Female,Black,-85.92805,42.17986
 2019-01-10,U,Alcona,25-34,Female,White,-83.7224,44.59262
 2019-01-10,U,Alcona,55+,Female,Black,-83.46423,44.59908
@@ -8505,9 +8505,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-10,U,Ottawa,35-44,Female,Black,-86.10229,42.86832
 2019-01-10,U,Presque Isle,55+,Female,White,0.0,0.0
 2019-01-10,U,Sanilac,35-44,Male,Black,-82.9633,43.40529
-2019-01-10,U,St Clair,45-54,Female,Black,-82.6383,43.06985
-2019-01-10,U,St Clair,35-44,Male,Black,-82.78342,42.97137
-2019-01-10,U,St Joseph,55+,Male,Black,-85.65053,41.96364
+2019-01-10,U,St. Clair,45-54,Female,Black,-82.6383,43.06985
+2019-01-10,U,St. Clair,35-44,Male,Black,-82.78342,42.97137
+2019-01-10,U,St. Joseph,55+,Male,Black,-85.65053,41.96364
 2019-01-10,U,Wexford,25-34,Female,Asian,-85.61479,44.32397
 2019-01-11,U,Alcona,25-34,Female,Hispanic or Latino,-83.42881,44.66649
 2019-01-11,U,Alger,35-44,Male,American Indian or Alaska Native,-86.74937,46.31456
@@ -8680,7 +8680,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-13,Saginaw,Saginaw,35-44,Male,Asian,-84.13689,43.3422
 2019-01-13,U,Sanilac,25-34,Male,Black,-82.94599,43.48217
 2019-01-13,U,Shiawassee,25-34,Male,Black,-84.19257,43.10186
-2019-01-13,U,St Joseph,35-44,Male,Black,-85.50759,41.92345
+2019-01-13,U,St. Joseph,35-44,Male,Black,-85.50759,41.92345
 2019-01-13,U,Tuscola,25-34,Female,Black,-83.36506,43.35268
 2019-01-13,U,Van Buren,0-25,Unknown,White,-85.96767,42.28396
 2019-01-13,Ann Arbor,Washtenaw,25-34,Female,Black,-83.77591,42.25224
@@ -8801,7 +8801,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-15,U,Saginaw,35-44,Male,Black,-84.14382,43.33491
 2019-01-15,U,Schoolcraft,0-25,Female,Black,-86.26331,46.12567
 2019-01-15,U,Shiawassee,25-34,Male,Unknown,-84.14817,42.94436
-2019-01-15,U,St Clair,35-44,Male,White,-82.83723,43.06938
+2019-01-15,U,St. Clair,35-44,Male,White,-82.83723,43.06938
 2019-01-15,U,Tuscola,35-44,Male,White,-83.47137,43.39482
 2019-01-15,U,Tuscola,55+,Female,White,-83.38383,43.51925
 2019-01-15,Ann Arbor,Washtenaw,55+,Male,White,-83.75059,42.21426
@@ -8870,7 +8870,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-16,U,Shiawassee,35-44,Female,Asian,-84.16903,42.95972
 2019-01-16,U,Shiawassee,0-25,Female,Black,-84.03007,42.87141
 2019-01-16,U,Shiawassee,0-25,Female,White,-84.20287,42.88758
-2019-01-16,U,St Joseph,25-34,Male,Native Hawaiian or Other Pacific Islander,-85.50898,41.95821
+2019-01-16,U,St. Joseph,25-34,Male,Native Hawaiian or Other Pacific Islander,-85.50898,41.95821
 2019-01-16,U,Washtenaw,25-34,Female,Black,0.0,0.0
 2019-01-16,Lincoln Park,Wayne,45-54,Male,White,-83.35658,42.24208
 2019-01-16,Lincoln Park,Wayne,55+,Male,Asian,-83.40439,42.13945
@@ -9029,8 +9029,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-19,Saginaw,Saginaw,35-44,Female,Hispanic or Latino,-84.12851,43.20208
 2019-01-19,U,Saginaw,35-44,Female,White,0.0,0.0
 2019-01-19,U,Schoolcraft,35-44,Female,Native Hawaiian or Other Pacific Islander,-86.13025,46.19837
-2019-01-19,U,St Clair,45-54,Male,Black,-82.64854,42.91755
-2019-01-19,U,St Joseph,35-44,Female,White,0.0,0.0
+2019-01-19,U,St. Clair,45-54,Male,Black,-82.64854,42.91755
+2019-01-19,U,St. Joseph,35-44,Female,White,0.0,0.0
 2019-01-19,U,Van Buren,0-25,Male,Black,-86.07354,42.30103
 2019-01-19,U,Van Buren,25-34,Female,Asian,-86.06681,42.2423
 2019-01-19,Detroit,Wayne,25-34,Male,Black,-83.1358,42.35312
@@ -9102,9 +9102,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-20,U,Saginaw,35-44,Female,Black,-84.08834,43.33199
 2019-01-20,U,Shiawassee,0-25,Male,Black,-84.2386,43.0378
 2019-01-20,U,Shiawassee,45-54,Female,Other,0.0,0.0
-2019-01-20,U,St Clair,35-44,Female,White,-82.74743,42.89611
-2019-01-20,U,St Clair,0-25,Unknown,White,-82.72173,42.78678
-2019-01-20,U,St Joseph,55+,Female,Black,-85.50486,41.9258
+2019-01-20,U,St. Clair,35-44,Female,White,-82.74743,42.89611
+2019-01-20,U,St. Clair,0-25,Unknown,White,-82.72173,42.78678
+2019-01-20,U,St. Joseph,55+,Female,Black,-85.50486,41.9258
 2019-01-20,U,Van Buren,35-44,Male,White,-86.0037,42.31153
 2019-01-20,U,Washtenaw,0-25,Female,Black,-83.67571,42.18582
 2019-01-20,U,Wexford,25-34,Male,Asian,-85.62731,44.33837
@@ -9168,7 +9168,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-21,U,Schoolcraft,35-44,Male,Asian,-86.1959,46.14628
 2019-01-21,U,Schoolcraft,0-25,Female,White,-86.12232,46.28719
 2019-01-21,U,Shiawassee,25-34,Male,White,-84.10957,42.89511
-2019-01-21,U,St Clair,45-54,Female,American Indian or Alaska Native,-82.67974,42.91098
+2019-01-21,U,St. Clair,45-54,Female,American Indian or Alaska Native,-82.67974,42.91098
 2019-01-21,U,Washtenaw,0-25,Female,Black,-83.79736,42.2863
 2019-01-22,U,Alpena,25-34,Female,Hispanic or Latino,-83.55859,45.0123
 2019-01-22,U,Antrim,45-54,Male,White,-85.10406,45.07266
@@ -9228,12 +9228,12 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-22,Saginaw,Saginaw,35-44,Male,Asian,-83.97569,43.29167
 2019-01-22,Saginaw,Saginaw,35-44,Male,Black,-83.99898,43.39709
 2019-01-22,U,Sanilac,25-34,Male,Native Hawaiian or Other Pacific Islander,-82.88077,43.3163
-2019-01-22,U,St Clair,0-25,Female,White,-82.58888,42.84386
-2019-01-22,U,St Clair,35-44,Female,White,-82.64128,42.96146
-2019-01-22,U,St Clair,35-44,Male,Asian,-82.69722,42.91227
-2019-01-22,U,St Clair,0-25,Male,Asian,-82.66874,42.84815
-2019-01-22,U,St Joseph,55+,Female,Unknown,-85.65843,41.84962
-2019-01-22,U,St Joseph,0-25,Male,Hispanic or Latino,-85.4919,41.8248
+2019-01-22,U,St. Clair,0-25,Female,White,-82.58888,42.84386
+2019-01-22,U,St. Clair,35-44,Female,White,-82.64128,42.96146
+2019-01-22,U,St. Clair,35-44,Male,Asian,-82.69722,42.91227
+2019-01-22,U,St. Clair,0-25,Male,Asian,-82.66874,42.84815
+2019-01-22,U,St. Joseph,55+,Female,Unknown,-85.65843,41.84962
+2019-01-22,U,St. Joseph,0-25,Male,Hispanic or Latino,-85.4919,41.8248
 2019-01-23,U,Alger,35-44,Male,White,-86.67017,46.4559
 2019-01-23,U,Alger,0-25,Male,White,-86.50493,46.30652
 2019-01-23,U,Alger,35-44,Female,White,-86.59698,46.25799
@@ -9285,7 +9285,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-23,U,Sanilac,25-34,Female,Black,-82.73225,43.52464
 2019-01-23,U,Schoolcraft,25-34,Male,White,0.0,0.0
 2019-01-23,U,Shiawassee,0-25,Female,Black,-84.17863,42.87077
-2019-01-23,U,St Clair,45-54,Male,Hispanic or Latino,-82.53232,43.0562
+2019-01-23,U,St. Clair,45-54,Male,Hispanic or Latino,-82.53232,43.0562
 2019-01-24,U,Alcona,0-25,Female,White,-83.61902,44.69649
 2019-01-24,U,Alcona,45-54,Female,White,0.0,0.0
 2019-01-24,U,Alger,0-25,Female,White,-86.47038,46.33767
@@ -9336,8 +9336,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-24,U,Roscommon,25-34,Female,Hispanic or Latino,-84.73947,44.24223
 2019-01-24,U,Schoolcraft,35-44,Female,White,-86.16721,46.22073
 2019-01-24,U,Shiawassee,25-34,Male,Asian,-84.08352,42.85811
-2019-01-24,U,St Clair,0-25,Female,Black,-82.71832,43.0691
-2019-01-24,U,St Joseph,35-44,Female,Hispanic or Latino,-85.5013,41.98654
+2019-01-24,U,St. Clair,0-25,Female,Black,-82.71832,43.0691
+2019-01-24,U,St. Joseph,35-44,Female,Hispanic or Latino,-85.5013,41.98654
 2019-01-25,U,Alcona,35-44,Female,Asian,-83.63745,44.68972
 2019-01-25,U,Alger,35-44,Male,Native Hawaiian or Other Pacific Islander,-86.53054,46.35923
 2019-01-25,U,Allegan,25-34,Male,Black,-85.75495,42.59151
@@ -9407,9 +9407,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-25,U,Presque Isle,45-54,Male,American Indian or Alaska Native,-83.97222,45.31103
 2019-01-25,U,Sanilac,35-44,Male,Black,-82.73937,43.32092
 2019-01-25,U,Shiawassee,25-34,Male,American Indian or Alaska Native,-84.12273,42.8997
-2019-01-25,U,St Joseph,35-44,Female,White,-85.56647,41.93455
-2019-01-25,U,St Joseph,35-44,Female,Hispanic or Latino,-85.58704,41.8588
-2019-01-25,U,St Joseph,55+,Male,Black,-85.57519,41.93489
+2019-01-25,U,St. Joseph,35-44,Female,White,-85.56647,41.93455
+2019-01-25,U,St. Joseph,35-44,Female,Hispanic or Latino,-85.58704,41.8588
+2019-01-25,U,St. Joseph,55+,Male,Black,-85.57519,41.93489
 2019-01-25,Lincoln Park,Wayne,35-44,Female,Black,-83.31956,42.37271
 2019-01-26,U,Alcona,25-34,Female,White,-83.57699,44.70428
 2019-01-26,U,Alger,0-25,Female,Asian,-86.5585,46.45162
@@ -9457,7 +9457,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-26,U,Shiawassee,25-34,Male,Black,-84.21634,43.08042
 2019-01-26,U,Shiawassee,0-25,Male,Black,-84.10087,43.02218
 2019-01-26,U,Shiawassee,25-34,Female,White,-84.11971,42.90028
-2019-01-26,U,St Joseph,35-44,Male,Hispanic or Latino,-85.5081,41.98109
+2019-01-26,U,St. Joseph,35-44,Male,Hispanic or Latino,-85.5081,41.98109
 2019-01-26,Ypsilanti,Washtenaw,55+,Male,White,0.0,0.0
 2019-01-26,Livonia,Wayne,35-44,Male,Native Hawaiian or Other Pacific Islander,-83.37455,42.35336
 2019-01-28,U,Alger,55+,Female,Black,-86.66274,46.28815
@@ -9517,7 +9517,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-28,Saginaw,Saginaw,35-44,Male,Black,-83.91964,43.34538
 2019-01-28,Saginaw,Saginaw,35-44,Female,Unknown,-83.93345,43.33985
 2019-01-28,U,Sanilac,35-44,Male,Native Hawaiian or Other Pacific Islander,-82.79922,43.36611
-2019-01-28,U,St Joseph,35-44,Female,White,-85.42635,41.84334
+2019-01-28,U,St. Joseph,35-44,Female,White,-85.42635,41.84334
 2019-01-28,U,Tuscola,35-44,Female,Hispanic or Latino,-83.40674,43.4915
 2019-01-28,U,Tuscola,25-34,Female,Black,-83.3292,43.37665
 2019-01-28,U,Van Buren,55+,Male,White,0.0,0.0
@@ -9579,8 +9579,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-29,U,Ottawa,35-44,Male,White,-85.99512,42.88393
 2019-01-29,U,Roscommon,45-54,Male,Black,-84.51579,44.37353
 2019-01-29,U,Sanilac,25-34,Male,Hispanic or Latino,-82.91883,43.50302
-2019-01-29,U,St Clair,35-44,Female,White,-82.74817,42.98299
-2019-01-29,U,St Joseph,25-34,Female,White,-85.45142,41.86108
+2019-01-29,U,St. Clair,35-44,Female,White,-82.74817,42.98299
+2019-01-29,U,St. Joseph,25-34,Female,White,-85.45142,41.86108
 2019-01-29,U,Van Buren,25-34,Male,White,-86.07318,42.1877
 2019-01-29,U,Wexford,35-44,Female,Black,-85.48131,44.34224
 2019-01-30,U,Allegan,25-34,Female,Black,-85.79908,42.58939
@@ -9640,7 +9640,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-01-30,U,Sanilac,0-25,Female,Black,-82.90237,43.29927
 2019-01-30,U,Schoolcraft,0-25,Male,White,-86.24057,46.27093
 2019-01-30,U,Shiawassee,45-54,Male,Asian,-84.13863,43.0645
-2019-01-30,U,St Clair,35-44,Male,Hispanic or Latino,-82.65419,42.86814
+2019-01-30,U,St. Clair,35-44,Male,Hispanic or Latino,-82.65419,42.86814
 2019-01-30,U,Tuscola,25-34,Male,Asian,-83.3597,43.47587
 2019-01-30,Ann Arbor,Washtenaw,25-34,Male,Black,-83.83203,42.33225
 2019-01-30,U,Wexford,35-44,Female,White,-85.6124,44.23305
@@ -9747,7 +9747,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-01,U,Schoolcraft,35-44,Female,Asian,-86.27091,46.24997
 2019-02-01,U,Schoolcraft,0-25,Male,Black,-86.27171,46.14443
 2019-02-01,U,Shiawassee,25-34,Male,Black,-84.05568,42.99381
-2019-02-01,U,St Clair,0-25,Male,Asian,-82.77144,42.79939
+2019-02-01,U,St. Clair,0-25,Male,Asian,-82.77144,42.79939
 2019-02-01,U,Van Buren,35-44,Female,Hispanic or Latino,-86.06048,42.28496
 2019-02-01,U,Van Buren,55+,Male,Unknown,-85.95023,42.16717
 2019-02-01,U,Wexford,0-25,Male,White,-85.65174,44.4139
@@ -9812,7 +9812,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-02,U,Roscommon,45-54,Female,White,-84.49572,44.36571
 2019-02-02,U,Roscommon,45-54,Female,Black,-84.67372,44.27921
 2019-02-02,U,Roscommon,55+,Female,Black,-84.5103,44.41903
-2019-02-02,U,St Clair,55+,Male,Black,-82.66732,42.90753
+2019-02-02,U,St. Clair,55+,Male,Black,-82.66732,42.90753
 2019-02-02,U,Tuscola,25-34,Male,Black,-83.4926,43.42498
 2019-02-02,U,Washtenaw,55+,Male,White,-83.91936,42.21893
 2019-02-03,U,Alcona,25-34,Male,White,-83.60766,44.73092
@@ -9866,9 +9866,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-03,U,Roscommon,35-44,Male,Hispanic or Latino,-84.74531,44.35957
 2019-02-03,U,Roscommon,55+,Female,Black,-84.52381,44.38604
 2019-02-03,U,Schoolcraft,55+,Female,White,-86.29259,46.11326
-2019-02-03,U,St Clair,35-44,Female,White,-82.65417,42.84903
-2019-02-03,U,St Clair,35-44,Male,Black,-82.77503,42.96567
-2019-02-03,U,St Joseph,25-34,Female,Other,-85.42238,41.93744
+2019-02-03,U,St. Clair,35-44,Female,White,-82.65417,42.84903
+2019-02-03,U,St. Clair,35-44,Male,Black,-82.77503,42.96567
+2019-02-03,U,St. Joseph,25-34,Female,Other,-85.42238,41.93744
 2019-02-03,U,Van Buren,25-34,Female,White,0.0,0.0
 2019-02-04,U,Alger,25-34,Male,White,-86.58295,46.35354
 2019-02-04,U,Alger,35-44,Male,White,-86.6111,46.25867
@@ -9966,8 +9966,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-05,Saginaw,Saginaw,0-25,Male,Hispanic or Latino,-84.10437,43.2368
 2019-02-05,U,Schoolcraft,0-25,Male,Asian,-86.16323,46.27234
 2019-02-05,U,Shiawassee,25-34,Female,Black,-84.238,42.89783
-2019-02-05,U,St Clair,35-44,Female,Black,-82.75995,42.88707
-2019-02-05,U,St Clair,45-54,Female,Black,-82.59586,42.85836
+2019-02-05,U,St. Clair,35-44,Female,Black,-82.75995,42.88707
+2019-02-05,U,St. Clair,45-54,Female,Black,-82.59586,42.85836
 2019-02-05,U,Tuscola,25-34,Female,White,0.0,0.0
 2019-02-05,U,Tuscola,35-44,Female,White,-83.35127,43.42646
 2019-02-06,U,Alcona,25-34,Male,Asian,-83.48823,44.82942
@@ -10025,7 +10025,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-06,U,Roscommon,45-54,Female,Hispanic or Latino,-84.57606,44.27363
 2019-02-06,U,Sanilac,25-34,Female,White,-82.80101,43.34294
 2019-02-06,U,Shiawassee,0-25,Female,White,-84.00958,42.88888
-2019-02-06,U,St Clair,0-25,Male,White,-82.75383,42.78265
+2019-02-06,U,St. Clair,0-25,Male,White,-82.75383,42.78265
 2019-02-06,U,Van Buren,25-34,Male,Hispanic or Latino,-85.9009,42.18109
 2019-02-06,U,Van Buren,25-34,Male,White,-85.90308,42.27132
 2019-02-07,U,Alcona,0-25,Male,White,-83.52978,44.68376
@@ -10139,7 +10139,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-08,U,Osceola,25-34,Female,Black,-85.30597,44.02224
 2019-02-08,U,Roscommon,25-34,Male,White,-84.51644,44.25509
 2019-02-08,U,Schoolcraft,45-54,Male,Black,-86.25626,46.13826
-2019-02-08,U,St Clair,0-25,Female,Asian,-82.70398,42.873
+2019-02-08,U,St. Clair,0-25,Female,Asian,-82.70398,42.873
 2019-02-08,U,Tuscola,35-44,Male,Native Hawaiian or Other Pacific Islander,-83.52116,43.39688
 2019-02-08,U,Tuscola,35-44,Female,White,-83.41006,43.44152
 2019-02-08,U,Tuscola,35-44,Male,American Indian or Alaska Native,-83.35044,43.43862
@@ -10194,8 +10194,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-09,U,Otsego,35-44,Female,White,-84.56601,45.06463
 2019-02-09,U,Ottawa,55+,Female,White,-86.00756,42.94081
 2019-02-09,U,Shiawassee,35-44,Male,Hispanic or Latino,-84.19765,43.05284
-2019-02-09,U,St Clair,35-44,Female,White,-82.81032,43.00023
-2019-02-09,U,St Joseph,0-25,Male,Asian,-85.42195,41.95328
+2019-02-09,U,St. Clair,35-44,Female,White,-82.81032,43.00023
+2019-02-09,U,St. Joseph,0-25,Male,Asian,-85.42195,41.95328
 2019-02-09,U,Van Buren,0-25,Female,White,-86.0641,42.23406
 2019-02-09,U,Wexford,25-34,Female,Hispanic or Latino,-85.4917,44.26129
 2019-02-09,U,Wexford,25-34,Male,White,-85.62835,44.22722
@@ -10390,7 +10390,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-12,U,Otsego,35-44,Male,Hispanic or Latino,0.0,0.0
 2019-02-12,U,Roscommon,35-44,Male,White,-84.70141,44.3058
 2019-02-12,Saginaw,Saginaw,35-44,Female,White,-83.97325,43.33711
-2019-02-12,U,St Clair,35-44,Male,White,-82.65228,42.92951
+2019-02-12,U,St. Clair,35-44,Male,White,-82.65228,42.92951
 2019-02-12,U,Tuscola,25-34,Male,White,-83.36048,43.41109
 2019-02-13,U,Alcona,45-54,Female,Asian,-83.73764,44.65391
 2019-02-13,U,Alger,35-44,Male,Black,-86.66929,46.26256
@@ -10550,7 +10550,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-15,U,Schoolcraft,45-54,Female,Asian,-86.28835,46.21536
 2019-02-15,U,Schoolcraft,45-54,Female,Black,-86.11254,46.11269
 2019-02-15,U,Shiawassee,35-44,Female,Black,-84.20987,43.02392
-2019-02-15,U,St Joseph,55+,Male,Black,-85.58261,41.76826
+2019-02-15,U,St. Joseph,55+,Male,Black,-85.58261,41.76826
 2019-02-15,U,Tuscola,35-44,Female,White,-83.34812,43.43901
 2019-02-15,Lincoln Park,Wayne,35-44,Male,Hispanic or Latino,-83.25771,42.30585
 2019-02-16,U,Alcona,25-34,Male,White,-83.62461,44.58593
@@ -10657,7 +10657,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-17,U,Roscommon,35-44,Male,Black,-84.55678,44.28423
 2019-02-17,U,Schoolcraft,45-54,Male,White,-86.22572,46.15393
 2019-02-17,U,Shiawassee,25-34,Female,Black,-84.12324,42.93025
-2019-02-17,U,St Joseph,25-34,Female,Black,-85.43544,41.81976
+2019-02-17,U,St. Joseph,25-34,Female,Black,-85.43544,41.81976
 2019-02-17,U,Tuscola,35-44,Female,White,-83.37492,43.44787
 2019-02-17,Livonia,Wayne,35-44,Male,Hispanic or Latino,-83.32781,42.20045
 2019-02-17,U,Wexford,25-34,Male,Hispanic or Latino,-85.50866,44.38916
@@ -10716,8 +10716,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-19,U,Sanilac,0-25,Female,Unknown,-82.89788,43.33678
 2019-02-19,U,Sanilac,25-34,Male,Hispanic or Latino,-82.90539,43.48529
 2019-02-19,U,Schoolcraft,55+,Female,White,-86.31782,46.09426
-2019-02-19,U,St Clair,35-44,Female,White,-82.6157,42.89585
-2019-02-19,U,St Joseph,55+,Female,Asian,-85.5647,41.78934
+2019-02-19,U,St. Clair,35-44,Female,White,-82.6157,42.89585
+2019-02-19,U,St. Joseph,55+,Female,Asian,-85.5647,41.78934
 2019-02-19,Detroit,Wayne,25-34,Male,White,-83.38201,42.31231
 2019-02-19,Lincoln Park,Wayne,0-25,Male,Asian,-83.36864,42.21028
 2019-02-19,Lincoln Park,Wayne,45-54,Male,White,-83.30233,42.171
@@ -10770,7 +10770,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-20,U,Presque Isle,25-34,Male,Black,-83.93358,45.23369
 2019-02-20,Saginaw,Saginaw,35-44,Female,White,-83.91769,43.3846
 2019-02-20,U,Shiawassee,25-34,Female,White,-84.09721,42.96019
-2019-02-20,U,St Joseph,55+,Male,Asian,-85.55559,41.91107
+2019-02-20,U,St. Joseph,55+,Male,Asian,-85.55559,41.91107
 2019-02-20,U,Tuscola,35-44,Male,White,-83.43784,43.34053
 2019-02-20,U,Wayne,35-44,Female,Black,-83.33961,42.34729
 2019-02-20,U,Wexford,0-25,Female,Black,-85.5675,44.43328
@@ -10830,8 +10830,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-21,U,Roscommon,25-34,Male,Black,-84.55668,44.23727
 2019-02-21,U,Sanilac,0-25,Male,White,-82.79362,43.3535
 2019-02-21,U,Shiawassee,25-34,Female,Asian,-84.18123,42.96783
-2019-02-21,U,St Joseph,55+,Female,White,-85.44191,41.99548
-2019-02-21,U,St Joseph,35-44,Female,Black,-85.45376,41.91739
+2019-02-21,U,St. Joseph,55+,Female,White,-85.44191,41.99548
+2019-02-21,U,St. Joseph,35-44,Female,Black,-85.45376,41.91739
 2019-02-21,U,Van Buren,55+,Female,Hispanic or Latino,-86.11484,42.25094
 2019-02-21,Ann Arbor,Washtenaw,25-34,Male,Asian,-83.73111,42.27274
 2019-02-21,U,Wexford,0-25,Female,Black,-85.55353,44.24008
@@ -10889,7 +10889,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-22,Saginaw,Saginaw,35-44,Male,Black,-84.14365,43.29171
 2019-02-22,U,Sanilac,25-34,Male,White,-82.86773,43.37649
 2019-02-22,U,Shiawassee,25-34,Female,Asian,-84.16233,43.03813
-2019-02-22,U,St Clair,0-25,Male,Black,-82.59324,42.86658
+2019-02-22,U,St. Clair,0-25,Male,Black,-82.59324,42.86658
 2019-02-22,U,Van Buren,25-34,Male,White,-85.9624,42.34913
 2019-02-22,U,Van Buren,55+,Unknown,White,-86.02398,42.19391
 2019-02-22,U,Washtenaw,55+,Male,White,-83.76877,42.30077
@@ -10944,9 +10944,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-23,U,Schoolcraft,35-44,Female,White,-86.24315,46.23966
 2019-02-23,U,Schoolcraft,55+,Female,American Indian or Alaska Native,-86.29967,46.11637
 2019-02-23,U,Shiawassee,25-34,Female,Hispanic or Latino,-84.06425,42.97627
-2019-02-23,U,St Clair,55+,Male,Unknown,-82.57395,42.9976
-2019-02-23,U,St Clair,35-44,Female,Black,0.0,0.0
-2019-02-23,U,St Joseph,25-34,Female,Black,-85.43209,41.90681
+2019-02-23,U,St. Clair,55+,Male,Unknown,-82.57395,42.9976
+2019-02-23,U,St. Clair,35-44,Female,Black,0.0,0.0
+2019-02-23,U,St. Joseph,25-34,Female,Black,-85.43209,41.90681
 2019-02-23,U,Van Buren,25-34,Female,White,-85.93928,42.19962
 2019-02-23,U,Van Buren,25-34,Female,Black,-86.05008,42.31566
 2019-02-23,Dearborn,Wayne,25-34,Male,White,-83.2556,42.24324
@@ -11002,7 +11002,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-24,U,Presque Isle,55+,Male,Black,-83.88926,45.33719
 2019-02-24,U,Roscommon,35-44,Male,Asian,-84.7155,44.34651
 2019-02-24,U,Schoolcraft,0-25,Male,White,-86.13806,46.20263
-2019-02-24,U,St Clair,45-54,Male,Black,-82.59362,42.9102
+2019-02-24,U,St. Clair,45-54,Male,Black,-82.59362,42.9102
 2019-02-24,U,Tuscola,25-34,Male,Black,-83.45035,43.63085
 2019-02-24,U,Tuscola,55+,Female,Black,-83.4142,43.51218
 2019-02-25,U,Alpena,35-44,Female,White,-83.73334,44.90581
@@ -11102,8 +11102,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-27,U,Roscommon,25-34,Male,Black,-84.5744,44.2672
 2019-02-27,Saginaw,Saginaw,35-44,Female,Black,-84.11475,43.46699
 2019-02-27,U,Schoolcraft,35-44,Male,Black,-86.20699,46.09989
-2019-02-27,U,St Clair,35-44,Female,White,-82.74238,42.95537
-2019-02-27,U,St Clair,0-25,Female,Black,-82.60245,43.05772
+2019-02-27,U,St. Clair,35-44,Female,White,-82.74238,42.95537
+2019-02-27,U,St. Clair,0-25,Female,Black,-82.60245,43.05772
 2019-02-27,U,Tuscola,35-44,Male,White,-83.30137,43.50894
 2019-02-27,U,Tuscola,35-44,Male,Black,-83.36867,43.43899
 2019-02-28,U,Alger,55+,Male,American Indian or Alaska Native,-86.73186,46.3164
@@ -11168,7 +11168,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-02-28,U,Schoolcraft,0-25,Female,White,-86.06206,46.09791
 2019-02-28,U,Shiawassee,35-44,Female,White,-84.18463,42.85153
 2019-02-28,U,Shiawassee,25-34,Male,White,-84.03329,43.07385
-2019-02-28,U,St Joseph,35-44,Female,Hispanic or Latino,-85.59593,42.02545
+2019-02-28,U,St. Joseph,35-44,Female,Hispanic or Latino,-85.59593,42.02545
 2019-02-28,U,Tuscola,55+,Male,White,-83.37281,43.41761
 2019-02-28,U,Van Buren,35-44,Male,Asian,-86.00122,42.2351
 2019-02-28,U,Washtenaw,25-34,Male,White,-83.77157,42.34464
@@ -11228,11 +11228,11 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-01,U,Ogemaw,25-34,Female,Black,-84.08374,44.34269
 2019-03-01,U,Ontonagon,0-25,Female,Black,-89.28543,46.70596
 2019-03-01,U,Schoolcraft,0-25,Male,Unknown,-86.16039,46.22733
-2019-03-01,U,St Clair,35-44,Male,Unknown,-82.67158,42.86391
-2019-03-01,U,St Clair,45-54,Male,Hispanic or Latino,-82.58263,42.89839
-2019-03-01,U,St Clair,45-54,Female,White,-82.71281,43.04082
-2019-03-01,U,St Joseph,0-25,Female,White,-85.64736,41.92833
-2019-03-01,U,St Joseph,35-44,Male,White,-85.65584,42.01685
+2019-03-01,U,St. Clair,35-44,Male,Unknown,-82.67158,42.86391
+2019-03-01,U,St. Clair,45-54,Male,Hispanic or Latino,-82.58263,42.89839
+2019-03-01,U,St. Clair,45-54,Female,White,-82.71281,43.04082
+2019-03-01,U,St. Joseph,0-25,Female,White,-85.64736,41.92833
+2019-03-01,U,St. Joseph,35-44,Male,White,-85.65584,42.01685
 2019-03-01,U,Tuscola,55+,Female,White,-83.30126,43.42984
 2019-03-01,Detroit,Wayne,25-34,Female,White,-83.34576,42.40476
 2019-03-02,U,Antrim,45-54,Female,Unknown,-85.12264,45.03452
@@ -11339,7 +11339,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-03,U,Otsego,35-44,Male,Unknown,-84.53575,44.93437
 2019-03-03,U,Ottawa,55+,Female,Native Hawaiian or Other Pacific Islander,-85.94089,43.11247
 2019-03-03,U,Presque Isle,55+,Female,Hispanic or Latino,-83.92723,45.35553
-2019-03-03,U,St Clair,35-44,Female,Hispanic or Latino,-82.62672,42.78449
+2019-03-03,U,St. Clair,35-44,Female,Hispanic or Latino,-82.62672,42.78449
 2019-03-03,U,Tuscola,55+,Female,Other,-83.42499,43.55969
 2019-03-03,U,Van Buren,55+,Female,Black,-86.02544,42.30658
 2019-03-03,U,Van Buren,0-25,Female,White,0.0,0.0
@@ -11523,8 +11523,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-06,U,Oscoda,45-54,Male,Native Hawaiian or Other Pacific Islander,-84.0608,44.61816
 2019-03-06,U,Sanilac,0-25,Female,American Indian or Alaska Native,-82.90453,43.3394
 2019-03-06,U,Schoolcraft,0-25,Female,Black,-86.09208,46.23533
-2019-03-06,U,St Joseph,35-44,Male,Asian,-85.52925,41.85644
-2019-03-06,U,St Joseph,35-44,Male,Black,-85.37092,41.87343
+2019-03-06,U,St. Joseph,35-44,Male,Asian,-85.52925,41.85644
+2019-03-06,U,St. Joseph,35-44,Male,Black,-85.37092,41.87343
 2019-03-06,U,Tuscola,25-34,Male,Black,-83.48982,43.45663
 2019-03-06,U,Tuscola,35-44,Female,Asian,-83.26648,43.47801
 2019-03-06,U,Van Buren,55+,Male,White,-85.92921,42.37207
@@ -11584,7 +11584,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-07,U,Saginaw,25-34,Male,White,-84.03065,43.37042
 2019-03-07,U,Sanilac,0-25,Female,Native Hawaiian or Other Pacific Islander,-82.85248,43.32009
 2019-03-07,U,Sanilac,0-25,Male,White,-82.86696,43.37829
-2019-03-07,U,St Joseph,0-25,Male,White,-85.57297,41.99552
+2019-03-07,U,St. Joseph,0-25,Male,White,-85.57297,41.99552
 2019-03-07,U,Van Buren,25-34,Male,White,-86.07331,42.30908
 2019-03-08,U,Allegan,25-34,Male,Asian,-85.89494,42.61009
 2019-03-08,U,Antrim,35-44,Female,Asian,-85.23458,44.99455
@@ -11635,7 +11635,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-08,U,Oscoda,55+,Female,Other,-83.97942,44.56005
 2019-03-08,U,Ottawa,45-54,Female,Black,-86.1393,42.94232
 2019-03-08,U,Roscommon,45-54,Male,White,-84.5756,44.41952
-2019-03-08,U,St Clair,0-25,Female,Black,-82.67502,42.85922
+2019-03-08,U,St. Clair,0-25,Female,Black,-82.67502,42.85922
 2019-03-08,U,Tuscola,55+,Female,Hispanic or Latino,-83.32933,43.47786
 2019-03-08,U,Tuscola,35-44,Female,White,-83.44472,43.49423
 2019-03-08,Ypsilanti,Washtenaw,35-44,Male,Black,-83.93059,42.36891
@@ -11677,8 +11677,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-09,U,Schoolcraft,25-34,Female,White,-86.2371,46.25609
 2019-03-09,U,Schoolcraft,35-44,Male,Black,-86.30123,46.11562
 2019-03-09,U,Shiawassee,0-25,Female,Asian,-84.19069,42.9672
-2019-03-09,U,St Joseph,55+,Female,Hispanic or Latino,-85.57081,41.95259
-2019-03-09,U,St Joseph,25-34,Female,Hispanic or Latino,-85.46487,41.87851
+2019-03-09,U,St. Joseph,55+,Female,Hispanic or Latino,-85.57081,41.95259
+2019-03-09,U,St. Joseph,25-34,Female,Hispanic or Latino,-85.46487,41.87851
 2019-03-09,U,Tuscola,35-44,Female,Asian,-83.48089,43.34401
 2019-03-09,U,Van Buren,55+,Female,Hispanic or Latino,-86.14411,42.23125
 2019-03-09,U,Washtenaw,25-34,Male,Black,-83.82255,42.29986
@@ -11734,9 +11734,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-10,U,Osceola,45-54,Female,Black,-85.22451,43.9818
 2019-03-10,U,Otsego,35-44,Male,Native Hawaiian or Other Pacific Islander,-84.49416,45.06556
 2019-03-10,U,Otsego,25-34,Male,Native Hawaiian or Other Pacific Islander,-84.70483,45.00254
-2019-03-10,U,St Clair,35-44,Female,White,-82.66672,42.85202
-2019-03-10,U,St Clair,35-44,Male,White,-82.61549,42.96997
-2019-03-10,U,St Joseph,25-34,Female,White,-85.59861,41.7655
+2019-03-10,U,St. Clair,35-44,Female,White,-82.66672,42.85202
+2019-03-10,U,St. Clair,35-44,Male,White,-82.61549,42.96997
+2019-03-10,U,St. Joseph,25-34,Female,White,-85.59861,41.7655
 2019-03-10,U,Tuscola,35-44,Female,White,-83.4688,43.4412
 2019-03-10,Detroit,Wayne,35-44,Female,White,-83.27303,42.22759
 2019-03-10,U,Wexford,0-25,Male,Black,-85.45697,44.29324
@@ -11790,8 +11790,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-11,U,Ottawa,0-25,Male,Black,-85.99554,42.92153
 2019-03-11,U,Roscommon,25-34,Female,White,-84.63365,44.33347
 2019-03-11,U,Shiawassee,25-34,Female,White,-84.23156,42.94681
-2019-03-11,U,St Joseph,35-44,Male,Black,-85.50532,41.99802
-2019-03-11,U,St Joseph,25-34,Female,White,-85.45865,41.96029
+2019-03-11,U,St. Joseph,35-44,Male,Black,-85.50532,41.99802
+2019-03-11,U,St. Joseph,25-34,Female,White,-85.45865,41.96029
 2019-03-11,U,Tuscola,55+,Female,Hispanic or Latino,-83.49147,43.52746
 2019-03-11,U,Van Buren,35-44,Female,White,-86.13846,42.36252
 2019-03-11,U,Wexford,0-25,Male,Hispanic or Latino,-85.53321,44.21201
@@ -11874,8 +11874,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-13,U,Sanilac,35-44,Male,Unknown,-82.83785,43.35202
 2019-03-13,U,Schoolcraft,25-34,Male,White,-86.15407,46.27387
 2019-03-13,U,Shiawassee,25-34,Female,American Indian or Alaska Native,-84.15123,43.06807
-2019-03-13,U,St Clair,35-44,Female,Black,-82.77638,42.87223
-2019-03-13,U,St Clair,35-44,Female,Black,-82.61027,42.90892
+2019-03-13,U,St. Clair,35-44,Female,Black,-82.77638,42.87223
+2019-03-13,U,St. Clair,35-44,Female,Black,-82.61027,42.90892
 2019-03-14,U,Alcona,55+,Male,Black,-83.53218,44.81023
 2019-03-14,U,Allegan,0-25,Male,White,-85.75739,42.62465
 2019-03-14,U,Arenac,35-44,Female,Unknown,-83.89865,43.96272
@@ -11934,7 +11934,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-14,U,Schoolcraft,25-34,Male,White,-86.29257,46.19487
 2019-03-14,U,Schoolcraft,0-25,Male,Black,-86.21038,46.16453
 2019-03-14,U,Shiawassee,45-54,Female,Black,-84.02631,43.01984
-2019-03-14,U,St Joseph,55+,Male,White,-85.47107,41.98736
+2019-03-14,U,St. Joseph,55+,Male,White,-85.47107,41.98736
 2019-03-14,U,Van Buren,25-34,Male,Other,-85.93774,42.15804
 2019-03-15,U,Alcona,25-34,Male,Native Hawaiian or Other Pacific Islander,-83.58185,44.61569
 2019-03-15,U,Antrim,25-34,Female,Black,-85.23512,44.90915
@@ -12032,8 +12032,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-16,U,Ottawa,55+,Female,Hispanic or Latino,-86.03876,43.09935
 2019-03-16,U,Sanilac,35-44,Male,White,-82.8633,43.51103
 2019-03-16,U,Shiawassee,25-34,Male,Asian,-84.22712,42.98853
-2019-03-16,U,St Clair,0-25,Female,Hispanic or Latino,-82.71265,42.86935
-2019-03-16,U,St Joseph,25-34,Male,White,-85.40146,41.81009
+2019-03-16,U,St. Clair,0-25,Female,Hispanic or Latino,-82.71265,42.86935
+2019-03-16,U,St. Joseph,25-34,Male,White,-85.40146,41.81009
 2019-03-16,U,Tuscola,25-34,Female,White,-83.35184,43.45387
 2019-03-16,U,Wayne,25-34,Female,Black,-83.2938,42.26914
 2019-03-17,U,Alcona,25-34,Female,Black,-83.74545,44.66629
@@ -12098,9 +12098,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-17,U,Schoolcraft,45-54,Female,White,-86.32329,46.312
 2019-03-17,U,Schoolcraft,45-54,Male,Black,-86.16584,46.22765
 2019-03-17,U,Schoolcraft,55+,Male,Black,-86.27843,46.23746
-2019-03-17,U,St Clair,35-44,Male,White,-82.71205,43.08647
-2019-03-17,U,St Joseph,0-25,Female,Black,-85.50687,41.8792
-2019-03-17,U,St Joseph,55+,Female,Black,-85.52813,41.88434
+2019-03-17,U,St. Clair,35-44,Male,White,-82.71205,43.08647
+2019-03-17,U,St. Joseph,0-25,Female,Black,-85.50687,41.8792
+2019-03-17,U,St. Joseph,55+,Female,Black,-85.52813,41.88434
 2019-03-17,U,Van Buren,55+,Male,White,-85.92547,42.17426
 2019-03-17,U,Wexford,25-34,Male,Asian,-85.45454,44.27935
 2019-03-17,U,Wexford,25-34,Male,Black,0.0,0.0
@@ -12164,8 +12164,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-18,U,Schoolcraft,0-25,Male,Hispanic or Latino,-86.15124,46.21618
 2019-03-18,U,Shiawassee,0-25,Male,Black,-84.20727,43.01137
 2019-03-18,U,Shiawassee,25-34,Male,Black,-84.09731,42.8915
-2019-03-18,U,St Joseph,25-34,Female,American Indian or Alaska Native,-85.57056,41.95189
-2019-03-18,U,St Joseph,35-44,Female,Black,-85.5255,41.89894
+2019-03-18,U,St. Joseph,25-34,Female,American Indian or Alaska Native,-85.57056,41.95189
+2019-03-18,U,St. Joseph,35-44,Female,Black,-85.5255,41.89894
 2019-03-18,U,Tuscola,25-34,Unknown,White,-83.49645,43.47394
 2019-03-18,U,Van Buren,25-34,Female,Black,-86.1314,42.18294
 2019-03-18,U,Van Buren,25-34,Male,Hispanic or Latino,-85.92542,42.17214
@@ -12276,8 +12276,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-20,U,Shiawassee,45-54,Male,Black,-84.04617,42.92514
 2019-03-20,U,Shiawassee,25-34,Female,Black,-84.28853,42.89382
 2019-03-20,U,Shiawassee,25-34,Male,Black,-84.27502,42.88351
-2019-03-20,U,St Clair,45-54,Female,Hispanic or Latino,-82.75535,43.00608
-2019-03-20,U,St Joseph,55+,Female,Hispanic or Latino,-85.54753,41.84115
+2019-03-20,U,St. Clair,45-54,Female,Hispanic or Latino,-82.75535,43.00608
+2019-03-20,U,St. Joseph,55+,Female,Hispanic or Latino,-85.54753,41.84115
 2019-03-20,U,Tuscola,55+,Female,White,-83.28816,43.59395
 2019-03-20,U,Van Buren,25-34,Male,Black,0.0,0.0
 2019-03-21,U,Alger,0-25,Male,White,-86.66298,46.52054
@@ -12333,11 +12333,11 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-21,U,Sanilac,35-44,Male,Black,-82.68763,43.34277
 2019-03-21,U,Schoolcraft,0-25,Male,Black,-86.08402,46.22525
 2019-03-21,U,Shiawassee,25-34,Female,Black,-84.05663,42.85318
-2019-03-21,U,St Clair,35-44,Female,Black,-82.64301,42.95605
-2019-03-21,U,St Clair,45-54,Female,Black,-82.58161,42.80249
-2019-03-21,U,St Clair,45-54,Male,White,-82.66371,42.98179
-2019-03-21,U,St Joseph,0-25,Female,White,-85.41597,41.8294
-2019-03-21,U,St Joseph,35-44,Female,Black,-85.52116,41.95043
+2019-03-21,U,St. Clair,35-44,Female,Black,-82.64301,42.95605
+2019-03-21,U,St. Clair,45-54,Female,Black,-82.58161,42.80249
+2019-03-21,U,St. Clair,45-54,Male,White,-82.66371,42.98179
+2019-03-21,U,St. Joseph,0-25,Female,White,-85.41597,41.8294
+2019-03-21,U,St. Joseph,35-44,Female,Black,-85.52116,41.95043
 2019-03-22,U,Alcona,35-44,Male,Black,-83.5006,44.7204
 2019-03-22,U,Alcona,45-54,Female,Black,-83.72017,44.60559
 2019-03-22,U,Allegan,25-34,Male,Black,-85.92662,42.46825
@@ -12399,7 +12399,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-22,U,Shiawassee,25-34,Male,Asian,-84.21136,43.08163
 2019-03-22,U,Shiawassee,25-34,Female,Asian,-84.06067,42.96845
 2019-03-22,U,Shiawassee,25-34,Male,Black,-84.1925,43.03275
-2019-03-22,U,St Joseph,25-34,Female,Asian,-85.49654,41.80148
+2019-03-22,U,St. Joseph,25-34,Female,Asian,-85.49654,41.80148
 2019-03-23,U,Alger,0-25,Female,Native Hawaiian or Other Pacific Islander,-86.60902,46.25634
 2019-03-23,U,Alger,35-44,Female,White,-86.54925,46.3253
 2019-03-23,U,Allegan,25-34,Female,American Indian or Alaska Native,-85.82465,42.54475
@@ -12453,8 +12453,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-23,U,Saginaw,25-34,Female,Black,-83.98843,43.26884
 2019-03-23,U,Sanilac,35-44,Male,White,-82.75417,43.37082
 2019-03-23,U,Sanilac,0-25,Male,Black,-82.7916,43.36413
-2019-03-23,U,St Clair,0-25,Male,Black,-82.76488,42.94564
-2019-03-23,U,St Joseph,0-25,Male,Black,-85.48451,41.96332
+2019-03-23,U,St. Clair,0-25,Male,Black,-82.76488,42.94564
+2019-03-23,U,St. Joseph,0-25,Male,Black,-85.48451,41.96332
 2019-03-23,U,Tuscola,35-44,Male,White,-83.44183,43.49001
 2019-03-23,Ypsilanti,Washtenaw,25-34,Male,Native Hawaiian or Other Pacific Islander,-83.74055,42.35778
 2019-03-23,U,Wayne,55+,Male,White,-83.33474,42.31097
@@ -12514,8 +12514,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-24,U,Saginaw,25-34,Female,White,-84.08728,43.29294
 2019-03-24,U,Schoolcraft,35-44,Male,White,-86.20757,46.12958
 2019-03-24,U,Schoolcraft,0-25,Female,White,-86.25016,46.2464
-2019-03-24,U,St Clair,35-44,Male,Black,-82.78004,42.98798
-2019-03-24,U,St Joseph,35-44,Male,Black,-85.58258,41.9401
+2019-03-24,U,St. Clair,35-44,Male,Black,-82.78004,42.98798
+2019-03-24,U,St. Joseph,35-44,Male,Black,-85.58258,41.9401
 2019-03-24,U,Tuscola,35-44,Female,Hispanic or Latino,-83.41125,43.50754
 2019-03-24,U,Tuscola,55+,Female,White,0.0,0.0
 2019-03-24,U,Tuscola,25-34,Female,White,-83.37668,43.36461
@@ -12633,8 +12633,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-26,U,Roscommon,35-44,Male,White,-84.60627,44.2019
 2019-03-26,U,Schoolcraft,25-34,Unknown,White,-86.19204,46.25649
 2019-03-26,U,Schoolcraft,45-54,Female,White,-86.22267,46.3008
-2019-03-26,U,St Joseph,35-44,Female,Black,-85.48937,42.02387
-2019-03-26,U,St Joseph,35-44,Female,Black,-85.63193,41.91546
+2019-03-26,U,St. Joseph,35-44,Female,Black,-85.48937,42.02387
+2019-03-26,U,St. Joseph,35-44,Female,Black,-85.63193,41.91546
 2019-03-26,U,Tuscola,55+,Male,Black,-83.4617,43.4475
 2019-03-26,Ypsilanti,Washtenaw,25-34,Female,Black,-83.92772,42.27048
 2019-03-27,U,Allegan,25-34,Male,Asian,-85.89411,42.70356
@@ -12696,9 +12696,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-03-27,U,Presque Isle,25-34,Female,Native Hawaiian or Other Pacific Islander,-83.75876,45.27481
 2019-03-27,Saginaw,Saginaw,35-44,Male,Black,-84.03811,43.37425
 2019-03-27,U,Shiawassee,25-34,Male,Asian,-84.13991,42.8675
-2019-03-27,U,St Clair,35-44,Female,Black,-82.60784,42.97826
-2019-03-27,U,St Clair,35-44,Female,White,-82.59483,42.99225
-2019-03-27,U,St Joseph,25-34,Female,White,-85.53905,41.82772
+2019-03-27,U,St. Clair,35-44,Female,Black,-82.60784,42.97826
+2019-03-27,U,St. Clair,35-44,Female,White,-82.59483,42.99225
+2019-03-27,U,St. Joseph,25-34,Female,White,-85.53905,41.82772
 2019-03-28,U,Alger,55+,Male,Black,-86.56346,46.39073
 2019-03-28,U,Alger,25-34,Male,Hispanic or Latino,-86.46416,46.35516
 2019-03-28,U,Antrim,25-34,Female,Asian,-85.28138,45.13776
@@ -12933,7 +12933,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-03,U,Shiawassee,0-25,Female,Black,-84.13824,42.88684
 2019-04-03,U,Shiawassee,25-34,Female,American Indian or Alaska Native,-84.02517,42.93038
 2019-04-03,U,Shiawassee,0-25,Male,Hispanic or Latino,-84.12466,42.88454
-2019-04-03,U,St Clair,45-54,Female,White,-82.63821,42.97019
+2019-04-03,U,St. Clair,45-54,Female,White,-82.63821,42.97019
 2019-04-03,U,Tuscola,25-34,Male,Native Hawaiian or Other Pacific Islander,-83.47898,43.58384
 2019-04-03,U,Van Buren,25-34,Female,Asian,-85.93272,42.14143
 2019-04-03,U,Washtenaw,45-54,Female,White,-83.72079,42.30848
@@ -12982,7 +12982,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-04,U,Ontonagon,35-44,Female,Black,-89.39624,46.77352
 2019-04-04,U,Oscoda,35-44,Female,White,-84.16281,44.66138
 2019-04-04,U,Roscommon,55+,Female,White,-84.66738,44.38555
-2019-04-04,U,St Joseph,35-44,Male,White,-85.68159,41.90946
+2019-04-04,U,St. Joseph,35-44,Male,White,-85.68159,41.90946
 2019-04-04,U,Van Buren,35-44,Female,Black,-86.10332,42.1297
 2019-04-04,U,Van Buren,25-34,Male,Black,-86.02685,42.41445
 2019-04-04,U,Van Buren,25-34,Female,White,-86.04348,42.16919
@@ -13056,7 +13056,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-05,U,Schoolcraft,45-54,Female,Hispanic or Latino,-86.31791,46.19761
 2019-04-05,U,Schoolcraft,45-54,Male,Black,-86.18137,46.06074
 2019-04-05,U,Shiawassee,0-25,Male,White,-84.0046,43.00097
-2019-04-05,U,St Clair,45-54,Female,Black,-82.76362,42.83791
+2019-04-05,U,St. Clair,45-54,Female,Black,-82.76362,42.83791
 2019-04-05,U,Van Buren,25-34,Female,White,-86.07552,42.33488
 2019-04-05,U,Wexford,35-44,Male,American Indian or Alaska Native,-85.47396,44.28699
 2019-04-05,U,Wexford,25-34,Male,White,-85.612,44.20148
@@ -13103,7 +13103,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-06,U,Saginaw,35-44,Female,Hispanic or Latino,-83.92292,43.28979
 2019-04-06,U,Schoolcraft,0-25,Female,Black,-86.33695,46.10261
 2019-04-06,U,Shiawassee,25-34,Female,White,-84.068,43.03024
-2019-04-06,U,St Joseph,55+,Male,White,-85.66625,41.78952
+2019-04-06,U,St. Joseph,55+,Male,White,-85.66625,41.78952
 2019-04-06,U,Tuscola,35-44,Male,Hispanic or Latino,-83.30064,43.33276
 2019-04-06,Lincoln Park,Wayne,0-25,Male,Black,-83.25405,42.31087
 2019-04-06,U,Wexford,25-34,Male,White,-85.48814,44.18037
@@ -13266,7 +13266,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-09,U,Roscommon,45-54,Female,Asian,-84.59377,44.29171
 2019-04-09,U,Sanilac,0-25,Male,Hispanic or Latino,-82.95755,43.27201
 2019-04-09,U,Shiawassee,45-54,Female,White,-84.24751,42.9343
-2019-04-09,U,St Clair,45-54,Female,Asian,-82.54527,42.85659
+2019-04-09,U,St. Clair,45-54,Female,Asian,-82.54527,42.85659
 2019-04-09,U,Wexford,0-25,Male,White,-85.6378,44.36517
 2019-04-10,U,Alger,35-44,Male,White,-86.6824,46.27368
 2019-04-10,U,Arenac,35-44,Female,Black,-83.84657,43.99296
@@ -13379,7 +13379,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-11,U,Otsego,55+,Male,Black,-84.56175,45.02832
 2019-04-11,U,Roscommon,0-25,Male,American Indian or Alaska Native,-84.57655,44.27662
 2019-04-11,U,Saginaw,0-25,Female,White,-84.0657,43.27953
-2019-04-11,U,St Clair,35-44,Female,Black,-82.77036,42.92348
+2019-04-11,U,St. Clair,35-44,Female,Black,-82.77036,42.92348
 2019-04-11,U,Tuscola,35-44,Female,Other,-83.51052,43.45905
 2019-04-11,U,Tuscola,55+,Female,White,-83.28284,43.4275
 2019-04-11,Dearborn,Wayne,35-44,Male,Black,-83.27979,42.19757
@@ -13492,11 +13492,11 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-13,U,Saginaw,35-44,Male,White,-83.95313,43.47105
 2019-04-13,U,Schoolcraft,25-34,Male,Black,-86.1099,46.25759
 2019-04-13,U,Shiawassee,25-34,Female,Hispanic or Latino,-84.0713,42.98171
-2019-04-13,U,St Clair,0-25,Female,White,-82.80402,42.97921
-2019-04-13,U,St Clair,35-44,Female,Asian,-82.73947,43.01418
-2019-04-13,U,St Clair,0-25,Male,Unknown,-82.61634,42.87613
-2019-04-13,U,St Clair,0-25,Male,White,-82.64571,42.88052
-2019-04-13,U,St Joseph,25-34,Female,White,-85.55323,41.8848
+2019-04-13,U,St. Clair,0-25,Female,White,-82.80402,42.97921
+2019-04-13,U,St. Clair,35-44,Female,Asian,-82.73947,43.01418
+2019-04-13,U,St. Clair,0-25,Male,Unknown,-82.61634,42.87613
+2019-04-13,U,St. Clair,0-25,Male,White,-82.64571,42.88052
+2019-04-13,U,St. Joseph,25-34,Female,White,-85.55323,41.8848
 2019-04-14,U,Alcona,0-25,Female,Black,-83.56848,44.75929
 2019-04-14,U,Alpena,25-34,Male,White,-83.71735,45.06638
 2019-04-14,U,Antrim,25-34,Female,Black,-85.20724,44.93375
@@ -13677,7 +13677,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-16,Saginaw,Saginaw,25-34,Female,Asian,-84.1176,43.47054
 2019-04-16,U,Schoolcraft,25-34,Male,White,-86.29581,46.29818
 2019-04-16,U,Shiawassee,45-54,Male,American Indian or Alaska Native,-84.2285,42.89071
-2019-04-16,U,St Clair,35-44,Male,Black,-82.73566,42.9037
+2019-04-16,U,St. Clair,35-44,Male,Black,-82.73566,42.9037
 2019-04-16,U,Tuscola,35-44,Male,Asian,-83.50082,43.60701
 2019-04-16,U,Van Buren,55+,Male,Black,-86.00655,42.33025
 2019-04-16,Ann Arbor,Washtenaw,0-25,Female,Asian,-83.72162,42.2317
@@ -13727,8 +13727,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-17,U,Sanilac,25-34,Female,White,-82.67496,43.38049
 2019-04-17,U,Schoolcraft,25-34,Male,Black,0.0,0.0
 2019-04-17,U,Shiawassee,45-54,Male,Black,-84.22697,42.98903
-2019-04-17,U,St Joseph,35-44,Male,American Indian or Alaska Native,-85.57745,41.89207
-2019-04-17,U,St Joseph,0-25,Male,White,-85.50185,41.99716
+2019-04-17,U,St. Joseph,35-44,Male,American Indian or Alaska Native,-85.57745,41.89207
+2019-04-17,U,St. Joseph,0-25,Male,White,-85.50185,41.99716
 2019-04-17,U,Tuscola,25-34,Male,Hispanic or Latino,-83.3113,43.35641
 2019-04-17,U,Tuscola,25-34,Female,Black,-83.55046,43.61782
 2019-04-17,U,Tuscola,25-34,Female,Black,-83.54069,43.49692
@@ -13792,8 +13792,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-19,U,Ottawa,45-54,Male,Native Hawaiian or Other Pacific Islander,-86.05437,42.9512
 2019-04-19,U,Roscommon,25-34,Male,Hispanic or Latino,-84.62182,44.27697
 2019-04-19,U,Schoolcraft,45-54,Female,White,-86.22154,46.20845
-2019-04-19,U,St Clair,0-25,Female,White,-82.80474,42.83505
-2019-04-19,U,St Clair,55+,Male,Black,-82.5744,43.01675
+2019-04-19,U,St. Clair,0-25,Female,White,-82.80474,42.83505
+2019-04-19,U,St. Clair,55+,Male,Black,-82.5744,43.01675
 2019-04-19,U,Van Buren,35-44,Female,White,-86.00311,42.12798
 2019-04-20,U,Alpena,25-34,Male,American Indian or Alaska Native,-83.55622,45.0067
 2019-04-20,U,Antrim,25-34,Male,Black,-85.16415,44.98165
@@ -13845,7 +13845,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-20,U,Presque Isle,25-34,Male,Asian,-83.9277,45.46234
 2019-04-20,U,Roscommon,35-44,Female,White,-84.70318,44.2902
 2019-04-20,U,Schoolcraft,45-54,Female,Black,0.0,0.0
-2019-04-20,U,St Joseph,0-25,Male,Black,-85.52446,42.04053
+2019-04-20,U,St. Joseph,0-25,Male,Black,-85.52446,42.04053
 2019-04-20,U,Tuscola,25-34,Male,Black,-83.28958,43.50156
 2019-04-20,U,Van Buren,55+,Female,Native Hawaiian or Other Pacific Islander,-86.13521,42.25863
 2019-04-20,U,Van Buren,25-34,Male,White,-85.95037,42.17633
@@ -13943,7 +13943,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-22,U,Oscoda,25-34,Female,Asian,-84.2151,44.72247
 2019-04-22,U,Oscoda,45-54,Female,White,-84.1552,44.72288
 2019-04-22,U,Presque Isle,25-34,Female,White,-83.97318,45.30383
-2019-04-22,U,St Clair,0-25,Male,Asian,-82.78566,42.93747
+2019-04-22,U,St. Clair,0-25,Male,Asian,-82.78566,42.93747
 2019-04-22,U,Tuscola,55+,Female,Other,-83.43996,43.53531
 2019-04-23,U,Alger,35-44,Female,White,-86.6387,46.44599
 2019-04-23,U,Alger,25-34,Male,White,-86.48444,46.39694
@@ -14014,7 +14014,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-23,U,Schoolcraft,35-44,Female,White,-86.10085,46.15504
 2019-04-23,U,Shiawassee,0-25,Male,Black,-84.23611,42.94307
 2019-04-23,U,Shiawassee,35-44,Male,American Indian or Alaska Native,-84.03888,42.94719
-2019-04-23,U,St Clair,45-54,Male,Black,-82.64451,42.95112
+2019-04-23,U,St. Clair,45-54,Male,Black,-82.64451,42.95112
 2019-04-23,U,Tuscola,35-44,Male,White,-83.45008,43.35838
 2019-04-23,Lincoln Park,Wayne,25-34,Male,Hispanic or Latino,-83.3832,42.36247
 2019-04-24,U,Alger,0-25,Female,Native Hawaiian or Other Pacific Islander,-86.67106,46.45828
@@ -14074,8 +14074,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-24,Saginaw,Saginaw,35-44,Female,White,-83.97526,43.39984
 2019-04-24,U,Sanilac,0-25,Female,Black,-82.87572,43.42877
 2019-04-24,U,Shiawassee,35-44,Female,White,-84.20011,43.02865
-2019-04-24,U,St Joseph,25-34,Male,White,-85.54592,41.87133
-2019-04-24,U,St Joseph,0-25,Female,White,-85.49208,42.03787
+2019-04-24,U,St. Joseph,25-34,Male,White,-85.54592,41.87133
+2019-04-24,U,St. Joseph,0-25,Female,White,-85.49208,42.03787
 2019-04-24,U,Van Buren,0-25,Female,Black,0.0,0.0
 2019-04-24,Ann Arbor,Washtenaw,25-34,Male,Black,-83.91479,42.23403
 2019-04-25,U,Allegan,25-34,Male,White,-86.02313,42.62967
@@ -14133,7 +14133,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-25,U,Saginaw,35-44,Female,White,-84.18912,43.39927
 2019-04-25,U,Schoolcraft,45-54,Male,White,-86.23081,46.07675
 2019-04-25,U,Shiawassee,0-25,Female,Black,-84.16168,42.91929
-2019-04-25,U,St Joseph,35-44,Male,White,-85.6129,41.99807
+2019-04-25,U,St. Joseph,35-44,Male,White,-85.6129,41.99807
 2019-04-25,U,Van Buren,25-34,Male,White,-86.14263,42.41348
 2019-04-25,Livonia,Wayne,35-44,Female,Hispanic or Latino,0.0,0.0
 2019-04-28,U,Alcona,45-54,Male,White,-83.75924,44.61096
@@ -14204,9 +14204,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-28,U,Schoolcraft,0-25,Female,Unknown,0.0,0.0
 2019-04-28,U,Schoolcraft,45-54,Male,White,-86.08858,46.05086
 2019-04-28,U,Shiawassee,35-44,Female,Black,-84.12381,42.99166
-2019-04-28,U,St Clair,55+,Female,White,-82.5974,42.94551
-2019-04-28,U,St Clair,0-25,Male,Other,-82.75575,42.78901
-2019-04-28,U,St Joseph,35-44,Female,White,-85.51572,41.91298
+2019-04-28,U,St. Clair,55+,Female,White,-82.5974,42.94551
+2019-04-28,U,St. Clair,0-25,Male,Other,-82.75575,42.78901
+2019-04-28,U,St. Joseph,35-44,Female,White,-85.51572,41.91298
 2019-04-28,Ypsilanti,Washtenaw,0-25,Female,Black,-83.78705,42.20808
 2019-04-28,U,Wexford,0-25,Male,White,-85.66086,44.28074
 2019-04-28,U,Wexford,25-34,Female,Black,-85.67395,44.35521
@@ -14313,10 +14313,10 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-04-30,U,Schoolcraft,35-44,Female,Black,-86.22113,46.28243
 2019-04-30,U,Shiawassee,25-34,Male,White,-84.05508,42.92246
 2019-04-30,U,Shiawassee,45-54,Female,Hispanic or Latino,-84.09624,43.01126
-2019-04-30,U,St Joseph,55+,Male,Black,-85.51837,41.76726
-2019-04-30,U,St Joseph,0-25,Female,White,-85.39467,41.97074
-2019-04-30,U,St Joseph,25-34,Male,White,-85.55987,41.90243
-2019-04-30,U,St Joseph,35-44,Female,Black,-85.58215,41.76947
+2019-04-30,U,St. Joseph,55+,Male,Black,-85.51837,41.76726
+2019-04-30,U,St. Joseph,0-25,Female,White,-85.39467,41.97074
+2019-04-30,U,St. Joseph,25-34,Male,White,-85.55987,41.90243
+2019-04-30,U,St. Joseph,35-44,Female,Black,-85.58215,41.76947
 2019-04-30,U,Tuscola,25-34,Female,Black,-83.44018,43.56973
 2019-04-30,U,Tuscola,55+,Female,White,-83.56964,43.52031
 2019-04-30,U,Tuscola,35-44,Male,White,-83.37044,43.4531
@@ -14377,8 +14377,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-01,U,Saginaw,35-44,Female,Asian,-83.95135,43.39256
 2019-05-01,U,Sanilac,0-25,Male,White,-82.9426,43.34544
 2019-05-01,U,Schoolcraft,0-25,Male,Black,-86.23149,46.16197
-2019-05-01,U,St Clair,0-25,Female,Black,-82.71033,42.81958
-2019-05-01,U,St Clair,55+,Female,Black,-82.72423,42.96563
+2019-05-01,U,St. Clair,0-25,Female,Black,-82.71033,42.81958
+2019-05-01,U,St. Clair,55+,Female,Black,-82.72423,42.96563
 2019-05-01,Detroit,Wayne,35-44,Female,White,-83.16928,42.22761
 2019-05-02,U,Alcona,25-34,Male,Black,0.0,0.0
 2019-05-02,U,Allegan,35-44,Female,White,-85.85342,42.64519
@@ -14435,7 +14435,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-02,U,Roscommon,35-44,Female,White,-84.60555,44.18994
 2019-05-02,U,Sanilac,0-25,Female,Hispanic or Latino,-82.89976,43.4861
 2019-05-02,U,Shiawassee,0-25,Female,Black,-84.11926,42.85338
-2019-05-02,U,St Clair,35-44,Male,White,-82.67806,42.98172
+2019-05-02,U,St. Clair,35-44,Male,White,-82.67806,42.98172
 2019-05-02,U,Van Buren,25-34,Female,Hispanic or Latino,0.0,0.0
 2019-05-02,U,Wexford,25-34,Male,Asian,-85.60953,44.37071
 2019-05-03,U,Baraga,0-25,Female,Black,-88.37407,46.76473
@@ -14550,7 +14550,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-04,U,Roscommon,25-34,Female,Black,-84.65523,44.30248
 2019-05-04,U,Schoolcraft,45-54,Male,Black,-86.15141,46.09133
 2019-05-04,U,Shiawassee,35-44,Female,Black,-84.13857,42.88867
-2019-05-04,U,St Clair,35-44,Male,White,-82.66422,42.857
+2019-05-04,U,St. Clair,35-44,Male,White,-82.66422,42.857
 2019-05-04,U,Tuscola,25-34,Male,Black,-83.55503,43.50313
 2019-05-04,U,Tuscola,35-44,Male,Black,0.0,0.0
 2019-05-04,U,Van Buren,0-25,Female,Hispanic or Latino,-85.92355,42.40356
@@ -14729,7 +14729,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-08,U,Sanilac,35-44,Male,Unknown,-82.75743,43.36534
 2019-05-08,U,Schoolcraft,35-44,Male,White,-86.07967,46.2316
 2019-05-08,U,Shiawassee,45-54,Male,Black,-84.19785,42.82143
-2019-05-08,U,St Clair,0-25,Male,White,-82.57267,43.00356
+2019-05-08,U,St. Clair,0-25,Male,White,-82.57267,43.00356
 2019-05-08,Lincoln Park,Wayne,35-44,Female,Asian,-83.27195,42.24314
 2019-05-09,U,Alcona,45-54,Female,Asian,-83.68149,44.66057
 2019-05-09,U,Allegan,0-25,Male,White,-85.87534,42.64226
@@ -14790,9 +14790,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-09,U,Shiawassee,35-44,Male,White,-84.12555,43.02015
 2019-05-09,U,Shiawassee,25-34,Male,Black,-84.01929,42.88051
 2019-05-09,U,Shiawassee,45-54,Male,American Indian or Alaska Native,-84.00964,42.88864
-2019-05-09,U,St Clair,35-44,Male,Unknown,-82.68153,42.94988
-2019-05-09,U,St Clair,45-54,Female,White,-82.63438,43.00473
-2019-05-09,U,St Joseph,25-34,Male,White,-85.47384,41.76024
+2019-05-09,U,St. Clair,35-44,Male,Unknown,-82.68153,42.94988
+2019-05-09,U,St. Clair,45-54,Female,White,-82.63438,43.00473
+2019-05-09,U,St. Joseph,25-34,Male,White,-85.47384,41.76024
 2019-05-09,U,Tuscola,35-44,Female,Black,-83.3567,43.41148
 2019-05-10,U,Allegan,35-44,Male,White,0.0,0.0
 2019-05-10,U,Alpena,Unknown,Female,Black,-83.72915,45.13168
@@ -14895,7 +14895,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-11,U,Schoolcraft,35-44,Female,White,-86.23766,46.2061
 2019-05-11,U,Shiawassee,25-34,Female,Black,-84.26776,42.86795
 2019-05-11,U,Shiawassee,0-25,Male,White,-84.08584,42.98121
-2019-05-11,U,St Joseph,35-44,Female,White,-85.46439,41.95696
+2019-05-11,U,St. Joseph,35-44,Female,White,-85.46439,41.95696
 2019-05-11,U,Tuscola,25-34,Male,Black,0.0,0.0
 2019-05-11,U,Van Buren,55+,Male,Unknown,-85.98467,42.32444
 2019-05-12,U,Alger,55+,Male,Black,-86.65181,46.39796
@@ -15021,7 +15021,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-13,U,Schoolcraft,45-54,Male,Other,-86.3492,46.13933
 2019-05-13,U,Schoolcraft,0-25,Female,Asian,-86.31882,46.18343
 2019-05-13,U,Shiawassee,25-34,Male,White,0.0,0.0
-2019-05-13,U,St Joseph,0-25,Female,Black,-85.45002,41.76527
+2019-05-13,U,St. Joseph,0-25,Female,Black,-85.45002,41.76527
 2019-05-13,U,Tuscola,35-44,Female,Black,-83.42454,43.40683
 2019-05-13,U,Washtenaw,45-54,Female,White,-83.87854,42.21179
 2019-05-13,Ypsilanti,Washtenaw,25-34,Female,White,-83.86703,42.19589
@@ -15077,7 +15077,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-14,U,Presque Isle,25-34,Female,Asian,-83.89775,45.31614
 2019-05-14,U,Roscommon,25-34,Female,White,-84.64128,44.42467
 2019-05-14,U,Roscommon,55+,Male,Other,-84.70209,44.23154
-2019-05-14,U,St Clair,35-44,Female,White,-82.73388,42.84449
+2019-05-14,U,St. Clair,35-44,Female,White,-82.73388,42.84449
 2019-05-14,U,Wexford,0-25,Male,Black,-85.51905,44.25856
 2019-05-15,U,Alcona,55+,Female,White,-83.69377,44.63716
 2019-05-15,U,Alcona,55+,Male,Black,-83.59006,44.80844
@@ -15257,8 +15257,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-17,U,Schoolcraft,35-44,Female,Native Hawaiian or Other Pacific Islander,-86.27106,46.15828
 2019-05-17,U,Shiawassee,45-54,Male,Black,-84.17538,43.01218
 2019-05-17,U,Shiawassee,0-25,Male,Hispanic or Latino,-84.01478,43.02722
-2019-05-17,U,St Clair,0-25,Male,American Indian or Alaska Native,-82.72704,42.95481
-2019-05-17,U,St Joseph,55+,Female,Black,-85.49186,41.78535
+2019-05-17,U,St. Clair,0-25,Male,American Indian or Alaska Native,-82.72704,42.95481
+2019-05-17,U,St. Joseph,55+,Female,Black,-85.49186,41.78535
 2019-05-17,U,Van Buren,25-34,Female,White,-86.02518,42.248
 2019-05-18,U,Alger,25-34,Male,White,-86.61306,46.32401
 2019-05-18,U,Antrim,45-54,Female,Hispanic or Latino,-85.22028,44.95013
@@ -15360,8 +15360,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-19,U,Sanilac,0-25,Female,White,-82.92237,43.40654
 2019-05-19,U,Sanilac,35-44,Female,White,-82.84676,43.30258
 2019-05-19,U,Sanilac,25-34,Female,Black,0.0,0.0
-2019-05-19,U,St Clair,0-25,Male,Black,-82.78146,42.8596
-2019-05-19,U,St Joseph,0-25,Female,Hispanic or Latino,-85.46361,41.90738
+2019-05-19,U,St. Clair,0-25,Male,Black,-82.78146,42.8596
+2019-05-19,U,St. Joseph,0-25,Female,Hispanic or Latino,-85.46361,41.90738
 2019-05-19,Lincoln Park,Wayne,45-54,Female,White,-83.29403,42.29575
 2019-05-19,U,Wayne,45-54,Female,Hispanic or Latino,-83.32803,42.2167
 2019-05-19,U,Wexford,25-34,Female,Black,-85.58688,44.23811
@@ -15418,8 +15418,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-20,U,Shiawassee,25-34,Male,White,-84.16271,42.91724
 2019-05-20,U,Shiawassee,25-34,Male,White,-84.09258,43.02968
 2019-05-20,U,Shiawassee,35-44,Male,White,-84.11754,42.99153
-2019-05-20,U,St Clair,0-25,Male,Black,-82.579,42.78499
-2019-05-20,U,St Clair,45-54,Female,Black,-82.67046,43.05626
+2019-05-20,U,St. Clair,0-25,Male,Black,-82.579,42.78499
+2019-05-20,U,St. Clair,45-54,Female,Black,-82.67046,43.05626
 2019-05-20,U,Van Buren,25-34,Female,Native Hawaiian or Other Pacific Islander,-86.07136,42.33961
 2019-05-20,U,Washtenaw,0-25,Female,Black,-83.68487,42.23929
 2019-05-20,Dearborn,Wayne,25-34,Male,Hispanic or Latino,-83.31638,42.2842
@@ -15484,7 +15484,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-21,Saginaw,Saginaw,0-25,Male,Asian,-84.11379,43.22636
 2019-05-21,U,Shiawassee,45-54,Female,Black,-84.16268,42.95093
 2019-05-21,U,Shiawassee,0-25,Female,White,-84.05356,42.92094
-2019-05-21,U,St Joseph,0-25,Male,White,-85.48727,41.89689
+2019-05-21,U,St. Joseph,0-25,Male,White,-85.48727,41.89689
 2019-05-21,U,Van Buren,25-34,Female,White,-86.00457,42.26764
 2019-05-21,Dearborn,Wayne,35-44,Male,Hispanic or Latino,-83.36793,42.26586
 2019-05-22,U,Alcona,35-44,Female,White,-83.52465,44.69863
@@ -15668,7 +15668,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-24,U,Presque Isle,35-44,Female,Asian,-83.92381,45.38595
 2019-05-24,U,Presque Isle,45-54,Male,White,-83.83963,45.25877
 2019-05-24,U,Sanilac,25-34,Male,Black,-82.92951,43.42682
-2019-05-24,U,St Clair,35-44,Female,Hispanic or Latino,-82.66009,42.96167
+2019-05-24,U,St. Clair,35-44,Female,Hispanic or Latino,-82.66009,42.96167
 2019-05-24,U,Tuscola,35-44,Female,Black,-83.38188,43.32148
 2019-05-24,U,Tuscola,35-44,Male,White,-83.52281,43.48709
 2019-05-24,U,Tuscola,35-44,Female,Black,0.0,0.0
@@ -15738,9 +15738,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-25,U,Presque Isle,55+,Male,Hispanic or Latino,-83.99935,45.37159
 2019-05-25,U,Roscommon,35-44,Male,Black,-84.59485,44.27622
 2019-05-25,U,Schoolcraft,45-54,Female,American Indian or Alaska Native,-86.22469,46.27315
-2019-05-25,U,St Clair,35-44,Male,Black,-82.81244,42.88997
-2019-05-25,U,St Clair,0-25,Male,Black,-82.65763,42.78646
-2019-05-25,U,St Clair,35-44,Female,White,-82.75673,42.8507
+2019-05-25,U,St. Clair,35-44,Male,Black,-82.81244,42.88997
+2019-05-25,U,St. Clair,0-25,Male,Black,-82.65763,42.78646
+2019-05-25,U,St. Clair,35-44,Female,White,-82.75673,42.8507
 2019-05-25,U,Van Buren,0-25,Female,Black,-86.03125,42.23365
 2019-05-25,U,Van Buren,35-44,Female,White,-85.97417,42.24782
 2019-05-25,Lincoln Park,Wayne,45-54,Male,Asian,-83.35037,42.26879
@@ -15847,7 +15847,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-27,U,Roscommon,55+,Male,Asian,-84.5795,44.27977
 2019-05-27,U,Roscommon,35-44,Female,Black,-84.54786,44.35729
 2019-05-27,U,Sanilac,0-25,Female,Black,-82.73697,43.31316
-2019-05-27,U,St Clair,0-25,Female,Black,-82.75827,43.03372
+2019-05-27,U,St. Clair,0-25,Female,Black,-82.75827,43.03372
 2019-05-27,U,Tuscola,55+,Male,Other,-83.49456,43.58734
 2019-05-27,U,Tuscola,25-34,Male,Native Hawaiian or Other Pacific Islander,-83.37036,43.51654
 2019-05-27,U,Tuscola,35-44,Male,Asian,-83.43862,43.45908
@@ -15974,8 +15974,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-29,U,Sanilac,0-25,Female,Asian,-82.95619,43.28455
 2019-05-29,U,Schoolcraft,35-44,Male,Black,-86.12156,46.2406
 2019-05-29,U,Shiawassee,45-54,Female,American Indian or Alaska Native,-84.15512,42.88496
-2019-05-29,U,St Clair,45-54,Male,Black,-82.63598,42.92616
-2019-05-29,U,St Joseph,0-25,Male,White,-85.6114,41.85542
+2019-05-29,U,St. Clair,45-54,Male,Black,-82.63598,42.92616
+2019-05-29,U,St. Joseph,0-25,Male,White,-85.6114,41.85542
 2019-05-29,U,Van Buren,25-34,Male,Hispanic or Latino,0.0,0.0
 2019-05-29,U,Van Buren,35-44,Male,White,-85.99074,42.16797
 2019-05-29,U,Van Buren,25-34,Male,White,-85.96183,42.36791
@@ -16082,7 +16082,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-05-31,U,Roscommon,55+,Male,Black,-84.68536,44.23993
 2019-05-31,U,Schoolcraft,0-25,Male,White,-86.23662,46.04016
 2019-05-31,U,Shiawassee,45-54,Male,Black,-84.04618,42.93493
-2019-05-31,U,St Clair,0-25,Female,White,-82.59754,42.81984
+2019-05-31,U,St. Clair,0-25,Female,White,-82.59754,42.81984
 2019-05-31,U,Van Buren,0-25,Male,Black,-86.10925,42.29536
 2019-05-31,U,Van Buren,25-34,Female,White,0.0,0.0
 2019-05-31,Detroit,Wayne,25-34,Female,Asian,-83.22092,42.27005
@@ -16138,8 +16138,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-02,U,Shiawassee,0-25,Female,White,0.0,0.0
 2019-06-02,U,Shiawassee,25-34,Female,Other,-84.20163,42.91533
 2019-06-02,U,Shiawassee,0-25,Female,White,-84.24455,42.96297
-2019-06-02,U,St Clair,0-25,Male,White,-82.75175,42.91213
-2019-06-02,U,St Joseph,55+,Male,Asian,-85.54094,41.95939
+2019-06-02,U,St. Clair,0-25,Male,White,-82.75175,42.91213
+2019-06-02,U,St. Joseph,55+,Male,Asian,-85.54094,41.95939
 2019-06-02,U,Tuscola,35-44,Male,White,-83.40606,43.44448
 2019-06-02,U,Tuscola,25-34,Male,White,-83.37616,43.49291
 2019-06-02,U,Wexford,25-34,Male,Black,-85.6463,44.28594
@@ -16247,8 +16247,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-04,U,Schoolcraft,55+,Male,White,-86.16856,46.13689
 2019-06-04,U,Shiawassee,25-34,Female,Hispanic or Latino,-84.18463,42.93439
 2019-06-04,U,Shiawassee,0-25,Unknown,White,-84.14701,43.05165
-2019-06-04,U,St Joseph,55+,Male,Native Hawaiian or Other Pacific Islander,-85.55383,41.95334
-2019-06-04,U,St Joseph,55+,Female,White,-85.59053,41.99018
+2019-06-04,U,St. Joseph,55+,Male,Native Hawaiian or Other Pacific Islander,-85.55383,41.95334
+2019-06-04,U,St. Joseph,55+,Female,White,-85.59053,41.99018
 2019-06-04,U,Washtenaw,55+,Male,Asian,-83.72035,42.29401
 2019-06-04,Livonia,Wayne,35-44,Male,Hispanic or Latino,-83.22169,42.2501
 2019-06-04,U,Wexford,25-34,Female,White,0.0,0.0
@@ -16297,7 +16297,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-05,U,Presque Isle,55+,Male,White,-84.02493,45.43655
 2019-06-05,U,Roscommon,25-34,Male,White,-84.54276,44.25847
 2019-06-05,U,Shiawassee,25-34,Male,Native Hawaiian or Other Pacific Islander,-84.04763,42.84068
-2019-06-05,U,St Clair,35-44,Male,American Indian or Alaska Native,-82.77672,43.03259
+2019-06-05,U,St. Clair,35-44,Male,American Indian or Alaska Native,-82.77672,43.03259
 2019-06-05,U,Tuscola,35-44,Male,White,-83.34524,43.43849
 2019-06-05,U,Tuscola,35-44,Male,Asian,-83.39599,43.47967
 2019-06-05,U,Van Buren,0-25,Female,Black,-86.10788,42.24547
@@ -16409,7 +16409,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-07,U,Newaygo,45-54,Male,White,-85.88156,43.4807
 2019-06-07,U,Sanilac,35-44,Female,Black,0.0,0.0
 2019-06-07,U,Shiawassee,0-25,Female,White,-84.22474,42.88847
-2019-06-07,U,St Clair,45-54,Female,American Indian or Alaska Native,-82.68212,43.09305
+2019-06-07,U,St. Clair,45-54,Female,American Indian or Alaska Native,-82.68212,43.09305
 2019-06-07,U,Van Buren,25-34,Female,Hispanic or Latino,-85.89535,42.26802
 2019-06-07,U,Van Buren,25-34,Male,White,-86.05295,42.19535
 2019-06-08,U,Alcona,0-25,Male,Hispanic or Latino,-83.54412,44.78922
@@ -16585,7 +16585,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-10,U,Sanilac,0-25,Female,White,-82.76371,43.35653
 2019-06-10,U,Sanilac,0-25,Female,Hispanic or Latino,-82.70731,43.29121
 2019-06-10,U,Shiawassee,25-34,Female,Black,-84.17187,42.87364
-2019-06-10,U,St Joseph,35-44,Male,Black,-85.4538,41.84789
+2019-06-10,U,St. Joseph,35-44,Male,Black,-85.4538,41.84789
 2019-06-10,U,Tuscola,25-34,Female,Black,-83.50169,43.47269
 2019-06-10,Detroit,Wayne,45-54,Female,White,-83.14741,42.31584
 2019-06-10,Livonia,Wayne,25-34,Female,Native Hawaiian or Other Pacific Islander,-83.262,42.20372
@@ -16648,8 +16648,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-11,U,Schoolcraft,35-44,Male,Asian,-86.11327,46.21421
 2019-06-11,U,Schoolcraft,25-34,Unknown,Black,-86.24633,46.22753
 2019-06-11,U,Shiawassee,25-34,Male,White,-84.03763,42.82077
-2019-06-11,U,St Joseph,0-25,Female,Native Hawaiian or Other Pacific Islander,-85.50343,41.79919
-2019-06-11,U,St Joseph,35-44,Unknown,American Indian or Alaska Native,-85.50012,41.95671
+2019-06-11,U,St. Joseph,0-25,Female,Native Hawaiian or Other Pacific Islander,-85.50343,41.79919
+2019-06-11,U,St. Joseph,35-44,Unknown,American Indian or Alaska Native,-85.50012,41.95671
 2019-06-11,U,Tuscola,35-44,Male,Black,-83.32709,43.60297
 2019-06-11,U,Van Buren,25-34,Male,Black,-86.05729,42.2457
 2019-06-11,U,Wayne,0-25,Female,Black,-83.15692,42.35918
@@ -16828,7 +16828,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-14,U,Osceola,25-34,Female,Black,-85.37974,43.96626
 2019-06-14,U,Presque Isle,45-54,Male,Asian,-84.0398,45.30761
 2019-06-14,U,Sanilac,35-44,Female,Black,-82.75494,43.49509
-2019-06-14,U,St Joseph,55+,Male,White,-85.60102,41.93968
+2019-06-14,U,St. Joseph,55+,Male,White,-85.60102,41.93968
 2019-06-14,U,Van Buren,55+,Male,White,-86.0651,42.18082
 2019-06-14,U,Van Buren,0-25,Female,Black,0.0,0.0
 2019-06-14,Ypsilanti,Washtenaw,35-44,Male,Black,-83.81609,42.32764
@@ -16900,11 +16900,11 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-15,U,Schoolcraft,0-25,Female,Hispanic or Latino,0.0,0.0
 2019-06-15,U,Shiawassee,0-25,Male,White,0.0,0.0
 2019-06-15,U,Shiawassee,0-25,Male,White,-84.09716,42.96248
-2019-06-15,U,St Clair,45-54,Female,Hispanic or Latino,-82.70942,42.85019
-2019-06-15,U,St Clair,35-44,Female,American Indian or Alaska Native,-82.68888,42.88297
-2019-06-15,U,St Joseph,25-34,Male,White,-85.46134,41.81434
-2019-06-15,U,St Joseph,55+,Female,White,-85.66572,41.85461
-2019-06-15,U,St Joseph,0-25,Male,American Indian or Alaska Native,-85.46715,42.02849
+2019-06-15,U,St. Clair,45-54,Female,Hispanic or Latino,-82.70942,42.85019
+2019-06-15,U,St. Clair,35-44,Female,American Indian or Alaska Native,-82.68888,42.88297
+2019-06-15,U,St. Joseph,25-34,Male,White,-85.46134,41.81434
+2019-06-15,U,St. Joseph,55+,Female,White,-85.66572,41.85461
+2019-06-15,U,St. Joseph,0-25,Male,American Indian or Alaska Native,-85.46715,42.02849
 2019-06-15,U,Van Buren,25-34,Female,Black,-86.09886,42.2376
 2019-06-15,U,Van Buren,25-34,Female,Black,-86.11608,42.28355
 2019-06-15,U,Van Buren,0-25,Male,Hispanic or Latino,-85.93625,42.2491
@@ -16953,7 +16953,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-16,U,Sanilac,35-44,Female,Black,-82.91539,43.42434
 2019-06-16,U,Schoolcraft,0-25,Male,White,-86.22904,46.16265
 2019-06-16,U,Shiawassee,25-34,Male,White,-84.16931,42.97145
-2019-06-16,U,St Joseph,35-44,Male,Black,-85.46533,41.91947
+2019-06-16,U,St. Joseph,35-44,Male,Black,-85.46533,41.91947
 2019-06-16,U,Tuscola,55+,Male,White,-83.37448,43.47304
 2019-06-16,U,Van Buren,25-34,Male,Asian,-85.92948,42.11391
 2019-06-16,U,Washtenaw,25-34,Male,Asian,-83.74343,42.19651
@@ -17013,8 +17013,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-17,U,Ottawa,45-54,Female,White,-86.04614,43.04339
 2019-06-17,U,Ottawa,0-25,Male,Black,-86.02056,43.04905
 2019-06-17,U,Schoolcraft,35-44,Male,American Indian or Alaska Native,-86.20045,46.2953
-2019-06-17,U,St Joseph,35-44,Male,Black,-85.64663,41.99875
-2019-06-17,U,St Joseph,35-44,Male,White,0.0,0.0
+2019-06-17,U,St. Joseph,35-44,Male,Black,-85.64663,41.99875
+2019-06-17,U,St. Joseph,35-44,Male,White,0.0,0.0
 2019-06-17,U,Van Buren,25-34,Male,White,-86.03886,42.3257
 2019-06-17,U,Van Buren,0-25,Female,White,-85.89192,42.2065
 2019-06-17,U,Washtenaw,35-44,Female,Asian,-83.85597,42.16742
@@ -17076,7 +17076,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-18,U,Sanilac,25-34,Male,Black,-82.77092,43.3139
 2019-06-18,U,Sanilac,35-44,Male,Black,-82.83806,43.45711
 2019-06-18,U,Shiawassee,0-25,Male,Hispanic or Latino,-84.25575,42.95076
-2019-06-18,U,St Clair,55+,Male,White,-82.6058,42.85511
+2019-06-18,U,St. Clair,55+,Male,White,-82.6058,42.85511
 2019-06-18,U,Tuscola,55+,Male,White,-83.3141,43.48168
 2019-06-18,U,Tuscola,55+,Female,White,-83.48161,43.60211
 2019-06-18,U,Van Buren,25-34,Female,Black,-85.93531,42.19262
@@ -17134,7 +17134,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-19,U,Roscommon,0-25,Female,Black,-84.70413,44.42858
 2019-06-19,U,Roscommon,35-44,Female,White,-84.53042,44.27353
 2019-06-19,U,Shiawassee,0-25,Male,Black,-84.02891,43.00194
-2019-06-19,U,St Joseph,55+,Male,Black,-85.61887,41.93429
+2019-06-19,U,St. Joseph,55+,Male,Black,-85.61887,41.93429
 2019-06-19,U,Tuscola,35-44,Female,Black,0.0,0.0
 2019-06-20,U,Allegan,35-44,Male,White,-85.85239,42.54355
 2019-06-20,U,Antrim,25-34,Female,White,-85.06443,45.01706
@@ -17256,8 +17256,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-22,U,Schoolcraft,35-44,Female,White,-86.1458,46.28547
 2019-06-22,U,Shiawassee,25-34,Male,Other,-84.04964,42.87553
 2019-06-22,U,Shiawassee,0-25,Male,Black,-84.14153,42.9659
-2019-06-22,U,St Joseph,35-44,Female,White,-85.47613,41.78443
-2019-06-22,U,St Joseph,0-25,Male,Black,-85.65771,41.89976
+2019-06-22,U,St. Joseph,35-44,Female,White,-85.47613,41.78443
+2019-06-22,U,St. Joseph,0-25,Male,Black,-85.65771,41.89976
 2019-06-22,U,Tuscola,35-44,Male,Black,-83.47862,43.45984
 2019-06-22,U,Van Buren,0-25,Female,Hispanic or Latino,-86.0463,42.20721
 2019-06-22,Ypsilanti,Washtenaw,55+,Female,White,-83.92193,42.18848
@@ -17324,7 +17324,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-23,U,Roscommon,35-44,Female,Black,-84.69889,44.40769
 2019-06-23,U,Saginaw,25-34,Female,White,-84.10976,43.39809
 2019-06-23,U,Schoolcraft,55+,Female,White,-86.25709,46.27899
-2019-06-23,U,St Joseph,35-44,Male,American Indian or Alaska Native,-85.67298,41.97098
+2019-06-23,U,St. Joseph,35-44,Male,American Indian or Alaska Native,-85.67298,41.97098
 2019-06-23,U,Wayne,25-34,Female,Black,-83.36877,42.29953
 2019-06-24,U,Alger,0-25,Male,White,0.0,0.0
 2019-06-24,U,Allegan,25-34,Female,White,-85.79621,42.4926
@@ -17380,7 +17380,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-24,U,Shiawassee,45-54,Male,Black,-84.29674,43.02332
 2019-06-24,U,Shiawassee,45-54,Female,Asian,-84.16237,42.85817
 2019-06-24,U,Shiawassee,25-34,Male,Black,-84.2101,42.97801
-2019-06-24,U,St Joseph,0-25,Male,Black,-85.64265,41.97358
+2019-06-24,U,St. Joseph,0-25,Male,Black,-85.64265,41.97358
 2019-06-24,U,Tuscola,55+,Female,Asian,-83.33371,43.56515
 2019-06-24,U,Tuscola,25-34,Male,Unknown,-83.5656,43.30089
 2019-06-24,U,Van Buren,55+,Female,Black,-86.03992,42.27876
@@ -17443,7 +17443,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-25,U,Sanilac,0-25,Female,Hispanic or Latino,-82.77733,43.48223
 2019-06-25,U,Schoolcraft,35-44,Unknown,White,-86.22018,46.19899
 2019-06-25,U,Shiawassee,25-34,Female,Black,-84.01825,43.1
-2019-06-25,U,St Joseph,25-34,Male,Unknown,-85.40915,41.95677
+2019-06-25,U,St. Joseph,25-34,Male,Unknown,-85.40915,41.95677
 2019-06-25,U,Tuscola,25-34,Female,Asian,-83.37534,43.36019
 2019-06-25,U,Wayne,35-44,Female,White,-83.31639,42.22773
 2019-06-26,U,Allegan,25-34,Female,Black,-85.93131,42.66981
@@ -17546,8 +17546,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-27,U,Roscommon,45-54,Male,White,-84.66379,44.28081
 2019-06-27,Saginaw,Saginaw,25-34,Female,Hispanic or Latino,-84.09531,43.23146
 2019-06-27,U,Schoolcraft,55+,Female,Asian,-86.21147,46.15143
-2019-06-27,U,St Clair,0-25,Male,White,-82.74191,43.00146
-2019-06-27,U,St Joseph,55+,Female,Black,-85.43507,41.79337
+2019-06-27,U,St. Clair,0-25,Male,White,-82.74191,43.00146
+2019-06-27,U,St. Joseph,55+,Female,Black,-85.43507,41.79337
 2019-06-27,U,Wexford,25-34,Female,White,-85.49621,44.27481
 2019-06-28,U,Alger,55+,Male,Black,-86.58344,46.32678
 2019-06-28,U,Allegan,25-34,Female,Hispanic or Latino,-86.03483,42.68231
@@ -17661,7 +17661,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-29,Saginaw,Saginaw,35-44,Male,Black,-84.058,43.25036
 2019-06-29,U,Schoolcraft,45-54,Male,Black,-86.22623,46.28176
 2019-06-29,U,Shiawassee,35-44,Female,Black,-84.25777,42.87049
-2019-06-29,U,St Clair,35-44,Male,White,-82.65824,42.93675
+2019-06-29,U,St. Clair,35-44,Male,White,-82.65824,42.93675
 2019-06-29,U,Tuscola,25-34,Female,Other,-83.43796,43.56694
 2019-06-29,U,Van Buren,55+,Female,White,-86.15824,42.2885
 2019-06-29,U,Van Buren,35-44,Male,White,-86.09908,42.30657
@@ -17728,8 +17728,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-06-30,U,Otsego,35-44,Female,White,-84.68267,45.00905
 2019-06-30,U,Roscommon,55+,Male,White,0.0,0.0
 2019-06-30,Saginaw,Saginaw,35-44,Male,Black,-83.94962,43.28253
-2019-06-30,U,St Clair,45-54,Male,Black,-82.74466,42.93649
-2019-06-30,U,St Clair,0-25,Female,White,-82.62486,42.96116
+2019-06-30,U,St. Clair,45-54,Male,Black,-82.74466,42.93649
+2019-06-30,U,St. Clair,0-25,Female,White,-82.62486,42.96116
 2019-06-30,Livonia,Wayne,25-34,Male,Black,-83.3218,42.37006
 2019-07-01,U,Alger,25-34,Female,Black,-86.65997,46.36648
 2019-07-01,U,Allegan,25-34,Female,Black,-85.9243,42.6433
@@ -17845,7 +17845,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-02,U,Oscoda,0-25,Female,White,-84.10977,44.65502
 2019-07-02,U,Roscommon,55+,Female,Black,-84.72098,44.21475
 2019-07-02,U,Roscommon,25-34,Female,Black,0.0,0.0
-2019-07-02,U,St Joseph,0-25,Male,Black,-85.39666,41.87988
+2019-07-02,U,St. Joseph,0-25,Male,Black,-85.39666,41.87988
 2019-07-02,U,Tuscola,55+,Female,White,-83.40423,43.52175
 2019-07-02,Ann Arbor,Washtenaw,0-25,Female,White,-83.83039,42.23612
 2019-07-03,U,Alger,55+,Female,White,-86.70211,46.26267
@@ -17962,7 +17962,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-04,U,Shiawassee,45-54,Female,White,-84.02268,43.01682
 2019-07-04,U,Shiawassee,35-44,Male,Asian,-84.22094,42.84445
 2019-07-04,U,Shiawassee,0-25,Male,Unknown,-84.08962,42.86857
-2019-07-04,U,St Joseph,0-25,Male,White,-85.6097,41.93991
+2019-07-04,U,St. Joseph,0-25,Male,White,-85.6097,41.93991
 2019-07-04,U,Van Buren,25-34,Male,Black,-85.91611,42.31921
 2019-07-04,Lincoln Park,Wayne,45-54,Female,Black,-83.33537,42.33807
 2019-07-04,U,Wexford,25-34,Male,White,-85.61493,44.31573
@@ -18033,7 +18033,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-05,U,Saginaw,35-44,Male,Hispanic or Latino,-84.12933,43.31225
 2019-07-05,U,Sanilac,35-44,Female,Asian,-82.85229,43.31977
 2019-07-05,U,Sanilac,0-25,Male,Asian,-82.75536,43.35909
-2019-07-05,U,St Joseph,35-44,Male,White,-85.5602,41.97159
+2019-07-05,U,St. Joseph,35-44,Male,White,-85.5602,41.97159
 2019-07-05,U,Tuscola,55+,Male,White,-83.31881,43.61734
 2019-07-05,U,Tuscola,55+,Female,White,-83.49341,43.41587
 2019-07-05,U,Van Buren,25-34,Male,White,-86.05726,42.16849
@@ -18091,8 +18091,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-06,U,Presque Isle,45-54,Female,Black,-84.0435,45.24447
 2019-07-06,U,Saginaw,25-34,Male,White,-84.12716,43.20785
 2019-07-06,U,Saginaw,0-25,Male,White,-84.08712,43.43318
-2019-07-06,U,St Joseph,0-25,Male,White,-85.67349,41.9774
-2019-07-06,U,St Joseph,55+,Female,Black,-85.47847,41.85012
+2019-07-06,U,St. Joseph,0-25,Male,White,-85.67349,41.9774
+2019-07-06,U,St. Joseph,55+,Female,Black,-85.47847,41.85012
 2019-07-06,Ann Arbor,Washtenaw,25-34,Unknown,Black,0.0,0.0
 2019-07-06,Lincoln Park,Wayne,45-54,Female,American Indian or Alaska Native,-83.19674,42.26514
 2019-07-07,U,Alger,35-44,Male,Native Hawaiian or Other Pacific Islander,-86.65148,46.28415
@@ -18149,10 +18149,10 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-07,Saginaw,Saginaw,35-44,Female,Hispanic or Latino,-84.04045,43.41287
 2019-07-07,U,Saginaw,25-34,Female,White,-84.07525,43.44474
 2019-07-07,U,Schoolcraft,35-44,Female,White,-86.1404,46.22168
-2019-07-07,U,St Clair,45-54,Female,White,-82.62839,43.02773
-2019-07-07,U,St Clair,45-54,Male,Black,-82.59472,42.86766
-2019-07-07,U,St Joseph,0-25,Female,Hispanic or Latino,-85.57639,41.91775
-2019-07-07,U,St Joseph,0-25,Male,Black,-85.61083,41.9663
+2019-07-07,U,St. Clair,45-54,Female,White,-82.62839,43.02773
+2019-07-07,U,St. Clair,45-54,Male,Black,-82.59472,42.86766
+2019-07-07,U,St. Joseph,0-25,Female,Hispanic or Latino,-85.57639,41.91775
+2019-07-07,U,St. Joseph,0-25,Male,Black,-85.61083,41.9663
 2019-07-07,U,Tuscola,55+,Female,White,-83.48307,43.57375
 2019-07-07,U,Tuscola,35-44,Female,Other,-83.51735,43.39506
 2019-07-07,U,Wexford,25-34,Female,White,-85.4562,44.19682
@@ -18273,9 +18273,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-09,U,Roscommon,Unknown,Female,Unknown,-84.64382,44.3783
 2019-07-09,Saginaw,Saginaw,25-34,Female,Black,-84.10501,43.21547
 2019-07-09,U,Schoolcraft,55+,Female,Hispanic or Latino,-86.3243,46.25149
-2019-07-09,U,St Clair,0-25,Male,Black,-82.73897,42.79251
-2019-07-09,U,St Clair,0-25,Female,Black,0.0,0.0
-2019-07-09,U,St Joseph,35-44,Female,White,-85.59131,41.88677
+2019-07-09,U,St. Clair,0-25,Male,Black,-82.73897,42.79251
+2019-07-09,U,St. Clair,0-25,Female,Black,0.0,0.0
+2019-07-09,U,St. Joseph,35-44,Female,White,-85.59131,41.88677
 2019-07-09,U,Van Buren,25-34,Female,White,-85.96095,42.19471
 2019-07-09,Detroit,Wayne,25-34,Male,Black,-83.22632,42.21742
 2019-07-10,U,Alcona,25-34,Female,Black,-83.60574,44.72796
@@ -18408,8 +18408,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-11,U,Presque Isle,45-54,Male,White,-84.06755,45.31743
 2019-07-11,Saginaw,Saginaw,25-34,Female,White,-84.17037,43.35337
 2019-07-11,U,Schoolcraft,25-34,Female,Black,-86.07608,46.20598
-2019-07-11,U,St Clair,35-44,Female,Hispanic or Latino,-82.77022,43.01263
-2019-07-11,U,St Clair,0-25,Female,Hispanic or Latino,-82.56031,42.87413
+2019-07-11,U,St. Clair,35-44,Female,Hispanic or Latino,-82.77022,43.01263
+2019-07-11,U,St. Clair,0-25,Female,Hispanic or Latino,-82.56031,42.87413
 2019-07-11,U,Van Buren,25-34,Male,Black,-86.01547,42.26697
 2019-07-11,U,Van Buren,25-34,Female,Hispanic or Latino,-85.90646,42.30862
 2019-07-11,Detroit,Wayne,35-44,Female,Asian,-83.33499,42.32078
@@ -18452,9 +18452,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-12,U,Roscommon,25-34,Male,White,-84.62781,44.47359
 2019-07-12,U,Saginaw,35-44,Male,Black,-84.09257,43.24594
 2019-07-12,U,Sanilac,35-44,Male,White,0.0,0.0
-2019-07-12,U,St Clair,45-54,Female,Asian,-82.6298,43.00585
-2019-07-12,U,St Joseph,55+,Male,Black,-85.45572,41.8067
-2019-07-12,U,St Joseph,55+,Male,White,-85.59253,41.82069
+2019-07-12,U,St. Clair,45-54,Female,Asian,-82.6298,43.00585
+2019-07-12,U,St. Joseph,55+,Male,Black,-85.45572,41.8067
+2019-07-12,U,St. Joseph,55+,Male,White,-85.59253,41.82069
 2019-07-12,U,Tuscola,35-44,Female,Native Hawaiian or Other Pacific Islander,-83.31614,43.34985
 2019-07-12,U,Tuscola,55+,Female,White,-83.33315,43.52445
 2019-07-12,Dearborn,Wayne,55+,Male,Black,-83.31174,42.3047
@@ -18516,7 +18516,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-13,U,Schoolcraft,35-44,Female,White,-86.17927,46.19306
 2019-07-13,U,Shiawassee,0-25,Male,Black,-84.03606,42.90629
 2019-07-13,U,Shiawassee,0-25,Female,White,-84.1053,42.99344
-2019-07-13,U,St Clair,0-25,Male,Black,-82.71265,42.85435
+2019-07-13,U,St. Clair,0-25,Male,Black,-82.71265,42.85435
 2019-07-13,U,Van Buren,55+,Male,White,-86.07731,42.20164
 2019-07-13,U,Van Buren,55+,Female,Hispanic or Latino,-85.93175,42.32492
 2019-07-13,Dearborn,Wayne,45-54,Female,Hispanic or Latino,-83.16851,42.32041
@@ -18571,7 +18571,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-14,U,Ontonagon,35-44,Male,Black,-89.25229,46.6219
 2019-07-14,U,Roscommon,55+,Female,American Indian or Alaska Native,-84.67766,44.40331
 2019-07-14,U,Saginaw,35-44,Male,Native Hawaiian or Other Pacific Islander,-84.09012,43.36601
-2019-07-14,U,St Joseph,35-44,Female,Hispanic or Latino,-85.64413,41.90626
+2019-07-14,U,St. Joseph,35-44,Female,Hispanic or Latino,-85.64413,41.90626
 2019-07-14,U,Van Buren,25-34,Female,Black,-85.95152,42.31397
 2019-07-14,Ypsilanti,Washtenaw,0-25,Female,White,-83.73565,42.11693
 2019-07-14,Ypsilanti,Washtenaw,25-34,Female,White,-83.87096,42.297
@@ -18618,7 +18618,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-15,U,Roscommon,25-34,Female,Other,-84.61483,44.4628
 2019-07-15,U,Sanilac,35-44,Female,Hispanic or Latino,-82.7406,43.45276
 2019-07-15,U,Shiawassee,25-34,Male,American Indian or Alaska Native,-84.0523,43.00506
-2019-07-15,U,St Clair,55+,Male,Black,-82.66243,42.95059
+2019-07-15,U,St. Clair,55+,Male,Black,-82.66243,42.95059
 2019-07-16,U,Alcona,35-44,Female,Black,-83.56432,44.84085
 2019-07-16,U,Alcona,55+,Male,Black,-83.58691,44.758
 2019-07-16,U,Alger,25-34,Male,Native Hawaiian or Other Pacific Islander,-86.50016,46.36535
@@ -18678,9 +18678,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-16,U,Ottawa,55+,Male,Black,-85.96905,42.91212
 2019-07-16,U,Roscommon,25-34,Female,Hispanic or Latino,-84.53397,44.45721
 2019-07-16,U,Shiawassee,45-54,Female,Hispanic or Latino,-84.15787,42.90975
-2019-07-16,U,St Clair,35-44,Female,Black,-82.79102,43.04551
-2019-07-16,U,St Clair,35-44,Female,White,-82.64247,42.85853
-2019-07-16,U,St Clair,35-44,Male,White,-82.58289,43.00054
+2019-07-16,U,St. Clair,35-44,Female,Black,-82.79102,43.04551
+2019-07-16,U,St. Clair,35-44,Female,White,-82.64247,42.85853
+2019-07-16,U,St. Clair,35-44,Male,White,-82.58289,43.00054
 2019-07-16,U,Van Buren,25-34,Female,Black,-86.05006,42.19912
 2019-07-17,U,Alcona,35-44,Female,White,-83.51114,44.82202
 2019-07-17,U,Alger,25-34,Male,Hispanic or Latino,-86.7039,46.34393
@@ -18734,8 +18734,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-17,Saginaw,Saginaw,25-34,Female,White,-84.16575,43.40052
 2019-07-17,U,Sanilac,25-34,Female,Black,-82.73528,43.43081
 2019-07-17,U,Shiawassee,35-44,Female,Black,-84.2672,42.92221
-2019-07-17,U,St Clair,0-25,Male,Hispanic or Latino,-82.76493,42.84758
-2019-07-17,U,St Clair,0-25,Male,Black,-82.63318,42.92829
+2019-07-17,U,St. Clair,0-25,Male,Hispanic or Latino,-82.76493,42.84758
+2019-07-17,U,St. Clair,0-25,Male,Black,-82.63318,42.92829
 2019-07-17,U,Van Buren,25-34,Female,Black,-85.99212,42.29461
 2019-07-17,U,Wexford,25-34,Male,Black,-85.60597,44.25542
 2019-07-17,U,Wexford,25-34,Male,Black,-85.44178,44.42866
@@ -18785,8 +18785,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-18,U,Sanilac,25-34,Female,White,-82.77516,43.46647
 2019-07-18,U,Schoolcraft,45-54,Male,White,-86.06654,46.11772
 2019-07-18,U,Schoolcraft,25-34,Male,White,-86.09231,46.27387
-2019-07-18,U,St Clair,0-25,Male,Other,-82.61935,42.93762
-2019-07-18,U,St Joseph,0-25,Male,Black,-85.41171,41.95988
+2019-07-18,U,St. Clair,0-25,Male,Other,-82.61935,42.93762
+2019-07-18,U,St. Joseph,0-25,Male,Black,-85.41171,41.95988
 2019-07-18,U,Wexford,0-25,Female,Black,-85.66046,44.41037
 2019-07-19,U,Alpena,25-34,Male,Black,-83.53598,44.98254
 2019-07-19,U,Antrim,35-44,Female,White,-85.03294,44.93867
@@ -18847,7 +18847,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-19,U,Osceola,45-54,Male,Hispanic or Latino,-85.37058,43.94991
 2019-07-19,U,Oscoda,45-54,Female,Black,-84.09222,44.75449
 2019-07-19,U,Sanilac,35-44,Male,White,-82.77238,43.49243
-2019-07-19,U,St Joseph,25-34,Female,White,-85.49495,41.81113
+2019-07-19,U,St. Joseph,25-34,Female,White,-85.49495,41.81113
 2019-07-19,U,Tuscola,35-44,Female,White,-83.49769,43.47877
 2019-07-19,Livonia,Wayne,45-54,Male,Black,-83.22045,42.31574
 2019-07-20,U,Alger,55+,Male,Black,-86.55937,46.44652
@@ -19010,9 +19010,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-22,U,Ottawa,0-25,Female,White,-86.00115,43.02239
 2019-07-22,U,Roscommon,55+,Female,White,-84.59666,44.25522
 2019-07-22,U,Schoolcraft,0-25,Female,Black,-86.28299,46.24779
-2019-07-22,U,St Clair,35-44,Female,Asian,-82.8147,42.94808
-2019-07-22,U,St Joseph,25-34,Female,Hispanic or Latino,-85.56578,41.89821
-2019-07-22,U,St Joseph,35-44,Female,Black,-85.5004,42.05656
+2019-07-22,U,St. Clair,35-44,Female,Asian,-82.8147,42.94808
+2019-07-22,U,St. Joseph,25-34,Female,Hispanic or Latino,-85.56578,41.89821
+2019-07-22,U,St. Joseph,35-44,Female,Black,-85.5004,42.05656
 2019-07-22,U,Tuscola,35-44,Female,Black,-83.37605,43.53378
 2019-07-22,Livonia,Wayne,45-54,Male,Black,-83.35536,42.32835
 2019-07-22,U,Wexford,25-34,Female,Black,-85.47105,44.41268
@@ -19066,8 +19066,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-23,U,Oceana,55+,Female,Other,-86.1407,43.72971
 2019-07-23,U,Oscoda,25-34,Female,White,-84.09808,44.73778
 2019-07-23,U,Schoolcraft,0-25,Male,Black,-86.2959,46.19758
-2019-07-23,U,St Clair,35-44,Female,Black,-82.69585,43.00348
-2019-07-23,U,St Joseph,55+,Male,Hispanic or Latino,-85.57805,41.84138
+2019-07-23,U,St. Clair,35-44,Female,Black,-82.69585,43.00348
+2019-07-23,U,St. Joseph,55+,Male,Hispanic or Latino,-85.57805,41.84138
 2019-07-23,U,Van Buren,0-25,Female,White,-86.06468,42.14325
 2019-07-23,Dearborn,Wayne,55+,Male,White,-83.17206,42.14681
 2019-07-23,Lincoln Park,Wayne,35-44,Male,Black,-83.16999,42.25884
@@ -19136,8 +19136,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-24,U,Saginaw,35-44,Female,Black,-84.11131,43.27171
 2019-07-24,U,Sanilac,35-44,Female,White,-82.75767,43.49496
 2019-07-24,U,Shiawassee,25-34,Female,Hispanic or Latino,-84.15937,43.00777
-2019-07-24,U,St Clair,0-25,Female,Black,-82.64867,42.84818
-2019-07-24,U,St Clair,45-54,Male,American Indian or Alaska Native,-82.62235,42.80279
+2019-07-24,U,St. Clair,0-25,Female,Black,-82.64867,42.84818
+2019-07-24,U,St. Clair,45-54,Male,American Indian or Alaska Native,-82.62235,42.80279
 2019-07-24,U,Van Buren,55+,Female,White,-86.05287,42.25898
 2019-07-24,U,Van Buren,55+,Male,Asian,-86.12714,42.18951
 2019-07-24,Detroit,Wayne,45-54,Male,White,-83.14554,42.20653
@@ -19188,7 +19188,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-25,U,Roscommon,45-54,Female,Black,-84.54095,44.44209
 2019-07-25,U,Roscommon,0-25,Male,Black,-84.48917,44.37251
 2019-07-25,U,Shiawassee,25-34,Male,Black,0.0,0.0
-2019-07-25,U,St Joseph,0-25,Female,White,-85.40332,41.82496
+2019-07-25,U,St. Joseph,0-25,Female,White,-85.40332,41.82496
 2019-07-25,U,Van Buren,25-34,Female,Native Hawaiian or Other Pacific Islander,0.0,0.0
 2019-07-25,Ypsilanti,Washtenaw,45-54,Female,White,-83.82867,42.35286
 2019-07-26,U,Alcona,25-34,Female,Hispanic or Latino,-83.54158,44.57736
@@ -19353,8 +19353,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-28,U,Roscommon,55+,Male,Black,-84.71837,44.44646
 2019-07-28,Saginaw,Saginaw,25-34,Male,Black,-84.17065,43.1763
 2019-07-28,U,Shiawassee,25-34,Male,Hispanic or Latino,-84.28028,42.96288
-2019-07-28,U,St Clair,45-54,Female,Hispanic or Latino,-82.66074,43.00445
-2019-07-28,U,St Joseph,25-34,Female,Asian,-85.50874,41.80526
+2019-07-28,U,St. Clair,45-54,Female,Hispanic or Latino,-82.66074,43.00445
+2019-07-28,U,St. Joseph,25-34,Female,Asian,-85.50874,41.80526
 2019-07-28,U,Tuscola,35-44,Male,Black,0.0,0.0
 2019-07-28,U,Tuscola,35-44,Female,Asian,-83.38052,43.35413
 2019-07-28,U,Van Buren,35-44,Male,Black,-86.10437,42.15562
@@ -19402,7 +19402,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-29,U,Saginaw,35-44,Female,Black,-84.12709,43.46591
 2019-07-29,U,Sanilac,25-34,Female,White,-82.81082,43.35849
 2019-07-29,U,Sanilac,25-34,Female,Black,-82.80795,43.37419
-2019-07-29,U,St Joseph,55+,Female,White,-85.43744,41.85415
+2019-07-29,U,St. Joseph,55+,Female,White,-85.43744,41.85415
 2019-07-29,Ypsilanti,Washtenaw,55+,Male,Asian,-83.69089,42.28627
 2019-07-29,Livonia,Wayne,0-25,Male,Asian,-83.35382,42.20757
 2019-07-29,U,Wexford,25-34,Male,Black,-85.56297,44.36288
@@ -19460,12 +19460,12 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-30,U,Roscommon,0-25,Female,White,0.0,0.0
 2019-07-30,U,Sanilac,0-25,Female,White,-82.93087,43.29208
 2019-07-30,U,Sanilac,0-25,Female,White,-82.90493,43.49651
-2019-07-30,U,St Clair,35-44,Female,Asian,-82.66795,42.99299
-2019-07-30,U,St Joseph,35-44,Male,White,-85.50331,42.01284
-2019-07-30,U,St Joseph,35-44,Male,American Indian or Alaska Native,-85.67037,41.92209
-2019-07-30,U,St Joseph,55+,Male,White,-85.4646,41.88208
-2019-07-30,U,St Joseph,25-34,Female,Black,0.0,0.0
-2019-07-30,U,St Joseph,55+,Female,American Indian or Alaska Native,-85.53211,42.00401
+2019-07-30,U,St. Clair,35-44,Female,Asian,-82.66795,42.99299
+2019-07-30,U,St. Joseph,35-44,Male,White,-85.50331,42.01284
+2019-07-30,U,St. Joseph,35-44,Male,American Indian or Alaska Native,-85.67037,41.92209
+2019-07-30,U,St. Joseph,55+,Male,White,-85.4646,41.88208
+2019-07-30,U,St. Joseph,25-34,Female,Black,0.0,0.0
+2019-07-30,U,St. Joseph,55+,Female,American Indian or Alaska Native,-85.53211,42.00401
 2019-07-30,U,Van Buren,25-34,Male,White,-86.06607,42.29814
 2019-07-30,U,Washtenaw,0-25,Female,Native Hawaiian or Other Pacific Islander,-83.72013,42.12355
 2019-07-30,U,Wexford,25-34,Female,Hispanic or Latino,-85.5637,44.20387
@@ -19534,9 +19534,9 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-07-31,U,Roscommon,25-34,Male,White,-84.67414,44.28939
 2019-07-31,Saginaw,Saginaw,35-44,Female,Black,-84.03457,43.40411
 2019-07-31,U,Schoolcraft,0-25,Male,Black,-86.26004,46.14272
-2019-07-31,U,St Clair,35-44,Male,Asian,-82.69768,42.78424
-2019-07-31,U,St Joseph,35-44,Female,Black,-85.47453,41.97954
-2019-07-31,U,St Joseph,25-34,Female,Black,-85.62732,41.80107
+2019-07-31,U,St. Clair,35-44,Male,Asian,-82.69768,42.78424
+2019-07-31,U,St. Joseph,35-44,Female,Black,-85.47453,41.97954
+2019-07-31,U,St. Joseph,25-34,Female,Black,-85.62732,41.80107
 2019-07-31,U,Tuscola,55+,Male,Asian,-83.34855,43.46741
 2019-07-31,U,Tuscola,25-34,Female,White,-83.47631,43.39866
 2019-07-31,Livonia,Wayne,25-34,Male,White,-83.30673,42.38156
@@ -19587,10 +19587,10 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-08-01,Saginaw,Saginaw,35-44,Male,Black,-83.93361,43.31348
 2019-08-01,U,Saginaw,0-25,Female,Black,-84.00122,43.34916
 2019-08-01,U,Schoolcraft,35-44,Female,Asian,-86.28654,46.03871
-2019-08-01,U,St Clair,35-44,Female,White,-82.65491,42.9679
-2019-08-01,U,St Joseph,0-25,Female,White,-85.64577,42.03173
-2019-08-01,U,St Joseph,0-25,Female,Native Hawaiian or Other Pacific Islander,-85.68062,42.02892
-2019-08-01,U,St Joseph,55+,Female,American Indian or Alaska Native,-85.5954,41.90692
+2019-08-01,U,St. Clair,35-44,Female,White,-82.65491,42.9679
+2019-08-01,U,St. Joseph,0-25,Female,White,-85.64577,42.03173
+2019-08-01,U,St. Joseph,0-25,Female,Native Hawaiian or Other Pacific Islander,-85.68062,42.02892
+2019-08-01,U,St. Joseph,55+,Female,American Indian or Alaska Native,-85.5954,41.90692
 2019-08-01,U,Tuscola,25-34,Female,Unknown,-83.50336,43.51487
 2019-08-01,U,Van Buren,35-44,Female,White,-86.16308,42.27832
 2019-08-01,U,Wexford,25-34,Male,Black,-85.65347,44.31045
@@ -19651,8 +19651,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-08-02,Saginaw,Saginaw,25-34,Female,White,-84.12134,43.4498
 2019-08-02,U,Sanilac,25-34,Female,Black,-82.7259,43.38632
 2019-08-02,U,Shiawassee,0-25,Female,Black,-84.03185,43.02765
-2019-08-02,U,St Clair,35-44,Male,White,-82.6017,42.95456
-2019-08-02,U,St Clair,45-54,Male,Hispanic or Latino,-82.68954,42.9478
+2019-08-02,U,St. Clair,35-44,Male,White,-82.6017,42.95456
+2019-08-02,U,St. Clair,45-54,Male,Hispanic or Latino,-82.68954,42.9478
 2019-08-02,U,Tuscola,35-44,Male,White,-83.34381,43.38999
 2019-08-02,U,Tuscola,35-44,Male,Black,-83.47118,43.37137
 2019-08-02,Detroit,Wayne,35-44,Male,White,-83.33247,42.39865
@@ -19718,8 +19718,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-08-03,Saginaw,Saginaw,35-44,Female,Black,-83.89564,43.35807
 2019-08-03,Saginaw,Saginaw,35-44,Female,White,-84.08275,43.2535
 2019-08-03,U,Shiawassee,25-34,Male,Hispanic or Latino,-84.22761,43.0425
-2019-08-03,U,St Clair,35-44,Male,Hispanic or Latino,-82.62694,42.82102
-2019-08-03,U,St Joseph,25-34,Male,Black,0.0,0.0
+2019-08-03,U,St. Clair,35-44,Male,Hispanic or Latino,-82.62694,42.82102
+2019-08-03,U,St. Joseph,25-34,Male,Black,0.0,0.0
 2019-08-03,U,Van Buren,0-25,Male,Black,-86.11163,42.22335
 2019-08-03,U,Van Buren,25-34,Female,Asian,-86.0776,42.16407
 2019-08-03,U,Wayne,55+,Male,Native Hawaiian or Other Pacific Islander,-83.36774,42.23639
@@ -19877,7 +19877,7 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-08-07,U,Oscoda,45-54,Male,White,-84.21455,44.73832
 2019-08-07,U,Presque Isle,55+,Female,Black,-83.88784,45.30751
 2019-08-07,U,Sanilac,35-44,Male,Unknown,-82.78975,43.40901
-2019-08-07,U,St Clair,35-44,Male,Black,-82.75722,42.93518
+2019-08-07,U,St. Clair,35-44,Male,Black,-82.75722,42.93518
 2019-08-07,U,Van Buren,25-34,Male,Black,-85.88374,42.15141
 2019-08-08,U,Alcona,25-34,Unknown,White,-83.61794,44.74551
 2019-08-08,U,Alcona,25-34,Male,Unknown,-83.58529,44.80262
@@ -19936,8 +19936,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-08-08,U,Osceola,0-25,Male,Black,-85.4155,43.84628
 2019-08-08,U,Ottawa,0-25,Female,Black,-86.09396,43.03802
 2019-08-08,U,Ottawa,35-44,Male,Black,-86.07564,42.94821
-2019-08-08,U,St Clair,35-44,Male,White,-82.74242,42.96278
-2019-08-08,U,St Joseph,55+,Male,White,-85.531,42.00138
+2019-08-08,U,St. Clair,35-44,Male,White,-82.74242,42.96278
+2019-08-08,U,St. Joseph,55+,Male,White,-85.531,42.00138
 2019-08-08,U,Tuscola,55+,Male,Asian,-83.36292,43.40077
 2019-08-08,Ann Arbor,Washtenaw,45-54,Female,Black,-83.72924,42.22121
 2019-08-08,Ypsilanti,Washtenaw,25-34,Female,White,-83.86787,42.37437
@@ -19994,8 +19994,8 @@ date,city,county,Age,Gender,Race,lng,lat
 2019-08-09,U,Ontonagon,25-34,Female,Asian,-89.34329,46.77019
 2019-08-09,U,Presque Isle,35-44,Male,Black,-83.87285,45.42949
 2019-08-09,U,Roscommon,0-25,Male,Black,-84.59743,44.25418
-2019-08-09,U,St Clair,0-25,Female,Black,-82.55341,42.90819
-2019-08-09,U,St Joseph,35-44,Male,White,-85.56997,41.9948
+2019-08-09,U,St. Clair,0-25,Female,Black,-82.55341,42.90819
+2019-08-09,U,St. Joseph,35-44,Male,White,-85.56997,41.9948
 2019-08-09,U,Van Buren,35-44,Female,White,-85.9973,42.24123
 2019-08-09,U,Washtenaw,45-54,Male,Black,-83.79265,42.24118
 2019-08-09,Livonia,Wayne,25-34,Female,White,-83.34911,42.33765
