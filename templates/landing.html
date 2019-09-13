@@ -68,7 +68,7 @@
            <div class = "row mapbg">
              <div class = "row incidentcount">
                <div class = "col-sm-12">
-                 <p class = "numberIncidents">Total Incidents: </p>
+                 <p class = "numberIncidents"></p>
                </div>
              </div>
              <div class = "col-sm-12 d-flex justify-content-center">
@@ -133,6 +133,8 @@
     </footer>
   <!-- scripts -->
     <script src= "/static/js/makeMich.js"></script>
-    <script>makeMichMap(mich, "mich");</script>
+    <script>
+      makeMichMap(mich, "/static/data/countyCounts.csv");
+    </script>
 </body>
 </html>
