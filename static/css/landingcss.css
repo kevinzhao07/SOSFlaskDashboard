@@ -80,10 +80,15 @@ path.county:hover{
 }
 
 .mapandcount{
-    border-left: 12px solid #587abc;
     background-color: #f8f8f8;
 }
+.unitEms{
+    border-left: 12px solid #587abc;
+}
+.unitMe{
+    border-left: 12px solid #575294;
 
+}
 .numberIncidents{
     font-weight: bold;
     font-size: 18px;
