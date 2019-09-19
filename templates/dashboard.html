@@ -321,6 +321,7 @@
     centerMapbox = {{ data.center }};
     county_geojson = "{{ url_for('static',filename=data.f_geojson) }}";
     zoomMapbox = {{ data.zoom }};
+    cities = {{ cities|safe }};
 
     // populate data graphics
     makeDashboard("/static/data/map_fake.csv", "{{ data.placename }}");

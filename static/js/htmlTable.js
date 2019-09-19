@@ -25,10 +25,10 @@ function updateHtmlTable(data) {
     row.selectAll('td')
         .data((d) => d3.values(d).slice(0,-2))
         .join('td')
-        .text((d,i) => i = 1 ? formatHTMLthings(d) : d)
+        .text((d,i) => i == 0 ? formatHTMLthings(d) : d)
 };
 function formatHTMLthings(d){
-    return d instanceof Date ?  d3.timeFormat("%b %d, %Y")(d) : d;
+    return d instanceof Date ? d3.timeFormat("%b %d, %Y")(d) : d;
 };
 function getSortedData(sortColumn){
     if (sortColumn == "date") {
@@ -64,7 +64,8 @@ function reduceData(data) {
         const bottomData = data.slice(-rows/2);
         var data = [...topData, ...middle, ...bottomData];
     }
-    return data;
+    data.map(d => d.city = d.city == 'U' ? 'Unknown' : d.city)
+    return data
 };
 function toggleToAsc(current){
     const column = d3.select(current).select('i')

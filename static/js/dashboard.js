@@ -1,6 +1,6 @@
 // creates all charts
 
-async function makeDashboard(fileName, citycounty) {
+async function makeDashboard(fileName, placename) {
     previous = "";
     neutral = "fa-sort";
     ascending = "fa-sort-asc";
@@ -10,8 +10,13 @@ async function makeDashboard(fileName, citycounty) {
     formatDate = d3.timeFormat("%b %d, %Y");
     DATA = await d3.csv(fileName, type);
     CF = crossfilter(DATA);
-    countyDim = CF.dimension(d => d.county);
-    countyDim.filter(d => d === citycounty);
+    if (cities.includes(placename)) {
+        cityDim = CF.dimension(d => d.city);
+        cityDim.filter(d => d === placename)
+    } else {
+        countyDim = CF.dimension(d => d.county);
+        countyDim.filter(d => d === placename)
+    }
     rows = 10;
     sortColumn = "date";
     makeTimeSeries();
