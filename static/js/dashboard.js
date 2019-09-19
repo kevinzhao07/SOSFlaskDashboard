@@ -1,6 +1,5 @@
 // creates all charts
-
-async function makeDashboard(fileName, placename) {
+async function makeDashboard(fileName, placename, placetype) {
     previous = "";
     neutral = "fa-sort";
     ascending = "fa-sort-asc";
@@ -10,12 +9,12 @@ async function makeDashboard(fileName, placename) {
     formatDate = d3.timeFormat("%b %d, %Y");
     DATA = await d3.csv(fileName, type);
     CF = crossfilter(DATA);
-    if (cities.includes(placename)) {
-        cityDim = CF.dimension(d => d.city);
-        cityDim.filter(d => d === placename)
-    } else {
+    if (placetype == 'county') {
         countyDim = CF.dimension(d => d.county);
         countyDim.filter(d => d === placename)
+    } else  {
+        cityDim = CF.dimension(d => d.city);
+        cityDim.filter(d => d === placename)
     }
     rows = 10;
     sortColumn = "date";
@@ -78,19 +77,19 @@ function summaryStats(dayRange) {
 function colorCodePct(data){
     return data.includes("+") ? 'color:red' :
            data.includes("-") ? 'color:green' :
-           'color:black';
+                                'color:black' ;
 };
 
 function colorCode(data){
     return data > 0 ? 'color:red' :
            data < 0 ? 'color:green' :
-           'color:black';
+                      'color:black' ;
 };
 
 function arrowUpDown(data){
     return data > 0 ? `<i class= "fa fa-arrow-up"></i> ${data}` :
            data < 0 ? `<i class ="fa fa-arrow-down"></i> ${Math.abs(data)}` :
-           `${data}`;
+                      `${data}` ;
 };
 
 function resetAll() {

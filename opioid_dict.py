@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 src_dict = {'EMS':'EMS', 'ED':'Emergency Departments', 'ME':'Medical Examiner'}
 race_dict = {'B':'Black',
              'African American':'Black',
@@ -45,7 +47,7 @@ gender_dict = {'F':'Female',
                'Unknown (Unable to Determine)':'Unknown',
                'Not Applicable':'Unknown',
                }
-center_dict = { "City" :
+center_dict = { "cities" :
     {'Ann Arbor': {
         'center': '{lat: 42.28, lng: -83.73}',
         'county': 'Washtenaw',
@@ -194,7 +196,7 @@ center_dict = { "City" :
         'minheight': 200
     }},
 
-    'County':
+    'counties':
     {'Alcona': {
         'center': '{lat:44.68, lng:-83.58}',
         'minwidth': 450,
@@ -623,44 +625,19 @@ center_dict = { "City" :
     }}
 }
 
+special_dict = {'Saginaw': 'Saginaw (City)',
+                'Kalamazoo': 'Kalamazoo (City)',
+                'Muskegon': 'Muskegon (City)',
+                }
+cities = [city for city in center_dict["cities"].keys()]
+counties = list(center_dict["counties"].keys())
 
-name_case_ls = ['Saginaw', 'Kalamazoo', 'Muskegon']
-name_cases = [{'Saginaw' : 'Saginaw (City)'}, {'Kalamazoo' : 'Kalamazoo (City)'}, {'Muskegon' : 'Muskegon (City)'}]
-counties=[]
-cities = []
+placenames = defaultdict(list)
+for county in center_dict["counties"].keys():
+    placenames[county[0]].append(county)
+for city in cities:
+    placenames[city[0]].append(special_dict.get(city, city))
+    placenames[city[0]].sort()
 
-
-placenames={}
-names={}
-
-for county in center_dict["County"].keys():
-    counties.append(county)
-
-for city in center_dict["City"].keys():
-    if city in name_case_ls:
-        city = city + " (City)"
-        cities.append(city)
-    else:
-        cities.append(city)
-
-
-for eachcounty in counties:
-    if eachcounty[0] not in placenames:
-        placenames[eachcounty[0]]=[eachcounty]
-    else:
-        placenames[eachcounty[0]].append(eachcounty)
-
-
-for eachcity in cities:
-    if eachcity[0] not in placenames:
-        placenames[eachcity[0]] = [eachcity]
-        placenames[eachcity[0]].sort()
-    else:
-        placenames[eachcity[0]].append(eachcity)
-        placenames[eachcity[0]].sort()
-
-
-keyalphabet=sorted(placenames.keys())
-
-for letter in keyalphabet:
-    names[letter]=placenames[letter]
+key_alphabet = sorted(placenames.keys())
+names = {letter:placenames[letter] for letter in key_alphabet}
