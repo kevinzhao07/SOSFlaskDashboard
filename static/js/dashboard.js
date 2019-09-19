@@ -10,7 +10,7 @@ async function makeDashboard(fileName, placename, placetype, src) {
     DATA = await d3.csv(fileName, type);
     CF = crossfilter(DATA);
     srcDim = CF.dimension(d => d.src)
-    srcDim.filter(d => d === src)
+    changeDataSource(src)
     if (placetype == 'county') {
         countyDim = CF.dimension(d => d.county);
         countyDim.filter(d => d === placename)
@@ -101,7 +101,12 @@ function resetAll() {
     updateAll();
 };
 
-function changeSrc(src) {
-    srcDim.filter(d => d === src)
+function changeDataSource(src) {
+    d3.select('#datasource').text(`${src} - SIMULATED`)
+    srcDim.filter(d => d === src)  
+}
+
+function updateDataSource(src) {
+    changeDataSource(src)
     updateAll()
 }
