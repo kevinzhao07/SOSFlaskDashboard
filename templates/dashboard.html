@@ -66,32 +66,20 @@
   <nav class="navbar navbar-expand-sm fixed-top d-print-none">
     <div class = "container-fluid">
       <div class = "navbar-header">
-          <a class="navbar-brand" href="/search">SOS Michigan Opioid Epidemic Dashboard</a>
+        <a class="navbar-brand" href="/search">SOS Michigan Opioid Epidemic Dashboard</a>
       </div>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        {% for eachsource in ['EMS', 'ME'] %}
-          <li class="nav-item">
-          <!-- check the data source and apply active class. also check for city or county. -->
-          {% if data.src == eachsource %}
-            {% if data.placename in data.counties %}
-              <a class="nav-link active" href="?src={{ eachsource }}&county={{data.placename}}">{{ eachsource }}</a>
-            {% else %}
-              <a class="nav-link active" href="?src={{ eachsource }}&city={{data.placename}}">{{ eachsource }}</a>
-            {% endif %}
-          {% else %}
-            {% if data.placename in data.counties %}
-              <a class="nav-link" href="?src={{ eachsource }}&county={{data.placename}}">{{ eachsource }}</a>
-            {% else %}
-              <a class="nav-link" href="?src={{ eachsource }}&city={{data.placename}}">{{ eachsource }}</a>
-            {% endif %}
-          {% endif %}
-          </li>
-        {% endfor %}
+        <li class="nav-item">
+          <div>
+            <button class="srcbutton" onclick="changeSrc('EMS')"> EMS </button>
+            <button class="srcbutton" onclick="changeSrc('ME')"> ME </button>
+          </div>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-          <li class = "signout"><a href = "/logout"><span class="fa fa-sign-out"></span> Logout</a></li>
+        <li class = "signout"><a href = "/logout"><span class="fa fa-sign-out"></span> Logout</a></li>
       </ul>
-     </div>
+    </div>
   </nav>
 
   <div class="container-fluid container-top-buffer">
@@ -130,7 +118,7 @@
         <div class="row top-buffer sticky-top border-bottom">
             <div class= "col-sm-4 text-left">
               <h2 id="place">{{ data.titlename }}</h2>
-              <h4 id="datasource">{{ data.src }} - SIMULATED</h4>
+              <h4 id="datasource"></h4>
               {% if data.src == 'EMS' %}
                 <img src = "/static/markers/ambulance_icon_blues.svg" alt = "ambulance represents EMS data">
               {% elif data.src == 'ME' %}
@@ -307,7 +295,7 @@
     zoomMapbox = {{ data.zoom }};
 
     // populate data graphics
-    makeDashboard("/static/data/map_fake.csv", "{{ data.placename }}", "{{ data.placetype }}");
+    makeDashboard("/static/data/map_fake.csv", "{{ data.placename }}", "{{ data.placetype }}", "{{ data.src }}");
 </script>
 </body>
 </html>

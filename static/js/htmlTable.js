@@ -1,5 +1,5 @@
 function makeHtmlTable() {
-    const headers = DATA.columns.slice(0, -2)
+    const headers = DATA.columns.slice(0, -3)
     // selects table to add
     table = d3.select("#sosTable")
     thead = table.append('thead').append('tr')
@@ -23,7 +23,7 @@ function updateHtmlTable(data) {
         .data(data)
         .join('tr')
     row.selectAll('td')
-        .data((d) => d3.values(d).slice(0,-2))
+        .data((d) => d3.values(d).slice(0,-3))
         .join('td')
         .text((d,i) => i == 0 ? formatHTMLthings(d) : d)
 };

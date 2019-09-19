@@ -52,7 +52,6 @@
             <div class="col-sm-12 d-flex justify-content-center">
               <div class="onemap" id="onemap"></div>
             </div>
-
           </div>
 
           <div class = "row content">
@@ -63,7 +62,6 @@
 
           <div class="row content">
             <div class="col-sm-12 d-flex justify-content-center">
-
               <div class="form-check form-check-inline radios"  id = "radios">
                 <input class="form-check-input" type="radio" name="Radio" id="EMSRadio" value="EMS" onchange = "updateGlobal(this)" checked> EMS
               </div>
@@ -84,9 +82,9 @@
               </form>
             </div>
           </div>
-        <div class = "row content">
-          <div class="col-sm-12 tallerpage"></div>
-        </div>
+          <div class = "row content">
+            <div class="col-sm-12 tallerpage"></div>
+          </div>
 
         </div>
       </div>
@@ -100,7 +98,7 @@
       <div class="row text-center">
         {% for thing in ["Links", "Contact","Help"] %}
           <div class="col-sm-4 text-center">
-              <h4>{{ thing }}</h4>
+            <h4>{{ thing }}</h4>
             <div class="list-group">
               <li class="list-group-item"><a class="footlink" href="#">About the data</a></li>
               <li class="list-group-item"><a class="footlink" href="#">About this site</a></li>
