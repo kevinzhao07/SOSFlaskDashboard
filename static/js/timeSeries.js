@@ -155,15 +155,13 @@ function updateTimeSeries() {
     avgLine2.datum(movingAvgData)
       .transition().ease(easeFunc).duration(T)
         .attr('d', movingAvg2)
-
-    summaryStats(x.domain());
 };
 
 // brush function
 function brushed() {
     const selection = d3.event.selection || x2.range(); // default brush selection
     x.domain(selection.map(x2.invert, x2)); // new focus x-domain
-    const days = (x.domain()[1] - x.domain()[0]) / 86400000;
+    const days = numDays();
     focus.selectAll(".bar")
         .attr("x", d => x(d3.timeHour.offset(d.key,1)))
         .attr("width", width / days * 22/24)
@@ -171,15 +169,19 @@ function brushed() {
         .attr("d", movingAvg1);
     focus.select(".axis--x")
         .call(xAxis)
-    summaryStats(x.domain())
+    summaryStats()
 };
+
+function numDays() {
+  return (x.domain()[1] - x.domain()[0]) / 86400000
+}
 
 // brush snapping function
 function brushended() {
     if (!d3.event.sourceEvent) return; // Only transition after input.
     if (!d3.event.selection) brushed(); // Empty selection returns default brush
     const dateRange = d3.event.selection.map(x2.invert);
-    dayRange = dateRange.map(d3.timeDay.round);
+    let dayRange = dateRange.map(d3.timeDay.round);
 
     // If empty when rounded, use floor & ceil instead.
     if (dayRange[0] >= dayRange[1]) {
@@ -212,8 +214,8 @@ function movingAverage(data, N) {
 function resampleDates(data) {
     const startDate = d3.min(data, d => d.key)
     const endDate = d3.max(data, d => d.key)
-    dayRange = d3.timeDay.range(startDate, d3.timeDay.offset(endDate,1), 1)
-    return dayRange.map(day => {
+    const dateRange = d3.timeDay.range(startDate, d3.timeDay.offset(endDate,1), 1)
+    return dateRange.map(day => {
       return data.find(d => d.key >= day && d.key < d3.timeHour.offset(day,1)) || {'key':day, 'value':0}
     })
 };

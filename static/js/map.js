@@ -44,9 +44,9 @@ function createMap() {// Mapbox section
 
 // draw map markers
 function drawMarkers() {
-    const days = (dayRange[1] - dayRange[0]) / 86400000;
+    const days = numDays();
     for (let pt of latDim.top(Infinity)) {
-        const offset = (dayRange[1] - pt.date) / 86400000;
+        const offset = (x.domain()[1] - pt.date) / 86400000;
         featureLayer.addLayer(L.marker([pt.lat, pt.lng], {
             icon: tableIcon,
             opacity: d3.max([1 - (offset-1)/days, 0]),
