@@ -1,14 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for
-from opioid_dict import src_dict, center_dict, cities, counties, names, name_case_ls, name_cases
+from opioid_dict import src_dict, center_dict, special_dict, counties, names
 from flask_login import LoginManager, login_required, login_user, logout_user, UserMixin, current_user
 from flask_bcrypt import Bcrypt
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
+from itertools import chain
 import os
-# from create_D3_files import create_county_files
 
 application = Flask(__name__)
-application.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 application.secret_key = b'whatisacsrf#$^@&^@#!&^:{>}'
 login_manager = LoginManager()
 login_manager.init_app(application)
@@ -79,7 +78,6 @@ def unauthorized():
     redirerror = 'You must login first.'
     return render_template('login.html', form=form, redirerror=redirerror)
 
-
 @application.route('/')
 def landing():
     return render_template('landing.html')
@@ -87,81 +85,39 @@ def landing():
 @application.route('/search', methods=['GET'])
 @login_required
 def searchpage():
-    data = {
-      'counties': counties,
-    }
-    placenames=[]
-    for each in cities:
-        placenames.append(each)
-    for each in counties:
-        placenames.append(each)
-
-    return render_template("search.html", data=data, placenames=placenames, cities=cities, counties=counties)
-
+    data = {'placenames': list(chain.from_iterable(names.values()))}
+    return render_template("search.html", data=data)
 
 @application.route('/dashboard', methods=['GET'])
 @login_required
 def navtocorrect():
-    arguments=['city', 'county', 'src', 'T0' , 'T1' ]
-    source = request.args.get('src', default = "EMS", type = str)
+    source = request.args.get('src', default = "EMS", type = str).upper()
     city = request.args.get('city')
     county = request.args.get('county')
-    T0 = request.args.get('T0', default = 14, type = int)
-    T1 = request.args.get('T1', default = None, type = int)
+    city_flag = True if city else False
 
-    if county:
-        cityorcounty = "County"
-        name = county
-    if city:
-        cityorcounty = "City"
-        name = city
-
-
-    # create_county_files(name, source, T0, T1, cityorcounty)
-
-
-    source = source.upper()
-
-
-    if city:
-        city = city.title()
-        for each in name_cases:
-            if city in each.keys():
-                city = each[city]
-    if county:
-        county = county.title()
-
-    if city in cities:
-        if '(City)' in city:
-            propername = city[:-7]
-        else:
-            propername = city
+    if city_flag:
+        placename = city.title()
+        titlename = special_dict.get(placename, placename)
         folder = 'cities'
-        county_flag = ''
-        data = {
-            'placename': city,
-            'src': source,
-            'county_flag': county_flag,
-            'titlename': src_dict[source],
-            'f_geojson': f'geojson/{folder}/{propername}.geojson',
-            'center': center_dict["City"][propername]['center'],
-            'zoom' : center_dict["City"][propername].get('zoom', 10)}
-
-    if county in counties:
+    else:
+        placename = county.title()
+        titlename = f'{placename} County'
         folder = 'counties'
-        county_flag = 'County'
-        data = {
-            'placename': county,
-            'src': source,
-            'county_flag': county_flag,
-            'titlename': src_dict[source],
-            'f_geojson': f'geojson/{folder}/{county}.geojson',
-            'center': center_dict["County"][county]['center'],
-            'zoom' : center_dict["County"][county].get('zoom', 10)}
 
+    data = {
+      'placename': placename,
+      'titlename': titlename,
+      'src': source,
+      'f_geojson': f'geojson/{folder}/{placename}.geojson',
+      'center': center_dict[folder][placename]['center'],
+      'zoom': center_dict[folder][placename].get('zoom', 10),
+      'names': names,
+      'counties': counties,
+      'placetype': folder.replace('ies','y'),
+    }
 
-
-    return render_template("dashboard.html", data=data, names=names, cities=cities, counties=counties)
+    return render_template("dashboard.html", data=data)
 
 #%% Run Flask app
 # python application.py
