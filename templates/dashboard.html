@@ -2,11 +2,7 @@
 <html lang="en">
 <head>
   <!--Title uses flask to update data source-->
-  {% if data.placename in counties %}
-    <title> {{ data.placename }}  County {{  data.src  }} - SIMULATED</title>
-  {% else %}
-    <title> {{ data.placename }} {{  data.src  }} - SIMULATED</title>
-  {% endif %}
+  <title> {{ data.titlename }}  {{  data.src  }} - SIMULATED</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,32 +66,20 @@
   <nav class="navbar navbar-expand-sm fixed-top d-print-none">
     <div class = "container-fluid">
       <div class = "navbar-header">
-          <a class="navbar-brand" href="/search">SOS Michigan Opioid Epidemic Dashboard</a>
+        <a class="navbar-brand" href="/search">SOS Michigan Opioid Epidemic Dashboard</a>
       </div>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        {% for eachsource in ['EMS', 'ME'] %}
-          <li class="nav-item">
-          <!-- check the data source and apply active class. also check for city or county. -->
-          {% if data.src == eachsource %}
-            {% if data.placename in cities %}
-              <a class="nav-link active" href="?src={{ eachsource }}&city={{data.placename}}">{{ eachsource }}</a>
-            {% else %}
-              <a class="nav-link active" href="?src={{ eachsource }}&county={{data.placename}}">{{ eachsource }}</a>
-            {% endif %}
-          {% else %}
-            {% if data.placename in cities %}
-              <a class="nav-link" href="?src={{ eachsource }}&city={{data.placename}}">{{ eachsource }}</a>
-            {% else %}
-              <a class="nav-link" href="?src={{ eachsource }}&county={{data.placename}}">{{ eachsource }}</a>
-            {% endif %}
-          {% endif %}
-          </li>
-        {% endfor %}
+        <li class="nav-item">
+          <div>
+            <button class="srcbutton" onclick="updateDataSource('EMS')"> EMS </button>
+            <button class="srcbutton" onclick="updateDataSource('ME')"> ME </button>
+          </div>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-          <li class = "signout"><a href = "/logout"><span class="fa fa-sign-out"></span> Logout</a></li>
+        <li class = "signout"><a href = "/logout"><span class="fa fa-sign-out"></span> Logout</a></li>
       </ul>
-     </div>
+    </div>
   </nav>
 
   <div class="container-fluid container-top-buffer">
@@ -107,19 +91,19 @@
         <div id="accordion" class="accordion">
           <!-- accordion has extra styling rules in style.css -->
           <div class="panel list-group">
-          {% for each in names %}
+          {% for letter in data.names %}
           <!-- add each place to the sidenav under appropriate alphabet -->
-            <a href="#{{ each }}-sec" data-parent="#accordion" data-toggle="collapse" class="list-group-item-action accordion-toggle collapsed">
-              {{ each }}
+            <a href="#{{ letter }}-sec" data-parent="#accordion" data-toggle="collapse" class="list-group-item-action accordion-toggle collapsed">
+              {{ letter }}
             </a>
-            <div class="collapse collapse-in" id="{{ each }}-sec">
+            <div class="collapse collapse-in" id="{{ letter }}-sec">
               <ul class="list-group-item-text">
-                {% for item in names[each] %}
-                  {% if item in counties %}
-                    {% set county = item %}
+                {% for item in data.names[letter] %}
+                  {% if item in data.counties %}
                     <li><a href="?src={{ data.src }}&county={{ item }}">{{ item }}</a></li>
                   {% else %}
-                    <li><a href="?src={{ data.src }}&city={{ item }}">{{ item }}</a></li>
+                    {% set urlcity = item.replace(' (City)','') %}
+                    <li><a href="?src={{ data.src }}&city={{ urlcity }}">{{ item }}</a></li>
                   {% endif %}
                 {% endfor %}
               </ul>
@@ -129,144 +113,136 @@
         </div>
       </div>
       <!-- screen view  content -->
-        <div class="col-sm-10 text-center"  id="content" tabindex="-1">
-          <!-- sticky information bar, with variables inserted through flask -->
-          <div class="row top-buffer sticky-top border-bottom">
-              <div class= "col-sm-4 text-left">
-                {% if data.placename in counties %}
-                  <h2 id="countyname">{{ data.placename }} County</h2>
-                {% else %}
-                  <h2 id="countyname">{{ data.placename }}</h2>
-                {% endif %}
-                <h4 id="datasource">{{ data.src }} - SIMULATED</h4>
-                {% if data.src == 'EMS' %}
-                  <img src = "/static/markers/ambulance_icon_blues.svg" alt = "ambulance represents EMS data">
-                {% endif %}
-                {% if data.src == 'ME' %}
-                  <img src = "/static/markers/morguetable_5.svg" alt = "morgue table represents ME data">
-                {% endif %}
-                <!-- {% if data.src == "ED" %}
-                  <img src = "/static/markers/hospital_icon_blues.svg" alt = "hospital represents ED data">
-                {% endif %} -->
-              </div>
-              <div class="col-sm-4">
-                <div class="row vbottom">
-                  <div class="col-sm-12">
-                    <h4 class="summary d-inline" id="dayRange1"> </h4><h5 class="d-inline"> to</h5>
-                    <h4 class="summary d-inline" id="dayRange2"></h4>
-                  </div>
+      <div class="col-sm-10 text-center"  id="content" tabindex="-1">
+        <!-- sticky information bar, with variables inserted through flask -->
+        <div class="row top-buffer sticky-top border-bottom">
+            <div class= "col-sm-4 text-left">
+              <h2 id="place">{{ data.titlename }}</h2>
+              <h4 id="datasource"></h4>
+              {% if data.src == 'EMS' %}
+                <img src = "/static/markers/ambulance_icon_blues.svg" alt = "ambulance represents EMS data">
+              {% elif data.src == 'ME' %}
+                <img src = "/static/markers/morguetable_5.svg" alt = "morgue table represents ME data">
+              {% endif %}
+              <!-- {% if data.src == "ED" %}
+                <img src = "/static/markers/hospital_icon_blues.svg" alt = "hospital represents ED data">
+              {% endif %} -->
+            </div>
+            <div class="col-sm-4">
+              <div class="row vbottom">
+                <div class="col-sm-12">
+                  <h4 class="summary d-inline" id="dayRange1"> </h4><h5 class="d-inline"> to</h5>
+                  <h4 class="summary d-inline" id="dayRange2"></h4>
                 </div>
               </div>
-              <div class= "col-sm-4 text-right">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="summary" id="N"></h2><p>total</p>
-                  </div>
-                  <div class="col-sm-4 text-left">
-                    <h3 class="summary" id="Np"></h3><p>incident(s)</p>
-                    <h3 class="summary" id="Pct"></h3>
-                  </div>
+            </div>
+            <div class= "col-sm-4 text-right">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="summary" id="N"></h2><p>total</p>
+                </div>
+                <div class="col-sm-4 text-left">
+                  <h3 class="summary" id="Np"></h3><p>incident(s)</p>
+                  <h3 class="summary" id="Pct"></h3>
                 </div>
               </div>
-          </div>
-
-          <!-- Map -->
-          <div class="map-insert" align="center">
-            <div class="map" id="map"></div>
-          </div>
-          <div class="mapdiclaimer">
-            <p class = "disclaimer">*Total counts are based on mailing address, which may not correspond with municipal boundaries
-            </p>
-            <p class = "disclaimer">*Some incidents may be unmappable due to incomplete location information 
-
-            </p>
-          </div>
-
-          <!-- Timeseries -->
-          <div class="timetable-insert">
-            <button class="timetablebutton" onclick="changeDate('oneweek');"> 1W </button>
-            <button class="timetablebutton" onclick="changeDate('twoweeks');"> 2W </button>
-            <button class="timetablebutton" onclick="changeDate('onemonth');"> 1M </button>
-            <button class="timetablebutton" onclick="changeDate('threemonths');"> 3M </button>
-            <button class="timetablebutton" onclick="changeDate('yeartodate');"> YTD </button>
-            <div class="timetable bottombuffer"></div>
-          </div>
-
-          <!-- Demographics -->
-          <div class="row demographics">
-          {% for item in ["Age", "Gender", "Race"] %}
-            <div class="col-sm-4 mx-auto">
-              <div class="row-content text-center bottombuffer">
-                <h4 class="eachDemographic">{{ item }}</h4>
-              </div>
-              <div class="row {{item}}-chart center-block f-flex alogn-items-centerS">
-                {% if item == "Age" %}
-                  <button class="resetButton"onclick="resetAge()"> reset age </button>
-                  <svg id="age"></svg>
-                {% endif %}
-                {% if item == "Gender" %}
-                  <button class="resetButton" onclick="resetGender()"> reset gender </button>
-                  <svg id="gender"></svg>
-                {% endif %}
-                {% if item == "Race" %}
-                  <button class="resetButton" onclick="resetRace()"> reset race </button>
-                  <svg id="race"></svg>
-                {% endif %}
-              </div>
             </div>
-          {% endfor %}
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <button class="resetButton" onclick="resetAll()"> reset demographics </button>
+        </div>
+
+        <!-- Map -->
+        <div class="map-insert" align="center">
+          <div class="map" id="map"></div>
+        </div>
+        <div class="mapdisclaimer">
+          <p class = "disclaimer">*Total counts are based on mailing address, which may not correspond with municipal boundaries</p>
+          <p class = "disclaimer">*Some incidents may be unmappable due to incomplete location information</p>
+        </div>
+
+        <!-- Timeseries -->
+        <div class="timetable-insert">
+          <button class="timetablebutton" onclick="changeDate('oneweek')"> 1W </button>
+          <button class="timetablebutton" onclick="changeDate('twoweeks')"> 2W </button>
+          <button class="timetablebutton" onclick="changeDate('onemonth')"> 1M </button>
+          <button class="timetablebutton" onclick="changeDate('threemonths')"> 3M </button>
+          <button class="timetablebutton" onclick="changeDate('yeartodate')"> YTD </button>
+          <div class="timetable bottombuffer"></div>
+        </div>
+
+        <!-- Demographics -->
+        <div class="row demographics">
+        {% for item in ["Age", "Gender", "Race"] %}
+          <div class="col-sm-4 mx-auto">
+            <div class="row-content text-center bottombuffer">
+              <h4 class="eachDemographic">{{ item }}</h4>
+            </div>
+            <div class="row {{item}}-chart center-block f-flex alogn-items-centerS">
+              {% if item == "Age" %}
+                <button class="resetButton" onclick="resetAge()"> reset age </button>
+                <svg id="age"></svg>
+              {% endif %}
+              {% if item == "Gender" %}
+                <button class="resetButton" onclick="resetGender()"> reset gender </button>
+                <svg id="gender"></svg>
+              {% endif %}
+              {% if item == "Race" %}
+                <button class="resetButton" onclick="resetRace()"> reset race </button>
+                <svg id="race"></svg>
+              {% endif %}
             </div>
           </div>
-
-
-          <!-- Table -->
-          <div class="tablebuttondiv">
-            <button onclick="changeRows(10);" class="ten change selected tablebutton"> 10 rows </button>
-            <button onclick="changeRows(20);" class="twenty change tablebutton"> 20 rows </button>
-            <button onclick="changeRows(50);" class="fifty change tablebutton"> 50 rows </button>
-          </div>
-          <div class="table-responsive bottombuffer">
-            <table id="sosTable" class="table table-bordered table-striped table-hover"></table>
-          </div>
-
-          <!-- Buttons, currently disabled -->
-          <!-- <div class="row top-buffer buttons d-print-none">
-            {% for itm in ["Save", "Email", "Print"] %}
-              <div class="col-sm">
-                {% if itm == "Print" %}
-                  <button type="button" class="btn-lg btn-primary" onclick="window.print(); return false;">{{ itm }}</button>
-                {% else %}
-                  <button type="button" class="btn-lg btn-primary disabled">{{ itm }}</button>
-                {% endif %}
-            </div>
-            {% endfor %}
-          </div> -->
-          <!-- Back to top link -->
-          <div class = "row backtotop">
-            <div class = "col-sm">
-              <a href="#content">Back to Top</a>
-            </div>
-          </div>
-          <div class="row discs">
-            <div class="col-sm-12">
-              <p class="disclaimer">Due to the near-real time nature of SOS, all data collected is provisional and subject to change. Data may not always be complete and data should not be considered a definitive opioid overdose count. All locations on the map are approximate.
-                <br>Please reach out to <a href="mailto:SOS.Reports@umich.edu">SOS.Reports@umich.edu</a> with any questions.
-                <br>University of Michigan 2019 	&#8482;
-              </p>
-            </div>
-          </div>
-          <div class="row logos">
-            <div class = "col-sm-12 d-flex justify-content-center align-items-center">
-              <a href="https://injurycenter.umich.edu/" target="_blank"><img class="isIpc" src = "/static/images/IPC.png"></img></a>
-              <img class = "notipc" src = "/static/images/SOS.png"></img>
-              <img class = "notipc" src = "/static/images/hidta.png"></img>
-            </div>
+        {% endfor %}
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <button class="resetButton" onclick="resetAll()"> reset demographics </button>
           </div>
         </div>
+
+
+        <!-- Table -->
+        <div class="tablebuttondiv">
+          <button onclick="changeRows(10);" class="ten change selected tablebutton"> 10 rows </button>
+          <button onclick="changeRows(20);" class="twenty change tablebutton"> 20 rows </button>
+          <button onclick="changeRows(50);" class="fifty change tablebutton"> 50 rows </button>
+        </div>
+        <div class="table-responsive bottombuffer">
+          <table id="sosTable" class="table table-bordered table-striped table-hover"></table>
+        </div>
+
+        <!-- Buttons, currently disabled -->
+        <!-- <div class="row top-buffer buttons d-print-none">
+          {% for itm in ["Save", "Email", "Print"] %}
+            <div class="col-sm">
+              {% if itm == "Print" %}
+                <button type="button" class="btn-lg btn-primary" onclick="window.print(); return false;">{{ itm }}</button>
+              {% else %}
+                <button type="button" class="btn-lg btn-primary disabled">{{ itm }}</button>
+              {% endif %}
+          </div>
+          {% endfor %}
+        </div> -->
+        <!-- Back to top link -->
+        <div class = "row backtotop">
+          <div class = "col-sm">
+            <a href="#content">Back to Top</a>
+          </div>
+        </div>
+        <div class="row discs">
+          <div class="col-sm-12">
+            <p class="disclaimer">Due to the near-real time nature of SOS, all data collected is provisional and subject to change. Data may not always be complete and data should not be considered a definitive opioid overdose count. All locations on the map are approximate.
+              <br>Please reach out to <a href="mailto:SOS.Reports@umich.edu">SOS.Reports@umich.edu</a> with any questions.
+              <br>University of Michigan 2019 	&#8482;
+            </p>
+          </div>
+        </div>
+        <div class="row logos">
+          <div class = "col-sm-12 d-flex justify-content-center align-items-center">
+            <a href="https://injurycenter.umich.edu/" target="_blank"><img class="isIpc" src = "/static/images/IPC.png"></img></a>
+            <img class = "notipc" src = "/static/images/SOS.png"></img>
+            <img class = "notipc" src = "/static/images/hidta.png"></img>
+          </div>
+        </div>
+      </div>
     <div class="col-sm-1 sidebuff">  </div>
   </div>
   <footer class="footer d-print-none">
@@ -288,27 +264,23 @@
   {% if data.src == "EMS" %}
     <script>
     var tableIcon = L.icon({
-
         iconUrl: '/static/markers/ambulance_icon_blues.svg',
         iconSize:     [25,25], // size of the icon
         iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
       });
     </script>
-  {% endif %}
   <!-- {% if data.src == "ED" %}
     <script>
     var tableIcon = L.icon({
-
         iconUrl: '/static/markers/hospital_icon_blues.svg',
         iconSize:     [25,25], // size of the icon
         iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
       });
     </script>
   {% endif %} -->
-  {% if data.src == "ME" %}
+  {% elif data.src == "ME" %}
     <script>
     var tableIcon = L.icon({
-
         iconUrl: '/static/markers/morguetable_5.svg',
         iconSize:     [25,25], // size of the icon
         iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
@@ -323,7 +295,7 @@
     zoomMapbox = {{ data.zoom }};
 
     // populate data graphics
-    makeDashboard("/static/data/map_fake.csv", "{{ data.placename }}");
+    makeDashboard("/static/data/map_fake.csv", "{{ data.placename }}", "{{ data.placetype }}", "{{ data.src }}");
 </script>
 </body>
 </html>

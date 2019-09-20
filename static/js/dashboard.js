@@ -1,6 +1,5 @@
 // creates all charts
-
-async function makeDashboard(fileName, citycounty) {
+async function makeDashboard(fileName, placename, placetype, src) {
     previous = "";
     neutral = "fa-sort";
     ascending = "fa-sort-asc";
@@ -10,8 +9,15 @@ async function makeDashboard(fileName, citycounty) {
     formatDate = d3.timeFormat("%b %d, %Y");
     DATA = await d3.csv(fileName, type);
     CF = crossfilter(DATA);
-    countyDim = CF.dimension(d => d.county);
-    countyDim.filter(d => d === citycounty);
+    srcDim = CF.dimension(d => d.src)
+    changeDataSource(src)
+    if (placetype == 'county') {
+        countyDim = CF.dimension(d => d.county);
+        countyDim.filter(d => d === placename)
+    } else  {
+        cityDim = CF.dimension(d => d.city);
+        cityDim.filter(d => d === placename)
+    }
     rows = 10;
     sortColumn = "date";
     makeTimeSeries();
@@ -22,12 +28,20 @@ async function makeDashboard(fileName, citycounty) {
     makeHtmlTable();
 };
 
+// read in data
+function type(d) {
+  d.date = parseDate(d.date);
+  d.lat = +d.lat;
+  d.lng = +d.lng;
+  return d;
+};
+
 // updates all
 function updateAll(updateCharts = true) {
     if (updateCharts) {
         updateMap(map.getBounds());
         updateTimeSeries();
-        summaryStats(x.domain());
+        summaryStats();
         updateAge();
         updateGender();
         updateRace();
@@ -37,16 +51,8 @@ function updateAll(updateCharts = true) {
     updateHtmlTable(tableData);
 };
 
-// read in data
-function type(d) {
-    d.date = parseDate(d.date);
-    d.lat = +d.lat;
-    d.lng = +d.lng;
-    return d;
-};
-
 // Calculate descriptive statistics
-function summaryStats(dayRange) {
+function summaryStats(dayRange=x.domain()) {
     const days = (dayRange[1] - dayRange[0]) / 86400000
     const prevDayRange = [d3.timeDay.offset(dayRange[0],-days), dayRange[0]];
     dayRange[1] = d3.timeSecond.offset(dayRange[1],-1);
@@ -73,19 +79,19 @@ function summaryStats(dayRange) {
 function colorCodePct(data){
     return data.includes("+") ? 'color:red' :
            data.includes("-") ? 'color:green' :
-           'color:black';
+                                'color:black' ;
 };
 
 function colorCode(data){
     return data > 0 ? 'color:red' :
            data < 0 ? 'color:green' :
-           'color:black';
+                      'color:black' ;
 };
 
 function arrowUpDown(data){
     return data > 0 ? `<i class= "fa fa-arrow-up"></i> ${data}` :
            data < 0 ? `<i class ="fa fa-arrow-down"></i> ${Math.abs(data)}` :
-           `${data}`;
+                      `${data}` ;
 };
 
 function resetAll() {
@@ -94,3 +100,13 @@ function resetAll() {
     resetRace();
     updateAll();
 };
+
+function changeDataSource(src) {
+    d3.select('#datasource').text(`${src} - SIMULATED`)
+    srcDim.filter(d => d === src)  
+}
+
+function updateDataSource(src) {
+    changeDataSource(src)
+    updateAll()
+}

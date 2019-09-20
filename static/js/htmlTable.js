@@ -1,5 +1,5 @@
 function makeHtmlTable() {
-    const headers = DATA.columns.slice(0, -2)
+    const headers = DATA.columns.slice(0, -3)
     // selects table to add
     table = d3.select("#sosTable")
     thead = table.append('thead').append('tr')
@@ -23,12 +23,12 @@ function updateHtmlTable(data) {
         .data(data)
         .join('tr')
     row.selectAll('td')
-        .data((d) => d3.values(d).slice(0,-2))
+        .data((d) => d3.values(d).slice(0,-3))
         .join('td')
-        .text((d,i) => i = 1 ? formatHTMLthings(d) : d)
+        .text((d,i) => i == 0 ? formatHTMLthings(d) : d)
 };
 function formatHTMLthings(d){
-    return d instanceof Date ?  d3.timeFormat("%b %d, %Y")(d) : d;
+    return d instanceof Date ? d3.timeFormat("%b %d, %Y")(d) : d;
 };
 function getSortedData(sortColumn){
     if (sortColumn == "date") {
@@ -64,7 +64,8 @@ function reduceData(data) {
         const bottomData = data.slice(-rows/2);
         var data = [...topData, ...middle, ...bottomData];
     }
-    return data;
+    data.map(d => d.city = d.city == 'U' ? 'Unknown' : d.city)
+    return data
 };
 function toggleToAsc(current){
     const column = d3.select(current).select('i')
