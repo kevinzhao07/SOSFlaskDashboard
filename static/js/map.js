@@ -2,7 +2,6 @@
 function createMap() {// Mapbox section
     L.mapbox.accessToken = 'pk.eyJ1Ijoic3RjaG9pIiwiYSI6ImNqd2pkNWN0NzAyNnE0YW8xeTl5a3VqMXQifQ.Rq3qT82-ysDHcMsHGTBiQg';
     layers = {
-        // 'main': L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'),
         'Light': L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10'),
         'Dark': L.mapbox.styleLayer('mapbox://styles/mapbox/dark-v10'),
         'Main': L.mapbox.styleLayer('mapbox://styles/stchoi/cjwky60dk0toy1cm8fnhngzrv')
@@ -25,7 +24,7 @@ function createMap() {// Mapbox section
             color: '#72add4',
             fillOpacity: 0.30
         };
-  }
+    }
 
     L.control.layers(layers).addTo(map); // add basemap control
     featureLayer = L.mapbox.featureLayer().addTo(map);
@@ -54,6 +53,7 @@ function drawMarkers() {
           .bindPopup(`<p>${formatDate(pt.date)}<br>${pt.county}<br>${pt.Age} ${pt.Race} ${pt.Gender}</p>`))
       };
 };
+
 function updateMap(bounds) {
     latDim.filter([bounds.getSouth(), bounds.getNorth()])
     lngDim.filter([bounds.getWest(), bounds.getEast()])

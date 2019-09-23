@@ -71,8 +71,8 @@
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
           <div>
-            <button class="srcbutton" onclick="updateDataSource('EMS')"> EMS </button>
-            <button class="srcbutton" onclick="updateDataSource('ME')"> ME </button>
+            <button class="srcbutton" onclick="updateSrc('EMS')"> EMS </button>
+            <button class="srcbutton" onclick="updateSrc('ME')"> ME </button>
           </div>
         </li>
       </ul>
@@ -119,11 +119,7 @@
             <div class= "col-sm-4 text-left">
               <h2 id="place">{{ data.titlename }}</h2>
               <h4 id="datasource"></h4>
-              {% if data.src == 'EMS' %}
-                <img src = "/static/markers/ambulance_icon_blues.svg" alt = "ambulance represents EMS data">
-              {% elif data.src == 'ME' %}
-                <img src = "/static/markers/morguetable_5.svg" alt = "morgue table represents ME data">
-              {% endif %}
+              <img id='dataicon'>
               <!-- {% if data.src == "ED" %}
                 <img src = "/static/markers/hospital_icon_blues.svg" alt = "hospital represents ED data">
               {% endif %} -->
@@ -260,42 +256,15 @@
       </div>
     </div>
   </footer>
-  <!-- setting leaflet-mapbox icons through Flask -->
-  {% if data.src == "EMS" %}
-    <script>
-    var tableIcon = L.icon({
-        iconUrl: '/static/markers/ambulance_icon_blues.svg',
-        iconSize:     [25,25], // size of the icon
-        iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
-      });
-    </script>
-  <!-- {% if data.src == "ED" %}
-    <script>
-    var tableIcon = L.icon({
-        iconUrl: '/static/markers/hospital_icon_blues.svg',
-        iconSize:     [25,25], // size of the icon
-        iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
-      });
-    </script>
-  {% endif %} -->
-  {% elif data.src == "ME" %}
-    <script>
-    var tableIcon = L.icon({
-        iconUrl: '/static/markers/morguetable_5.svg',
-        iconSize:     [25,25], // size of the icon
-        iconAnchor:   [15,15], // point of the icon which will correspond to marker's location
-      });
-    </script>
-  {% endif %}
 
   <script>
   // Mapbox - Flask variables
     centerMapbox = {{ data.center }};
     county_geojson = "{{ url_for('static',filename=data.f_geojson) }}";
     zoomMapbox = {{ data.zoom }};
-
+    src = "{{ data.src }}";
     // populate data graphics
-    makeDashboard("/static/data/map_fake.csv", "{{ data.placename }}", "{{ data.placetype }}", "{{ data.src }}");
+    makeDashboard("/static/data/map_fake.csv", "{{ data.placename }}", "{{ data.placetype }}");
 </script>
 </body>
 </html>
