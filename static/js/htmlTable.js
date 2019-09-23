@@ -4,7 +4,7 @@ function makeHtmlTable() {
     table = d3.select("#sosTable")
     thead = table.append('thead').append('tr')
       .selectAll('th')
-      .data(d => headers)
+      .data(headers)
       .join('th')
         .text((d,i) => i = 1 ? formatHTMLthings(d): d)
         .attr('class', (d,i) => headers[i] + " sortable")
@@ -20,11 +20,11 @@ function makeHtmlTable() {
 // updates HTML table
 function updateHtmlTable(data) {
     row = tbody.selectAll('tr')
-        .data(data)
-        .join('tr')
+      .data(data)
+      .join('tr')
     row.selectAll('td')
-        .data((d) => d3.values(d).slice(0,-3))
-        .join('td')
+      .data(d => d3.values(d).slice(0,-3))
+      .join('td')
         .text((d,i) => i == 0 ? formatHTMLthings(d) : d)
 };
 function formatHTMLthings(d){

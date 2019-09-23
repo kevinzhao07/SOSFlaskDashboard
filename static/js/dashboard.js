@@ -1,5 +1,5 @@
 // creates all charts
-async function makeDashboard(fileName, placename, placetype, src) {
+async function makeDashboard(fileName, placename, placetype) {
     previous = "";
     neutral = "fa-sort";
     ascending = "fa-sort-asc";
@@ -10,7 +10,7 @@ async function makeDashboard(fileName, placename, placetype, src) {
     DATA = await d3.csv(fileName, type);
     CF = crossfilter(DATA);
     srcDim = CF.dimension(d => d.src)
-    changeDataSource(src)
+    changeSrc()
     if (placetype == 'county') {
         countyDim = CF.dimension(d => d.county);
         countyDim.filter(d => d === placename)
@@ -101,12 +101,23 @@ function resetAll() {
     updateAll();
 };
 
-function changeDataSource(src) {
+function changeSrc() {
+    const svgIcon = src === 'EMS' ? 'ambulance_icon_blues.svg' : 'morguetable_5.svg'
+    const txtIcon = src === 'EMS' ? 'ambulance' : 'morgue table'
+    tableIcon = L.icon({
+      iconUrl: '/static/markers/' + svgIcon,
+      iconSize: [25,25], // size of the icon
+      iconAnchor: [15,15], // point of the icon which will correspond to marker's location
+    });
     d3.select('#datasource').text(`${src} - SIMULATED`)
+    d3.select('#dataicon')
+        .attr('src',`/static/markers/${svgIcon}`)
+        .attr('alt',`${txtIcon} represents ${src} data`)
     srcDim.filter(d => d === src)  
 }
 
-function updateDataSource(src) {
-    changeDataSource(src)
+function updateSrc(source) {
+    src = source
+    changeSrc()
     updateAll()
 }
