@@ -218,31 +218,15 @@ function resampleDates(data) {
     })
 };
 
-function changeDate(time, end = "none") {
-    if (end === "none"){
-        endDate = d3.timeDay.offset(d3.max(data, d => d.key),1);
-        x.domain([d3.min(data, d => d.key), endDate]);
-    } else {
-        endDate = end;
-        x.domain([d3.min(data, d => d.key), endDate]);
-        // console.log(endDate);
-    }
+function changeDate(T, endTime = false) {
+  const endDate = endTime ? endTime : d3.timeDay.offset(d3.max(data, d => d.key),1)
+  const beginDate = T == '1W' ? d3.timeDay.offset(endDate, -7) :
+                    T == '2W' ? d3.timeDay.offset(endDate, -14) :
+                    T == "1M" ? d3.timeMonth.offset(endDate, -1) :
+                    T == "3M" ? d3.timeMonth.offset(endDate, -3) :
+                    T =="YTD" ? d3.timeYear(new Date) : T
 
-    // console.log(endDate);
-
-    beginDate = time == 'oneweek' ? d3.timeDay.offset(endDate, -7) :
-                time == 'twoweeks' ? d3.timeDay.offset(endDate, -14) :
-                time == "onemonth" ? d3.timeMonth.offset(endDate, -1) :
-                time == "threemonths" ? d3.timeMonth.offset(endDate, -3) :
-                time == "yeartodate" ? d3.timeYear(new Date) :
-                                       time;
-
-    // console.log(beginDate);
-
-    selection.attr("class", "brush")
-      .call(brush)
-      .call(brush.move, [x(beginDate), x(endDate)]) // initialize brush selection
-
-    dateDim.filter([beginDate, endDate]);
-    updateAll();
+  selection.call(brush.move, [x2(beginDate), x2(endDate)]) // initialize brush selection
+  dateDim.filter([beginDate, endDate]);
+  updateAll();
 };
