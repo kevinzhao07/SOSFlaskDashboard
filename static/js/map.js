@@ -68,8 +68,10 @@ function updateMap(boole){
     drawMarkers();
 
     function pointExclusions(){
-        let nonDisplayed = lngDim.filter(d => d == 0 ).top(Infinity).length
-        d3.select('.numberExcl').html("* " + nonDisplayed +  " incidents excluded " + '<i class="fa fa-info-circle" aria-hidden="true"></i>')
-        lngDim.filterAll();
-    };
+        latDim.filter(d => d == 0)
+        lngDim.filter(d => d == 0)
+        const excludedPts = lngDim.top(Infinity).length
+        d3.select('.numberExcl')
+            .html('* ' + excludedPts + ' incidents excluded<i class="fa fa-info-circle" aria-hidden="true"></i>')
+      };
 };
