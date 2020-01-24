@@ -1,0 +1,207 @@
+*{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container .row{
+  width: inherit;
+}
+.countynames {
+  padding-top: 10px !important;
+}
+
+.content{
+  width: inherit;
+  margin: 0px;
+  padding-top: 10px;
+}
+.onemap {
+  padding-bottom: 20px;
+}
+.content svg{
+  width: inherit;
+}
+.tallerpage {
+  height: 200px;
+}
+
+p a {
+  color: #00274c;
+  font-weight: 500;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+p a:focus {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.bodystuff{
+  padding: 0px;
+  margin: 0px;
+}
+
+.county {
+  fill: #9b9a6d;
+}
+.col-sm-6{
+  padding: 0px;
+}
+
+.radios {
+  padding: 20px;
+  font-size: 20px;
+}
+.datasourceselect{
+  width: inherit;
+  padding-bottom: 10px;
+}
+
+.form-check-inline {
+  margin: 20px;
+}
+
+.search{
+  width: inherit;
+}
+
+#ED {
+  background: #e4e1df; /* OBSERVATORY WHITE */
+}
+
+.onemap {
+  padding-bottom: 20px;
+  width: inherit;
+}
+
+.EMS.county {
+  fill: #a79d96; /* ANGELL HALL ASH */
+}
+
+.ED.county {
+  fill: #9b9a6d; /* BURTON TOWER BEIGE */
+}
+
+.ME.county {
+  fill :#989c97; /* THE ROCK GRAY */
+}
+
+.mapEMS, .mapED, .mapME {
+  margin-bottom : 20px;
+}
+
+path.county {
+  stroke: #fff;
+}
+
+path.county:hover, circle.city:hover {
+  fill: #ffcb05;
+  cursor: pointer;
+}
+
+circle.city {
+  fill: #587abc;
+  stroke: white;
+}
+
+.formthing input {
+  width: 450px !important;
+  height: 50px !important;
+}
+
+.formthing button {
+  width: 80px;
+  height: 50px;
+  color: black;
+  border-radius: 0;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+form .autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  width: 450px;
+  top: 100%;
+}
+
+.autocomplete-items div {
+  padding: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+  
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+.signout{
+  color: white;
+}
+
+nav span{
+  color: white;
+}
+
+h5{
+  padding: 5px 0px;
+}
+
+footer{
+  background-color: #00274c;
+  width: inherit;
+}
+.footer{
+  background-color: #00274c !important;
+  width: inherit;
+}
+
+.footer p{
+  color: white;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.bottomIPC{
+  height: 50px;
+}
+
+.bottomSOS{
+  height: 100px;
+}
+.bottomHIDTA{
+  height: 100px;
+}
+
+
+.logos{
+  padding: 0px;
+}
+
+.nav-item{
+  padding: 0px 5px;
+}
+
+.current{
+  font-weight: bold;
+}

@@ -1,0 +1,11 @@
+#map {
+  top: 0;
+  bottom: 0;
+  width: 875px;
+  height: 550px;
+  cursor: default;
+  padding: 5px;
+}
+path.leaflet-interactive{
+  cursor: default !important;
+}

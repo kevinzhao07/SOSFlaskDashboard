@@ -1,0 +1,58 @@
+.alert{
+    padding-top: 55px;
+    width: 100%;
+}
+.loginalert{
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.login-field{
+    padding: 5px;
+    width: 100%;
+}
+
+.control-group{
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.logos{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.loginsubmit{
+    width: 100%;
+    padding: 10px;
+}
+.btn{
+    margin: 0;
+    padding: 10px 0px;
+    margin-top: 15px;
+}
+
+.license{
+    padding: 10px 0px;
+}
+
+.license a{
+    text-decoration: underline;
+}
+
+.agreementcheck{
+    padding-right: 5px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.buttonpadded{
+    padding: 5px;
+}

@@ -1,0 +1,57 @@
+/* search page map */
+.onemap {
+  margin-bottom : 20px;
+  padding: 5px;
+}
+
+.onemap.county{
+  fill :#9b9a6d;
+}
+
+
+.tooltip{
+  margin: 2px !important;
+  font-size: 15px !important;
+  opacity: 0.8 !important;
+}
+
+.tooltip p{
+  color: white !important;
+}
+
+path.county {
+  stroke: #fff !important;
+}
+
+path.county:hover, circle.city:hover {
+  fill: #ffcb05 !important;
+  cursor: pointer;
+}
+
+circle.city {
+  fill: #575294  !important;
+  stroke: white !important;
+}
+
+.extraMapPadding {
+  padding-bottom: 20px;
+}
+
+/* landing page map */
+.mich{
+  padding: 15px;
+}
+
+#michEms .county {
+fill: #587abc;
+cursor: default !important;
+}
+#michMe .county{
+  fill: #575294;
+  cursor: default !important;
+}
+
+.mich{
+  display: inline-block;
+  margin-top:10px;
+}

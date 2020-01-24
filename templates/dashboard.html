@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Title uses flask to update data source-->
+  {% if data.src == "EMS" %}
+    <title>{{ data.titlename }} EMS Naloxone Administrations - SIMULATED</title>
+  {% else %}
+    <title> {{ data.titlename }} Suspected Drug Related Deaths - SIMULATED</title>
+  {% endif %}
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- icon  -->
+  <link rel="icon" type="image/png" href="/static/images/icon_t.png">
+
+  <!-- BS and FA -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- d3 -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.7/crossfilter.min.js"></script>
+  <script src="//d3js.org/topojson.v3.min.js"></script>
+
+  <!-- general style -->
+  <link rel="stylesheet" href="/static/css/style.css">
+
+  <!--timetable -->
+  <link rel="stylesheet" href="/static/css/timetable.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!--mapbox -->
+  <link rel="stylesheet" href="/static/css/map.css">
+  <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/1.1.0/mapbox-gl.js"></script>
+
+
+  <!-- three charts -->
+  <link rel="stylesheet" href="/static/css/tablecharts.css">
+
+  <!-- searchpage michigan-->
+  <link rel="stylesheet" href="/static/css/michigan.css">
+
+  <!-- print style -->
+  <link rel ="stylesheet" media="print" href="/static/css/print.css">
+
+  
+  <!--Google Fonts Noto Sans-->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- javascript files -->
+  <script src="/static/js/ageChart.js"></script>
+  <script src="/static/js/genderChart.js"></script>
+  <script src="/static/js/htmlTable.js"></script>
+  <script src="/static/js/map.js"></script>
+  <script src="/static/js/raceChart.js"></script>
+  <script src="/static/js/timeSeries.js"></script>
+  <script src="/static/js/dashboard.js"></script>
+
+</head>
+
+<body>
+  <!-- accessibility skip to main tab index -->
+  <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <header></header>
+
+  <!-- top navigation -->
+  <nav class="navbar navbar-expand-sm sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/search">SOS Authorized User Dashboard</a>
+        <ul class = "navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">HOME</a>
+            </li>
+            <li class = "nav-item">
+              <a class="nav-link" href="/about">ABOUT</a>
+            </li>
+            <li class = "nav-item">
+              <a class="nav-link" href="/contact">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/howtouse">HOW TO USE</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class = "nav-link"><a href = "/logout"><span class="fa fa-sign-out"></span> Logout</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid container-top-buffer">
+    <!-- container-top-buffer is defined in style.css -->
+    <div class="row content">
+      <!-- side navigation -->
+      <div class="col-sm-1 sidenav text-right push-1">
+        <h5 class="sidenavlabel toggledatatype">Data Source:</h5>
+        <div class="sourcetogglers">
+          <button class="srcbutton" onclick="updateSrc('EMS')"> EMS </button>
+          <button class="srcbutton" onclick="updateSrc('ME')"> ME </button>
+        </div>
+        <h5 class="sidenavlabel">County or City of Interest:</h5>
+        <!-- <form class = "form-inline formthing" onsubmit="navPlace()">
+            <input class="form-control autocomplete form-inline" method="GET" autocomplete="off" id="searchthing" placeholder="City or County Name" aria-label="Search" type="text" required>
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form> -->
+
+        <div id="accordion" class="accordion">
+          <div class="panel list-group">
+          {% for letter in data.names %}
+            <a href="#{{ letter }}-sec" data-parent="#accordion" data-toggle="collapse" class="list-group-item-action accordion-toggle collapsed">
+              {{ letter }}
+            </a>
+            <div class="collapse collapse-in" id="{{ letter }}-sec">
+              <ul class="list-group-item-text">
+                {% for item in data.names[letter] %}
+                  {% if item in data.counties %}
+                    <li><a href="?county={{ item }}">{{ item }}</a></li>
+                  {% else %}
+                    {% set urlcity = item.replace(' (City)','') %}
+                    <li><a href="?city={{ urlcity }}">{{ item }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+
+      </div>
+      
+      <!-- screen view  content -->
+      <div class="col-sm-11 text-center"  id="content" tabindex="-1">
+        <!-- sticky information bar, with variables inserted through flask -->
+        <div class="summarySticky row border-bottom sticky-top">
+            <div class= "col-sm-4 text-left">
+              <h2 id="place">{{ data.titlename }}</h2>
+              <h4 id="datasource"></h4>
+            </div>
+            <div class="col-sm-4">
+              <div class="row vbottom">
+                <div class="col-sm-12">
+                  <h4 class="summary d-inline" id="dayRange1"> </h4><h5 class="d-inline"> to</h5>
+                  <h4 class="summary d-inline" id="dayRange2"></h4>
+                </div>
+              </div>
+            </div>
+            <div class= "col-sm-4 text-right">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="summary" id="N"></h2><p>total</p>
+                </div>
+                <div class="col-sm-4 text-left">
+                  <h3 class="summary" id="Np"></h3><p>incident(s)</p>
+                  <h3 class="summary" id="Pct"></h3>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div class="row allmapelems">
+          <div class="col-sm-2">
+            <p class="pinexplain">Click on each pin for more details on the overdose incident</p>
+          </div>
+          <div class="col-sm-8 d-flex align-items-center justify-content-center">
+            <div class="alignmaptext d-flex flex-column align-items-start justify-content-center">
+              <div class="map-insert d-flex align-items-center justify-content-center">
+                  <div class="map" id="map"></div>
+                </div>
+                <div class="mapdisclaimers text-left">
+                  <p class = "mapdisclaimer"> *All locations on the map are approximate</p>
+                  <p class = "mapdisclaimer">**Total counts are based on mailing address, which may not correspond with municipal boundaries</p>
+                  <p class = "mapdisclaimer">***Some incidents may be unmappable due to incomplete location information</p>
+                  <p class = "mapdisclaimer">****All locations on the map are randomly displaced between 100 and 300 meters to protect privacy</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+
+
+        <!-- Timeseries -->
+        <div class="timetable-insert">
+          <button class="timetablebutton" onclick="changeDate(7)">7 days</button>
+          <button class="timetablebutton" onclick="changeDate(14)">14 days</button>
+          <button class="timetablebutton" onclick="changeDate(30)">30 days</button>
+          <button class="timetablebutton" onclick="changeDate(90)">90 days</button>
+          <button class="timetablebutton" onclick="changeDate(365)">365 days</button>
+          <div class='row ttandexp'>
+            <div class="col-sm-2">
+                <p class="pinexplain">Drag grey bar to adjust timeframe</p>
+            </div>
+            <div class="col-sm-8">
+                <div class="timetable bottombuffer"></div>
+            </div>
+            <div class="col-sm-2">
+            </div>
+          </div>
+        </div>
+
+        <!-- Demographics -->
+        <div class="row demographics">
+        {% for item in ["Age", "Gender", "Race"] %}
+          <div class="col-sm-4 mx-auto">
+            <div class="row-content text-center bottombuffer">
+              <h4 class="eachDemographic">{{ item }}</h4>
+            </div>
+            <div class="row {{item}}-chart center-block f-flex alogn-items-centerS">
+              {% if item == "Age" %}
+                <button class="resetButton" onclick="resetAge()">reset age</button>
+                <svg id="age"></svg>
+              {% endif %}
+              {% if item == "Gender" %}
+                <button class="resetButton" onclick="resetGender()">reset gender</button>
+                <svg id="gender"></svg>
+              {% endif %}
+              {% if item == "Race" %}
+                <button class="resetButton" onclick="resetRace()">reset race</button>
+                <svg id="race"></svg>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+        <div class="row resetalldem">
+          <div class="col-sm-12">
+            <button class="resetButton" onclick="resetAll()">reset demographics</button>
+            <p class="text-left">To learn more about interactive capabilities, go to our <a href="/howtouse"> How to Use</a> tab</p>
+          </div>
+        </div>
+
+
+        <!-- Table -->
+        <div class="tablebuttondiv">
+          <button onclick="changeRows(10);" class="ten change selected tablebutton">10 rows</button>
+          <button onclick="changeRows(20);" class="twenty change tablebutton">20 rows</button>
+          <button onclick="changeRows(50);" class="fifty change tablebutton">50 rows</button>
+        </div>
+        <div class="table-responsive bottombuffer">
+          <table id="sosTable" class="table table-bordered table-striped table-hover"></table>
+        </div>
+
+        <!-- Buttons, currently disabled -->
+        <!-- <div class="row top-buffer buttons d-print-none">
+          {% for itm in ["Save", "Email", "Print"] %}
+            <div class="col-sm">
+              {% if itm == "Print" %}
+                <button type="button" class="btn-lg btn-primary" onclick="window.print(); return false;">{{ itm }}</button>
+              {% else %}
+                <button type="button" class="btn-lg btn-primary disabled">{{ itm }}</button>
+              {% endif %}
+          </div>
+          {% endfor %}
+        </div> -->
+        <!-- Back to top link -->
+        <div class = "row backtotop">
+          <div class = "col-sm">
+            <a href="#content">Back to Top</a>
+          </div>
+        </div>
+        <div class="row discs">
+          <div class="col-sm-12">
+            <p class="bottomdisclaimer">Due to the near-real time nature of SOS, all data collected is provisional and subject to change. Data may not always be complete and data should not be considered a definitive opioid overdose count. All locations on the map are approximate.
+              <br>Please reach out to <a href="mailto:SOS.Reports@umich.edu">SOS.Reports@umich.edu</a> with any questions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid">
+          <div class="row logos d-flex align-items-center justify-content-between">
+            <a href="https://injurycenter.umich.edu/" target="_blank">
+              <img class="bottomIPC" src="/static/images/IPC.png">
+            </a>
+            <p>&copy 2019 The Regents of the University of Michigan</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <script>
+  // Mapbox - Flask variables
+    centerMapbox = {{ data.center }};
+    county_geojson = "{{ url_for('static',filename=data.f_geojson) }}";
+    zoomMapbox = {{ data.zoom }};
+    src = "{{ data.src }}";
+    // populate data graphics
+    makeDashboard("/static/data/map_fake_100000.csv", "{{ data.placename }}", "{{ data.placetype }}");
+</script>
+</body>
+</html>

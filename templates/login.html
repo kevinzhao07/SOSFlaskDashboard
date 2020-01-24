@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!--Title of landing login page-->
+  <title>SOS Michigan Opioid Epidemic </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- icon  -->
+  <link rel="icon" type="image/png" href="/static/images/icon_t.png">
+
+  <!-- BS and FA -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- d3 -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.7/crossfilter.min.js"></script>
+  <script src="//d3js.org/topojson.v3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+
+  <!-- general style -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/landingcss.css">
+  <link rel="stylesheet" href="/static/css/logincss.css">
+
+  <!--Google Fonts Noto Sans-->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <!-- accessibility skip to main tab index -->
+  <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <!-- top navigation -->
+  <nav class = "navbar navbar-expand-sm sticky-top">
+      <a class="navbar-brand" href="https://injurycenter.umich.edu/" target="_blank">
+          <img class="topIPC" src="/static/images/IPC.png">
+      </a>
+        <ul class = "navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">HOME</a>
+            </li>
+            <li class = "nav-item">
+              <a class="nav-link" href="/about">ABOUT</a>
+            </li>
+            <li class = "nav-item">
+              <a class="nav-link" href="/contact">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link current" href="/login"><span class="fa fa-sign-in"></span> Login</a>
+            </li>
+        </ul> 
+  </nav>
+  <div class="container-fluid container-top-buffer all">
+    <div class="row allpagestuff">
+        <div class = "col-sm-12">
+            <div class = "row logins">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 loginform">
+                    {% if session['logged_in'] %}
+                        <div class = "row alert">
+                            <div class="col-sm-12 text-center">
+                                <p class = "loginalert">You are already logged in.</p>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class = "row alert">
+                            <div class="col-sm-12 text-center">
+                                <p class = "loginalert">{{ redirerror }}</p>
+                            </div>
+                        </div>
+                        <form action="/login" method="POST">
+                            {{ form.csrf_token }}
+                            {{ form.name }}
+                            <div class="login-form">
+                                <h2>Login</h2>
+                                <div class="control-group">
+                                    <label for="login-name"><i class="fa fa-user"></i>  Username</label>
+                                    <input type="text" class="login-field" value="" placeholder="username" name="username" required>
+                                </div>
+                                <div class="control-group">
+                                    <label for="login-pass"><i class="fa fa-lock"></i>  Password</label>
+                                    <input type="password" class="login-field" value="" placeholder="password" name="password" required>
+                                </div>
+
+                                <div class="control-group license">
+                                    <input type="checkbox" name="agreetolicense" class="agreementcheck" required> I agree to the terms in the <a href="#EULA" data-toggle="modal" data-target=".modal">End User License Agreement</a>.
+                                </div>
+                                <input type="submit" value="Log In" class="loginsubmit btn btn-primary btn-large">		 
+                            </div>
+                        </form>
+
+                    {% endif %}
+                    {% if error %}
+                        <p class = 'loginalert'>{{ error }}</p>
+                    {% endif %}
+                </div>
+                <div class="col-sm-4"></div>
+            </div> <!--close row logins-->
+        </div> <!--close col-sm-12-->
+      </div> <!--close main row-->
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">END USER LICENSE AGREEMENT</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>EULA explanation, user agreements, etc.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary buttonpadded" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <footer class="footer mt-auto py-3">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-right d-flex justify-content-end">
+                <p>&copy 2019 The Regents of the University of Michigan</p>
+              </div>
+          </div>
+      </div>
+    </footer>
+</body>
+</html>

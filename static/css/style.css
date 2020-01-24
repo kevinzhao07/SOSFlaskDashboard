@@ -1,0 +1,394 @@
+*{
+  font-family: 'Noto Sans', sans-serif;
+  color: #00274c;
+}
+
+nav{
+  width: inherit !important;
+
+}
+
+.navbar {
+  border-radius: 0;
+  margin: 0px;
+  padding: 0px;
+  background-color: #00274c;
+}
+
+.navbar a:hover {
+  color: black !important;
+  background-color: #CCC !important;
+}
+
+.navbar .active {
+  font-weight: bold;
+}
+.navbar .navbar-brand{
+  padding: 10px;
+}
+
+
+.navbar a {
+  color:#FFFFFF !important;
+}
+
+
+.topdatebuff {
+  padding-top: 50px;
+}
+
+
+.srcbutton{
+  background-color: inherit !important;
+  color: white !important;
+  border: none;
+  padding: 5px;
+}
+.srcbutton:hover{
+  text-decoration: underline;
+}
+
+.srcbutton:active{
+  font-weight: bold;
+}
+.srcbutton:focus{
+  font-weight: bold;
+}
+
+.sidenav {
+  background-color:#001a33; /* a shade darker than 00274c*/
+  height: inherit;
+}
+
+
+li {
+  list-style: none;
+}
+
+#race, #age, #gender {
+  width: 100%;
+  margin: 5px;
+}
+
+.content{
+  padding: 0px;
+  width: inherit;
+  margin: 0px;
+}
+
+section {
+  margin-top: 40px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  padding: 10px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+th {
+  background-color: #2E4B70;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+.container-top-buffer {
+  margin: 0px;
+  padding: 0px;
+}
+
+.section-buffer {
+  margin-top: 60px;
+}
+
+.list-group-item-action {
+  font-size: 20px !important;
+  margin: 5px;
+}
+
+.accordion .list-group-item-action:after {
+    font-family: 'FontAwesome';
+    content: "\f078";
+
+}
+
+.accordion .list-group-item-action.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f053";
+}
+
+.accordion .list-group-item-text a {
+  color: white;
+}
+
+.accordion .list-group-item-text a:hover {
+  background-color:#B5CEEE;
+  color: inherit;
+}
+
+.accordion .list-group-item-text a:focus {
+  background-color:#B5CEEE;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.accordion .list-group a {
+  background-color: inherit;
+  color: white;
+  font-size: 14px;
+  border: none;
+}
+
+.accordion .list-group {
+  background-color: inherit;
+  border: none;
+}
+
+.btn {
+  margin: 10px;
+}
+
+.centerimage img {
+  width:100%;
+  padding: 5px;
+}
+
+#dashboard-landing-img {
+  width:80%;
+  padding: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.allmapelems{
+  width: inherit;
+}
+.sidebuff {
+  height: inherit;
+  background-color: #00274c;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+#datasource {
+  font-weight: bold;
+}
+
+#N {
+  font-size: 80px;
+}
+#Np {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+#Pct {
+  font-weight: bold;
+}
+
+#gender {
+  background-color: #F8F8F8;
+}
+.demographics{
+  width: inherit;
+  margin: 0px;
+}
+.eachDemographic {
+  padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 5px;
+}
+.resetalldem{
+  width: inherit;
+  padding: 0px;
+  margin: 0px;
+}
+
+.backtotop {
+  padding: 15px;
+}
+
+.timetable-insert {
+  padding-top: 50px;
+}
+
+.rightbuff {
+  background-color:#00274c;
+  height: 100%;
+}
+
+div.sticky-top {
+  background-color: white;
+  top: 50px;
+  padding: 5px;
+}
+/*  https://stackoverflow.com/questions/29258382/bootstrap-align-divs-to-top-middle-and-bottom */
+.vbottom {
+  position: relative;
+  top: 100%;
+  transform: translateY(-100%);
+}
+
+.resetButton {
+  height: 20px;
+  background-color: white;
+  border-style: hidden;
+  font-size: 12px;
+}
+
+.tablebuttondiv {
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+.tablebutton {
+  background-color: #2E4B70;
+  color: white;
+  padding: 8px;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.timetablebutton {
+  background-color: #2E4B70;
+  color: white;
+  padding: 8px;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.timetablebutton:focus {
+  background-color:  #00274c;
+  color: white;
+}
+
+.tablebutton:focus {
+  background-color:  #00274c;
+  color: white;
+}
+
+.timetablebutton:hover {
+  background-color: #243c59;
+}
+
+.tablebutton:hover {
+  background-color:#243c59;
+}
+
+.selected {
+  background-color: #00274c;
+}
+
+.disclaimer{
+  font-style: oblique;
+}
+
+.notipc{
+  margin: 20px;
+  display: inline-block;
+  height: 50px;
+}
+.isIpc{
+  background-color: white;
+  margin: 20px;
+  display: inline-block;
+  height: 20px;
+}
+
+nav span{
+  color: white;
+}
+
+
+footer{
+  width: inherit;
+}
+
+.footer{
+  position: relative;
+  background-color: #00274c !important;
+}
+
+.footer p{
+  color: white;
+}
+
+
+.logos{
+  padding: 0px;
+}
+
+table i{
+  color: white;
+}
+
+.summarySticky{
+  padding: 0px !important;
+  margin: 0px !important;
+  margin-bottom: 25px;
+}
+
+.map-insert{
+  padding-top: 10px;
+}
+
+#datasource{
+  font-weight: normal;
+  font-size: 14pt;
+}
+
+.sidenavlabel{
+  color: white;
+  font-size: 10pt;
+  padding: 4px 0px;
+}
+
+.toggledatatype{
+  margin-bottom: 2px;
+}
+
+.sourcetogglers{
+  margin-top: 0px;
+  padding-top: 0px;
+  border-bottom-color: white;
+  border-bottom-style: double;
+  margin-bottom: 4px;
+}
+
+.fa-arrow-up{
+  color: red;
+}
+
+.fa-arrow-down{
+  color: green;
+}
+
+.bottomIPC{
+  height: 50px;
+}
+
+.bottomSOS{
+  height: 100px;
+}
+.bottomHIDTA{
+  height: 100px;
+}
+.mapdisclaimer{
+  font-style: oblique;
+  padding: 0px;
+  margin: 0px;
+}
+
+.pinexplain{
+  padding: 10px;
+  border: 1px solid black;
+  margin: 10px;
+}
