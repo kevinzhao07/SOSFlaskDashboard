@@ -1,1 +1,1 @@
-web: gunicorn SOSFlaskDashboard:app
+web: gunicorn application:app
