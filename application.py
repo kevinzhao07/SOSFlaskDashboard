@@ -43,7 +43,7 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password')
     submit = SubmitField('Submit')
 
-user1 = User('flask@login', os.getenv('User'), os.getenv('Pwd'), False)
+user1 = User('flask@login', 'kevin', 'kevin', False)
 
 @login_manager.user_loader
 def load_user(user_id):
