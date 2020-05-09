@@ -207,9 +207,13 @@
         <!-- Demographics -->
         <div class="row demographics">
         {% for item in ["Age", "Gender", "Race"] %}
-          <div class="col-sm-4 mx-auto">
+          {% if item == "Race" %}
+            <div class="col-sm-4 mx-auto" style="z-index: 9999;">
+          {% else %}
+            <div class="col-sm-4 mx-auto">
+          {% endif %}
             <div class="row-content text-center bottombuffer">
-              <h4 class="eachDemographic">{{ item }}</h4>
+                <h4 class="eachDemographic">Filter by {{ item }}</h4>
             </div>
             <div class="row {{item}}-chart center-block f-flex alogn-items-centerS">
               {% if item == "Age" %}
@@ -217,12 +221,12 @@
                 <svg id="age"></svg>
               {% endif %}
               {% if item == "Gender" %}
-                <button class="resetButton" onclick="resetGender()">reset gender</button>
+                <button class="resetButton" onclick="resetAll()">reset <b>all</b></button>
                 <svg id="gender"></svg>
               {% endif %}
               {% if item == "Race" %}
                 <button class="resetButton" onclick="resetRace()">reset race</button>
-                <svg id="race"></svg>
+                <svg id="race" style="overflow: visible !important;"></svg>
               {% endif %}
             </div>
           </div>
@@ -230,7 +234,6 @@
         </div>
         <div class="row resetalldem">
           <div class="col-sm-12">
-            <button class="resetButton" onclick="resetAll()">reset demographics</button>
             <p class="text-left">To learn more about interactive capabilities, go to our <a href="/howtouse"> How to Use</a> tab</p>
           </div>
         </div>
