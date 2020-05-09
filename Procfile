@@ -1,1 +1,1 @@
-web: gunicorn SOSFLASKDASHBOARD.wsgi
+web: gunicorn d3-visualizer:app
